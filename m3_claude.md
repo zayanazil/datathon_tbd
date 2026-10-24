@@ -1,6 +1,6 @@
 # M3 network and indicators: status
 
-**Owner:** Al (M3) · **Branch:** `m3-network` · **Last updated:** 24 Oct 2026, after switching to the shared `config.py`
+**Owner:** Al (M3) · **Branch:** `m3-network` · **Last updated:** 24 Oct 2026, after merging `main` (sheets and `terminals.csv`)
 
 This file says what M3 has built, what it needs from the rest of the team, and what comes next. It's updated after each major step. Team: M1 Zayan (GIS), M2 Eish (movement), M3 Al (network), M4 Saroof (lead, dashboard).
 
@@ -39,7 +39,10 @@ Tests: `python -m pytest tests` → 11 passed.
 
   `run_scenario({})` gives exactly the base `access_results.csv`. One scenario takes about a second.
 - **There are extra tables for the dashboard and slides**, beyond the §4 contracts, all in `data/processed/` (described below): `population_within.csv`, `hdx_comparison.csv`, `nsds_figures.csv` and `best_ferry_change.csv`.
-- **Branch files:** this branch adds `data/sheets/` (copied from `datasets/data_pack/sheets/`, current versions only) and an empty `src/kaafu/__init__.py`. If you set up the repo layout differently, keep the package importable as `kaafu`.
+- **Branch files:**
+  - `main` is merged into `m3-network`, and `data/sheets/` is identical to `main`'s.
+  - The branch also adds an empty `src/kaafu/__init__.py`, the same as on `zayan`.
+  - Zayan's `config.py` on the `zayan` branch is identical to the one my code was checked against.
 
 ### Zayan (M1): last mile
 
@@ -47,7 +50,8 @@ Tests: `python -m pytest tests` → 11 passed.
   - terminal to hospital on the same island: `TERMINAL_EXIT_MIN` + straight line ÷ 80 m/min;
   - atoll-hospital islands: `TERMINAL_EXIT_MIN` + the hospital's `walk_minutes`.
 
-  The terminal coordinates come from your `terminals.csv` (`config.TERMINALS_CSV`) as soon as it exists. Until then they come from Team Kandu's bus stops (codes 1008, 1101, 507, 1301).
+  The terminal coordinates come from your `terminals.csv` (merged from `main`). Results are unchanged, because it has the same coordinates as my stand-in.
+- **`docs/facilities.txt` on the `zayan` branch is the old note.** It still lists H01, H03, H07 and H08 as open questions. The current one, with those marked DONE on 23 Oct, is `datasets/data_pack/sheets/facilities (1).txt`; please swap it in.
 - **When you drop `data/processed/last_mile.csv` (`config.LAST_MILE_CSV`) in, my code uses it automatically.** It needs:
   - columns `stop_id, facility_id, hour, mode, minutes, available, detail`;
   - `stop_id` using the terminal IDs `T_MALE_NORTH`, `T_MALE_WEST`, `T_HULHUMALE`, `T_VILLIMALE`;
@@ -136,7 +140,7 @@ These **will change** once the real last mile and observed speedboat times are i
 
 - Everything M3 needs is present and matches the handover's row counts.
 - `datasets/data_pack/sheets/` was missing `bus_headways.csv` and `bus_service_hours.txt`, and had an old 11-row `bus_service_hours.csv`. The correct versions are now in `data/sheets/`.
-- `facilities.txt` there is the old note; `facilities (1).txt` is current and was copied as `data/sheets/facilities.txt`.
+- `facilities.txt` there is the old note; `facilities (1).txt` is the current one. The sheet notes (`*.txt`) live in `docs/` on the `zayan` branch, not in `data/sheets/`.
 - `raw/followme_check.txt.txt` is a blank template. `MACL/` is missing, but it isn't used.
 
 ## Next
