@@ -64,13 +64,12 @@ def island_summary(results, islands, conns, cfg, target="gm_hospital", observed_
     return pd.DataFrame(rows, columns=SUMMARY_COLUMNS)
 
 
-def observed_gap(conns, observed_trips, stop_island, cfg):
-    """Scheduled minus observed boat minutes from each island to Greater Malé.
+def scheduled_vs_observed(conns, observed_trips, stop_island, cfg):
+    """Boat minutes from each island to Greater Malé: scheduled_min, observed_min, observed_trips.
 
     Scheduled: the quickest timetabled ride from the island to a Greater Malé terminal on
     one trip (DAY or NEXT_DAY). Observed: M2's median of all tracked trips from the island
-    to Malé, Hulhumalé or Villimalé, if there are at least OBSERVED_MIN_TRIPS. Positive means
-    the boats people actually take are faster than the timetable.
+    to Malé, Hulhumalé or Villimalé, if there are at least OBSERVED_MIN_TRIPS.
     """
     scheduled = {}
     for _, trip in conns.sort_values("dep_min").groupby("trip_id"):
@@ -84,9 +83,17 @@ def observed_gap(conns, observed_trips, stop_island, cfg):
                 scheduled[leg.from_stop] = min(scheduled.get(leg.from_stop, ride), ride)
     gm_islands = set(stop_island.values())
     to_gm = observed_trips[observed_trips["to_key"].isin(gm_islands)].groupby("from_key")["duration_min"]
-    observed = to_gm.median()[to_gm.size() >= cfg.OBSERVED_MIN_TRIPS]
-    gap = pd.Series(scheduled, dtype=float) - observed
-    return gap.dropna().round(1)
+    enough = to_gm.size() >= cfg.OBSERVED_MIN_TRIPS
+    return pd.DataFrame({"scheduled_min": pd.Series(scheduled, dtype=float),
+                         "observed_min": to_gm.median()[enough],
+                         "observed_trips": to_gm.size()[enough]})
+
+
+def observed_gap(conns, observed_trips, stop_island, cfg):
+    """Scheduled minus observed boat minutes to Greater Malé (see scheduled_vs_observed).
+    Positive means the boats people actually take are faster than the timetable."""
+    both = scheduled_vs_observed(conns, observed_trips, stop_island, cfg)
+    return (both["scheduled_min"] - both["observed_min"]).dropna().round(1)
 
 
 def _per_island_minutes(results, target, cfg, dep_min=None):
@@ -223,6 +230,7 @@ def load_inputs(cfg):
         last_mile=load_last_mile(facilities, cfg),
         stop_island=stop_island,
         observed_pairs=_read_if_there(cfg.OBSERVED_PAIRS_CSV, cfg),
+        observed_trips=observed_trips,
         observed_gap=(observed_gap(conns, observed_trips, stop_island, cfg)
                       if observed_trips is not None else None),
     )

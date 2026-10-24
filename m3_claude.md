@@ -1,6 +1,6 @@
 # M3 network and indicators: status
 
-**Owner:** Al (M3) · **Branch:** `m3-network` · **Last updated:** 24 Oct 2026, after adding synthetic speedboat departures to the observed switch
+**Owner:** Al (M3) · **Branch:** `m3-network` · **Last updated:** 24 Oct 2026, after Step 5 (final figures for slides 5–6)
 
 This file says what M3 has built, what it needs from the rest of the team, and what comes next. It's updated after each major step. Team: M1 Zayan (GIS), M2 Eish (movement), M3 Al (network), M4 Saroof (lead, dashboard).
 
@@ -13,7 +13,7 @@ This file says what M3 has built, what it needs from the rest of the team, and w
 | 3. `access_results.csv` + `island_summary.csv` (H3) | Done, with **Zayan's real `last_mile.csv`** |
 | 4. Indicators, HDX, NSDS, scenarios, best ferry change | Done, including the bus and taxi sliders |
 | 4. Observed boat times | Done: leg durations, synthetic speedboat departures, `observed_gap_min` |
-| 5. Final figures for slides 5–6 | Not started |
+| 5. Final figures for slides 5–6 | Done: six charts and the slide numbers in `docs/figures/m3_*` |
 
 Tests: `python -m pytest` → 14 passed.
 
@@ -94,6 +94,7 @@ From the repo root (or `pip install -e .` once, then drop the `PYTHONPATH=src`):
 PYTHONPATH=src python -m kaafu.timetable    # data/processed/connections.csv
 PYTHONPATH=src python -m kaafu.indicators   # access_results, island_summary, population_within, hdx_comparison, nsds_figures
 PYTHONPATH=src python -m kaafu.scenarios    # best_ferry_change.csv (30-90 s; one-off, not for the live dashboard)
+PYTHONPATH=src python -m kaafu.m3_figures   # docs/figures/m3_*.png and m3_slide_numbers.md (~10 s; run after the two above)
 python -m pytest
 ```
 
@@ -106,7 +107,8 @@ Every `main()` and `run_scenario()` takes an optional `cfg` argument, which defa
 | `src/kaafu/timetable.py` | Ferry sheet to connections: Wednesday legs, plus **Thursday's own legs** at +1440 (`trip_id` + `_d2`). Greater Malé stops become terminal IDs. Stops if a name isn't in `island_names.csv`. |
 | `src/kaafu/routing.py` | Connection scan (`earliest_arrival`), door-to-door times (`door_to_door`), trip breakdown, placeholder last mile, and `access_results()` for all islands × departures × targets. |
 | `src/kaafu/indicators.py` | `island_summary`, `population_within`, `hdx_comparison`, `nsds_figures`; `main()` writes the base outputs. |
-| `src/kaafu/scenarios.py` | `run_scenario`, `scale_route` (ferry factor), `extra_run`, Thulusdhoo hospital, `best_ferry_change`. |
+| `src/kaafu/scenarios.py` | `run_scenario`, `scale_route` (ferry factor), `extra_run`, Thulusdhoo hospital, `best_ferry_change`, observed durations and speedboat departures, bus/taxi adjustment. |
+| `src/kaafu/m3_figures.py` | Step 5: the slide charts and `m3_slide_numbers.md`, from the base scenario and the observed switch. |
 | `tests/test_routing.py` | 12 toy tests: direct boat, next morning, transfer time, staying on board, later never earlier, breakdown adds up, own hospital, re-spacing, extra run, bus/taxi slider adjustment. |
 
 ## Outputs in `data/processed/`
@@ -205,10 +207,18 @@ Every `main()` and `run_scenario()` takes an optional `cfg` argument, which defa
 ## Next
 
 1. **Merge:** `m3-network` into `main`. Code and outputs are checked against the shared `config.py`.
-2. **Step 5:**
-   - charts for slides 5–6: worst-served islands, population within 1/2/4 h against HDX (ferries only against + speedboats), share within 2 h through the day, last practical departures, scheduled against observed, best ferry change, NSDS figures;
-   - every number labelled "Wednesday, CFN public ferries (+ observed speedboats if used), Jetty NO5 assumed".
+2. **Slides 5–6:** use the figures below. Rerun `m3_figures` if any input changes.
 
-## AI-assisted (for the README)
+## Figures for slides 5–6 (`docs/figures/`)
 
-`timetable.py`, `routing.py`, `indicators.py`, `scenarios.py` and `tests/test_routing.py` were written with Claude Code (connection scan, journey breakdown, placeholder last mile, indicators, scenario functions, best ferry change, toy tests).
+Every chart has the same colours: orange ring = public ferries only, blue dot = with observed speedboats, grey = HDX car-only. Each carries the caption "Wednesday CFN timetable; observed speedboats from FollowMe, Aug 2025 (not a published schedule); Malé jetty assumed Jetty NO5".
+
+| File | Slide | What it shows |
+|---|---|---|
+| `m3_within_vs_hdx.png` | 5 | Share within 30 min–4 h of the nearest hospital (daytime median) against HDX: Kaafu 0% / 22% against 77% at 2 h |
+| `m3_within_2h_through_day.png` | 5 | Share of Kaafu within 2 h of a Malé hospital by departure time, with HDX as a line |
+| `m3_worst_served.png` | 5 | Daytime median per island, worst first, with an "unreachable today" column |
+| `m3_last_departure.png` | 5 | Last practical departure per island; ADh has none on Wednesday |
+| `m3_scheduled_vs_observed.png` | 5 (with Eish) | Quickest scheduled ferry against the observed median boat time to Malé |
+| `m3_best_ferry_change.png` | 6 | Best extra evening run of each CFN route, by people-hours saved |
+| `m3_slide_numbers.md` | 5–6 | All the headline numbers as tables, including the NSDS figures |
