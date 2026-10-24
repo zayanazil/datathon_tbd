@@ -1,6 +1,6 @@
 # M3 network and indicators: status
 
-**Owner:** Al (M3) · **Branch:** `m3-network` · **Last updated:** 24 Oct 2026, after merging `m2-movement` and adding the observed-times switch
+**Owner:** Al (M3) · **Branch:** `m3-network` · **Last updated:** 24 Oct 2026, after adding synthetic speedboat departures to the observed switch
 
 This file says what M3 has built, what it needs from the rest of the team, and what comes next. It's updated after each major step. Team: M1 Zayan (GIS), M2 Eish (movement), M3 Al (network), M4 Saroof (lead, dashboard).
 
@@ -12,10 +12,10 @@ This file says what M3 has built, what it needs from the rest of the team, and w
 | 2. `routing.py` + toy tests | Done; matches the reference table in `M3_network.md` for all 23 islands |
 | 3. `access_results.csv` + `island_summary.csv` (H3) | Done, with **Zayan's real `last_mile.csv`** |
 | 4. Indicators, HDX, NSDS, scenarios, best ferry change | Done, including the bus and taxi sliders |
-| 4. Observed boat times | Leg durations and `observed_gap_min` done. Synthetic speedboat departures **not decided yet** |
+| 4. Observed boat times | Done: leg durations, synthetic speedboat departures, `observed_gap_min` |
 | 5. Final figures for slides 5–6 | Not started |
 
-Tests: `python -m pytest` → 13 passed.
+Tests: `python -m pytest` → 14 passed.
 
 **Branch contents:**
 - `main`, `zayan` and `m2-movement` are all merged in. This branch has the official `config.py`, `pyproject.toml`, Zayan's `last_mile.csv` (real Avas taxi times) and Eish's `observed_pairs.csv`/`observed_trips.csv`.
@@ -36,7 +36,8 @@ Tests: `python -m pytest` → 13 passed.
   | `ferry_factor` | works | `{route_id: factor}`, 0.5–3 |
   | `extra_runs` | works | `[(route_id, minute)]`, e.g. `[("307", 1080)]` for 18:00 |
   | `thulusdhoo_hospital` | works | `True` adds K.Thulusdhoo as an atoll hospital (`any_hospital` only) |
-  | `observed` | works | Re-times CFN legs with Eish's slow medians (see Eish's section). Speedboats are not added yet. |
+  | `observed` | works | Re-times CFN legs with Eish's slow medians **and** adds synthetic speedboat departures (see "Synthetic speedboat departures" below). |
+  | `speedboats` | works | Default `True`. With `observed`, `False` gives re-timed ferries only. |
   | `bus_factor` | works | 0.5–3; the bus wait is divided by it |
   | `taxi_availability` | works | 0–1; cuts the Avas unserved share (the part of the taxi wait above `TAXI_BASE_WAIT_MIN`) |
 
@@ -83,7 +84,7 @@ Tests: `python -m pytest` → 13 passed.
   - Definition: scheduled minutes from the island to a Greater Malé terminal on one timetabled trip, minus your median of **all** tracked trips from the island to Malé/Hulhumalé/Villimalé (≥ 5 trips).
   - Positive means boats are faster than the timetable. E.g. Thoddoo 387 (route 303 loops via Rasdhoo and Ukulhas), V islands 206–237, Kaashidhoo 165, Huraa 37, Himmafushi 20.
   - Blank where there's no direct scheduled boat: Mathiveri, Bodufolhudhoo, and the ADh islands except Mahibadhoo.
-- **Still to decide:** synthetic speedboat departures for your four busy fast pairs (Thulusdhoo, Dhiffushi, Himmafushi, Thoddoo → Malé).
+- **Synthetic speedboat departures** are built from your four busy fast pairs (see the note below).
 
 ## How to run
 
@@ -120,10 +121,51 @@ Every `main()` and `run_scenario()` takes an optional `cfg` argument, which defa
 | `nsds_figures.csv` | 10 | Direct boat to Greater Malé, same-day boat with changes, health facility within 30 min, hospital within 2 h. |
 | `best_ferry_change.csv` | 27 | One extra run per CFN route × 18:00/20:00/22:00, ranked. |
 
+## Synthetic speedboat departures (observed switch)
+
+**Why:**
+- The timetable has public ferries only, once or twice a day, but Eish's FollowMe data shows that most trips from the islands near Malé are speedboats running all day (e.g. 87% of Thulusdhoo's trips).
+- Re-timing the ferries alone leaves the headline at 0% within 2 h, so `observed: True` also adds these boats.
+
+**How (`scenarios.speedboat_departures`):**
+- **Which pairs:** island → Greater Malé pairs whose `fast` trips average at least **`SPEEDBOAT_MIN_TRIPS_PER_DAY` (5, new in `config.py`)** a day.
+- **Spacing:** one departure every `round((last_hour − first_hour) × 60 / trips_per_day)` min, from `first_hour` to `last_hour`.
+- **Timing:** each takes the observed median, on Wednesday and again on Thursday.
+- **Arrival:** `T_MALE_NORTH`, the same Jetty NO5 assumption as the CFN.
+- **Labels:** `route_id = SPEEDBOAT`, `mode = speedboat_observed`, `estimated = yes`, `source = "observed boat movements, not a published schedule"`.
+
+| From | Departures a day | First–last | Ride |
+|---|---|---|---|
+| K.Thulusdhoo | 15 | 06:00–22:20 | 32 min |
+| K.Himmafushi | 8 | 05:00–22:16 | 18 min |
+| K.Dhiffushi | 8 | 01:00–16:59 | 47 min |
+| AA.Thoddoo | 6 | 05:00–21:35 | 73 min |
+
+**Limits (for the slide):**
+- These are boat movements from August 2025 trackers, not a published 2026 schedule.
+- We assume anyone can board them, but some may be private, resort or chartered boats.
+- Departures are spread evenly across the hours seen.
+- The ferry-only result stays the default (`observed: False`). Always say which one a number comes from.
+
+**Effect** (within 2 h of a Greater Malé hospital, daytime median):
+
+| | Ferries only | Re-timed ferries only | + speedboats |
+|---|---|---|---|
+| Kaafu | 0% | 0% | **21.5%** |
+| All 23 islands | 0% | 0% | **12.1%** |
+
+- **Daytime medians:**
+  - Thulusdhoo: 1,176 → 83 min.
+  - Himmafushi: 1,131 → 98.
+  - Dhiffushi: 1,221 → 132.
+  - Thoddoo: blank → 182.
+  - Huraa: 1,146 → 358 (it connects via Himmafushi).
+- **Last practical departures** move from early morning to 21:30–22:15 for Thulusdhoo, Himmafushi and Thoddoo.
+
 ## Current results (public CFN ferries, Wednesday, Zayan's last mile)
 
+- **These are the ferry-only numbers.** For the speedboat effect, see the section above.
 - **The real last mile changed nothing:** the nearest hospital is always a short walk from the terminal.
-- **These will change once observed speedboat times are in:** public ferries alone make the islands near Malé look much worse than reality, because most people there take speedboats.
 
 - **Within 2 h of any hospital (daytime median):** 0% of Kaafu and 14.3% of all 23 islands. The 14.3% is just the three islands with their own atoll hospital. HDX's car-only estimate is 77.4% of Kaafu and 45.9% of the Maldives.
 - **Direct scheduled boat to Greater Malé on Wednesday:** 100% of Kaafu and 76.9% of all 23. Mathiveri, Bodufolhudhoo (they change at Ukulhas) and all of Alif Dhaalu are missing. With changes allowed, same day: 81.9%.
@@ -160,10 +202,9 @@ Every `main()` and `run_scenario()` takes an optional `cfg` argument, which defa
 
 ## Next
 
-1. **Synthetic speedboat departures:** decide with Saroof, then add them to the observed switch.
-2. **Merge:** `m3-network` into `main` at H3/H5. Code and outputs are already checked against the shared `config.py`.
-3. **Step 5:**
-   - charts for slides 5–6: worst-served islands, population within 1/2/4 h against HDX, share within 2 h through the day, last practical departures, scheduled against observed, best ferry change, NSDS figures;
+1. **Merge:** `m3-network` into `main`. Code and outputs are checked against the shared `config.py`.
+2. **Step 5:**
+   - charts for slides 5–6: worst-served islands, population within 1/2/4 h against HDX (ferries only against + speedboats), share within 2 h through the day, last practical departures, scheduled against observed, best ferry change, NSDS figures;
    - every number labelled "Wednesday, CFN public ferries (+ observed speedboats if used), Jetty NO5 assumed".
 
 ## AI-assisted (for the README)

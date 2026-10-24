@@ -158,6 +158,10 @@ EVENING_RUN_TIMES = ["18:00", "20:00", "22:00"]   # best ferry change candidates
 # this many times the scheduled duration. M2 found cargo dhonis in the slow class
 # (e.g. Malé -> Himmafushi 74 min observed vs 40 scheduled).
 OBSERVED_MAX_SLOWDOWN = 1.5
+# Synthetic speedboat departures (observed switch): island -> Greater Malé pairs whose
+# `fast` trips average at least this many a day get evenly spaced departures between
+# first_hour and last_hour. Observed boat movements, not a published schedule.
+SPEEDBOAT_MIN_TRIPS_PER_DAY = 5
 
 # Population checks (Census 2022)
 POP_KAAFU = 17_749

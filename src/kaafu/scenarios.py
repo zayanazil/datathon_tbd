@@ -6,6 +6,7 @@ params (all optional; leaving one out means no change):
     extra_runs           [(route_id, minute), ...] one extra departure each, on DAY
     thulusdhoo_hospital  True adds K.Thulusdhoo as an atoll-level hospital (any_hospital)
     observed             True re-times legs with M2's observed slow medians (observed_durations)
+    speedboats           with observed, also add synthetic speedboat departures (default True)
     bus_factor           bus frequency factor, 0.5 to 3 (divides the wait)
     taxi_availability    0 to 1, cuts the Avas unserved share by that fraction
     label                the scenario column value (default "base" or "scenario")
@@ -18,7 +19,8 @@ import pandas as pd
 from kaafu import indicators, routing
 
 DEFAULTS = dict(ferry_factor={}, extra_runs=[], thulusdhoo_hospital=False, observed=False,
-                bus_factor=1.0, taxi_availability=0.0)
+                speedboats=True, bus_factor=1.0, taxi_availability=0.0)
+SPEEDBOAT_ROUTE = "SPEEDBOAT"  # route_id of the synthetic speedboat legs
 WAIT_IN_DETAIL = re.compile(r"wait (\d+(?:\.\d+)?)")  # M1's last_mile.csv detail, e.g. "wait 7.5"
 THULUSDHOO_ID = "H10"
 BEST_FERRY_CHANGE_CSV = "best_ferry_change.csv"  # extra table, not in the section 4 contracts
@@ -137,6 +139,35 @@ def observed_durations(conns, pairs, stop_island, cfg):
     return _finish(conns)
 
 
+def speedboat_departures(pairs, stop_island, cfg):
+    """Synthetic speedboat legs from M2's busy `fast` pairs into Greater Malé.
+
+    For each origin -> Greater Malé pair with trips_per_day >= SPEEDBOAT_MIN_TRIPS_PER_DAY:
+    a departure every round((last_hour - first_hour) x 60 / trips_per_day) minutes from
+    first_hour to last_hour, taking the observed median, on DAY and again on NEXT_DAY.
+    They arrive at the island's first terminal (Malé: T_MALE_NORTH, as for the CFN).
+    Observed boat movements, not a published schedule: estimated = yes.
+    """
+    island_terminal = {}
+    for stop, island in stop_island.items():
+        island_terminal.setdefault(island, stop)
+    busy = pairs[(pairs["speed_class"] == "fast")
+                 & (pairs["trips_per_day"] >= cfg.SPEEDBOAT_MIN_TRIPS_PER_DAY)
+                 & pairs["to_key"].isin(island_terminal) & ~pairs["from_key"].isin(island_terminal)]
+    rows = []
+    for p in busy.itertuples():
+        every = round((p.last_hour - p.first_hour) * 60 / p.trips_per_day)
+        for k, dep in enumerate(range(p.first_hour * 60, p.last_hour * 60 + 1, every)):
+            for offset, suffix in ((0, ""), (cfg.MINUTES_PER_DAY, "_d2")):
+                rows.append(dict(trip_id=f"{SPEEDBOAT_ROUTE}_{p.from_key}_{k:02d}{suffix}",
+                                 route_id=SPEEDBOAT_ROUTE, from_stop=p.from_key,
+                                 to_stop=island_terminal[p.to_key], dep_min=dep + offset,
+                                 arr_min=dep + offset + round(p.median_min), mode="speedboat_observed",
+                                 operator="observed (FollowMe)", day_type=cfg.DAY, estimated="yes",
+                                 source="observed boat movements, not a published schedule"))
+    return pd.DataFrame(rows)
+
+
 def adjust_last_mile(last_mile, cfg, bus_factor=1.0, taxi_availability=0.0):
     """Last mile with bus waits divided by bus_factor and the taxi unserved share cut.
 
@@ -194,6 +225,9 @@ def run_scenario(params=None, cfg=None):
         if data["observed_pairs"] is None:
             raise FileNotFoundError(f"'observed' needs M2's {cfg.OBSERVED_PAIRS_CSV.name}")
         conns = observed_durations(conns, data["observed_pairs"], data["stop_island"], cfg)
+        if params["speedboats"]:
+            conns = _finish(pd.concat([conns, speedboat_departures(
+                data["observed_pairs"], data["stop_island"], cfg)]))
     for route_id, factor in params["ferry_factor"].items():
         conns = scale_route(conns, str(route_id), factor)
     for route_id, minute in params["extra_runs"]:

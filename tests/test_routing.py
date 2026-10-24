@@ -8,7 +8,8 @@ import pandas as pd
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "src"))
 
 from kaafu.routing import door_to_door, earliest_arrival  # noqa: E402
-from kaafu.scenarios import adjust_last_mile, extra_run, observed_durations, scale_route  # noqa: E402
+from kaafu.scenarios import (  # noqa: E402
+    adjust_last_mile, extra_run, observed_durations, scale_route, speedboat_departures)
 
 CFG = SimpleNamespace(ACCESS_MIN=5, BOAT_TRANSFER_MIN=10, TERMINAL_EXIT_MIN=5, WALK_M_PER_MIN=80)
 
@@ -143,3 +144,19 @@ def test_observed_durations_replace_guard_and_delay():
     # A->C 20 -> 40 is 2x, over OBSERVED_MAX_SLOWDOWN: scheduled time stays. Fast trips are ignored.
     assert out.loc[("R2", "A"), ["dep_min", "arr_min"]].tolist() == [600, 620]
     assert out.loc[("R2", "A"), "estimated"] == "no"
+
+
+def test_speedboat_departures_from_busy_fast_pairs_only():
+    cfg = SimpleNamespace(SPEEDBOAT_MIN_TRIPS_PER_DAY=5, MINUTES_PER_DAY=1440, DAY="Wed")
+    pairs = pd.DataFrame({
+        "from_key": ["A", "B", "A", "K.M"], "to_key": ["K.M", "K.M", "K.M", "A"],
+        "speed_class": ["fast", "fast", "slow", "fast"], "trips_per_day": [6.0, 2.0, 9.0, 9.0],
+        "median_min": [30.0, 20.0, 80.0, 30.0], "first_hour": [6, 6, 6, 6], "last_hour": [18, 18, 18, 18],
+    })
+    sb = speedboat_departures(pairs, {"T_M1": "K.M", "T_M2": "K.M"}, cfg)
+    day1 = sb[sb["dep_min"] < 1440]
+    # Only A -> K.M fast (6 a day): every round(12 x 60 / 6) = 120 min, 06:00-18:00, to the first terminal.
+    assert day1["dep_min"].tolist() == [360, 480, 600, 720, 840, 960, 1080]
+    assert set(day1["to_stop"]) == {"T_M1"} and set(day1["from_stop"]) == {"A"}
+    assert (day1["arr_min"] - day1["dep_min"] == 30).all() and len(sb) == 2 * len(day1)
+    assert sb[sb["dep_min"] >= 1440]["trip_id"].str.endswith("_d2").all()
