@@ -65,6 +65,8 @@ This file says what M2 has built, what it gives the rest of the team, and what c
 
 ### Saroof (M4): config and merge
 
+- **`m2-movement` is up to date with the other branches:** `origin/zayan` (up to `3905772`) and `origin/m3-network` (up to `71bcccd`) are merged in (`16088af`). Al's tests pass (12), and every module imports with the merged `config.py`. Merging `m2-movement` into `main` therefore brings all three workstreams.
+- **The only conflict was `config.py`** (both branches added it). It was resolved by keeping Zayan's file plus the M2 block.
 - **`config.py` on `main`** is Zayan's latest, unchanged (commit `b6efe25`). It's identical on `zayan` and `m3-network`.
 - **`m2-movement` adds M2 settings to `config.py`**, as new lines only, so it merges cleanly:
   - FollowMe: `PING_MAX_GAP_MIN`, `SPEED_WINDOW_MIN`, `BOAT_MIN_SEA_SHARE`, `BOAT_SEA_DIST_M`, `BOAT_MIN_ISLANDS`, `SPEED_CLASS_SPLIT_KMH`, `DEVICE_HASH_LEN`, `FOLLOWME_DAYS`, `FOLLOWME_DEV_DAYS`.
@@ -196,13 +198,45 @@ CFN timetable legs (`ferry_timetable.csv`, scheduled minutes) against the observ
 - **Ride times look modelled, not measured.** Ride time is almost exactly 70 s + 85 s per km of `distance_km`: correlation 0.976, with a spread of about 39 s. Hourly speeds barely change (Malé 28.3–29.1 km/h), so the data shows no rush-hour traffic. Only the unserved share varies through the day.
 - **Avas covers Aug–Sep 2026; FollowMe is Aug 2025.**
 
+## Slide text (draft): M2 parts of slides 4, 5 and 7
+
+Written for the judges. Numbers are from the tables above; edit freely.
+
+### Slide 4 (Method): boat GPS → stops → trips
+
+- **9.8 million GPS pings from 997 boats, August 2025** (FollowMe). Clock shifted from UTC to Malé time, duplicates removed.
+- **A stop** is at least 10 minutes standing still inside an island's outline (+300 m). Speed is measured over 5 minutes, because ping-to-ping GPS noise makes moored boats look like they're moving.
+- **A trip** runs from leaving one island stop to reaching the next: 10,975 trips, 2,655 of them into Greater Malé (85 a day).
+- **Ferry or speedboat:** trips split at the dip in the speed histogram, 26 km/h.
+- **Checked against the timetable:** for 28 ferry legs, observed slow boats are within a median of 5 minutes of the schedule. The Villimalé ferry takes 8 minutes on paper and 8 in the data.
+
+*Speaker note:* "We don't guess boat times. We rebuilt them from GPS tracks and checked them against the published timetable."
+
+### Slide 5 (Findings): what people actually ride
+
+- **The public ferry is the slow option.** From the islands near Malé, 74–88% of boat trips are speedboats.
+  - Maafushi → Malé: ferry 84–90 minutes, speedboat 41.
+  - Himmafushi → Malé: speedboat 18 minutes, 7 a day.
+- **Busiest links into Malé** (boats a day): Thulusdhoo 17, Himmafushi 10, Dhiffushi 10, Maafushi 6, Thoddoo 6.
+- **Far atolls depend on the ferry schedule.** Mahibadhoo → Malé is 260 minutes scheduled; slow boats take a median 297 and speedboats 105.
+- **The last mile:** 7.7% of taxi requests in Greater Malé go unserved.
+  - That rises to 18% at 07:00 and 16% at 18:00.
+  - Morning is worst in Hulhumalé (23%), evening in Malé (24%).
+  - At the airport at 23:00, two in three requests go unserved.
+
+*Chart idea:* bars for five legs, scheduled against observed slow and observed fast. Use Maafushi → Malé, Malé → Maafushi, Hulhumalé → Malé, Mahibadhoo → Malé and Villimalé → Malé from the validation table.
+
+### Slide 7 (Limits): M2 items
+
+- **Boat coverage:** boat tracks only cover boats with a FollowMe tracker. They count boat movements, not passengers, and are from August 2025 while the timetable is from 2026.
+- **"Slow" boats** include cargo dhonis, not only the public ferry.
+- **Stop rule:** stops under 10 minutes are missed. Times run from island edge to island edge, a few minutes shorter than dock-to-dock.
+- **Raw FollowMe data:** timestamps are UTC (shifted +5 h) and the speed column is in knots. We derive speed from positions instead.
+- **Taxi data:** Avas only includes rides of 2 km or more (Aug–Sep 2026). Ride times look modelled, so there's no rush-hour traffic in taxi speeds; only the unserved share changes through the day.
+
 ## Next
 
-1. **Slides 4–5 with Al:**
-   - the method line "pings → stops → trips";
-   - the speedboat story;
-   - the scheduled-against-observed table above;
-   - the limits.
+1. **Keep the branch current:** when Zayan or Al push again, merge `origin/zayan` and `origin/m3-network` into `m2-movement`, rerun the tests and push.
 2. **Rerun if needed:** if Zayan changes `island_zones.geojson`, run `python -m kaafu.followme --month` again and push both files.
 
 ## AI-assisted (for the README)
