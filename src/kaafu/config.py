@@ -138,10 +138,12 @@ FOLLOWME_DEV_DAYS = (4, 10)   # one week for development (Step 2)
 AVAS_WEEKDAYS = [6, 0, 1, 2, 3]   # pandas dayofweek for Sun-Thu; the build day is Wednesday
 AVAS_ZONES = {                     # pickup boxes: (lat_min, lat_max, lon_min, lon_max)
     "male": (4.165, 4.182, 73.500, 73.522),
-    "airport": (4.182, 4.207, 73.520, 73.536),
+    "airport": (4.182, 4.205, 73.520, 73.536),     # top 4.205, not 4.207: Hulhumalé's south tip
     "hulhumale": (4.200, 4.245, 73.525, 73.556),   # checked after airport
 }
-AVAS_MIN_RIDES = 20               # fewer rides in a zone-hour: use the "all" speed
+AVAS_MIN_RIDES = 20               # fewer rides in a zone-hour: use the zone's all-day speed
+AVAS_SPEED_SAME_ZONE = True       # speed from rides that start and end in the pickup zone:
+                                  # all rides are mostly Malé-Hulhumalé bridge trips (~39 km/h)
 
 # ---------------------------------------------------------------------------
 # Routing and indicators (M3)
