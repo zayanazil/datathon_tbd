@@ -47,6 +47,12 @@ Tests: `python -m pytest` → 12 passed.
   | `label` | optional | value of the `scenario` column |
 
   `run_scenario({})` gives exactly the base `access_results.csv`. One scenario takes about a second.
+- **A blank `day_median_min` (11 islands: AA, V, Kaashidhoo, Gaafaru) is expected, not missing data.**
+  - Most daytime departures there can't reach a hospital before the end of Thursday, because the next boat is at the weekend.
+  - On the map and in the island panel, show it as **"unreachable today"** (the BUILD_PLAN map category), not an empty cell.
+  - For the worst-served ranking on slide 5, sort by `last_practical_departure`, which every island has.
+  - If asked why Alif Dhaalu has a number but AA doesn't: we scan Wednesday + Thursday; Alif Dhaalu's boat is Thursday, while AA's next one is Sunday.
+  - Scanning a full week goes on the roadmap slide.
 - **There are extra tables for the dashboard and slides**, beyond the §4 contracts, all in `data/processed/` (described below): `population_within.csv`, `hdx_comparison.csv`, `nsds_figures.csv` and `best_ferry_change.csv`.
 - **Branch files:**
   - `main` is merged into `m3-network`, and `data/sheets/` is identical to `main`'s.
