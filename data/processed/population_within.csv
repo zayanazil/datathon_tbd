@@ -1,0 +1,1941 @@
+area,target,departure,threshold_min,population_within,population,share_pct
+Kaafu,gm_hospital,day_median,30,0,17749,0.0
+Kaafu,gm_hospital,day_median,60,0,17749,0.0
+Kaafu,gm_hospital,day_median,90,0,17749,0.0
+Kaafu,gm_hospital,day_median,120,0,17749,0.0
+Kaafu,gm_hospital,day_median,240,0,17749,0.0
+All 23,gm_hospital,day_median,30,0,31414,0.0
+All 23,gm_hospital,day_median,60,0,31414,0.0
+All 23,gm_hospital,day_median,90,0,31414,0.0
+All 23,gm_hospital,day_median,120,0,31414,0.0
+All 23,gm_hospital,day_median,240,0,31414,0.0
+Kaafu,gm_hospital,00:00,30,0,17749,0.0
+Kaafu,gm_hospital,00:00,60,0,17749,0.0
+Kaafu,gm_hospital,00:00,90,0,17749,0.0
+Kaafu,gm_hospital,00:00,120,0,17749,0.0
+Kaafu,gm_hospital,00:00,240,0,17749,0.0
+All 23,gm_hospital,00:00,30,0,31414,0.0
+All 23,gm_hospital,00:00,60,0,31414,0.0
+All 23,gm_hospital,00:00,90,0,31414,0.0
+All 23,gm_hospital,00:00,120,0,31414,0.0
+All 23,gm_hospital,00:00,240,0,31414,0.0
+Kaafu,gm_hospital,00:15,30,0,17749,0.0
+Kaafu,gm_hospital,00:15,60,0,17749,0.0
+Kaafu,gm_hospital,00:15,90,0,17749,0.0
+Kaafu,gm_hospital,00:15,120,0,17749,0.0
+Kaafu,gm_hospital,00:15,240,0,17749,0.0
+All 23,gm_hospital,00:15,30,0,31414,0.0
+All 23,gm_hospital,00:15,60,0,31414,0.0
+All 23,gm_hospital,00:15,90,0,31414,0.0
+All 23,gm_hospital,00:15,120,0,31414,0.0
+All 23,gm_hospital,00:15,240,0,31414,0.0
+Kaafu,gm_hospital,00:30,30,0,17749,0.0
+Kaafu,gm_hospital,00:30,60,0,17749,0.0
+Kaafu,gm_hospital,00:30,90,0,17749,0.0
+Kaafu,gm_hospital,00:30,120,0,17749,0.0
+Kaafu,gm_hospital,00:30,240,0,17749,0.0
+All 23,gm_hospital,00:30,30,0,31414,0.0
+All 23,gm_hospital,00:30,60,0,31414,0.0
+All 23,gm_hospital,00:30,90,0,31414,0.0
+All 23,gm_hospital,00:30,120,0,31414,0.0
+All 23,gm_hospital,00:30,240,0,31414,0.0
+Kaafu,gm_hospital,00:45,30,0,17749,0.0
+Kaafu,gm_hospital,00:45,60,0,17749,0.0
+Kaafu,gm_hospital,00:45,90,0,17749,0.0
+Kaafu,gm_hospital,00:45,120,0,17749,0.0
+Kaafu,gm_hospital,00:45,240,0,17749,0.0
+All 23,gm_hospital,00:45,30,0,31414,0.0
+All 23,gm_hospital,00:45,60,0,31414,0.0
+All 23,gm_hospital,00:45,90,0,31414,0.0
+All 23,gm_hospital,00:45,120,0,31414,0.0
+All 23,gm_hospital,00:45,240,0,31414,0.0
+Kaafu,gm_hospital,01:00,30,0,17749,0.0
+Kaafu,gm_hospital,01:00,60,0,17749,0.0
+Kaafu,gm_hospital,01:00,90,0,17749,0.0
+Kaafu,gm_hospital,01:00,120,0,17749,0.0
+Kaafu,gm_hospital,01:00,240,0,17749,0.0
+All 23,gm_hospital,01:00,30,0,31414,0.0
+All 23,gm_hospital,01:00,60,0,31414,0.0
+All 23,gm_hospital,01:00,90,0,31414,0.0
+All 23,gm_hospital,01:00,120,0,31414,0.0
+All 23,gm_hospital,01:00,240,0,31414,0.0
+Kaafu,gm_hospital,01:15,30,0,17749,0.0
+Kaafu,gm_hospital,01:15,60,0,17749,0.0
+Kaafu,gm_hospital,01:15,90,0,17749,0.0
+Kaafu,gm_hospital,01:15,120,0,17749,0.0
+Kaafu,gm_hospital,01:15,240,0,17749,0.0
+All 23,gm_hospital,01:15,30,0,31414,0.0
+All 23,gm_hospital,01:15,60,0,31414,0.0
+All 23,gm_hospital,01:15,90,0,31414,0.0
+All 23,gm_hospital,01:15,120,0,31414,0.0
+All 23,gm_hospital,01:15,240,0,31414,0.0
+Kaafu,gm_hospital,01:30,30,0,17749,0.0
+Kaafu,gm_hospital,01:30,60,0,17749,0.0
+Kaafu,gm_hospital,01:30,90,0,17749,0.0
+Kaafu,gm_hospital,01:30,120,0,17749,0.0
+Kaafu,gm_hospital,01:30,240,0,17749,0.0
+All 23,gm_hospital,01:30,30,0,31414,0.0
+All 23,gm_hospital,01:30,60,0,31414,0.0
+All 23,gm_hospital,01:30,90,0,31414,0.0
+All 23,gm_hospital,01:30,120,0,31414,0.0
+All 23,gm_hospital,01:30,240,0,31414,0.0
+Kaafu,gm_hospital,01:45,30,0,17749,0.0
+Kaafu,gm_hospital,01:45,60,0,17749,0.0
+Kaafu,gm_hospital,01:45,90,0,17749,0.0
+Kaafu,gm_hospital,01:45,120,0,17749,0.0
+Kaafu,gm_hospital,01:45,240,0,17749,0.0
+All 23,gm_hospital,01:45,30,0,31414,0.0
+All 23,gm_hospital,01:45,60,0,31414,0.0
+All 23,gm_hospital,01:45,90,0,31414,0.0
+All 23,gm_hospital,01:45,120,0,31414,0.0
+All 23,gm_hospital,01:45,240,0,31414,0.0
+Kaafu,gm_hospital,02:00,30,0,17749,0.0
+Kaafu,gm_hospital,02:00,60,0,17749,0.0
+Kaafu,gm_hospital,02:00,90,0,17749,0.0
+Kaafu,gm_hospital,02:00,120,0,17749,0.0
+Kaafu,gm_hospital,02:00,240,0,17749,0.0
+All 23,gm_hospital,02:00,30,0,31414,0.0
+All 23,gm_hospital,02:00,60,0,31414,0.0
+All 23,gm_hospital,02:00,90,0,31414,0.0
+All 23,gm_hospital,02:00,120,0,31414,0.0
+All 23,gm_hospital,02:00,240,0,31414,0.0
+Kaafu,gm_hospital,02:15,30,0,17749,0.0
+Kaafu,gm_hospital,02:15,60,0,17749,0.0
+Kaafu,gm_hospital,02:15,90,0,17749,0.0
+Kaafu,gm_hospital,02:15,120,0,17749,0.0
+Kaafu,gm_hospital,02:15,240,0,17749,0.0
+All 23,gm_hospital,02:15,30,0,31414,0.0
+All 23,gm_hospital,02:15,60,0,31414,0.0
+All 23,gm_hospital,02:15,90,0,31414,0.0
+All 23,gm_hospital,02:15,120,0,31414,0.0
+All 23,gm_hospital,02:15,240,0,31414,0.0
+Kaafu,gm_hospital,02:30,30,0,17749,0.0
+Kaafu,gm_hospital,02:30,60,0,17749,0.0
+Kaafu,gm_hospital,02:30,90,0,17749,0.0
+Kaafu,gm_hospital,02:30,120,0,17749,0.0
+Kaafu,gm_hospital,02:30,240,0,17749,0.0
+All 23,gm_hospital,02:30,30,0,31414,0.0
+All 23,gm_hospital,02:30,60,0,31414,0.0
+All 23,gm_hospital,02:30,90,0,31414,0.0
+All 23,gm_hospital,02:30,120,0,31414,0.0
+All 23,gm_hospital,02:30,240,0,31414,0.0
+Kaafu,gm_hospital,02:45,30,0,17749,0.0
+Kaafu,gm_hospital,02:45,60,0,17749,0.0
+Kaafu,gm_hospital,02:45,90,0,17749,0.0
+Kaafu,gm_hospital,02:45,120,0,17749,0.0
+Kaafu,gm_hospital,02:45,240,0,17749,0.0
+All 23,gm_hospital,02:45,30,0,31414,0.0
+All 23,gm_hospital,02:45,60,0,31414,0.0
+All 23,gm_hospital,02:45,90,0,31414,0.0
+All 23,gm_hospital,02:45,120,0,31414,0.0
+All 23,gm_hospital,02:45,240,0,31414,0.0
+Kaafu,gm_hospital,03:00,30,0,17749,0.0
+Kaafu,gm_hospital,03:00,60,0,17749,0.0
+Kaafu,gm_hospital,03:00,90,0,17749,0.0
+Kaafu,gm_hospital,03:00,120,0,17749,0.0
+Kaafu,gm_hospital,03:00,240,0,17749,0.0
+All 23,gm_hospital,03:00,30,0,31414,0.0
+All 23,gm_hospital,03:00,60,0,31414,0.0
+All 23,gm_hospital,03:00,90,0,31414,0.0
+All 23,gm_hospital,03:00,120,0,31414,0.0
+All 23,gm_hospital,03:00,240,0,31414,0.0
+Kaafu,gm_hospital,03:15,30,0,17749,0.0
+Kaafu,gm_hospital,03:15,60,0,17749,0.0
+Kaafu,gm_hospital,03:15,90,0,17749,0.0
+Kaafu,gm_hospital,03:15,120,0,17749,0.0
+Kaafu,gm_hospital,03:15,240,0,17749,0.0
+All 23,gm_hospital,03:15,30,0,31414,0.0
+All 23,gm_hospital,03:15,60,0,31414,0.0
+All 23,gm_hospital,03:15,90,0,31414,0.0
+All 23,gm_hospital,03:15,120,0,31414,0.0
+All 23,gm_hospital,03:15,240,0,31414,0.0
+Kaafu,gm_hospital,03:30,30,0,17749,0.0
+Kaafu,gm_hospital,03:30,60,0,17749,0.0
+Kaafu,gm_hospital,03:30,90,0,17749,0.0
+Kaafu,gm_hospital,03:30,120,0,17749,0.0
+Kaafu,gm_hospital,03:30,240,0,17749,0.0
+All 23,gm_hospital,03:30,30,0,31414,0.0
+All 23,gm_hospital,03:30,60,0,31414,0.0
+All 23,gm_hospital,03:30,90,0,31414,0.0
+All 23,gm_hospital,03:30,120,0,31414,0.0
+All 23,gm_hospital,03:30,240,0,31414,0.0
+Kaafu,gm_hospital,03:45,30,0,17749,0.0
+Kaafu,gm_hospital,03:45,60,0,17749,0.0
+Kaafu,gm_hospital,03:45,90,0,17749,0.0
+Kaafu,gm_hospital,03:45,120,0,17749,0.0
+Kaafu,gm_hospital,03:45,240,0,17749,0.0
+All 23,gm_hospital,03:45,30,0,31414,0.0
+All 23,gm_hospital,03:45,60,0,31414,0.0
+All 23,gm_hospital,03:45,90,0,31414,0.0
+All 23,gm_hospital,03:45,120,0,31414,0.0
+All 23,gm_hospital,03:45,240,0,31414,0.0
+Kaafu,gm_hospital,04:00,30,0,17749,0.0
+Kaafu,gm_hospital,04:00,60,0,17749,0.0
+Kaafu,gm_hospital,04:00,90,0,17749,0.0
+Kaafu,gm_hospital,04:00,120,0,17749,0.0
+Kaafu,gm_hospital,04:00,240,0,17749,0.0
+All 23,gm_hospital,04:00,30,0,31414,0.0
+All 23,gm_hospital,04:00,60,0,31414,0.0
+All 23,gm_hospital,04:00,90,0,31414,0.0
+All 23,gm_hospital,04:00,120,0,31414,0.0
+All 23,gm_hospital,04:00,240,0,31414,0.0
+Kaafu,gm_hospital,04:15,30,0,17749,0.0
+Kaafu,gm_hospital,04:15,60,0,17749,0.0
+Kaafu,gm_hospital,04:15,90,0,17749,0.0
+Kaafu,gm_hospital,04:15,120,0,17749,0.0
+Kaafu,gm_hospital,04:15,240,0,17749,0.0
+All 23,gm_hospital,04:15,30,0,31414,0.0
+All 23,gm_hospital,04:15,60,0,31414,0.0
+All 23,gm_hospital,04:15,90,0,31414,0.0
+All 23,gm_hospital,04:15,120,0,31414,0.0
+All 23,gm_hospital,04:15,240,0,31414,0.0
+Kaafu,gm_hospital,04:30,30,0,17749,0.0
+Kaafu,gm_hospital,04:30,60,0,17749,0.0
+Kaafu,gm_hospital,04:30,90,0,17749,0.0
+Kaafu,gm_hospital,04:30,120,0,17749,0.0
+Kaafu,gm_hospital,04:30,240,0,17749,0.0
+All 23,gm_hospital,04:30,30,0,31414,0.0
+All 23,gm_hospital,04:30,60,0,31414,0.0
+All 23,gm_hospital,04:30,90,0,31414,0.0
+All 23,gm_hospital,04:30,120,0,31414,0.0
+All 23,gm_hospital,04:30,240,0,31414,0.0
+Kaafu,gm_hospital,04:45,30,0,17749,0.0
+Kaafu,gm_hospital,04:45,60,0,17749,0.0
+Kaafu,gm_hospital,04:45,90,0,17749,0.0
+Kaafu,gm_hospital,04:45,120,0,17749,0.0
+Kaafu,gm_hospital,04:45,240,0,17749,0.0
+All 23,gm_hospital,04:45,30,0,31414,0.0
+All 23,gm_hospital,04:45,60,0,31414,0.0
+All 23,gm_hospital,04:45,90,0,31414,0.0
+All 23,gm_hospital,04:45,120,0,31414,0.0
+All 23,gm_hospital,04:45,240,0,31414,0.0
+Kaafu,gm_hospital,05:00,30,0,17749,0.0
+Kaafu,gm_hospital,05:00,60,0,17749,0.0
+Kaafu,gm_hospital,05:00,90,0,17749,0.0
+Kaafu,gm_hospital,05:00,120,0,17749,0.0
+Kaafu,gm_hospital,05:00,240,6737,17749,38.0
+All 23,gm_hospital,05:00,30,0,31414,0.0
+All 23,gm_hospital,05:00,60,0,31414,0.0
+All 23,gm_hospital,05:00,90,0,31414,0.0
+All 23,gm_hospital,05:00,120,0,31414,0.0
+All 23,gm_hospital,05:00,240,6737,31414,21.4
+Kaafu,gm_hospital,05:15,30,0,17749,0.0
+Kaafu,gm_hospital,05:15,60,0,17749,0.0
+Kaafu,gm_hospital,05:15,90,0,17749,0.0
+Kaafu,gm_hospital,05:15,120,0,17749,0.0
+Kaafu,gm_hospital,05:15,240,6737,17749,38.0
+All 23,gm_hospital,05:15,30,0,31414,0.0
+All 23,gm_hospital,05:15,60,0,31414,0.0
+All 23,gm_hospital,05:15,90,0,31414,0.0
+All 23,gm_hospital,05:15,120,0,31414,0.0
+All 23,gm_hospital,05:15,240,6737,31414,21.4
+Kaafu,gm_hospital,05:30,30,0,17749,0.0
+Kaafu,gm_hospital,05:30,60,0,17749,0.0
+Kaafu,gm_hospital,05:30,90,0,17749,0.0
+Kaafu,gm_hospital,05:30,120,0,17749,0.0
+Kaafu,gm_hospital,05:30,240,13927,17749,78.5
+All 23,gm_hospital,05:30,30,0,31414,0.0
+All 23,gm_hospital,05:30,60,0,31414,0.0
+All 23,gm_hospital,05:30,90,0,31414,0.0
+All 23,gm_hospital,05:30,120,0,31414,0.0
+All 23,gm_hospital,05:30,240,13927,31414,44.3
+Kaafu,gm_hospital,05:45,30,0,17749,0.0
+Kaafu,gm_hospital,05:45,60,0,17749,0.0
+Kaafu,gm_hospital,05:45,90,0,17749,0.0
+Kaafu,gm_hospital,05:45,120,0,17749,0.0
+Kaafu,gm_hospital,05:45,240,13927,17749,78.5
+All 23,gm_hospital,05:45,30,0,31414,0.0
+All 23,gm_hospital,05:45,60,0,31414,0.0
+All 23,gm_hospital,05:45,90,0,31414,0.0
+All 23,gm_hospital,05:45,120,0,31414,0.0
+All 23,gm_hospital,05:45,240,13927,31414,44.3
+Kaafu,gm_hospital,06:00,30,0,17749,0.0
+Kaafu,gm_hospital,06:00,60,0,17749,0.0
+Kaafu,gm_hospital,06:00,90,0,17749,0.0
+Kaafu,gm_hospital,06:00,120,0,17749,0.0
+Kaafu,gm_hospital,06:00,240,13927,17749,78.5
+All 23,gm_hospital,06:00,30,0,31414,0.0
+All 23,gm_hospital,06:00,60,0,31414,0.0
+All 23,gm_hospital,06:00,90,0,31414,0.0
+All 23,gm_hospital,06:00,120,0,31414,0.0
+All 23,gm_hospital,06:00,240,13927,31414,44.3
+Kaafu,gm_hospital,06:15,30,0,17749,0.0
+Kaafu,gm_hospital,06:15,60,0,17749,0.0
+Kaafu,gm_hospital,06:15,90,0,17749,0.0
+Kaafu,gm_hospital,06:15,120,0,17749,0.0
+Kaafu,gm_hospital,06:15,240,13927,17749,78.5
+All 23,gm_hospital,06:15,30,0,31414,0.0
+All 23,gm_hospital,06:15,60,0,31414,0.0
+All 23,gm_hospital,06:15,90,0,31414,0.0
+All 23,gm_hospital,06:15,120,0,31414,0.0
+All 23,gm_hospital,06:15,240,13927,31414,44.3
+Kaafu,gm_hospital,06:30,30,0,17749,0.0
+Kaafu,gm_hospital,06:30,60,0,17749,0.0
+Kaafu,gm_hospital,06:30,90,0,17749,0.0
+Kaafu,gm_hospital,06:30,120,0,17749,0.0
+Kaafu,gm_hospital,06:30,240,12657,17749,71.3
+All 23,gm_hospital,06:30,30,0,31414,0.0
+All 23,gm_hospital,06:30,60,0,31414,0.0
+All 23,gm_hospital,06:30,90,0,31414,0.0
+All 23,gm_hospital,06:30,120,0,31414,0.0
+All 23,gm_hospital,06:30,240,12657,31414,40.3
+Kaafu,gm_hospital,06:45,30,0,17749,0.0
+Kaafu,gm_hospital,06:45,60,0,17749,0.0
+Kaafu,gm_hospital,06:45,90,0,17749,0.0
+Kaafu,gm_hospital,06:45,120,0,17749,0.0
+Kaafu,gm_hospital,06:45,240,12657,17749,71.3
+All 23,gm_hospital,06:45,30,0,31414,0.0
+All 23,gm_hospital,06:45,60,0,31414,0.0
+All 23,gm_hospital,06:45,90,0,31414,0.0
+All 23,gm_hospital,06:45,120,0,31414,0.0
+All 23,gm_hospital,06:45,240,12657,31414,40.3
+Kaafu,gm_hospital,07:00,30,0,17749,0.0
+Kaafu,gm_hospital,07:00,60,0,17749,0.0
+Kaafu,gm_hospital,07:00,90,0,17749,0.0
+Kaafu,gm_hospital,07:00,120,5467,17749,30.8
+Kaafu,gm_hospital,07:00,240,10914,17749,61.5
+All 23,gm_hospital,07:00,30,0,31414,0.0
+All 23,gm_hospital,07:00,60,0,31414,0.0
+All 23,gm_hospital,07:00,90,0,31414,0.0
+All 23,gm_hospital,07:00,120,5467,31414,17.4
+All 23,gm_hospital,07:00,240,10914,31414,34.7
+Kaafu,gm_hospital,07:15,30,0,17749,0.0
+Kaafu,gm_hospital,07:15,60,0,17749,0.0
+Kaafu,gm_hospital,07:15,90,0,17749,0.0
+Kaafu,gm_hospital,07:15,120,3666,17749,20.7
+Kaafu,gm_hospital,07:15,240,9113,17749,51.3
+All 23,gm_hospital,07:15,30,0,31414,0.0
+All 23,gm_hospital,07:15,60,0,31414,0.0
+All 23,gm_hospital,07:15,90,0,31414,0.0
+All 23,gm_hospital,07:15,120,3666,31414,11.7
+All 23,gm_hospital,07:15,240,9113,31414,29.0
+Kaafu,gm_hospital,07:30,30,0,17749,0.0
+Kaafu,gm_hospital,07:30,60,0,17749,0.0
+Kaafu,gm_hospital,07:30,90,3666,17749,20.7
+Kaafu,gm_hospital,07:30,120,4642,17749,26.2
+Kaafu,gm_hospital,07:30,240,4642,17749,26.2
+All 23,gm_hospital,07:30,30,0,31414,0.0
+All 23,gm_hospital,07:30,60,0,31414,0.0
+All 23,gm_hospital,07:30,90,3666,31414,11.7
+All 23,gm_hospital,07:30,120,4642,31414,14.8
+All 23,gm_hospital,07:30,240,4642,31414,14.8
+Kaafu,gm_hospital,07:45,30,0,17749,0.0
+Kaafu,gm_hospital,07:45,60,0,17749,0.0
+Kaafu,gm_hospital,07:45,90,2012,17749,11.3
+Kaafu,gm_hospital,07:45,120,2988,17749,16.8
+Kaafu,gm_hospital,07:45,240,2988,17749,16.8
+All 23,gm_hospital,07:45,30,0,31414,0.0
+All 23,gm_hospital,07:45,60,0,31414,0.0
+All 23,gm_hospital,07:45,90,2012,31414,6.4
+All 23,gm_hospital,07:45,120,2988,31414,9.5
+All 23,gm_hospital,07:45,240,2988,31414,9.5
+Kaafu,gm_hospital,08:00,30,0,17749,0.0
+Kaafu,gm_hospital,08:00,60,0,17749,0.0
+Kaafu,gm_hospital,08:00,90,0,17749,0.0
+Kaafu,gm_hospital,08:00,120,0,17749,0.0
+Kaafu,gm_hospital,08:00,240,1294,17749,7.3
+All 23,gm_hospital,08:00,30,0,31414,0.0
+All 23,gm_hospital,08:00,60,0,31414,0.0
+All 23,gm_hospital,08:00,90,0,31414,0.0
+All 23,gm_hospital,08:00,120,0,31414,0.0
+All 23,gm_hospital,08:00,240,1294,31414,4.1
+Kaafu,gm_hospital,08:15,30,0,17749,0.0
+Kaafu,gm_hospital,08:15,60,0,17749,0.0
+Kaafu,gm_hospital,08:15,90,0,17749,0.0
+Kaafu,gm_hospital,08:15,120,0,17749,0.0
+Kaafu,gm_hospital,08:15,240,1294,17749,7.3
+All 23,gm_hospital,08:15,30,0,31414,0.0
+All 23,gm_hospital,08:15,60,0,31414,0.0
+All 23,gm_hospital,08:15,90,0,31414,0.0
+All 23,gm_hospital,08:15,120,0,31414,0.0
+All 23,gm_hospital,08:15,240,1294,31414,4.1
+Kaafu,gm_hospital,08:30,30,0,17749,0.0
+Kaafu,gm_hospital,08:30,60,0,17749,0.0
+Kaafu,gm_hospital,08:30,90,0,17749,0.0
+Kaafu,gm_hospital,08:30,120,0,17749,0.0
+Kaafu,gm_hospital,08:30,240,0,17749,0.0
+All 23,gm_hospital,08:30,30,0,31414,0.0
+All 23,gm_hospital,08:30,60,0,31414,0.0
+All 23,gm_hospital,08:30,90,0,31414,0.0
+All 23,gm_hospital,08:30,120,0,31414,0.0
+All 23,gm_hospital,08:30,240,0,31414,0.0
+Kaafu,gm_hospital,08:45,30,0,17749,0.0
+Kaafu,gm_hospital,08:45,60,0,17749,0.0
+Kaafu,gm_hospital,08:45,90,0,17749,0.0
+Kaafu,gm_hospital,08:45,120,0,17749,0.0
+Kaafu,gm_hospital,08:45,240,0,17749,0.0
+All 23,gm_hospital,08:45,30,0,31414,0.0
+All 23,gm_hospital,08:45,60,0,31414,0.0
+All 23,gm_hospital,08:45,90,0,31414,0.0
+All 23,gm_hospital,08:45,120,0,31414,0.0
+All 23,gm_hospital,08:45,240,0,31414,0.0
+Kaafu,gm_hospital,09:00,30,0,17749,0.0
+Kaafu,gm_hospital,09:00,60,0,17749,0.0
+Kaafu,gm_hospital,09:00,90,0,17749,0.0
+Kaafu,gm_hospital,09:00,120,0,17749,0.0
+Kaafu,gm_hospital,09:00,240,0,17749,0.0
+All 23,gm_hospital,09:00,30,0,31414,0.0
+All 23,gm_hospital,09:00,60,0,31414,0.0
+All 23,gm_hospital,09:00,90,0,31414,0.0
+All 23,gm_hospital,09:00,120,0,31414,0.0
+All 23,gm_hospital,09:00,240,0,31414,0.0
+Kaafu,gm_hospital,09:15,30,0,17749,0.0
+Kaafu,gm_hospital,09:15,60,0,17749,0.0
+Kaafu,gm_hospital,09:15,90,0,17749,0.0
+Kaafu,gm_hospital,09:15,120,0,17749,0.0
+Kaafu,gm_hospital,09:15,240,0,17749,0.0
+All 23,gm_hospital,09:15,30,0,31414,0.0
+All 23,gm_hospital,09:15,60,0,31414,0.0
+All 23,gm_hospital,09:15,90,0,31414,0.0
+All 23,gm_hospital,09:15,120,0,31414,0.0
+All 23,gm_hospital,09:15,240,0,31414,0.0
+Kaafu,gm_hospital,09:30,30,0,17749,0.0
+Kaafu,gm_hospital,09:30,60,0,17749,0.0
+Kaafu,gm_hospital,09:30,90,0,17749,0.0
+Kaafu,gm_hospital,09:30,120,0,17749,0.0
+Kaafu,gm_hospital,09:30,240,0,17749,0.0
+All 23,gm_hospital,09:30,30,0,31414,0.0
+All 23,gm_hospital,09:30,60,0,31414,0.0
+All 23,gm_hospital,09:30,90,0,31414,0.0
+All 23,gm_hospital,09:30,120,0,31414,0.0
+All 23,gm_hospital,09:30,240,0,31414,0.0
+Kaafu,gm_hospital,09:45,30,0,17749,0.0
+Kaafu,gm_hospital,09:45,60,0,17749,0.0
+Kaafu,gm_hospital,09:45,90,0,17749,0.0
+Kaafu,gm_hospital,09:45,120,0,17749,0.0
+Kaafu,gm_hospital,09:45,240,0,17749,0.0
+All 23,gm_hospital,09:45,30,0,31414,0.0
+All 23,gm_hospital,09:45,60,0,31414,0.0
+All 23,gm_hospital,09:45,90,0,31414,0.0
+All 23,gm_hospital,09:45,120,0,31414,0.0
+All 23,gm_hospital,09:45,240,0,31414,0.0
+Kaafu,gm_hospital,10:00,30,0,17749,0.0
+Kaafu,gm_hospital,10:00,60,0,17749,0.0
+Kaafu,gm_hospital,10:00,90,0,17749,0.0
+Kaafu,gm_hospital,10:00,120,0,17749,0.0
+Kaafu,gm_hospital,10:00,240,0,17749,0.0
+All 23,gm_hospital,10:00,30,0,31414,0.0
+All 23,gm_hospital,10:00,60,0,31414,0.0
+All 23,gm_hospital,10:00,90,0,31414,0.0
+All 23,gm_hospital,10:00,120,0,31414,0.0
+All 23,gm_hospital,10:00,240,0,31414,0.0
+Kaafu,gm_hospital,10:15,30,0,17749,0.0
+Kaafu,gm_hospital,10:15,60,0,17749,0.0
+Kaafu,gm_hospital,10:15,90,0,17749,0.0
+Kaafu,gm_hospital,10:15,120,0,17749,0.0
+Kaafu,gm_hospital,10:15,240,0,17749,0.0
+All 23,gm_hospital,10:15,30,0,31414,0.0
+All 23,gm_hospital,10:15,60,0,31414,0.0
+All 23,gm_hospital,10:15,90,0,31414,0.0
+All 23,gm_hospital,10:15,120,0,31414,0.0
+All 23,gm_hospital,10:15,240,0,31414,0.0
+Kaafu,gm_hospital,10:30,30,0,17749,0.0
+Kaafu,gm_hospital,10:30,60,0,17749,0.0
+Kaafu,gm_hospital,10:30,90,0,17749,0.0
+Kaafu,gm_hospital,10:30,120,0,17749,0.0
+Kaafu,gm_hospital,10:30,240,4471,17749,25.2
+All 23,gm_hospital,10:30,30,0,31414,0.0
+All 23,gm_hospital,10:30,60,0,31414,0.0
+All 23,gm_hospital,10:30,90,0,31414,0.0
+All 23,gm_hospital,10:30,120,0,31414,0.0
+All 23,gm_hospital,10:30,240,6153,31414,19.6
+Kaafu,gm_hospital,10:45,30,0,17749,0.0
+Kaafu,gm_hospital,10:45,60,0,17749,0.0
+Kaafu,gm_hospital,10:45,90,0,17749,0.0
+Kaafu,gm_hospital,10:45,120,0,17749,0.0
+Kaafu,gm_hospital,10:45,240,4471,17749,25.2
+All 23,gm_hospital,10:45,30,0,31414,0.0
+All 23,gm_hospital,10:45,60,0,31414,0.0
+All 23,gm_hospital,10:45,90,0,31414,0.0
+All 23,gm_hospital,10:45,120,0,31414,0.0
+All 23,gm_hospital,10:45,240,5753,31414,18.3
+Kaafu,gm_hospital,11:00,30,0,17749,0.0
+Kaafu,gm_hospital,11:00,60,0,17749,0.0
+Kaafu,gm_hospital,11:00,90,0,17749,0.0
+Kaafu,gm_hospital,11:00,120,0,17749,0.0
+Kaafu,gm_hospital,11:00,240,4471,17749,25.2
+All 23,gm_hospital,11:00,30,0,31414,0.0
+All 23,gm_hospital,11:00,60,0,31414,0.0
+All 23,gm_hospital,11:00,90,0,31414,0.0
+All 23,gm_hospital,11:00,120,0,31414,0.0
+All 23,gm_hospital,11:00,240,4471,31414,14.2
+Kaafu,gm_hospital,11:15,30,0,17749,0.0
+Kaafu,gm_hospital,11:15,60,0,17749,0.0
+Kaafu,gm_hospital,11:15,90,0,17749,0.0
+Kaafu,gm_hospital,11:15,120,0,17749,0.0
+Kaafu,gm_hospital,11:15,240,4471,17749,25.2
+All 23,gm_hospital,11:15,30,0,31414,0.0
+All 23,gm_hospital,11:15,60,0,31414,0.0
+All 23,gm_hospital,11:15,90,0,31414,0.0
+All 23,gm_hospital,11:15,120,0,31414,0.0
+All 23,gm_hospital,11:15,240,4471,31414,14.2
+Kaafu,gm_hospital,11:30,30,0,17749,0.0
+Kaafu,gm_hospital,11:30,60,0,17749,0.0
+Kaafu,gm_hospital,11:30,90,0,17749,0.0
+Kaafu,gm_hospital,11:30,120,0,17749,0.0
+Kaafu,gm_hospital,11:30,240,4471,17749,25.2
+All 23,gm_hospital,11:30,30,0,31414,0.0
+All 23,gm_hospital,11:30,60,0,31414,0.0
+All 23,gm_hospital,11:30,90,0,31414,0.0
+All 23,gm_hospital,11:30,120,0,31414,0.0
+All 23,gm_hospital,11:30,240,4471,31414,14.2
+Kaafu,gm_hospital,11:45,30,0,17749,0.0
+Kaafu,gm_hospital,11:45,60,0,17749,0.0
+Kaafu,gm_hospital,11:45,90,0,17749,0.0
+Kaafu,gm_hospital,11:45,120,0,17749,0.0
+Kaafu,gm_hospital,11:45,240,4471,17749,25.2
+All 23,gm_hospital,11:45,30,0,31414,0.0
+All 23,gm_hospital,11:45,60,0,31414,0.0
+All 23,gm_hospital,11:45,90,0,31414,0.0
+All 23,gm_hospital,11:45,120,0,31414,0.0
+All 23,gm_hospital,11:45,240,4471,31414,14.2
+Kaafu,gm_hospital,12:00,30,0,17749,0.0
+Kaafu,gm_hospital,12:00,60,0,17749,0.0
+Kaafu,gm_hospital,12:00,90,0,17749,0.0
+Kaafu,gm_hospital,12:00,120,0,17749,0.0
+Kaafu,gm_hospital,12:00,240,4471,17749,25.2
+All 23,gm_hospital,12:00,30,0,31414,0.0
+All 23,gm_hospital,12:00,60,0,31414,0.0
+All 23,gm_hospital,12:00,90,0,31414,0.0
+All 23,gm_hospital,12:00,120,0,31414,0.0
+All 23,gm_hospital,12:00,240,4471,31414,14.2
+Kaafu,gm_hospital,12:15,30,0,17749,0.0
+Kaafu,gm_hospital,12:15,60,0,17749,0.0
+Kaafu,gm_hospital,12:15,90,0,17749,0.0
+Kaafu,gm_hospital,12:15,120,0,17749,0.0
+Kaafu,gm_hospital,12:15,240,4471,17749,25.2
+All 23,gm_hospital,12:15,30,0,31414,0.0
+All 23,gm_hospital,12:15,60,0,31414,0.0
+All 23,gm_hospital,12:15,90,0,31414,0.0
+All 23,gm_hospital,12:15,120,0,31414,0.0
+All 23,gm_hospital,12:15,240,4471,31414,14.2
+Kaafu,gm_hospital,12:30,30,0,17749,0.0
+Kaafu,gm_hospital,12:30,60,0,17749,0.0
+Kaafu,gm_hospital,12:30,90,0,17749,0.0
+Kaafu,gm_hospital,12:30,120,4471,17749,25.2
+Kaafu,gm_hospital,12:30,240,4471,17749,25.2
+All 23,gm_hospital,12:30,30,0,31414,0.0
+All 23,gm_hospital,12:30,60,0,31414,0.0
+All 23,gm_hospital,12:30,90,0,31414,0.0
+All 23,gm_hospital,12:30,120,4471,31414,14.2
+All 23,gm_hospital,12:30,240,4471,31414,14.2
+Kaafu,gm_hospital,12:45,30,0,17749,0.0
+Kaafu,gm_hospital,12:45,60,0,17749,0.0
+Kaafu,gm_hospital,12:45,90,0,17749,0.0
+Kaafu,gm_hospital,12:45,120,0,17749,0.0
+Kaafu,gm_hospital,12:45,240,0,17749,0.0
+All 23,gm_hospital,12:45,30,0,31414,0.0
+All 23,gm_hospital,12:45,60,0,31414,0.0
+All 23,gm_hospital,12:45,90,0,31414,0.0
+All 23,gm_hospital,12:45,120,0,31414,0.0
+All 23,gm_hospital,12:45,240,0,31414,0.0
+Kaafu,gm_hospital,13:00,30,0,17749,0.0
+Kaafu,gm_hospital,13:00,60,0,17749,0.0
+Kaafu,gm_hospital,13:00,90,0,17749,0.0
+Kaafu,gm_hospital,13:00,120,0,17749,0.0
+Kaafu,gm_hospital,13:00,240,0,17749,0.0
+All 23,gm_hospital,13:00,30,0,31414,0.0
+All 23,gm_hospital,13:00,60,0,31414,0.0
+All 23,gm_hospital,13:00,90,0,31414,0.0
+All 23,gm_hospital,13:00,120,0,31414,0.0
+All 23,gm_hospital,13:00,240,0,31414,0.0
+Kaafu,gm_hospital,13:15,30,0,17749,0.0
+Kaafu,gm_hospital,13:15,60,0,17749,0.0
+Kaafu,gm_hospital,13:15,90,0,17749,0.0
+Kaafu,gm_hospital,13:15,120,0,17749,0.0
+Kaafu,gm_hospital,13:15,240,0,17749,0.0
+All 23,gm_hospital,13:15,30,0,31414,0.0
+All 23,gm_hospital,13:15,60,0,31414,0.0
+All 23,gm_hospital,13:15,90,0,31414,0.0
+All 23,gm_hospital,13:15,120,0,31414,0.0
+All 23,gm_hospital,13:15,240,0,31414,0.0
+Kaafu,gm_hospital,13:30,30,0,17749,0.0
+Kaafu,gm_hospital,13:30,60,0,17749,0.0
+Kaafu,gm_hospital,13:30,90,0,17749,0.0
+Kaafu,gm_hospital,13:30,120,0,17749,0.0
+Kaafu,gm_hospital,13:30,240,0,17749,0.0
+All 23,gm_hospital,13:30,30,0,31414,0.0
+All 23,gm_hospital,13:30,60,0,31414,0.0
+All 23,gm_hospital,13:30,90,0,31414,0.0
+All 23,gm_hospital,13:30,120,0,31414,0.0
+All 23,gm_hospital,13:30,240,0,31414,0.0
+Kaafu,gm_hospital,13:45,30,0,17749,0.0
+Kaafu,gm_hospital,13:45,60,0,17749,0.0
+Kaafu,gm_hospital,13:45,90,0,17749,0.0
+Kaafu,gm_hospital,13:45,120,0,17749,0.0
+Kaafu,gm_hospital,13:45,240,0,17749,0.0
+All 23,gm_hospital,13:45,30,0,31414,0.0
+All 23,gm_hospital,13:45,60,0,31414,0.0
+All 23,gm_hospital,13:45,90,0,31414,0.0
+All 23,gm_hospital,13:45,120,0,31414,0.0
+All 23,gm_hospital,13:45,240,0,31414,0.0
+Kaafu,gm_hospital,14:00,30,0,17749,0.0
+Kaafu,gm_hospital,14:00,60,0,17749,0.0
+Kaafu,gm_hospital,14:00,90,0,17749,0.0
+Kaafu,gm_hospital,14:00,120,0,17749,0.0
+Kaafu,gm_hospital,14:00,240,0,17749,0.0
+All 23,gm_hospital,14:00,30,0,31414,0.0
+All 23,gm_hospital,14:00,60,0,31414,0.0
+All 23,gm_hospital,14:00,90,0,31414,0.0
+All 23,gm_hospital,14:00,120,0,31414,0.0
+All 23,gm_hospital,14:00,240,0,31414,0.0
+Kaafu,gm_hospital,14:15,30,0,17749,0.0
+Kaafu,gm_hospital,14:15,60,0,17749,0.0
+Kaafu,gm_hospital,14:15,90,0,17749,0.0
+Kaafu,gm_hospital,14:15,120,0,17749,0.0
+Kaafu,gm_hospital,14:15,240,0,17749,0.0
+All 23,gm_hospital,14:15,30,0,31414,0.0
+All 23,gm_hospital,14:15,60,0,31414,0.0
+All 23,gm_hospital,14:15,90,0,31414,0.0
+All 23,gm_hospital,14:15,120,0,31414,0.0
+All 23,gm_hospital,14:15,240,0,31414,0.0
+Kaafu,gm_hospital,14:30,30,0,17749,0.0
+Kaafu,gm_hospital,14:30,60,0,17749,0.0
+Kaafu,gm_hospital,14:30,90,0,17749,0.0
+Kaafu,gm_hospital,14:30,120,0,17749,0.0
+Kaafu,gm_hospital,14:30,240,0,17749,0.0
+All 23,gm_hospital,14:30,30,0,31414,0.0
+All 23,gm_hospital,14:30,60,0,31414,0.0
+All 23,gm_hospital,14:30,90,0,31414,0.0
+All 23,gm_hospital,14:30,120,0,31414,0.0
+All 23,gm_hospital,14:30,240,0,31414,0.0
+Kaafu,gm_hospital,14:45,30,0,17749,0.0
+Kaafu,gm_hospital,14:45,60,0,17749,0.0
+Kaafu,gm_hospital,14:45,90,0,17749,0.0
+Kaafu,gm_hospital,14:45,120,0,17749,0.0
+Kaafu,gm_hospital,14:45,240,0,17749,0.0
+All 23,gm_hospital,14:45,30,0,31414,0.0
+All 23,gm_hospital,14:45,60,0,31414,0.0
+All 23,gm_hospital,14:45,90,0,31414,0.0
+All 23,gm_hospital,14:45,120,0,31414,0.0
+All 23,gm_hospital,14:45,240,0,31414,0.0
+Kaafu,gm_hospital,15:00,30,0,17749,0.0
+Kaafu,gm_hospital,15:00,60,0,17749,0.0
+Kaafu,gm_hospital,15:00,90,0,17749,0.0
+Kaafu,gm_hospital,15:00,120,0,17749,0.0
+Kaafu,gm_hospital,15:00,240,0,17749,0.0
+All 23,gm_hospital,15:00,30,0,31414,0.0
+All 23,gm_hospital,15:00,60,0,31414,0.0
+All 23,gm_hospital,15:00,90,0,31414,0.0
+All 23,gm_hospital,15:00,120,0,31414,0.0
+All 23,gm_hospital,15:00,240,0,31414,0.0
+Kaafu,gm_hospital,15:15,30,0,17749,0.0
+Kaafu,gm_hospital,15:15,60,0,17749,0.0
+Kaafu,gm_hospital,15:15,90,0,17749,0.0
+Kaafu,gm_hospital,15:15,120,0,17749,0.0
+Kaafu,gm_hospital,15:15,240,0,17749,0.0
+All 23,gm_hospital,15:15,30,0,31414,0.0
+All 23,gm_hospital,15:15,60,0,31414,0.0
+All 23,gm_hospital,15:15,90,0,31414,0.0
+All 23,gm_hospital,15:15,120,0,31414,0.0
+All 23,gm_hospital,15:15,240,0,31414,0.0
+Kaafu,gm_hospital,15:30,30,0,17749,0.0
+Kaafu,gm_hospital,15:30,60,0,17749,0.0
+Kaafu,gm_hospital,15:30,90,0,17749,0.0
+Kaafu,gm_hospital,15:30,120,0,17749,0.0
+Kaafu,gm_hospital,15:30,240,0,17749,0.0
+All 23,gm_hospital,15:30,30,0,31414,0.0
+All 23,gm_hospital,15:30,60,0,31414,0.0
+All 23,gm_hospital,15:30,90,0,31414,0.0
+All 23,gm_hospital,15:30,120,0,31414,0.0
+All 23,gm_hospital,15:30,240,0,31414,0.0
+Kaafu,gm_hospital,15:45,30,0,17749,0.0
+Kaafu,gm_hospital,15:45,60,0,17749,0.0
+Kaafu,gm_hospital,15:45,90,0,17749,0.0
+Kaafu,gm_hospital,15:45,120,0,17749,0.0
+Kaafu,gm_hospital,15:45,240,0,17749,0.0
+All 23,gm_hospital,15:45,30,0,31414,0.0
+All 23,gm_hospital,15:45,60,0,31414,0.0
+All 23,gm_hospital,15:45,90,0,31414,0.0
+All 23,gm_hospital,15:45,120,0,31414,0.0
+All 23,gm_hospital,15:45,240,0,31414,0.0
+Kaafu,gm_hospital,16:00,30,0,17749,0.0
+Kaafu,gm_hospital,16:00,60,0,17749,0.0
+Kaafu,gm_hospital,16:00,90,0,17749,0.0
+Kaafu,gm_hospital,16:00,120,0,17749,0.0
+Kaafu,gm_hospital,16:00,240,0,17749,0.0
+All 23,gm_hospital,16:00,30,0,31414,0.0
+All 23,gm_hospital,16:00,60,0,31414,0.0
+All 23,gm_hospital,16:00,90,0,31414,0.0
+All 23,gm_hospital,16:00,120,0,31414,0.0
+All 23,gm_hospital,16:00,240,0,31414,0.0
+Kaafu,gm_hospital,16:15,30,0,17749,0.0
+Kaafu,gm_hospital,16:15,60,0,17749,0.0
+Kaafu,gm_hospital,16:15,90,0,17749,0.0
+Kaafu,gm_hospital,16:15,120,0,17749,0.0
+Kaafu,gm_hospital,16:15,240,0,17749,0.0
+All 23,gm_hospital,16:15,30,0,31414,0.0
+All 23,gm_hospital,16:15,60,0,31414,0.0
+All 23,gm_hospital,16:15,90,0,31414,0.0
+All 23,gm_hospital,16:15,120,0,31414,0.0
+All 23,gm_hospital,16:15,240,0,31414,0.0
+Kaafu,gm_hospital,16:30,30,0,17749,0.0
+Kaafu,gm_hospital,16:30,60,0,17749,0.0
+Kaafu,gm_hospital,16:30,90,0,17749,0.0
+Kaafu,gm_hospital,16:30,120,0,17749,0.0
+Kaafu,gm_hospital,16:30,240,0,17749,0.0
+All 23,gm_hospital,16:30,30,0,31414,0.0
+All 23,gm_hospital,16:30,60,0,31414,0.0
+All 23,gm_hospital,16:30,90,0,31414,0.0
+All 23,gm_hospital,16:30,120,0,31414,0.0
+All 23,gm_hospital,16:30,240,0,31414,0.0
+Kaafu,gm_hospital,16:45,30,0,17749,0.0
+Kaafu,gm_hospital,16:45,60,0,17749,0.0
+Kaafu,gm_hospital,16:45,90,0,17749,0.0
+Kaafu,gm_hospital,16:45,120,0,17749,0.0
+Kaafu,gm_hospital,16:45,240,0,17749,0.0
+All 23,gm_hospital,16:45,30,0,31414,0.0
+All 23,gm_hospital,16:45,60,0,31414,0.0
+All 23,gm_hospital,16:45,90,0,31414,0.0
+All 23,gm_hospital,16:45,120,0,31414,0.0
+All 23,gm_hospital,16:45,240,0,31414,0.0
+Kaafu,gm_hospital,17:00,30,0,17749,0.0
+Kaafu,gm_hospital,17:00,60,0,17749,0.0
+Kaafu,gm_hospital,17:00,90,0,17749,0.0
+Kaafu,gm_hospital,17:00,120,0,17749,0.0
+Kaafu,gm_hospital,17:00,240,0,17749,0.0
+All 23,gm_hospital,17:00,30,0,31414,0.0
+All 23,gm_hospital,17:00,60,0,31414,0.0
+All 23,gm_hospital,17:00,90,0,31414,0.0
+All 23,gm_hospital,17:00,120,0,31414,0.0
+All 23,gm_hospital,17:00,240,0,31414,0.0
+Kaafu,gm_hospital,17:15,30,0,17749,0.0
+Kaafu,gm_hospital,17:15,60,0,17749,0.0
+Kaafu,gm_hospital,17:15,90,0,17749,0.0
+Kaafu,gm_hospital,17:15,120,0,17749,0.0
+Kaafu,gm_hospital,17:15,240,0,17749,0.0
+All 23,gm_hospital,17:15,30,0,31414,0.0
+All 23,gm_hospital,17:15,60,0,31414,0.0
+All 23,gm_hospital,17:15,90,0,31414,0.0
+All 23,gm_hospital,17:15,120,0,31414,0.0
+All 23,gm_hospital,17:15,240,0,31414,0.0
+Kaafu,gm_hospital,17:30,30,0,17749,0.0
+Kaafu,gm_hospital,17:30,60,0,17749,0.0
+Kaafu,gm_hospital,17:30,90,0,17749,0.0
+Kaafu,gm_hospital,17:30,120,0,17749,0.0
+Kaafu,gm_hospital,17:30,240,0,17749,0.0
+All 23,gm_hospital,17:30,30,0,31414,0.0
+All 23,gm_hospital,17:30,60,0,31414,0.0
+All 23,gm_hospital,17:30,90,0,31414,0.0
+All 23,gm_hospital,17:30,120,0,31414,0.0
+All 23,gm_hospital,17:30,240,0,31414,0.0
+Kaafu,gm_hospital,17:45,30,0,17749,0.0
+Kaafu,gm_hospital,17:45,60,0,17749,0.0
+Kaafu,gm_hospital,17:45,90,0,17749,0.0
+Kaafu,gm_hospital,17:45,120,0,17749,0.0
+Kaafu,gm_hospital,17:45,240,0,17749,0.0
+All 23,gm_hospital,17:45,30,0,31414,0.0
+All 23,gm_hospital,17:45,60,0,31414,0.0
+All 23,gm_hospital,17:45,90,0,31414,0.0
+All 23,gm_hospital,17:45,120,0,31414,0.0
+All 23,gm_hospital,17:45,240,0,31414,0.0
+Kaafu,gm_hospital,18:00,30,0,17749,0.0
+Kaafu,gm_hospital,18:00,60,0,17749,0.0
+Kaafu,gm_hospital,18:00,90,0,17749,0.0
+Kaafu,gm_hospital,18:00,120,0,17749,0.0
+Kaafu,gm_hospital,18:00,240,0,17749,0.0
+All 23,gm_hospital,18:00,30,0,31414,0.0
+All 23,gm_hospital,18:00,60,0,31414,0.0
+All 23,gm_hospital,18:00,90,0,31414,0.0
+All 23,gm_hospital,18:00,120,0,31414,0.0
+All 23,gm_hospital,18:00,240,0,31414,0.0
+Kaafu,gm_hospital,18:15,30,0,17749,0.0
+Kaafu,gm_hospital,18:15,60,0,17749,0.0
+Kaafu,gm_hospital,18:15,90,0,17749,0.0
+Kaafu,gm_hospital,18:15,120,0,17749,0.0
+Kaafu,gm_hospital,18:15,240,0,17749,0.0
+All 23,gm_hospital,18:15,30,0,31414,0.0
+All 23,gm_hospital,18:15,60,0,31414,0.0
+All 23,gm_hospital,18:15,90,0,31414,0.0
+All 23,gm_hospital,18:15,120,0,31414,0.0
+All 23,gm_hospital,18:15,240,0,31414,0.0
+Kaafu,gm_hospital,18:30,30,0,17749,0.0
+Kaafu,gm_hospital,18:30,60,0,17749,0.0
+Kaafu,gm_hospital,18:30,90,0,17749,0.0
+Kaafu,gm_hospital,18:30,120,0,17749,0.0
+Kaafu,gm_hospital,18:30,240,0,17749,0.0
+All 23,gm_hospital,18:30,30,0,31414,0.0
+All 23,gm_hospital,18:30,60,0,31414,0.0
+All 23,gm_hospital,18:30,90,0,31414,0.0
+All 23,gm_hospital,18:30,120,0,31414,0.0
+All 23,gm_hospital,18:30,240,0,31414,0.0
+Kaafu,gm_hospital,18:45,30,0,17749,0.0
+Kaafu,gm_hospital,18:45,60,0,17749,0.0
+Kaafu,gm_hospital,18:45,90,0,17749,0.0
+Kaafu,gm_hospital,18:45,120,0,17749,0.0
+Kaafu,gm_hospital,18:45,240,0,17749,0.0
+All 23,gm_hospital,18:45,30,0,31414,0.0
+All 23,gm_hospital,18:45,60,0,31414,0.0
+All 23,gm_hospital,18:45,90,0,31414,0.0
+All 23,gm_hospital,18:45,120,0,31414,0.0
+All 23,gm_hospital,18:45,240,0,31414,0.0
+Kaafu,gm_hospital,19:00,30,0,17749,0.0
+Kaafu,gm_hospital,19:00,60,0,17749,0.0
+Kaafu,gm_hospital,19:00,90,0,17749,0.0
+Kaafu,gm_hospital,19:00,120,0,17749,0.0
+Kaafu,gm_hospital,19:00,240,0,17749,0.0
+All 23,gm_hospital,19:00,30,0,31414,0.0
+All 23,gm_hospital,19:00,60,0,31414,0.0
+All 23,gm_hospital,19:00,90,0,31414,0.0
+All 23,gm_hospital,19:00,120,0,31414,0.0
+All 23,gm_hospital,19:00,240,0,31414,0.0
+Kaafu,gm_hospital,19:15,30,0,17749,0.0
+Kaafu,gm_hospital,19:15,60,0,17749,0.0
+Kaafu,gm_hospital,19:15,90,0,17749,0.0
+Kaafu,gm_hospital,19:15,120,0,17749,0.0
+Kaafu,gm_hospital,19:15,240,0,17749,0.0
+All 23,gm_hospital,19:15,30,0,31414,0.0
+All 23,gm_hospital,19:15,60,0,31414,0.0
+All 23,gm_hospital,19:15,90,0,31414,0.0
+All 23,gm_hospital,19:15,120,0,31414,0.0
+All 23,gm_hospital,19:15,240,0,31414,0.0
+Kaafu,gm_hospital,19:30,30,0,17749,0.0
+Kaafu,gm_hospital,19:30,60,0,17749,0.0
+Kaafu,gm_hospital,19:30,90,0,17749,0.0
+Kaafu,gm_hospital,19:30,120,0,17749,0.0
+Kaafu,gm_hospital,19:30,240,0,17749,0.0
+All 23,gm_hospital,19:30,30,0,31414,0.0
+All 23,gm_hospital,19:30,60,0,31414,0.0
+All 23,gm_hospital,19:30,90,0,31414,0.0
+All 23,gm_hospital,19:30,120,0,31414,0.0
+All 23,gm_hospital,19:30,240,0,31414,0.0
+Kaafu,gm_hospital,19:45,30,0,17749,0.0
+Kaafu,gm_hospital,19:45,60,0,17749,0.0
+Kaafu,gm_hospital,19:45,90,0,17749,0.0
+Kaafu,gm_hospital,19:45,120,0,17749,0.0
+Kaafu,gm_hospital,19:45,240,0,17749,0.0
+All 23,gm_hospital,19:45,30,0,31414,0.0
+All 23,gm_hospital,19:45,60,0,31414,0.0
+All 23,gm_hospital,19:45,90,0,31414,0.0
+All 23,gm_hospital,19:45,120,0,31414,0.0
+All 23,gm_hospital,19:45,240,0,31414,0.0
+Kaafu,gm_hospital,20:00,30,0,17749,0.0
+Kaafu,gm_hospital,20:00,60,0,17749,0.0
+Kaafu,gm_hospital,20:00,90,0,17749,0.0
+Kaafu,gm_hospital,20:00,120,0,17749,0.0
+Kaafu,gm_hospital,20:00,240,0,17749,0.0
+All 23,gm_hospital,20:00,30,0,31414,0.0
+All 23,gm_hospital,20:00,60,0,31414,0.0
+All 23,gm_hospital,20:00,90,0,31414,0.0
+All 23,gm_hospital,20:00,120,0,31414,0.0
+All 23,gm_hospital,20:00,240,0,31414,0.0
+Kaafu,gm_hospital,20:15,30,0,17749,0.0
+Kaafu,gm_hospital,20:15,60,0,17749,0.0
+Kaafu,gm_hospital,20:15,90,0,17749,0.0
+Kaafu,gm_hospital,20:15,120,0,17749,0.0
+Kaafu,gm_hospital,20:15,240,0,17749,0.0
+All 23,gm_hospital,20:15,30,0,31414,0.0
+All 23,gm_hospital,20:15,60,0,31414,0.0
+All 23,gm_hospital,20:15,90,0,31414,0.0
+All 23,gm_hospital,20:15,120,0,31414,0.0
+All 23,gm_hospital,20:15,240,0,31414,0.0
+Kaafu,gm_hospital,20:30,30,0,17749,0.0
+Kaafu,gm_hospital,20:30,60,0,17749,0.0
+Kaafu,gm_hospital,20:30,90,0,17749,0.0
+Kaafu,gm_hospital,20:30,120,0,17749,0.0
+Kaafu,gm_hospital,20:30,240,0,17749,0.0
+All 23,gm_hospital,20:30,30,0,31414,0.0
+All 23,gm_hospital,20:30,60,0,31414,0.0
+All 23,gm_hospital,20:30,90,0,31414,0.0
+All 23,gm_hospital,20:30,120,0,31414,0.0
+All 23,gm_hospital,20:30,240,0,31414,0.0
+Kaafu,gm_hospital,20:45,30,0,17749,0.0
+Kaafu,gm_hospital,20:45,60,0,17749,0.0
+Kaafu,gm_hospital,20:45,90,0,17749,0.0
+Kaafu,gm_hospital,20:45,120,0,17749,0.0
+Kaafu,gm_hospital,20:45,240,0,17749,0.0
+All 23,gm_hospital,20:45,30,0,31414,0.0
+All 23,gm_hospital,20:45,60,0,31414,0.0
+All 23,gm_hospital,20:45,90,0,31414,0.0
+All 23,gm_hospital,20:45,120,0,31414,0.0
+All 23,gm_hospital,20:45,240,0,31414,0.0
+Kaafu,gm_hospital,21:00,30,0,17749,0.0
+Kaafu,gm_hospital,21:00,60,0,17749,0.0
+Kaafu,gm_hospital,21:00,90,0,17749,0.0
+Kaafu,gm_hospital,21:00,120,0,17749,0.0
+Kaafu,gm_hospital,21:00,240,0,17749,0.0
+All 23,gm_hospital,21:00,30,0,31414,0.0
+All 23,gm_hospital,21:00,60,0,31414,0.0
+All 23,gm_hospital,21:00,90,0,31414,0.0
+All 23,gm_hospital,21:00,120,0,31414,0.0
+All 23,gm_hospital,21:00,240,0,31414,0.0
+Kaafu,gm_hospital,21:15,30,0,17749,0.0
+Kaafu,gm_hospital,21:15,60,0,17749,0.0
+Kaafu,gm_hospital,21:15,90,0,17749,0.0
+Kaafu,gm_hospital,21:15,120,0,17749,0.0
+Kaafu,gm_hospital,21:15,240,0,17749,0.0
+All 23,gm_hospital,21:15,30,0,31414,0.0
+All 23,gm_hospital,21:15,60,0,31414,0.0
+All 23,gm_hospital,21:15,90,0,31414,0.0
+All 23,gm_hospital,21:15,120,0,31414,0.0
+All 23,gm_hospital,21:15,240,0,31414,0.0
+Kaafu,gm_hospital,21:30,30,0,17749,0.0
+Kaafu,gm_hospital,21:30,60,0,17749,0.0
+Kaafu,gm_hospital,21:30,90,0,17749,0.0
+Kaafu,gm_hospital,21:30,120,0,17749,0.0
+Kaafu,gm_hospital,21:30,240,0,17749,0.0
+All 23,gm_hospital,21:30,30,0,31414,0.0
+All 23,gm_hospital,21:30,60,0,31414,0.0
+All 23,gm_hospital,21:30,90,0,31414,0.0
+All 23,gm_hospital,21:30,120,0,31414,0.0
+All 23,gm_hospital,21:30,240,0,31414,0.0
+Kaafu,gm_hospital,21:45,30,0,17749,0.0
+Kaafu,gm_hospital,21:45,60,0,17749,0.0
+Kaafu,gm_hospital,21:45,90,0,17749,0.0
+Kaafu,gm_hospital,21:45,120,0,17749,0.0
+Kaafu,gm_hospital,21:45,240,0,17749,0.0
+All 23,gm_hospital,21:45,30,0,31414,0.0
+All 23,gm_hospital,21:45,60,0,31414,0.0
+All 23,gm_hospital,21:45,90,0,31414,0.0
+All 23,gm_hospital,21:45,120,0,31414,0.0
+All 23,gm_hospital,21:45,240,0,31414,0.0
+Kaafu,gm_hospital,22:00,30,0,17749,0.0
+Kaafu,gm_hospital,22:00,60,0,17749,0.0
+Kaafu,gm_hospital,22:00,90,0,17749,0.0
+Kaafu,gm_hospital,22:00,120,0,17749,0.0
+Kaafu,gm_hospital,22:00,240,0,17749,0.0
+All 23,gm_hospital,22:00,30,0,31414,0.0
+All 23,gm_hospital,22:00,60,0,31414,0.0
+All 23,gm_hospital,22:00,90,0,31414,0.0
+All 23,gm_hospital,22:00,120,0,31414,0.0
+All 23,gm_hospital,22:00,240,0,31414,0.0
+Kaafu,gm_hospital,22:15,30,0,17749,0.0
+Kaafu,gm_hospital,22:15,60,0,17749,0.0
+Kaafu,gm_hospital,22:15,90,0,17749,0.0
+Kaafu,gm_hospital,22:15,120,0,17749,0.0
+Kaafu,gm_hospital,22:15,240,0,17749,0.0
+All 23,gm_hospital,22:15,30,0,31414,0.0
+All 23,gm_hospital,22:15,60,0,31414,0.0
+All 23,gm_hospital,22:15,90,0,31414,0.0
+All 23,gm_hospital,22:15,120,0,31414,0.0
+All 23,gm_hospital,22:15,240,0,31414,0.0
+Kaafu,gm_hospital,22:30,30,0,17749,0.0
+Kaafu,gm_hospital,22:30,60,0,17749,0.0
+Kaafu,gm_hospital,22:30,90,0,17749,0.0
+Kaafu,gm_hospital,22:30,120,0,17749,0.0
+Kaafu,gm_hospital,22:30,240,0,17749,0.0
+All 23,gm_hospital,22:30,30,0,31414,0.0
+All 23,gm_hospital,22:30,60,0,31414,0.0
+All 23,gm_hospital,22:30,90,0,31414,0.0
+All 23,gm_hospital,22:30,120,0,31414,0.0
+All 23,gm_hospital,22:30,240,0,31414,0.0
+Kaafu,gm_hospital,22:45,30,0,17749,0.0
+Kaafu,gm_hospital,22:45,60,0,17749,0.0
+Kaafu,gm_hospital,22:45,90,0,17749,0.0
+Kaafu,gm_hospital,22:45,120,0,17749,0.0
+Kaafu,gm_hospital,22:45,240,0,17749,0.0
+All 23,gm_hospital,22:45,30,0,31414,0.0
+All 23,gm_hospital,22:45,60,0,31414,0.0
+All 23,gm_hospital,22:45,90,0,31414,0.0
+All 23,gm_hospital,22:45,120,0,31414,0.0
+All 23,gm_hospital,22:45,240,0,31414,0.0
+Kaafu,gm_hospital,23:00,30,0,17749,0.0
+Kaafu,gm_hospital,23:00,60,0,17749,0.0
+Kaafu,gm_hospital,23:00,90,0,17749,0.0
+Kaafu,gm_hospital,23:00,120,0,17749,0.0
+Kaafu,gm_hospital,23:00,240,0,17749,0.0
+All 23,gm_hospital,23:00,30,0,31414,0.0
+All 23,gm_hospital,23:00,60,0,31414,0.0
+All 23,gm_hospital,23:00,90,0,31414,0.0
+All 23,gm_hospital,23:00,120,0,31414,0.0
+All 23,gm_hospital,23:00,240,0,31414,0.0
+Kaafu,gm_hospital,23:15,30,0,17749,0.0
+Kaafu,gm_hospital,23:15,60,0,17749,0.0
+Kaafu,gm_hospital,23:15,90,0,17749,0.0
+Kaafu,gm_hospital,23:15,120,0,17749,0.0
+Kaafu,gm_hospital,23:15,240,0,17749,0.0
+All 23,gm_hospital,23:15,30,0,31414,0.0
+All 23,gm_hospital,23:15,60,0,31414,0.0
+All 23,gm_hospital,23:15,90,0,31414,0.0
+All 23,gm_hospital,23:15,120,0,31414,0.0
+All 23,gm_hospital,23:15,240,0,31414,0.0
+Kaafu,gm_hospital,23:30,30,0,17749,0.0
+Kaafu,gm_hospital,23:30,60,0,17749,0.0
+Kaafu,gm_hospital,23:30,90,0,17749,0.0
+Kaafu,gm_hospital,23:30,120,0,17749,0.0
+Kaafu,gm_hospital,23:30,240,0,17749,0.0
+All 23,gm_hospital,23:30,30,0,31414,0.0
+All 23,gm_hospital,23:30,60,0,31414,0.0
+All 23,gm_hospital,23:30,90,0,31414,0.0
+All 23,gm_hospital,23:30,120,0,31414,0.0
+All 23,gm_hospital,23:30,240,0,31414,0.0
+Kaafu,gm_hospital,23:45,30,0,17749,0.0
+Kaafu,gm_hospital,23:45,60,0,17749,0.0
+Kaafu,gm_hospital,23:45,90,0,17749,0.0
+Kaafu,gm_hospital,23:45,120,0,17749,0.0
+Kaafu,gm_hospital,23:45,240,0,17749,0.0
+All 23,gm_hospital,23:45,30,0,31414,0.0
+All 23,gm_hospital,23:45,60,0,31414,0.0
+All 23,gm_hospital,23:45,90,0,31414,0.0
+All 23,gm_hospital,23:45,120,0,31414,0.0
+All 23,gm_hospital,23:45,240,0,31414,0.0
+Kaafu,any_hospital,day_median,30,0,17749,0.0
+Kaafu,any_hospital,day_median,60,0,17749,0.0
+Kaafu,any_hospital,day_median,90,0,17749,0.0
+Kaafu,any_hospital,day_median,120,0,17749,0.0
+Kaafu,any_hospital,day_median,240,0,17749,0.0
+All 23,any_hospital,day_median,30,4482,31414,14.3
+All 23,any_hospital,day_median,60,4482,31414,14.3
+All 23,any_hospital,day_median,90,4482,31414,14.3
+All 23,any_hospital,day_median,120,4482,31414,14.3
+All 23,any_hospital,day_median,240,5879,31414,18.7
+Kaafu,any_hospital,00:00,30,0,17749,0.0
+Kaafu,any_hospital,00:00,60,0,17749,0.0
+Kaafu,any_hospital,00:00,90,0,17749,0.0
+Kaafu,any_hospital,00:00,120,0,17749,0.0
+Kaafu,any_hospital,00:00,240,0,17749,0.0
+All 23,any_hospital,00:00,30,4482,31414,14.3
+All 23,any_hospital,00:00,60,4482,31414,14.3
+All 23,any_hospital,00:00,90,4482,31414,14.3
+All 23,any_hospital,00:00,120,4482,31414,14.3
+All 23,any_hospital,00:00,240,4482,31414,14.3
+Kaafu,any_hospital,00:15,30,0,17749,0.0
+Kaafu,any_hospital,00:15,60,0,17749,0.0
+Kaafu,any_hospital,00:15,90,0,17749,0.0
+Kaafu,any_hospital,00:15,120,0,17749,0.0
+Kaafu,any_hospital,00:15,240,0,17749,0.0
+All 23,any_hospital,00:15,30,4482,31414,14.3
+All 23,any_hospital,00:15,60,4482,31414,14.3
+All 23,any_hospital,00:15,90,4482,31414,14.3
+All 23,any_hospital,00:15,120,4482,31414,14.3
+All 23,any_hospital,00:15,240,4482,31414,14.3
+Kaafu,any_hospital,00:30,30,0,17749,0.0
+Kaafu,any_hospital,00:30,60,0,17749,0.0
+Kaafu,any_hospital,00:30,90,0,17749,0.0
+Kaafu,any_hospital,00:30,120,0,17749,0.0
+Kaafu,any_hospital,00:30,240,0,17749,0.0
+All 23,any_hospital,00:30,30,4482,31414,14.3
+All 23,any_hospital,00:30,60,4482,31414,14.3
+All 23,any_hospital,00:30,90,4482,31414,14.3
+All 23,any_hospital,00:30,120,4482,31414,14.3
+All 23,any_hospital,00:30,240,4482,31414,14.3
+Kaafu,any_hospital,00:45,30,0,17749,0.0
+Kaafu,any_hospital,00:45,60,0,17749,0.0
+Kaafu,any_hospital,00:45,90,0,17749,0.0
+Kaafu,any_hospital,00:45,120,0,17749,0.0
+Kaafu,any_hospital,00:45,240,0,17749,0.0
+All 23,any_hospital,00:45,30,4482,31414,14.3
+All 23,any_hospital,00:45,60,4482,31414,14.3
+All 23,any_hospital,00:45,90,4482,31414,14.3
+All 23,any_hospital,00:45,120,4482,31414,14.3
+All 23,any_hospital,00:45,240,4482,31414,14.3
+Kaafu,any_hospital,01:00,30,0,17749,0.0
+Kaafu,any_hospital,01:00,60,0,17749,0.0
+Kaafu,any_hospital,01:00,90,0,17749,0.0
+Kaafu,any_hospital,01:00,120,0,17749,0.0
+Kaafu,any_hospital,01:00,240,0,17749,0.0
+All 23,any_hospital,01:00,30,4482,31414,14.3
+All 23,any_hospital,01:00,60,4482,31414,14.3
+All 23,any_hospital,01:00,90,4482,31414,14.3
+All 23,any_hospital,01:00,120,4482,31414,14.3
+All 23,any_hospital,01:00,240,4482,31414,14.3
+Kaafu,any_hospital,01:15,30,0,17749,0.0
+Kaafu,any_hospital,01:15,60,0,17749,0.0
+Kaafu,any_hospital,01:15,90,0,17749,0.0
+Kaafu,any_hospital,01:15,120,0,17749,0.0
+Kaafu,any_hospital,01:15,240,0,17749,0.0
+All 23,any_hospital,01:15,30,4482,31414,14.3
+All 23,any_hospital,01:15,60,4482,31414,14.3
+All 23,any_hospital,01:15,90,4482,31414,14.3
+All 23,any_hospital,01:15,120,4482,31414,14.3
+All 23,any_hospital,01:15,240,4482,31414,14.3
+Kaafu,any_hospital,01:30,30,0,17749,0.0
+Kaafu,any_hospital,01:30,60,0,17749,0.0
+Kaafu,any_hospital,01:30,90,0,17749,0.0
+Kaafu,any_hospital,01:30,120,0,17749,0.0
+Kaafu,any_hospital,01:30,240,0,17749,0.0
+All 23,any_hospital,01:30,30,4482,31414,14.3
+All 23,any_hospital,01:30,60,4482,31414,14.3
+All 23,any_hospital,01:30,90,4482,31414,14.3
+All 23,any_hospital,01:30,120,4482,31414,14.3
+All 23,any_hospital,01:30,240,4482,31414,14.3
+Kaafu,any_hospital,01:45,30,0,17749,0.0
+Kaafu,any_hospital,01:45,60,0,17749,0.0
+Kaafu,any_hospital,01:45,90,0,17749,0.0
+Kaafu,any_hospital,01:45,120,0,17749,0.0
+Kaafu,any_hospital,01:45,240,0,17749,0.0
+All 23,any_hospital,01:45,30,4482,31414,14.3
+All 23,any_hospital,01:45,60,4482,31414,14.3
+All 23,any_hospital,01:45,90,4482,31414,14.3
+All 23,any_hospital,01:45,120,4482,31414,14.3
+All 23,any_hospital,01:45,240,4482,31414,14.3
+Kaafu,any_hospital,02:00,30,0,17749,0.0
+Kaafu,any_hospital,02:00,60,0,17749,0.0
+Kaafu,any_hospital,02:00,90,0,17749,0.0
+Kaafu,any_hospital,02:00,120,0,17749,0.0
+Kaafu,any_hospital,02:00,240,0,17749,0.0
+All 23,any_hospital,02:00,30,4482,31414,14.3
+All 23,any_hospital,02:00,60,4482,31414,14.3
+All 23,any_hospital,02:00,90,4482,31414,14.3
+All 23,any_hospital,02:00,120,4482,31414,14.3
+All 23,any_hospital,02:00,240,4482,31414,14.3
+Kaafu,any_hospital,02:15,30,0,17749,0.0
+Kaafu,any_hospital,02:15,60,0,17749,0.0
+Kaafu,any_hospital,02:15,90,0,17749,0.0
+Kaafu,any_hospital,02:15,120,0,17749,0.0
+Kaafu,any_hospital,02:15,240,0,17749,0.0
+All 23,any_hospital,02:15,30,4482,31414,14.3
+All 23,any_hospital,02:15,60,4482,31414,14.3
+All 23,any_hospital,02:15,90,4482,31414,14.3
+All 23,any_hospital,02:15,120,4482,31414,14.3
+All 23,any_hospital,02:15,240,4482,31414,14.3
+Kaafu,any_hospital,02:30,30,0,17749,0.0
+Kaafu,any_hospital,02:30,60,0,17749,0.0
+Kaafu,any_hospital,02:30,90,0,17749,0.0
+Kaafu,any_hospital,02:30,120,0,17749,0.0
+Kaafu,any_hospital,02:30,240,0,17749,0.0
+All 23,any_hospital,02:30,30,4482,31414,14.3
+All 23,any_hospital,02:30,60,4482,31414,14.3
+All 23,any_hospital,02:30,90,4482,31414,14.3
+All 23,any_hospital,02:30,120,4482,31414,14.3
+All 23,any_hospital,02:30,240,4482,31414,14.3
+Kaafu,any_hospital,02:45,30,0,17749,0.0
+Kaafu,any_hospital,02:45,60,0,17749,0.0
+Kaafu,any_hospital,02:45,90,0,17749,0.0
+Kaafu,any_hospital,02:45,120,0,17749,0.0
+Kaafu,any_hospital,02:45,240,0,17749,0.0
+All 23,any_hospital,02:45,30,4482,31414,14.3
+All 23,any_hospital,02:45,60,4482,31414,14.3
+All 23,any_hospital,02:45,90,4482,31414,14.3
+All 23,any_hospital,02:45,120,4482,31414,14.3
+All 23,any_hospital,02:45,240,4482,31414,14.3
+Kaafu,any_hospital,03:00,30,0,17749,0.0
+Kaafu,any_hospital,03:00,60,0,17749,0.0
+Kaafu,any_hospital,03:00,90,0,17749,0.0
+Kaafu,any_hospital,03:00,120,0,17749,0.0
+Kaafu,any_hospital,03:00,240,0,17749,0.0
+All 23,any_hospital,03:00,30,4482,31414,14.3
+All 23,any_hospital,03:00,60,4482,31414,14.3
+All 23,any_hospital,03:00,90,4482,31414,14.3
+All 23,any_hospital,03:00,120,4482,31414,14.3
+All 23,any_hospital,03:00,240,4482,31414,14.3
+Kaafu,any_hospital,03:15,30,0,17749,0.0
+Kaafu,any_hospital,03:15,60,0,17749,0.0
+Kaafu,any_hospital,03:15,90,0,17749,0.0
+Kaafu,any_hospital,03:15,120,0,17749,0.0
+Kaafu,any_hospital,03:15,240,0,17749,0.0
+All 23,any_hospital,03:15,30,4482,31414,14.3
+All 23,any_hospital,03:15,60,4482,31414,14.3
+All 23,any_hospital,03:15,90,4482,31414,14.3
+All 23,any_hospital,03:15,120,4482,31414,14.3
+All 23,any_hospital,03:15,240,4482,31414,14.3
+Kaafu,any_hospital,03:30,30,0,17749,0.0
+Kaafu,any_hospital,03:30,60,0,17749,0.0
+Kaafu,any_hospital,03:30,90,0,17749,0.0
+Kaafu,any_hospital,03:30,120,0,17749,0.0
+Kaafu,any_hospital,03:30,240,0,17749,0.0
+All 23,any_hospital,03:30,30,4482,31414,14.3
+All 23,any_hospital,03:30,60,4482,31414,14.3
+All 23,any_hospital,03:30,90,4482,31414,14.3
+All 23,any_hospital,03:30,120,4482,31414,14.3
+All 23,any_hospital,03:30,240,4482,31414,14.3
+Kaafu,any_hospital,03:45,30,0,17749,0.0
+Kaafu,any_hospital,03:45,60,0,17749,0.0
+Kaafu,any_hospital,03:45,90,0,17749,0.0
+Kaafu,any_hospital,03:45,120,0,17749,0.0
+Kaafu,any_hospital,03:45,240,0,17749,0.0
+All 23,any_hospital,03:45,30,4482,31414,14.3
+All 23,any_hospital,03:45,60,4482,31414,14.3
+All 23,any_hospital,03:45,90,4482,31414,14.3
+All 23,any_hospital,03:45,120,4482,31414,14.3
+All 23,any_hospital,03:45,240,4482,31414,14.3
+Kaafu,any_hospital,04:00,30,0,17749,0.0
+Kaafu,any_hospital,04:00,60,0,17749,0.0
+Kaafu,any_hospital,04:00,90,0,17749,0.0
+Kaafu,any_hospital,04:00,120,0,17749,0.0
+Kaafu,any_hospital,04:00,240,0,17749,0.0
+All 23,any_hospital,04:00,30,4482,31414,14.3
+All 23,any_hospital,04:00,60,4482,31414,14.3
+All 23,any_hospital,04:00,90,4482,31414,14.3
+All 23,any_hospital,04:00,120,4482,31414,14.3
+All 23,any_hospital,04:00,240,6406,31414,20.4
+Kaafu,any_hospital,04:15,30,0,17749,0.0
+Kaafu,any_hospital,04:15,60,0,17749,0.0
+Kaafu,any_hospital,04:15,90,0,17749,0.0
+Kaafu,any_hospital,04:15,120,0,17749,0.0
+Kaafu,any_hospital,04:15,240,0,17749,0.0
+All 23,any_hospital,04:15,30,4482,31414,14.3
+All 23,any_hospital,04:15,60,4482,31414,14.3
+All 23,any_hospital,04:15,90,4482,31414,14.3
+All 23,any_hospital,04:15,120,4482,31414,14.3
+All 23,any_hospital,04:15,240,6406,31414,20.4
+Kaafu,any_hospital,04:30,30,0,17749,0.0
+Kaafu,any_hospital,04:30,60,0,17749,0.0
+Kaafu,any_hospital,04:30,90,0,17749,0.0
+Kaafu,any_hospital,04:30,120,0,17749,0.0
+Kaafu,any_hospital,04:30,240,0,17749,0.0
+All 23,any_hospital,04:30,30,4482,31414,14.3
+All 23,any_hospital,04:30,60,4482,31414,14.3
+All 23,any_hospital,04:30,90,4482,31414,14.3
+All 23,any_hospital,04:30,120,4482,31414,14.3
+All 23,any_hospital,04:30,240,6406,31414,20.4
+Kaafu,any_hospital,04:45,30,0,17749,0.0
+Kaafu,any_hospital,04:45,60,0,17749,0.0
+Kaafu,any_hospital,04:45,90,0,17749,0.0
+Kaafu,any_hospital,04:45,120,0,17749,0.0
+Kaafu,any_hospital,04:45,240,0,17749,0.0
+All 23,any_hospital,04:45,30,4482,31414,14.3
+All 23,any_hospital,04:45,60,4482,31414,14.3
+All 23,any_hospital,04:45,90,4482,31414,14.3
+All 23,any_hospital,04:45,120,4482,31414,14.3
+All 23,any_hospital,04:45,240,7047,31414,22.4
+Kaafu,any_hospital,05:00,30,0,17749,0.0
+Kaafu,any_hospital,05:00,60,0,17749,0.0
+Kaafu,any_hospital,05:00,90,0,17749,0.0
+Kaafu,any_hospital,05:00,120,0,17749,0.0
+Kaafu,any_hospital,05:00,240,6737,17749,38.0
+All 23,any_hospital,05:00,30,4482,31414,14.3
+All 23,any_hospital,05:00,60,4482,31414,14.3
+All 23,any_hospital,05:00,90,4482,31414,14.3
+All 23,any_hospital,05:00,120,4482,31414,14.3
+All 23,any_hospital,05:00,240,13784,31414,43.9
+Kaafu,any_hospital,05:15,30,0,17749,0.0
+Kaafu,any_hospital,05:15,60,0,17749,0.0
+Kaafu,any_hospital,05:15,90,0,17749,0.0
+Kaafu,any_hospital,05:15,120,0,17749,0.0
+Kaafu,any_hospital,05:15,240,6737,17749,38.0
+All 23,any_hospital,05:15,30,4482,31414,14.3
+All 23,any_hospital,05:15,60,4482,31414,14.3
+All 23,any_hospital,05:15,90,4482,31414,14.3
+All 23,any_hospital,05:15,120,4482,31414,14.3
+All 23,any_hospital,05:15,240,13784,31414,43.9
+Kaafu,any_hospital,05:30,30,0,17749,0.0
+Kaafu,any_hospital,05:30,60,0,17749,0.0
+Kaafu,any_hospital,05:30,90,0,17749,0.0
+Kaafu,any_hospital,05:30,120,0,17749,0.0
+Kaafu,any_hospital,05:30,240,13927,17749,78.5
+All 23,any_hospital,05:30,30,4482,31414,14.3
+All 23,any_hospital,05:30,60,4482,31414,14.3
+All 23,any_hospital,05:30,90,4482,31414,14.3
+All 23,any_hospital,05:30,120,4482,31414,14.3
+All 23,any_hospital,05:30,240,20974,31414,66.8
+Kaafu,any_hospital,05:45,30,0,17749,0.0
+Kaafu,any_hospital,05:45,60,0,17749,0.0
+Kaafu,any_hospital,05:45,90,0,17749,0.0
+Kaafu,any_hospital,05:45,120,0,17749,0.0
+Kaafu,any_hospital,05:45,240,13927,17749,78.5
+All 23,any_hospital,05:45,30,4482,31414,14.3
+All 23,any_hospital,05:45,60,4482,31414,14.3
+All 23,any_hospital,05:45,90,4482,31414,14.3
+All 23,any_hospital,05:45,120,4482,31414,14.3
+All 23,any_hospital,05:45,240,20974,31414,66.8
+Kaafu,any_hospital,06:00,30,0,17749,0.0
+Kaafu,any_hospital,06:00,60,0,17749,0.0
+Kaafu,any_hospital,06:00,90,0,17749,0.0
+Kaafu,any_hospital,06:00,120,0,17749,0.0
+Kaafu,any_hospital,06:00,240,13927,17749,78.5
+All 23,any_hospital,06:00,30,4482,31414,14.3
+All 23,any_hospital,06:00,60,4482,31414,14.3
+All 23,any_hospital,06:00,90,4482,31414,14.3
+All 23,any_hospital,06:00,120,6406,31414,20.4
+All 23,any_hospital,06:00,240,22671,31414,72.2
+Kaafu,any_hospital,06:15,30,0,17749,0.0
+Kaafu,any_hospital,06:15,60,0,17749,0.0
+Kaafu,any_hospital,06:15,90,0,17749,0.0
+Kaafu,any_hospital,06:15,120,0,17749,0.0
+Kaafu,any_hospital,06:15,240,13927,17749,78.5
+All 23,any_hospital,06:15,30,4482,31414,14.3
+All 23,any_hospital,06:15,60,4482,31414,14.3
+All 23,any_hospital,06:15,90,4482,31414,14.3
+All 23,any_hospital,06:15,120,6406,31414,20.4
+All 23,any_hospital,06:15,240,22671,31414,72.2
+Kaafu,any_hospital,06:30,30,0,17749,0.0
+Kaafu,any_hospital,06:30,60,0,17749,0.0
+Kaafu,any_hospital,06:30,90,0,17749,0.0
+Kaafu,any_hospital,06:30,120,0,17749,0.0
+Kaafu,any_hospital,06:30,240,12657,17749,71.3
+All 23,any_hospital,06:30,30,4482,31414,14.3
+All 23,any_hospital,06:30,60,4482,31414,14.3
+All 23,any_hospital,06:30,90,4482,31414,14.3
+All 23,any_hospital,06:30,120,4482,31414,14.3
+All 23,any_hospital,06:30,240,20874,31414,66.4
+Kaafu,any_hospital,06:45,30,0,17749,0.0
+Kaafu,any_hospital,06:45,60,0,17749,0.0
+Kaafu,any_hospital,06:45,90,0,17749,0.0
+Kaafu,any_hospital,06:45,120,0,17749,0.0
+Kaafu,any_hospital,06:45,240,12657,17749,71.3
+All 23,any_hospital,06:45,30,4482,31414,14.3
+All 23,any_hospital,06:45,60,4482,31414,14.3
+All 23,any_hospital,06:45,90,4482,31414,14.3
+All 23,any_hospital,06:45,120,5123,31414,16.3
+All 23,any_hospital,06:45,240,23740,31414,75.6
+Kaafu,any_hospital,07:00,30,0,17749,0.0
+Kaafu,any_hospital,07:00,60,0,17749,0.0
+Kaafu,any_hospital,07:00,90,0,17749,0.0
+Kaafu,any_hospital,07:00,120,5467,17749,30.8
+Kaafu,any_hospital,07:00,240,10914,17749,61.5
+All 23,any_hospital,07:00,30,4482,31414,14.3
+All 23,any_hospital,07:00,60,4482,31414,14.3
+All 23,any_hospital,07:00,90,4482,31414,14.3
+All 23,any_hospital,07:00,120,10590,31414,33.7
+All 23,any_hospital,07:00,240,21997,31414,70.0
+Kaafu,any_hospital,07:15,30,0,17749,0.0
+Kaafu,any_hospital,07:15,60,0,17749,0.0
+Kaafu,any_hospital,07:15,90,0,17749,0.0
+Kaafu,any_hospital,07:15,120,3666,17749,20.7
+Kaafu,any_hospital,07:15,240,9113,17749,51.3
+All 23,any_hospital,07:15,30,4482,31414,14.3
+All 23,any_hospital,07:15,60,4482,31414,14.3
+All 23,any_hospital,07:15,90,5123,31414,16.3
+All 23,any_hospital,07:15,120,8789,31414,28.0
+All 23,any_hospital,07:15,240,20196,31414,64.3
+Kaafu,any_hospital,07:30,30,0,17749,0.0
+Kaafu,any_hospital,07:30,60,0,17749,0.0
+Kaafu,any_hospital,07:30,90,3666,17749,20.7
+Kaafu,any_hospital,07:30,120,4642,17749,26.2
+Kaafu,any_hospital,07:30,240,4642,17749,26.2
+All 23,any_hospital,07:30,30,4482,31414,14.3
+All 23,any_hospital,07:30,60,4482,31414,14.3
+All 23,any_hospital,07:30,90,8789,31414,28.0
+All 23,any_hospital,07:30,120,9765,31414,31.1
+All 23,any_hospital,07:30,240,15725,31414,50.1
+Kaafu,any_hospital,07:45,30,0,17749,0.0
+Kaafu,any_hospital,07:45,60,0,17749,0.0
+Kaafu,any_hospital,07:45,90,2012,17749,11.3
+Kaafu,any_hospital,07:45,120,2988,17749,16.8
+Kaafu,any_hospital,07:45,240,2988,17749,16.8
+All 23,any_hospital,07:45,30,4482,31414,14.3
+All 23,any_hospital,07:45,60,5123,31414,16.3
+All 23,any_hospital,07:45,90,7135,31414,22.7
+All 23,any_hospital,07:45,120,8111,31414,25.8
+All 23,any_hospital,07:45,240,14071,31414,44.8
+Kaafu,any_hospital,08:00,30,0,17749,0.0
+Kaafu,any_hospital,08:00,60,0,17749,0.0
+Kaafu,any_hospital,08:00,90,0,17749,0.0
+Kaafu,any_hospital,08:00,120,0,17749,0.0
+Kaafu,any_hospital,08:00,240,1294,17749,7.3
+All 23,any_hospital,08:00,30,4482,31414,14.3
+All 23,any_hospital,08:00,60,5123,31414,16.3
+All 23,any_hospital,08:00,90,5123,31414,16.3
+All 23,any_hospital,08:00,120,6820,31414,21.7
+All 23,any_hospital,08:00,240,12377,31414,39.4
+Kaafu,any_hospital,08:15,30,0,17749,0.0
+Kaafu,any_hospital,08:15,60,0,17749,0.0
+Kaafu,any_hospital,08:15,90,0,17749,0.0
+Kaafu,any_hospital,08:15,120,0,17749,0.0
+Kaafu,any_hospital,08:15,240,1294,17749,7.3
+All 23,any_hospital,08:15,30,5123,31414,16.3
+All 23,any_hospital,08:15,60,5123,31414,16.3
+All 23,any_hospital,08:15,90,5123,31414,16.3
+All 23,any_hospital,08:15,120,6059,31414,19.3
+All 23,any_hospital,08:15,240,11616,31414,37.0
+Kaafu,any_hospital,08:30,30,0,17749,0.0
+Kaafu,any_hospital,08:30,60,0,17749,0.0
+Kaafu,any_hospital,08:30,90,0,17749,0.0
+Kaafu,any_hospital,08:30,120,0,17749,0.0
+Kaafu,any_hospital,08:30,240,0,17749,0.0
+All 23,any_hospital,08:30,30,4482,31414,14.3
+All 23,any_hospital,08:30,60,4482,31414,14.3
+All 23,any_hospital,08:30,90,5418,31414,17.2
+All 23,any_hospital,08:30,120,6815,31414,21.7
+All 23,any_hospital,08:30,240,9681,31414,30.8
+Kaafu,any_hospital,08:45,30,0,17749,0.0
+Kaafu,any_hospital,08:45,60,0,17749,0.0
+Kaafu,any_hospital,08:45,90,0,17749,0.0
+Kaafu,any_hospital,08:45,120,0,17749,0.0
+Kaafu,any_hospital,08:45,240,0,17749,0.0
+All 23,any_hospital,08:45,30,4482,31414,14.3
+All 23,any_hospital,08:45,60,4482,31414,14.3
+All 23,any_hospital,08:45,90,4482,31414,14.3
+All 23,any_hospital,08:45,120,7867,31414,25.0
+All 23,any_hospital,08:45,240,7867,31414,25.0
+Kaafu,any_hospital,09:00,30,0,17749,0.0
+Kaafu,any_hospital,09:00,60,0,17749,0.0
+Kaafu,any_hospital,09:00,90,0,17749,0.0
+Kaafu,any_hospital,09:00,120,0,17749,0.0
+Kaafu,any_hospital,09:00,240,0,17749,0.0
+All 23,any_hospital,09:00,30,4482,31414,14.3
+All 23,any_hospital,09:00,60,4482,31414,14.3
+All 23,any_hospital,09:00,90,5879,31414,18.7
+All 23,any_hospital,09:00,120,7163,31414,22.8
+All 23,any_hospital,09:00,240,7163,31414,22.8
+Kaafu,any_hospital,09:15,30,0,17749,0.0
+Kaafu,any_hospital,09:15,60,0,17749,0.0
+Kaafu,any_hospital,09:15,90,0,17749,0.0
+Kaafu,any_hospital,09:15,120,0,17749,0.0
+Kaafu,any_hospital,09:15,240,0,17749,0.0
+All 23,any_hospital,09:15,30,4482,31414,14.3
+All 23,any_hospital,09:15,60,4482,31414,14.3
+All 23,any_hospital,09:15,90,7163,31414,22.8
+All 23,any_hospital,09:15,120,7163,31414,22.8
+All 23,any_hospital,09:15,240,7163,31414,22.8
+Kaafu,any_hospital,09:30,30,0,17749,0.0
+Kaafu,any_hospital,09:30,60,0,17749,0.0
+Kaafu,any_hospital,09:30,90,0,17749,0.0
+Kaafu,any_hospital,09:30,120,0,17749,0.0
+Kaafu,any_hospital,09:30,240,0,17749,0.0
+All 23,any_hospital,09:30,30,4482,31414,14.3
+All 23,any_hospital,09:30,60,5395,31414,17.2
+All 23,any_hospital,09:30,90,6679,31414,21.3
+All 23,any_hospital,09:30,120,6679,31414,21.3
+All 23,any_hospital,09:30,240,6679,31414,21.3
+Kaafu,any_hospital,09:45,30,0,17749,0.0
+Kaafu,any_hospital,09:45,60,0,17749,0.0
+Kaafu,any_hospital,09:45,90,0,17749,0.0
+Kaafu,any_hospital,09:45,120,0,17749,0.0
+Kaafu,any_hospital,09:45,240,0,17749,0.0
+All 23,any_hospital,09:45,30,4482,31414,14.3
+All 23,any_hospital,09:45,60,5395,31414,17.2
+All 23,any_hospital,09:45,90,6679,31414,21.3
+All 23,any_hospital,09:45,120,6679,31414,21.3
+All 23,any_hospital,09:45,240,6679,31414,21.3
+Kaafu,any_hospital,10:00,30,0,17749,0.0
+Kaafu,any_hospital,10:00,60,0,17749,0.0
+Kaafu,any_hospital,10:00,90,0,17749,0.0
+Kaafu,any_hospital,10:00,120,0,17749,0.0
+Kaafu,any_hospital,10:00,240,0,17749,0.0
+All 23,any_hospital,10:00,30,4482,31414,14.3
+All 23,any_hospital,10:00,60,4482,31414,14.3
+All 23,any_hospital,10:00,90,4482,31414,14.3
+All 23,any_hospital,10:00,120,4482,31414,14.3
+All 23,any_hospital,10:00,240,4482,31414,14.3
+Kaafu,any_hospital,10:15,30,0,17749,0.0
+Kaafu,any_hospital,10:15,60,0,17749,0.0
+Kaafu,any_hospital,10:15,90,0,17749,0.0
+Kaafu,any_hospital,10:15,120,0,17749,0.0
+Kaafu,any_hospital,10:15,240,0,17749,0.0
+All 23,any_hospital,10:15,30,4482,31414,14.3
+All 23,any_hospital,10:15,60,4482,31414,14.3
+All 23,any_hospital,10:15,90,4482,31414,14.3
+All 23,any_hospital,10:15,120,4482,31414,14.3
+All 23,any_hospital,10:15,240,4482,31414,14.3
+Kaafu,any_hospital,10:30,30,0,17749,0.0
+Kaafu,any_hospital,10:30,60,0,17749,0.0
+Kaafu,any_hospital,10:30,90,0,17749,0.0
+Kaafu,any_hospital,10:30,120,0,17749,0.0
+Kaafu,any_hospital,10:30,240,4471,17749,25.2
+All 23,any_hospital,10:30,30,4482,31414,14.3
+All 23,any_hospital,10:30,60,4482,31414,14.3
+All 23,any_hospital,10:30,90,4482,31414,14.3
+All 23,any_hospital,10:30,120,4482,31414,14.3
+All 23,any_hospital,10:30,240,9353,31414,29.8
+Kaafu,any_hospital,10:45,30,0,17749,0.0
+Kaafu,any_hospital,10:45,60,0,17749,0.0
+Kaafu,any_hospital,10:45,90,0,17749,0.0
+Kaafu,any_hospital,10:45,120,0,17749,0.0
+Kaafu,any_hospital,10:45,240,4471,17749,25.2
+All 23,any_hospital,10:45,30,4482,31414,14.3
+All 23,any_hospital,10:45,60,4482,31414,14.3
+All 23,any_hospital,10:45,90,4482,31414,14.3
+All 23,any_hospital,10:45,120,4482,31414,14.3
+All 23,any_hospital,10:45,240,8953,31414,28.5
+Kaafu,any_hospital,11:00,30,0,17749,0.0
+Kaafu,any_hospital,11:00,60,0,17749,0.0
+Kaafu,any_hospital,11:00,90,0,17749,0.0
+Kaafu,any_hospital,11:00,120,0,17749,0.0
+Kaafu,any_hospital,11:00,240,4471,17749,25.2
+All 23,any_hospital,11:00,30,4482,31414,14.3
+All 23,any_hospital,11:00,60,4482,31414,14.3
+All 23,any_hospital,11:00,90,4482,31414,14.3
+All 23,any_hospital,11:00,120,4482,31414,14.3
+All 23,any_hospital,11:00,240,8953,31414,28.5
+Kaafu,any_hospital,11:15,30,0,17749,0.0
+Kaafu,any_hospital,11:15,60,0,17749,0.0
+Kaafu,any_hospital,11:15,90,0,17749,0.0
+Kaafu,any_hospital,11:15,120,0,17749,0.0
+Kaafu,any_hospital,11:15,240,4471,17749,25.2
+All 23,any_hospital,11:15,30,4482,31414,14.3
+All 23,any_hospital,11:15,60,4482,31414,14.3
+All 23,any_hospital,11:15,90,4482,31414,14.3
+All 23,any_hospital,11:15,120,4482,31414,14.3
+All 23,any_hospital,11:15,240,10350,31414,32.9
+Kaafu,any_hospital,11:30,30,0,17749,0.0
+Kaafu,any_hospital,11:30,60,0,17749,0.0
+Kaafu,any_hospital,11:30,90,0,17749,0.0
+Kaafu,any_hospital,11:30,120,0,17749,0.0
+Kaafu,any_hospital,11:30,240,4471,17749,25.2
+All 23,any_hospital,11:30,30,4482,31414,14.3
+All 23,any_hospital,11:30,60,4482,31414,14.3
+All 23,any_hospital,11:30,90,4482,31414,14.3
+All 23,any_hospital,11:30,120,4482,31414,14.3
+All 23,any_hospital,11:30,240,10350,31414,32.9
+Kaafu,any_hospital,11:45,30,0,17749,0.0
+Kaafu,any_hospital,11:45,60,0,17749,0.0
+Kaafu,any_hospital,11:45,90,0,17749,0.0
+Kaafu,any_hospital,11:45,120,0,17749,0.0
+Kaafu,any_hospital,11:45,240,4471,17749,25.2
+All 23,any_hospital,11:45,30,4482,31414,14.3
+All 23,any_hospital,11:45,60,4482,31414,14.3
+All 23,any_hospital,11:45,90,4482,31414,14.3
+All 23,any_hospital,11:45,120,4482,31414,14.3
+All 23,any_hospital,11:45,240,10350,31414,32.9
+Kaafu,any_hospital,12:00,30,0,17749,0.0
+Kaafu,any_hospital,12:00,60,0,17749,0.0
+Kaafu,any_hospital,12:00,90,0,17749,0.0
+Kaafu,any_hospital,12:00,120,0,17749,0.0
+Kaafu,any_hospital,12:00,240,4471,17749,25.2
+All 23,any_hospital,12:00,30,4482,31414,14.3
+All 23,any_hospital,12:00,60,4482,31414,14.3
+All 23,any_hospital,12:00,90,4482,31414,14.3
+All 23,any_hospital,12:00,120,4482,31414,14.3
+All 23,any_hospital,12:00,240,10350,31414,32.9
+Kaafu,any_hospital,12:15,30,0,17749,0.0
+Kaafu,any_hospital,12:15,60,0,17749,0.0
+Kaafu,any_hospital,12:15,90,0,17749,0.0
+Kaafu,any_hospital,12:15,120,0,17749,0.0
+Kaafu,any_hospital,12:15,240,4471,17749,25.2
+All 23,any_hospital,12:15,30,4482,31414,14.3
+All 23,any_hospital,12:15,60,4482,31414,14.3
+All 23,any_hospital,12:15,90,4482,31414,14.3
+All 23,any_hospital,12:15,120,4482,31414,14.3
+All 23,any_hospital,12:15,240,10350,31414,32.9
+Kaafu,any_hospital,12:30,30,0,17749,0.0
+Kaafu,any_hospital,12:30,60,0,17749,0.0
+Kaafu,any_hospital,12:30,90,0,17749,0.0
+Kaafu,any_hospital,12:30,120,4471,17749,25.2
+Kaafu,any_hospital,12:30,240,4471,17749,25.2
+All 23,any_hospital,12:30,30,4482,31414,14.3
+All 23,any_hospital,12:30,60,4482,31414,14.3
+All 23,any_hospital,12:30,90,4482,31414,14.3
+All 23,any_hospital,12:30,120,8953,31414,28.5
+All 23,any_hospital,12:30,240,10350,31414,32.9
+Kaafu,any_hospital,12:45,30,0,17749,0.0
+Kaafu,any_hospital,12:45,60,0,17749,0.0
+Kaafu,any_hospital,12:45,90,0,17749,0.0
+Kaafu,any_hospital,12:45,120,0,17749,0.0
+Kaafu,any_hospital,12:45,240,0,17749,0.0
+All 23,any_hospital,12:45,30,4482,31414,14.3
+All 23,any_hospital,12:45,60,4482,31414,14.3
+All 23,any_hospital,12:45,90,4482,31414,14.3
+All 23,any_hospital,12:45,120,4482,31414,14.3
+All 23,any_hospital,12:45,240,5879,31414,18.7
+Kaafu,any_hospital,13:00,30,0,17749,0.0
+Kaafu,any_hospital,13:00,60,0,17749,0.0
+Kaafu,any_hospital,13:00,90,0,17749,0.0
+Kaafu,any_hospital,13:00,120,0,17749,0.0
+Kaafu,any_hospital,13:00,240,0,17749,0.0
+All 23,any_hospital,13:00,30,4482,31414,14.3
+All 23,any_hospital,13:00,60,4482,31414,14.3
+All 23,any_hospital,13:00,90,4482,31414,14.3
+All 23,any_hospital,13:00,120,4482,31414,14.3
+All 23,any_hospital,13:00,240,5879,31414,18.7
+Kaafu,any_hospital,13:15,30,0,17749,0.0
+Kaafu,any_hospital,13:15,60,0,17749,0.0
+Kaafu,any_hospital,13:15,90,0,17749,0.0
+Kaafu,any_hospital,13:15,120,0,17749,0.0
+Kaafu,any_hospital,13:15,240,0,17749,0.0
+All 23,any_hospital,13:15,30,4482,31414,14.3
+All 23,any_hospital,13:15,60,4482,31414,14.3
+All 23,any_hospital,13:15,90,4482,31414,14.3
+All 23,any_hospital,13:15,120,5879,31414,18.7
+All 23,any_hospital,13:15,240,5879,31414,18.7
+Kaafu,any_hospital,13:30,30,0,17749,0.0
+Kaafu,any_hospital,13:30,60,0,17749,0.0
+Kaafu,any_hospital,13:30,90,0,17749,0.0
+Kaafu,any_hospital,13:30,120,0,17749,0.0
+Kaafu,any_hospital,13:30,240,0,17749,0.0
+All 23,any_hospital,13:30,30,4482,31414,14.3
+All 23,any_hospital,13:30,60,4482,31414,14.3
+All 23,any_hospital,13:30,90,4482,31414,14.3
+All 23,any_hospital,13:30,120,5879,31414,18.7
+All 23,any_hospital,13:30,240,5879,31414,18.7
+Kaafu,any_hospital,13:45,30,0,17749,0.0
+Kaafu,any_hospital,13:45,60,0,17749,0.0
+Kaafu,any_hospital,13:45,90,0,17749,0.0
+Kaafu,any_hospital,13:45,120,0,17749,0.0
+Kaafu,any_hospital,13:45,240,0,17749,0.0
+All 23,any_hospital,13:45,30,4482,31414,14.3
+All 23,any_hospital,13:45,60,4482,31414,14.3
+All 23,any_hospital,13:45,90,5879,31414,18.7
+All 23,any_hospital,13:45,120,5879,31414,18.7
+All 23,any_hospital,13:45,240,5879,31414,18.7
+Kaafu,any_hospital,14:00,30,0,17749,0.0
+Kaafu,any_hospital,14:00,60,0,17749,0.0
+Kaafu,any_hospital,14:00,90,0,17749,0.0
+Kaafu,any_hospital,14:00,120,0,17749,0.0
+Kaafu,any_hospital,14:00,240,0,17749,0.0
+All 23,any_hospital,14:00,30,4482,31414,14.3
+All 23,any_hospital,14:00,60,4482,31414,14.3
+All 23,any_hospital,14:00,90,4966,31414,15.8
+All 23,any_hospital,14:00,120,4966,31414,15.8
+All 23,any_hospital,14:00,240,4966,31414,15.8
+Kaafu,any_hospital,14:15,30,0,17749,0.0
+Kaafu,any_hospital,14:15,60,0,17749,0.0
+Kaafu,any_hospital,14:15,90,0,17749,0.0
+Kaafu,any_hospital,14:15,120,0,17749,0.0
+Kaafu,any_hospital,14:15,240,0,17749,0.0
+All 23,any_hospital,14:15,30,4482,31414,14.3
+All 23,any_hospital,14:15,60,4966,31414,15.8
+All 23,any_hospital,14:15,90,4966,31414,15.8
+All 23,any_hospital,14:15,120,4966,31414,15.8
+All 23,any_hospital,14:15,240,4966,31414,15.8
+Kaafu,any_hospital,14:30,30,0,17749,0.0
+Kaafu,any_hospital,14:30,60,0,17749,0.0
+Kaafu,any_hospital,14:30,90,0,17749,0.0
+Kaafu,any_hospital,14:30,120,0,17749,0.0
+Kaafu,any_hospital,14:30,240,0,17749,0.0
+All 23,any_hospital,14:30,30,4482,31414,14.3
+All 23,any_hospital,14:30,60,4482,31414,14.3
+All 23,any_hospital,14:30,90,4482,31414,14.3
+All 23,any_hospital,14:30,120,4482,31414,14.3
+All 23,any_hospital,14:30,240,4482,31414,14.3
+Kaafu,any_hospital,14:45,30,0,17749,0.0
+Kaafu,any_hospital,14:45,60,0,17749,0.0
+Kaafu,any_hospital,14:45,90,0,17749,0.0
+Kaafu,any_hospital,14:45,120,0,17749,0.0
+Kaafu,any_hospital,14:45,240,0,17749,0.0
+All 23,any_hospital,14:45,30,4482,31414,14.3
+All 23,any_hospital,14:45,60,4482,31414,14.3
+All 23,any_hospital,14:45,90,4482,31414,14.3
+All 23,any_hospital,14:45,120,4482,31414,14.3
+All 23,any_hospital,14:45,240,4482,31414,14.3
+Kaafu,any_hospital,15:00,30,0,17749,0.0
+Kaafu,any_hospital,15:00,60,0,17749,0.0
+Kaafu,any_hospital,15:00,90,0,17749,0.0
+Kaafu,any_hospital,15:00,120,0,17749,0.0
+Kaafu,any_hospital,15:00,240,0,17749,0.0
+All 23,any_hospital,15:00,30,4482,31414,14.3
+All 23,any_hospital,15:00,60,4482,31414,14.3
+All 23,any_hospital,15:00,90,4482,31414,14.3
+All 23,any_hospital,15:00,120,4482,31414,14.3
+All 23,any_hospital,15:00,240,4482,31414,14.3
+Kaafu,any_hospital,15:15,30,0,17749,0.0
+Kaafu,any_hospital,15:15,60,0,17749,0.0
+Kaafu,any_hospital,15:15,90,0,17749,0.0
+Kaafu,any_hospital,15:15,120,0,17749,0.0
+Kaafu,any_hospital,15:15,240,0,17749,0.0
+All 23,any_hospital,15:15,30,4482,31414,14.3
+All 23,any_hospital,15:15,60,4482,31414,14.3
+All 23,any_hospital,15:15,90,4482,31414,14.3
+All 23,any_hospital,15:15,120,4482,31414,14.3
+All 23,any_hospital,15:15,240,4482,31414,14.3
+Kaafu,any_hospital,15:30,30,0,17749,0.0
+Kaafu,any_hospital,15:30,60,0,17749,0.0
+Kaafu,any_hospital,15:30,90,0,17749,0.0
+Kaafu,any_hospital,15:30,120,0,17749,0.0
+Kaafu,any_hospital,15:30,240,0,17749,0.0
+All 23,any_hospital,15:30,30,4482,31414,14.3
+All 23,any_hospital,15:30,60,4482,31414,14.3
+All 23,any_hospital,15:30,90,4482,31414,14.3
+All 23,any_hospital,15:30,120,4482,31414,14.3
+All 23,any_hospital,15:30,240,4482,31414,14.3
+Kaafu,any_hospital,15:45,30,0,17749,0.0
+Kaafu,any_hospital,15:45,60,0,17749,0.0
+Kaafu,any_hospital,15:45,90,0,17749,0.0
+Kaafu,any_hospital,15:45,120,0,17749,0.0
+Kaafu,any_hospital,15:45,240,0,17749,0.0
+All 23,any_hospital,15:45,30,4482,31414,14.3
+All 23,any_hospital,15:45,60,4482,31414,14.3
+All 23,any_hospital,15:45,90,4482,31414,14.3
+All 23,any_hospital,15:45,120,4482,31414,14.3
+All 23,any_hospital,15:45,240,4482,31414,14.3
+Kaafu,any_hospital,16:00,30,0,17749,0.0
+Kaafu,any_hospital,16:00,60,0,17749,0.0
+Kaafu,any_hospital,16:00,90,0,17749,0.0
+Kaafu,any_hospital,16:00,120,0,17749,0.0
+Kaafu,any_hospital,16:00,240,0,17749,0.0
+All 23,any_hospital,16:00,30,4482,31414,14.3
+All 23,any_hospital,16:00,60,4482,31414,14.3
+All 23,any_hospital,16:00,90,4482,31414,14.3
+All 23,any_hospital,16:00,120,4482,31414,14.3
+All 23,any_hospital,16:00,240,4482,31414,14.3
+Kaafu,any_hospital,16:15,30,0,17749,0.0
+Kaafu,any_hospital,16:15,60,0,17749,0.0
+Kaafu,any_hospital,16:15,90,0,17749,0.0
+Kaafu,any_hospital,16:15,120,0,17749,0.0
+Kaafu,any_hospital,16:15,240,0,17749,0.0
+All 23,any_hospital,16:15,30,4482,31414,14.3
+All 23,any_hospital,16:15,60,4482,31414,14.3
+All 23,any_hospital,16:15,90,4482,31414,14.3
+All 23,any_hospital,16:15,120,4482,31414,14.3
+All 23,any_hospital,16:15,240,4482,31414,14.3
+Kaafu,any_hospital,16:30,30,0,17749,0.0
+Kaafu,any_hospital,16:30,60,0,17749,0.0
+Kaafu,any_hospital,16:30,90,0,17749,0.0
+Kaafu,any_hospital,16:30,120,0,17749,0.0
+Kaafu,any_hospital,16:30,240,0,17749,0.0
+All 23,any_hospital,16:30,30,4482,31414,14.3
+All 23,any_hospital,16:30,60,4482,31414,14.3
+All 23,any_hospital,16:30,90,4482,31414,14.3
+All 23,any_hospital,16:30,120,4482,31414,14.3
+All 23,any_hospital,16:30,240,4482,31414,14.3
+Kaafu,any_hospital,16:45,30,0,17749,0.0
+Kaafu,any_hospital,16:45,60,0,17749,0.0
+Kaafu,any_hospital,16:45,90,0,17749,0.0
+Kaafu,any_hospital,16:45,120,0,17749,0.0
+Kaafu,any_hospital,16:45,240,0,17749,0.0
+All 23,any_hospital,16:45,30,4482,31414,14.3
+All 23,any_hospital,16:45,60,4482,31414,14.3
+All 23,any_hospital,16:45,90,4482,31414,14.3
+All 23,any_hospital,16:45,120,4482,31414,14.3
+All 23,any_hospital,16:45,240,4482,31414,14.3
+Kaafu,any_hospital,17:00,30,0,17749,0.0
+Kaafu,any_hospital,17:00,60,0,17749,0.0
+Kaafu,any_hospital,17:00,90,0,17749,0.0
+Kaafu,any_hospital,17:00,120,0,17749,0.0
+Kaafu,any_hospital,17:00,240,0,17749,0.0
+All 23,any_hospital,17:00,30,4482,31414,14.3
+All 23,any_hospital,17:00,60,4482,31414,14.3
+All 23,any_hospital,17:00,90,4482,31414,14.3
+All 23,any_hospital,17:00,120,4482,31414,14.3
+All 23,any_hospital,17:00,240,4482,31414,14.3
+Kaafu,any_hospital,17:15,30,0,17749,0.0
+Kaafu,any_hospital,17:15,60,0,17749,0.0
+Kaafu,any_hospital,17:15,90,0,17749,0.0
+Kaafu,any_hospital,17:15,120,0,17749,0.0
+Kaafu,any_hospital,17:15,240,0,17749,0.0
+All 23,any_hospital,17:15,30,4482,31414,14.3
+All 23,any_hospital,17:15,60,4482,31414,14.3
+All 23,any_hospital,17:15,90,4482,31414,14.3
+All 23,any_hospital,17:15,120,4482,31414,14.3
+All 23,any_hospital,17:15,240,4482,31414,14.3
+Kaafu,any_hospital,17:30,30,0,17749,0.0
+Kaafu,any_hospital,17:30,60,0,17749,0.0
+Kaafu,any_hospital,17:30,90,0,17749,0.0
+Kaafu,any_hospital,17:30,120,0,17749,0.0
+Kaafu,any_hospital,17:30,240,0,17749,0.0
+All 23,any_hospital,17:30,30,4482,31414,14.3
+All 23,any_hospital,17:30,60,4482,31414,14.3
+All 23,any_hospital,17:30,90,4482,31414,14.3
+All 23,any_hospital,17:30,120,4482,31414,14.3
+All 23,any_hospital,17:30,240,4482,31414,14.3
+Kaafu,any_hospital,17:45,30,0,17749,0.0
+Kaafu,any_hospital,17:45,60,0,17749,0.0
+Kaafu,any_hospital,17:45,90,0,17749,0.0
+Kaafu,any_hospital,17:45,120,0,17749,0.0
+Kaafu,any_hospital,17:45,240,0,17749,0.0
+All 23,any_hospital,17:45,30,4482,31414,14.3
+All 23,any_hospital,17:45,60,4482,31414,14.3
+All 23,any_hospital,17:45,90,4482,31414,14.3
+All 23,any_hospital,17:45,120,4482,31414,14.3
+All 23,any_hospital,17:45,240,4482,31414,14.3
+Kaafu,any_hospital,18:00,30,0,17749,0.0
+Kaafu,any_hospital,18:00,60,0,17749,0.0
+Kaafu,any_hospital,18:00,90,0,17749,0.0
+Kaafu,any_hospital,18:00,120,0,17749,0.0
+Kaafu,any_hospital,18:00,240,0,17749,0.0
+All 23,any_hospital,18:00,30,4482,31414,14.3
+All 23,any_hospital,18:00,60,4482,31414,14.3
+All 23,any_hospital,18:00,90,4482,31414,14.3
+All 23,any_hospital,18:00,120,4482,31414,14.3
+All 23,any_hospital,18:00,240,4482,31414,14.3
+Kaafu,any_hospital,18:15,30,0,17749,0.0
+Kaafu,any_hospital,18:15,60,0,17749,0.0
+Kaafu,any_hospital,18:15,90,0,17749,0.0
+Kaafu,any_hospital,18:15,120,0,17749,0.0
+Kaafu,any_hospital,18:15,240,0,17749,0.0
+All 23,any_hospital,18:15,30,4482,31414,14.3
+All 23,any_hospital,18:15,60,4482,31414,14.3
+All 23,any_hospital,18:15,90,4482,31414,14.3
+All 23,any_hospital,18:15,120,4482,31414,14.3
+All 23,any_hospital,18:15,240,4482,31414,14.3
+Kaafu,any_hospital,18:30,30,0,17749,0.0
+Kaafu,any_hospital,18:30,60,0,17749,0.0
+Kaafu,any_hospital,18:30,90,0,17749,0.0
+Kaafu,any_hospital,18:30,120,0,17749,0.0
+Kaafu,any_hospital,18:30,240,0,17749,0.0
+All 23,any_hospital,18:30,30,4482,31414,14.3
+All 23,any_hospital,18:30,60,4482,31414,14.3
+All 23,any_hospital,18:30,90,4482,31414,14.3
+All 23,any_hospital,18:30,120,4482,31414,14.3
+All 23,any_hospital,18:30,240,4482,31414,14.3
+Kaafu,any_hospital,18:45,30,0,17749,0.0
+Kaafu,any_hospital,18:45,60,0,17749,0.0
+Kaafu,any_hospital,18:45,90,0,17749,0.0
+Kaafu,any_hospital,18:45,120,0,17749,0.0
+Kaafu,any_hospital,18:45,240,0,17749,0.0
+All 23,any_hospital,18:45,30,4482,31414,14.3
+All 23,any_hospital,18:45,60,4482,31414,14.3
+All 23,any_hospital,18:45,90,4482,31414,14.3
+All 23,any_hospital,18:45,120,4482,31414,14.3
+All 23,any_hospital,18:45,240,4482,31414,14.3
+Kaafu,any_hospital,19:00,30,0,17749,0.0
+Kaafu,any_hospital,19:00,60,0,17749,0.0
+Kaafu,any_hospital,19:00,90,0,17749,0.0
+Kaafu,any_hospital,19:00,120,0,17749,0.0
+Kaafu,any_hospital,19:00,240,0,17749,0.0
+All 23,any_hospital,19:00,30,4482,31414,14.3
+All 23,any_hospital,19:00,60,4482,31414,14.3
+All 23,any_hospital,19:00,90,4482,31414,14.3
+All 23,any_hospital,19:00,120,4482,31414,14.3
+All 23,any_hospital,19:00,240,4482,31414,14.3
+Kaafu,any_hospital,19:15,30,0,17749,0.0
+Kaafu,any_hospital,19:15,60,0,17749,0.0
+Kaafu,any_hospital,19:15,90,0,17749,0.0
+Kaafu,any_hospital,19:15,120,0,17749,0.0
+Kaafu,any_hospital,19:15,240,0,17749,0.0
+All 23,any_hospital,19:15,30,4482,31414,14.3
+All 23,any_hospital,19:15,60,4482,31414,14.3
+All 23,any_hospital,19:15,90,4482,31414,14.3
+All 23,any_hospital,19:15,120,4482,31414,14.3
+All 23,any_hospital,19:15,240,4482,31414,14.3
+Kaafu,any_hospital,19:30,30,0,17749,0.0
+Kaafu,any_hospital,19:30,60,0,17749,0.0
+Kaafu,any_hospital,19:30,90,0,17749,0.0
+Kaafu,any_hospital,19:30,120,0,17749,0.0
+Kaafu,any_hospital,19:30,240,0,17749,0.0
+All 23,any_hospital,19:30,30,4482,31414,14.3
+All 23,any_hospital,19:30,60,4482,31414,14.3
+All 23,any_hospital,19:30,90,4482,31414,14.3
+All 23,any_hospital,19:30,120,4482,31414,14.3
+All 23,any_hospital,19:30,240,4482,31414,14.3
+Kaafu,any_hospital,19:45,30,0,17749,0.0
+Kaafu,any_hospital,19:45,60,0,17749,0.0
+Kaafu,any_hospital,19:45,90,0,17749,0.0
+Kaafu,any_hospital,19:45,120,0,17749,0.0
+Kaafu,any_hospital,19:45,240,0,17749,0.0
+All 23,any_hospital,19:45,30,4482,31414,14.3
+All 23,any_hospital,19:45,60,4482,31414,14.3
+All 23,any_hospital,19:45,90,4482,31414,14.3
+All 23,any_hospital,19:45,120,4482,31414,14.3
+All 23,any_hospital,19:45,240,4482,31414,14.3
+Kaafu,any_hospital,20:00,30,0,17749,0.0
+Kaafu,any_hospital,20:00,60,0,17749,0.0
+Kaafu,any_hospital,20:00,90,0,17749,0.0
+Kaafu,any_hospital,20:00,120,0,17749,0.0
+Kaafu,any_hospital,20:00,240,0,17749,0.0
+All 23,any_hospital,20:00,30,4482,31414,14.3
+All 23,any_hospital,20:00,60,4482,31414,14.3
+All 23,any_hospital,20:00,90,4482,31414,14.3
+All 23,any_hospital,20:00,120,4482,31414,14.3
+All 23,any_hospital,20:00,240,4482,31414,14.3
+Kaafu,any_hospital,20:15,30,0,17749,0.0
+Kaafu,any_hospital,20:15,60,0,17749,0.0
+Kaafu,any_hospital,20:15,90,0,17749,0.0
+Kaafu,any_hospital,20:15,120,0,17749,0.0
+Kaafu,any_hospital,20:15,240,0,17749,0.0
+All 23,any_hospital,20:15,30,4482,31414,14.3
+All 23,any_hospital,20:15,60,4482,31414,14.3
+All 23,any_hospital,20:15,90,4482,31414,14.3
+All 23,any_hospital,20:15,120,4482,31414,14.3
+All 23,any_hospital,20:15,240,4482,31414,14.3
+Kaafu,any_hospital,20:30,30,0,17749,0.0
+Kaafu,any_hospital,20:30,60,0,17749,0.0
+Kaafu,any_hospital,20:30,90,0,17749,0.0
+Kaafu,any_hospital,20:30,120,0,17749,0.0
+Kaafu,any_hospital,20:30,240,0,17749,0.0
+All 23,any_hospital,20:30,30,4482,31414,14.3
+All 23,any_hospital,20:30,60,4482,31414,14.3
+All 23,any_hospital,20:30,90,4482,31414,14.3
+All 23,any_hospital,20:30,120,4482,31414,14.3
+All 23,any_hospital,20:30,240,4482,31414,14.3
+Kaafu,any_hospital,20:45,30,0,17749,0.0
+Kaafu,any_hospital,20:45,60,0,17749,0.0
+Kaafu,any_hospital,20:45,90,0,17749,0.0
+Kaafu,any_hospital,20:45,120,0,17749,0.0
+Kaafu,any_hospital,20:45,240,0,17749,0.0
+All 23,any_hospital,20:45,30,4482,31414,14.3
+All 23,any_hospital,20:45,60,4482,31414,14.3
+All 23,any_hospital,20:45,90,4482,31414,14.3
+All 23,any_hospital,20:45,120,4482,31414,14.3
+All 23,any_hospital,20:45,240,4482,31414,14.3
+Kaafu,any_hospital,21:00,30,0,17749,0.0
+Kaafu,any_hospital,21:00,60,0,17749,0.0
+Kaafu,any_hospital,21:00,90,0,17749,0.0
+Kaafu,any_hospital,21:00,120,0,17749,0.0
+Kaafu,any_hospital,21:00,240,0,17749,0.0
+All 23,any_hospital,21:00,30,4482,31414,14.3
+All 23,any_hospital,21:00,60,4482,31414,14.3
+All 23,any_hospital,21:00,90,4482,31414,14.3
+All 23,any_hospital,21:00,120,4482,31414,14.3
+All 23,any_hospital,21:00,240,4482,31414,14.3
+Kaafu,any_hospital,21:15,30,0,17749,0.0
+Kaafu,any_hospital,21:15,60,0,17749,0.0
+Kaafu,any_hospital,21:15,90,0,17749,0.0
+Kaafu,any_hospital,21:15,120,0,17749,0.0
+Kaafu,any_hospital,21:15,240,0,17749,0.0
+All 23,any_hospital,21:15,30,4482,31414,14.3
+All 23,any_hospital,21:15,60,4482,31414,14.3
+All 23,any_hospital,21:15,90,4482,31414,14.3
+All 23,any_hospital,21:15,120,4482,31414,14.3
+All 23,any_hospital,21:15,240,4482,31414,14.3
+Kaafu,any_hospital,21:30,30,0,17749,0.0
+Kaafu,any_hospital,21:30,60,0,17749,0.0
+Kaafu,any_hospital,21:30,90,0,17749,0.0
+Kaafu,any_hospital,21:30,120,0,17749,0.0
+Kaafu,any_hospital,21:30,240,0,17749,0.0
+All 23,any_hospital,21:30,30,4482,31414,14.3
+All 23,any_hospital,21:30,60,4482,31414,14.3
+All 23,any_hospital,21:30,90,4482,31414,14.3
+All 23,any_hospital,21:30,120,4482,31414,14.3
+All 23,any_hospital,21:30,240,4482,31414,14.3
+Kaafu,any_hospital,21:45,30,0,17749,0.0
+Kaafu,any_hospital,21:45,60,0,17749,0.0
+Kaafu,any_hospital,21:45,90,0,17749,0.0
+Kaafu,any_hospital,21:45,120,0,17749,0.0
+Kaafu,any_hospital,21:45,240,0,17749,0.0
+All 23,any_hospital,21:45,30,4482,31414,14.3
+All 23,any_hospital,21:45,60,4482,31414,14.3
+All 23,any_hospital,21:45,90,4482,31414,14.3
+All 23,any_hospital,21:45,120,4482,31414,14.3
+All 23,any_hospital,21:45,240,4482,31414,14.3
+Kaafu,any_hospital,22:00,30,0,17749,0.0
+Kaafu,any_hospital,22:00,60,0,17749,0.0
+Kaafu,any_hospital,22:00,90,0,17749,0.0
+Kaafu,any_hospital,22:00,120,0,17749,0.0
+Kaafu,any_hospital,22:00,240,0,17749,0.0
+All 23,any_hospital,22:00,30,4482,31414,14.3
+All 23,any_hospital,22:00,60,4482,31414,14.3
+All 23,any_hospital,22:00,90,4482,31414,14.3
+All 23,any_hospital,22:00,120,4482,31414,14.3
+All 23,any_hospital,22:00,240,4482,31414,14.3
+Kaafu,any_hospital,22:15,30,0,17749,0.0
+Kaafu,any_hospital,22:15,60,0,17749,0.0
+Kaafu,any_hospital,22:15,90,0,17749,0.0
+Kaafu,any_hospital,22:15,120,0,17749,0.0
+Kaafu,any_hospital,22:15,240,0,17749,0.0
+All 23,any_hospital,22:15,30,4482,31414,14.3
+All 23,any_hospital,22:15,60,4482,31414,14.3
+All 23,any_hospital,22:15,90,4482,31414,14.3
+All 23,any_hospital,22:15,120,4482,31414,14.3
+All 23,any_hospital,22:15,240,4482,31414,14.3
+Kaafu,any_hospital,22:30,30,0,17749,0.0
+Kaafu,any_hospital,22:30,60,0,17749,0.0
+Kaafu,any_hospital,22:30,90,0,17749,0.0
+Kaafu,any_hospital,22:30,120,0,17749,0.0
+Kaafu,any_hospital,22:30,240,0,17749,0.0
+All 23,any_hospital,22:30,30,4482,31414,14.3
+All 23,any_hospital,22:30,60,4482,31414,14.3
+All 23,any_hospital,22:30,90,4482,31414,14.3
+All 23,any_hospital,22:30,120,4482,31414,14.3
+All 23,any_hospital,22:30,240,4482,31414,14.3
+Kaafu,any_hospital,22:45,30,0,17749,0.0
+Kaafu,any_hospital,22:45,60,0,17749,0.0
+Kaafu,any_hospital,22:45,90,0,17749,0.0
+Kaafu,any_hospital,22:45,120,0,17749,0.0
+Kaafu,any_hospital,22:45,240,0,17749,0.0
+All 23,any_hospital,22:45,30,4482,31414,14.3
+All 23,any_hospital,22:45,60,4482,31414,14.3
+All 23,any_hospital,22:45,90,4482,31414,14.3
+All 23,any_hospital,22:45,120,4482,31414,14.3
+All 23,any_hospital,22:45,240,4482,31414,14.3
+Kaafu,any_hospital,23:00,30,0,17749,0.0
+Kaafu,any_hospital,23:00,60,0,17749,0.0
+Kaafu,any_hospital,23:00,90,0,17749,0.0
+Kaafu,any_hospital,23:00,120,0,17749,0.0
+Kaafu,any_hospital,23:00,240,0,17749,0.0
+All 23,any_hospital,23:00,30,4482,31414,14.3
+All 23,any_hospital,23:00,60,4482,31414,14.3
+All 23,any_hospital,23:00,90,4482,31414,14.3
+All 23,any_hospital,23:00,120,4482,31414,14.3
+All 23,any_hospital,23:00,240,4482,31414,14.3
+Kaafu,any_hospital,23:15,30,0,17749,0.0
+Kaafu,any_hospital,23:15,60,0,17749,0.0
+Kaafu,any_hospital,23:15,90,0,17749,0.0
+Kaafu,any_hospital,23:15,120,0,17749,0.0
+Kaafu,any_hospital,23:15,240,0,17749,0.0
+All 23,any_hospital,23:15,30,4482,31414,14.3
+All 23,any_hospital,23:15,60,4482,31414,14.3
+All 23,any_hospital,23:15,90,4482,31414,14.3
+All 23,any_hospital,23:15,120,4482,31414,14.3
+All 23,any_hospital,23:15,240,4482,31414,14.3
+Kaafu,any_hospital,23:30,30,0,17749,0.0
+Kaafu,any_hospital,23:30,60,0,17749,0.0
+Kaafu,any_hospital,23:30,90,0,17749,0.0
+Kaafu,any_hospital,23:30,120,0,17749,0.0
+Kaafu,any_hospital,23:30,240,0,17749,0.0
+All 23,any_hospital,23:30,30,4482,31414,14.3
+All 23,any_hospital,23:30,60,4482,31414,14.3
+All 23,any_hospital,23:30,90,4482,31414,14.3
+All 23,any_hospital,23:30,120,4482,31414,14.3
+All 23,any_hospital,23:30,240,4482,31414,14.3
+Kaafu,any_hospital,23:45,30,0,17749,0.0
+Kaafu,any_hospital,23:45,60,0,17749,0.0
+Kaafu,any_hospital,23:45,90,0,17749,0.0
+Kaafu,any_hospital,23:45,120,0,17749,0.0
+Kaafu,any_hospital,23:45,240,0,17749,0.0
+All 23,any_hospital,23:45,30,4482,31414,14.3
+All 23,any_hospital,23:45,60,4482,31414,14.3
+All 23,any_hospital,23:45,90,4482,31414,14.3
+All 23,any_hospital,23:45,120,4482,31414,14.3
+All 23,any_hospital,23:45,240,4482,31414,14.3
