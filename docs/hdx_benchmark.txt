@@ -1,0 +1,12 @@
+hdx_benchmark.csv - Kaafu Connect data pack
+===========================================
+HDX Maldives accessibility indicators, hospitals, car-only travel time
+(file MDV_hospitals_access_wide.csv). Share of population within 30, 60,
+90 and 120 minutes, for the Maldives (ADM0), Kaafu, Malé and Alif Alif
+(ADM1). HDX has no row for Alif Dhaalu or Vaavu, and nothing beyond 120
+min, so the 240-minute band has no HDX value.
+
+Headline: Kaafu 77.41% within 2 h, Maldives 45.89%.
+HDX uses its own modelled population (Kaafu ~7,770), not Census 2022
+(17,749), so compare percentages, not head counts.
+Credit: HDX / Maldives accessibility indicators dataset.
