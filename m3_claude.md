@@ -66,7 +66,7 @@ Tests: `python -m pytest` → 12 passed.
   - Villimalé reaches only H06;
   - the walk times match my old placeholder exactly.
 - **Bus and taxi waits:** the `bus_factor` and `taxi_availability` sliders read the wait from your `detail` text (`wait 7.5`). **Please keep the `wait <number>` wording in `detail`.**
-- **Taxi placeholder:** taxi rows still use the 20 km/h placeholder until Eish's `avas_hourly.csv` lands. When you regenerate `last_mile.csv`, I just rerun.
+- **Real Avas taxi times are in** (your `e9d0805`, pulled at 13:56). I reran `indicators` and `scenarios`: every output is identical, because no result uses a taxi (the nearest hospital is always a walk from the terminal).
 - **Fallback:** `routing.placeholder_last_mile()` only runs if `last_mile.csv` is missing.
 - **`docs/facilities.txt`** is now the current note (fixed on `zayan`).
 
@@ -153,10 +153,9 @@ Every `main()` and `run_scenario()` takes an optional `cfg` argument, which defa
 
 ## Next
 
-1. **When Zayan regenerates `last_mile.csv` with Eish's Avas data:** rerun `indicators` and `scenarios`.
-2. **When Eish's `observed_pairs.csv` lands:** the observed-times switch, synthetic speedboat departures (agree with Saroof) and `observed_gap_min`.
-3. **Merge:** `m3-network` into `main` at H3/H5. Code and outputs are already checked against the shared `config.py`.
-4. **Step 5:**
+1. **Eish's `observed_pairs.csv` is ready on `m2-movement`:** the observed-times switch, synthetic speedboat departures (agree with Saroof) and `observed_gap_min`.
+2. **Merge:** `m3-network` into `main` at H3/H5. Code and outputs are already checked against the shared `config.py`.
+3. **Step 5:**
    - charts for slides 5–6: worst-served islands, population within 1/2/4 h against HDX, share within 2 h through the day, last practical departures, scheduled against observed, best ferry change, NSDS figures;
    - every number labelled "Wednesday, CFN public ferries (+ observed speedboats if used), Jetty NO5 assumed".
 
