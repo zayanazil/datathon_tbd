@@ -1,6 +1,9 @@
 """Terminals, island zones and map layers (M1)."""
 from __future__ import annotations
 
+import json
+import time
+
 import numpy as np
 import pandas as pd
 
@@ -261,9 +264,88 @@ def bus_routes_layer() -> pd.DataFrame:
              .agg(route=("route", "first"),
                   path=("lat", lambda s: stops.loc[s.index, ["lon", "lat"]].values.tolist()))
              .reset_index())
+    # Road geometry where it has been snapped (write_bus_road_paths); straight stop-to-stop lines otherwise.
+    roads = load_bus_road_paths()
+    on_road = paths.route_number.isin(roads.get("routes", {}))
+    paths.loc[on_road, "path"] = paths.loc[on_road, "route_number"].map(roads.get("routes", {}))
+    partly = paths.route_number.isin(roads.get("straight_legs", {}))
     paths["colour"] = [BUS_ROUTE_COLOUR] * len(paths)
-    paths["tooltip"] = paths.route_number + " " + paths.route
+    paths["tooltip"] = paths.route_number + " " + paths.route + np.select(
+        [~on_road, partly], [" (stops joined by straight lines)", " (some stops joined by straight lines)"], "")
     return paths
+
+
+BUS_ROAD_PATHS_JSON = C.PROCESSED / "bus_road_paths.json"
+OSRM_URL = "https://router.project-osrm.org/route/v1/driving/"
+
+
+def load_bus_road_paths() -> dict:
+    """{"routes": route_number -> [[lon, lat], ...] along the roads, "straight_legs": ...}; {} if not built."""
+    if not BUS_ROAD_PATHS_JSON.exists():
+        return {}
+    return json.loads(BUS_ROAD_PATHS_JSON.read_text(encoding="utf-8"))
+
+
+def _reverse_leg(a: list, b: list) -> tuple[list, float] | None:
+    """Road path from b to a, flipped to run a to b, with its length in metres; None if OSRM has none."""
+    import requests
+
+    r = requests.get(OSRM_URL + f"{b[0]:.6f},{b[1]:.6f};{a[0]:.6f},{a[1]:.6f}",
+                     params={"overview": "full", "geometries": "geojson"},
+                     headers={"User-Agent": "kaafu-connect (Maldives Datathon 2026)"}, timeout=30)
+    if not r.ok or not r.json().get("routes"):
+        return None
+    best = r.json()["routes"][0]
+    return [a, *best["geometry"]["coordinates"][::-1], b], best["distance"]
+
+
+def write_bus_road_paths(pause_s: float = 1.0) -> dict[str, list]:
+    """Snap each bus route onto OSM roads through its stops in order, via the public OSRM server.
+
+    Only public bus-stop coordinates are sent. Run once (needs internet); the app reads the saved file.
+    Each stop-to-stop leg follows the roads, except a leg whose road path is implausibly long (OSM's
+    one-way airport roads send Velana Domestic Terminal legs on an 11 km loop via Hulhumalé): that
+    leg alone is drawn straight and listed in `straight_legs`. A route OSRM can't place stays straight.
+    """
+    import requests
+
+    stops = pd.read_csv(BUS_ROUTES_CSV, encoding="utf-8-sig").sort_values(["route_number", "order"])
+    out, notes, straight_legs = {}, {}, {}
+    for route, g in stops.groupby("route_number"):
+        coords = ";".join(f"{lon:.6f},{lat:.6f}" for lon, lat in zip(g.lon, g.lat))
+        try:
+            r = requests.get(OSRM_URL + coords, params={"overview": "false", "steps": "true",
+                                                        "geometries": "geojson"},
+                             headers={"User-Agent": "kaafu-connect (Maldives Datathon 2026)"}, timeout=30)
+            r.raise_for_status()
+            legs = r.json()["routes"][0]["legs"]
+        except (requests.RequestException, KeyError, IndexError, ValueError) as e:
+            notes[route] = f"not snapped: {type(e).__name__}"
+            continue
+        pts = g[["lon", "lat"]].to_numpy().tolist()
+        path, bad = [], []
+        for i, leg in enumerate(legs):
+            straight = haversine_m([pts[i][::-1]], [pts[i + 1][::-1]])[0]
+            piece = [c for step in leg["steps"] for c in step["geometry"]["coordinates"]]
+            if leg["distance"] > 2 * straight + 500:
+                # Long detour: OSM's one-way tags may forbid this direction (Velana airport roads loop
+                # via Hulhumalé). Draw whichever is shorter, this way or the reverse trip flipped.
+                rev = _reverse_leg(pts[i], pts[i + 1])
+                if rev is not None and rev[1] < leg["distance"]:
+                    piece = rev[0]
+            if not piece:
+                piece = [pts[i], pts[i + 1]]
+                bad.append(f"{g.stop.iloc[i]} → {g.stop.iloc[i + 1]} (no road path)")
+            path.extend(piece if not path else piece[1:])
+        out[route] = [[round(x, 6), round(y, 6)] for x, y in path]
+        if bad:
+            straight_legs[route] = bad
+        notes[route] = f"{len(legs) - len(bad)}/{len(legs)} legs on roads"
+        time.sleep(pause_s)
+    BUS_ROAD_PATHS_JSON.write_text(json.dumps(
+        {"source": "OSRM (router.project-osrm.org) on OpenStreetMap roads, © OpenStreetMap contributors (ODbL)",
+         "notes": notes, "straight_legs": straight_legs, "routes": out}, ensure_ascii=False), encoding="utf-8")
+    return notes
 
 
 OBSERVED_PAIR_COLUMNS = ["from_key", "to_key", "speed_class", "n_trips", "n_devices",

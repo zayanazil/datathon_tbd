@@ -88,6 +88,7 @@ The model is a timetable journey planner, not a trained model. All scheduled boa
 | MTCC/RTL ferry and bus timetables | 23–24 Oct 2026 |
 | FollowMe boat GPS (Aug 2025) and Avas rides (Aug–Sep 2026), from the organisers | 24 Oct 2026 |
 | HDX hospital accessibility indicators (car-only benchmark) | 23 Oct 2026 |
+| Bus route road geometry: OSRM (router.project-osrm.org) on OpenStreetMap roads, © OpenStreetMap contributors (ODbL) | 24 Oct 2026 |
 
 MTCC.xlsx passenger counts are randomly generated and are not used for findings. MACL flight data is not used.
 

@@ -24,6 +24,11 @@ def main(skip_followme: bool = False):
     _write(geo.terminals()[["terminal_id", "name", "island_key", "lat", "lon", "bus_stop_code",
                             "walk_to_stop_min"]], "terminals.csv")
     (C.PROCESSED / "island_zones.geojson").write_text(geo.island_zones().to_json(), encoding="utf-8")
+    if geo.BUS_ROUTES_CSV.exists() and not geo.BUS_ROAD_PATHS_JSON.exists():
+        try:  # needs internet once; the committed file is used after that
+            print("  bus routes snapped to roads:", geo.write_bus_road_paths())
+        except Exception as e:
+            print(f"  bus routes not snapped ({type(e).__name__}): map draws straight stop-to-stop lines")
 
     print("M2 Avas")
     rides = None
