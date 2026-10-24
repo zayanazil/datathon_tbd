@@ -77,6 +77,15 @@ def test_breakdown_adds_up():
     assert r["n_boats"] == 2 and r["path"] == "A>B(T1)>C(T3)>walk>H1"
 
 
+def test_breakdown_waits_at_home_not_overnight_at_transfer():
+    # T1 reaches B on day 1, but the onward boat T3 only runs on day 2; T1_d2 also connects.
+    conns = toy([("T1", "A", "B", 480, 540), ("T1_d2", "A", "B", 1920, 1980), ("T3", "B", "C", 2000, 2040)])
+    hospitals = pd.DataFrame({"facility_id": ["H1"], "island_key": ["C"]})
+    r = door_to_door(conns, "A", 400, hospitals, {("C", 10): [("H1", 12.0, "walk")]}, CFG)
+    assert r["total_min"] == 2040 + 12 - 400
+    assert r["wait_min"] == 1920 - 405 and r["transfer_min"] == 20
+
+
 def test_own_hospital_scores_access_min():
     conns = toy([("T1", "A", "B", 480, 540)])
     hospitals = pd.DataFrame({"facility_id": ["H1"], "island_key": ["A"]})

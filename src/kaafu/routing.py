@@ -4,6 +4,7 @@ A connection scan: go through every boat leg in departure order and keep the
 earliest time each island or terminal can be reached. Every parameter comes
 from the `cfg` passed in (src/kaafu/config.py on the day).
 """
+import bisect
 import math
 
 import pandas as pd
@@ -66,18 +67,24 @@ def last_mile_index(last_mile):
     return index
 
 
+def as_rows(conns):
+    """Connections as a list of row tuples. Convert once and pass the list to
+    earliest_arrival when scanning many times; a DataFrame is converted per call."""
+    return conns if isinstance(conns, list) else list(conns.itertuples(index=False))
+
+
 def earliest_arrival(conns, origin, t, cfg):
     """Earliest reach time at every stop leaving home on `origin` at minute `t`.
 
-    `conns` must be sorted by dep_min. came_by[stop] = (last leg into stop, the
+    `conns` (DataFrame or as_rows() list) must be sorted by dep_min. came_by[stop] = (last leg into stop, the
     leg where that trip was boarded), so the journey can be walked back.
     """
+    rows = as_rows(conns)
     reach = {origin: t + cfg.ACCESS_MIN}
     came_by = {}
     boarded = {}
-    for c in conns.itertuples():
-        if c.dep_min < t:
-            continue
+    start = bisect.bisect_left(rows, t, key=lambda c: c.dep_min)  # skip boats that left before t
+    for c in rows[start:]:
         on_board = c.trip_id in boarded
         need = 0 if c.from_stop == origin else cfg.BOAT_TRANSFER_MIN
         can_board = c.from_stop in reach and reach[c.from_stop] + need <= c.dep_min
@@ -100,11 +107,27 @@ def journey(came_by, origin, stop):
     return legs[::-1]
 
 
-def door_to_door(conns, origin, t, hospitals, lm_index, cfg):
+def latest_departure(conns, origin, t, stop, at, cfg):
+    """came_by of the scan from the latest departure >= t that still reaches `stop` by `at`."""
+    lo, hi = t, int(at)  # reach is monotone in the departure time, so bisect on it
+    while lo < hi:
+        mid = (lo + hi + 1) // 2
+        if earliest_arrival(conns, origin, mid, cfg)[0].get(stop, math.inf) <= at:
+            lo = mid
+        else:
+            hi = mid - 1
+    return earliest_arrival(conns, origin, lo, cfg)[1]
+
+
+UNREACHABLE ="unreachable: no hospital by the end of NEXT_DAY's boats"
+
+
+def door_to_door(conns, origin, t, hospitals, lm_index, cfg, scan=None):
     """Fastest trip from home on `origin` at `t` to any of `hospitals`.
 
-    Returns the access_results.csv fields from total_min on; total_min is None
-    when no hospital is reached within the two days of connections.
+    Returns the access_results.csv fields from facility_id on; total_min is None
+    when no hospital is reached within the two days of connections. `scan` is an
+    earlier earliest_arrival() result for the same origin and t, to reuse it.
     """
     if origin in set(hospitals["island_key"]):
         f = hospitals[hospitals["island_key"] == origin].iloc[0]
@@ -113,7 +136,8 @@ def door_to_door(conns, origin, t, hospitals, lm_index, cfg):
                     path=f"{origin}>{f.facility_id}")
 
     wanted = set(hospitals["facility_id"])
-    reach, came_by = earliest_arrival(conns, origin, t, cfg)
+    conns = as_rows(conns)
+    reach, came_by = scan or earliest_arrival(conns, origin, t, cfg)
     best = None
     for stop, at in reach.items():
         if stop == origin:
@@ -123,10 +147,15 @@ def door_to_door(conns, origin, t, hospitals, lm_index, cfg):
                 best = (at + minutes, stop, facility_id, minutes, mode)
     if best is None:
         return dict(facility_id=None, total_min=None, wait_min=None, boat_min=None,
-                    transfer_min=None, lastmile_mode=None, lastmile_min=None, n_boats=0, path=None)
+                    transfer_min=None, lastmile_mode=None, lastmile_min=None, n_boats=0,
+                    path=UNREACHABLE)
 
     arrival, stop, facility_id, minutes, mode = best
     legs = journey(came_by, origin, stop)
+    if len(legs) > 1:
+        # Same arrival, but on the latest boats that still make it, so the waiting
+        # happens at home rather than overnight at a transfer island (e.g. ADh on Wed).
+        legs = journey(latest_departure(conns, origin, t, stop, reach[stop], cfg), origin, stop)
     transfers = sum(nxt[2] - prev[4] for prev, nxt in zip(legs, legs[1:]))
     path = ">".join([origin] + [f"{to}({route})" for route, _, _, to, _ in legs] + [mode, facility_id])
     return dict(facility_id=facility_id, total_min=round(arrival - t, 1),
@@ -134,3 +163,25 @@ def door_to_door(conns, origin, t, hospitals, lm_index, cfg):
                 boat_min=sum(arr - dep for _, _, dep, _, arr in legs),
                 transfer_min=transfers, lastmile_mode=mode, lastmile_min=minutes,
                 n_boats=len(legs), path=path)
+
+
+ACCESS_COLUMNS = [
+    "scenario", "day_type", "origin_key", "dep_min", "target", "facility_id", "total_min",
+    "wait_min", "boat_min", "transfer_min", "lastmile_mode", "lastmile_min", "n_boats", "path",
+]
+
+
+def access_results(conns, origins, facilities, last_mile, cfg, scenario="base"):
+    """access_results.csv: every origin x departure (every STEP_MIN) x target."""
+    lm_index = last_mile_index(last_mile)
+    targets = {target: target_hospitals(facilities, target, cfg) for target in TARGET_FACILITIES}
+    conn_rows = as_rows(conns)
+    rows = []
+    for origin in origins:
+        for t in range(0, 1440, cfg.STEP_MIN):
+            scan = earliest_arrival(conn_rows, origin, t, cfg)
+            for target, hospitals in targets.items():
+                r = door_to_door(conn_rows, origin, t, hospitals, lm_index, cfg, scan)
+                rows.append(dict(scenario=scenario, day_type=cfg.DAY, origin_key=origin,
+                                 dep_min=t, target=target, **r))
+    return pd.DataFrame(rows, columns=ACCESS_COLUMNS)
