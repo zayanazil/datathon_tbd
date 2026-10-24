@@ -5,7 +5,7 @@ params (all optional; leaving one out means no change):
     ferry_factor         {route_id: factor}, 0.5 to 3
     extra_runs           [(route_id, minute), ...] one extra departure each, on DAY
     thulusdhoo_hospital  True adds K.Thulusdhoo as an atoll-level hospital (any_hospital)
-    observed             True uses observed boat times        -- waiting for M2's observed_pairs.csv
+    observed             True re-times legs with M2's observed slow medians (observed_durations)
     bus_factor           bus frequency factor, 0.5 to 3 (divides the wait)
     taxi_availability    0 to 1, cuts the Avas unserved share by that fraction
     label                the scenario column value (default "base" or "scenario")
@@ -19,7 +19,6 @@ from kaafu import indicators, routing
 
 DEFAULTS = dict(ferry_factor={}, extra_runs=[], thulusdhoo_hospital=False, observed=False,
                 bus_factor=1.0, taxi_availability=0.0)
-PENDING = {"observed": "M2's observed_pairs.csv"}
 WAIT_IN_DETAIL = re.compile(r"wait (\d+(?:\.\d+)?)")  # M1's last_mile.csv detail, e.g. "wait 7.5"
 THULUSDHOO_ID = "H10"
 BEST_FERRY_CHANGE_CSV = "best_ferry_change.csv"  # extra table, not in the section 4 contracts
@@ -110,6 +109,34 @@ def extra_run(conns, route_id, minute, towards_male=True):
     return _finish(pd.concat([conns, run]))
 
 
+def observed_durations(conns, pairs, stop_island, cfg):
+    """Scheduled legs re-timed with M2's observed `slow` medians (BUILD_PLAN 6.4 step 8).
+
+    A leg takes the median of its island pair where n_trips >= OBSERVED_MIN_TRIPS and the
+    median is at most OBSERVED_MAX_SLOWDOWN x the scheduled time (the slow class also holds
+    cargo dhonis). Departures stay as scheduled, except that a boat can't leave a stop before
+    it arrives there, so a later leg of a delayed trip leaves late.
+    `stop_island` maps terminal IDs to island keys, as M2's pairs use island keys.
+    """
+    slow = pairs[(pairs["speed_class"] == "slow") & (pairs["n_trips"] >= cfg.OBSERVED_MIN_TRIPS)]
+    median = slow.set_index(["from_key", "to_key"])["median_min"].to_dict()
+    conns = conns.sort_values(["trip_id", "dep_min"]).copy()
+    arrived = {}
+    for i, c in zip(conns.index, conns.itertuples()):
+        dep = max(c.dep_min, arrived.get(c.trip_id, c.dep_min))
+        scheduled = c.arr_min - c.dep_min
+        observed = median.get((stop_island.get(c.from_stop, c.from_stop),
+                               stop_island.get(c.to_stop, c.to_stop)))
+        if observed is not None and observed <= cfg.OBSERVED_MAX_SLOWDOWN * scheduled:
+            conns.loc[i, ["estimated", "source"]] = ["yes", "observed FollowMe slow median"]
+            duration = round(observed)
+        else:
+            duration = scheduled
+        conns.loc[i, ["dep_min", "arr_min"]] = [dep, dep + duration]
+        arrived[c.trip_id] = dep + duration
+    return _finish(conns)
+
+
 def adjust_last_mile(last_mile, cfg, bus_factor=1.0, taxi_availability=0.0):
     """Last mile with bus waits divided by bus_factor and the taxi unserved share cut.
 
@@ -157,15 +184,16 @@ def run_scenario(params=None, cfg=None):
     if cfg is None:
         from kaafu import config as cfg
     params = {**DEFAULTS, **(params or {})}
-    for name, needs in PENDING.items():
-        if params[name] != DEFAULTS[name]:
-            raise NotImplementedError(f"'{name}' needs {needs}, which hasn't landed yet")
-    key = json.dumps(params, sort_keys=True, default=str)
+    key =json.dumps(params, sort_keys=True, default=str)
     if key in _results_cache:
         return _results_cache[key]
 
     data = _inputs(cfg)
     conns, facilities, last_mile = data["conns"], data["facilities"], data["last_mile"]
+    if params["observed"]:
+        if data["observed_pairs"] is None:
+            raise FileNotFoundError(f"'observed' needs M2's {cfg.OBSERVED_PAIRS_CSV.name}")
+        conns = observed_durations(conns, data["observed_pairs"], data["stop_island"], cfg)
     for route_id, factor in params["ferry_factor"].items():
         conns = scale_route(conns, str(route_id), factor)
     for route_id, minute in params["extra_runs"]:
@@ -183,7 +211,7 @@ def run_scenario(params=None, cfg=None):
     label = params.get("label") or ("scenario" if changed else "base")
     origins = data["islands"].loc[data["islands"]["role"] == "origin", "island_key"].tolist()
     results = routing.access_results(conns, origins, facilities, last_mile, cfg, label, targets)
-    summary = indicators.island_summary(results, data["islands"], conns, cfg)
+    summary = indicators.island_summary(results, data["islands"], conns, cfg, observed_gap=data["observed_gap"])
     _results_cache[key] = (results, summary)
     return results, summary
 

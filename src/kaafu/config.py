@@ -154,6 +154,10 @@ THRESHOLDS_MIN = [30, 60, 90, 120, 240]   # HDX format plus the guide's 4-hour b
 DAYTIME_START_MIN = 6 * 60            # "day" = departures 06:00-18:00
 DAYTIME_END_MIN = 18 * 60
 EVENING_RUN_TIMES = ["18:00", "20:00", "22:00"]   # best ferry change candidates
+# Observed boat times: a slow median replaces a scheduled leg only if it is at most
+# this many times the scheduled duration. M2 found cargo dhonis in the slow class
+# (e.g. Malé -> Himmafushi 74 min observed vs 40 scheduled).
+OBSERVED_MAX_SLOWDOWN = 1.5
 
 # Population checks (Census 2022)
 POP_KAAFU = 17_749

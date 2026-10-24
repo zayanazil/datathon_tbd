@@ -36,12 +36,13 @@ def _daytime(dep_min, cfg):
     return dep_min.between(cfg.DAYTIME_START_MIN, cfg.DAYTIME_END_MIN)
 
 
-def island_summary(results, islands, conns, cfg, target="gm_hospital"):
+def island_summary(results, islands, conns, cfg, target="gm_hospital", observed_gap=None):
     """island_summary.csv from access_results rows for one scenario and target.
 
     Unreachable departures count as infinite, so a median or worst value that
-    is unreachable is left blank.
+    is unreachable is left blank. `observed_gap` is observed_gap() by origin, if M2's data is in.
     """
+    observed_gap = observed_gap if observed_gap is not None else pd.Series(dtype=float)
     res = results[results["target"] == target]
     population = islands.set_index("island_key")["population_2022"]
     rows = []
@@ -58,9 +59,34 @@ def island_summary(results, islands, conns, cfg, target="gm_hospital"):
             worst_day_min=_blank_if_inf(day.max()),
             last_practical_departure=hhmm(same_day["dep_min"].max()) if len(same_day) else "none",
             boats_per_day=leaving["trip_id"].nunique(),
-            observed_gap_min=None,  # filled in Step 4 from M2's observed_pairs.csv
+            observed_gap_min=observed_gap.get(origin),
         ))
     return pd.DataFrame(rows, columns=SUMMARY_COLUMNS)
+
+
+def observed_gap(conns, observed_trips, stop_island, cfg):
+    """Scheduled minus observed boat minutes from each island to Greater Malé.
+
+    Scheduled: the quickest timetabled ride from the island to a Greater Malé terminal on
+    one trip (DAY or NEXT_DAY). Observed: M2's median of all tracked trips from the island
+    to Malé, Hulhumalé or Villimalé, if there are at least OBSERVED_MIN_TRIPS. Positive means
+    the boats people actually take are faster than the timetable.
+    """
+    scheduled = {}
+    for _, trip in conns.sort_values("dep_min").groupby("trip_id"):
+        legs = list(trip.itertuples())
+        for i, leg in enumerate(legs):
+            if leg.from_stop.startswith("T_"):
+                continue
+            at_gm = next((later.arr_min for later in legs[i:] if later.to_stop.startswith("T_")), None)
+            if at_gm is not None:
+                ride = at_gm - leg.dep_min
+                scheduled[leg.from_stop] = min(scheduled.get(leg.from_stop, ride), ride)
+    gm_islands = set(stop_island.values())
+    to_gm = observed_trips[observed_trips["to_key"].isin(gm_islands)].groupby("from_key")["duration_min"]
+    observed = to_gm.median()[to_gm.size() >= cfg.OBSERVED_MIN_TRIPS]
+    gap = pd.Series(scheduled, dtype=float) - observed
+    return gap.dropna().round(1)
 
 
 def _per_island_minutes(results, target, cfg, dep_min=None):
@@ -177,14 +203,28 @@ def load_last_mile(facilities, cfg):
     return routing.placeholder_last_mile(facilities, cfg, terminals)
 
 
+def _read_if_there(path, cfg):
+    return pd.read_csv(path, encoding=cfg.READ_ENCODING) if path.exists() else None
+
+
 def load_inputs(cfg):
-    """connections, islands, facilities and last mile, as every M3 run needs them."""
-    facilities = pd.read_csv(cfg.FACILITIES_CSV, encoding=cfg.READ_ENCODING)
+    """Everything an M3 run needs. M2's observed files are None until they land."""
+    read = dict(encoding=cfg.READ_ENCODING)
+    facilities = pd.read_csv(cfg.FACILITIES_CSV, **read)
+    conns = pd.read_csv(cfg.CONNECTIONS_CSV, dtype={"route_id": str}, **read)
+    terminals = _read_if_there(cfg.TERMINALS_CSV, cfg)
+    stop_island = routing.terminals_from_csv(terminals) if terminals is not None else routing.PLACEHOLDER_TERMINALS
+    stop_island = {stop: island for stop, (island, _, _) in stop_island.items()}
+    observed_trips = _read_if_there(cfg.OBSERVED_TRIPS_CSV, cfg)
     return dict(
-        conns=pd.read_csv(cfg.CONNECTIONS_CSV, encoding=cfg.READ_ENCODING, dtype={"route_id": str}),
-        islands=pd.read_csv(cfg.ISLANDS_CSV, encoding=cfg.READ_ENCODING),
+        conns=conns,
+        islands=pd.read_csv(cfg.ISLANDS_CSV, **read),
         facilities=facilities,
         last_mile=load_last_mile(facilities, cfg),
+        stop_island=stop_island,
+        observed_pairs=_read_if_there(cfg.OBSERVED_PAIRS_CSV, cfg),
+        observed_gap=(observed_gap(conns, observed_trips, stop_island, cfg)
+                      if observed_trips is not None else None),
     )
 
 
@@ -196,7 +236,7 @@ def main(cfg=None):
     origins = islands.loc[islands["role"] == "origin", "island_key"].tolist()
 
     results = routing.access_results(conns, origins, facilities, data["last_mile"], cfg)
-    summary = island_summary(results, islands, conns, cfg)
+    summary = island_summary(results, islands, conns, cfg, observed_gap=data["observed_gap"])
     write = dict(index=False, encoding=cfg.WRITE_ENCODING)
     results.to_csv(cfg.ACCESS_RESULTS_CSV, **write)
     summary.to_csv(cfg.ISLAND_SUMMARY_CSV, **write)

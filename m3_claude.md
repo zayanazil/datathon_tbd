@@ -1,6 +1,6 @@
 # M3 network and indicators: status
 
-**Owner:** Al (M3) · **Branch:** `m3-network` · **Last updated:** 24 Oct 2026, after merging `zayan` (real `last_mile.csv`, `config.py`)
+**Owner:** Al (M3) · **Branch:** `m3-network` · **Last updated:** 24 Oct 2026, after merging `m2-movement` and adding the observed-times switch
 
 This file says what M3 has built, what it needs from the rest of the team, and what comes next. It's updated after each major step. Team: M1 Zayan (GIS), M2 Eish (movement), M3 Al (network), M4 Saroof (lead, dashboard).
 
@@ -12,13 +12,13 @@ This file says what M3 has built, what it needs from the rest of the team, and w
 | 2. `routing.py` + toy tests | Done; matches the reference table in `M3_network.md` for all 23 islands |
 | 3. `access_results.csv` + `island_summary.csv` (H3) | Done, with **Zayan's real `last_mile.csv`** |
 | 4. Indicators, HDX, NSDS, scenarios, best ferry change | Done, including the bus and taxi sliders |
-| 4. Observed boat times | **Waiting** for Eish's `observed_pairs.csv` |
+| 4. Observed boat times | Leg durations and `observed_gap_min` done. Synthetic speedboat departures **not decided yet** |
 | 5. Final figures for slides 5–6 | Not started |
 
-Tests: `python -m pytest` → 12 passed.
+Tests: `python -m pytest` → 13 passed.
 
 **Branch contents:**
-- `main` and `zayan` are both merged in, so this branch has the official `config.py`, `pyproject.toml`, Zayan's `geo.py`/`lastmile.py` and `last_mile.csv`.
+- `main`, `zayan` and `m2-movement` are all merged in. This branch has the official `config.py`, `pyproject.toml`, Zayan's `last_mile.csv` (real Avas taxi times) and Eish's `observed_pairs.csv`/`observed_trips.csv`.
 - `data/sheets/` is identical to `main`'s.
 
 ## What each member needs to know
@@ -36,7 +36,7 @@ Tests: `python -m pytest` → 12 passed.
   | `ferry_factor` | works | `{route_id: factor}`, 0.5–3 |
   | `extra_runs` | works | `[(route_id, minute)]`, e.g. `[("307", 1080)]` for 18:00 |
   | `thulusdhoo_hospital` | works | `True` adds K.Thulusdhoo as an atoll hospital (`any_hospital` only) |
-  | `observed` | waiting for Eish | raises `NotImplementedError` if set |
+  | `observed` | works | Re-times CFN legs with Eish's slow medians (see Eish's section). Speedboats are not added yet. |
   | `bus_factor` | works | 0.5–3; the bus wait is divided by it |
   | `taxi_availability` | works | 0–1; cuts the Avas unserved share (the part of the taxi wait above `TAXI_BASE_WAIT_MIN`) |
 
@@ -72,11 +72,18 @@ Tests: `python -m pytest` → 12 passed.
 
 ### Eish (M2): observed boat times
 
-- **I need `data/processed/observed_pairs.csv`**, with columns `from_key, to_key, speed_class, n_trips, n_devices, median_min, p90_min, trips_per_day, first_hour, last_hour`, keyed by `island_key`. Use `K.Malé` / `K.Hulhumalé` for the Greater Malé end, or tell me if you use terminal IDs.
-- **What I'll do with it:**
-  1. Replace scheduled leg durations with the `slow` median where `n_trips ≥ 5`.
-  2. Add synthetic speedboat departures for busy `fast` pairs (`trips_per_day ≥ 5`). To agree with Saroof.
-  3. Fill `observed_gap_min` in `island_summary.csv`.
+- **Your `observed_pairs.csv` and `observed_trips.csv` are in use** (merged from `m2-movement`).
+- **Observed switch (`scenarios.observed_durations`):**
+  - A leg takes its pair's `slow` median where `n_trips ≥ OBSERVED_MIN_TRIPS`.
+  - It doesn't if the median is more than **`OBSERVED_MAX_SLOWDOWN` (1.5×, new in `config.py`)** times the scheduled time. That's your cargo-dhoni suggestion.
+  - A boat can't leave a stop before it arrives, so a slowed leg delays the rest of its trip.
+  - 55 CFN legs are re-timed, mostly by a few minutes. The Villimalé ferry is unchanged (7.7 rounds to 8).
+- **Effect on results:** island times move by −6 to +37 min, and the headline stays at 0% within 2 h. On their own, re-timed ferries don't change the picture.
+- **`observed_gap_min`:**
+  - Definition: scheduled minutes from the island to a Greater Malé terminal on one timetabled trip, minus your median of **all** tracked trips from the island to Malé/Hulhumalé/Villimalé (≥ 5 trips).
+  - Positive means boats are faster than the timetable. E.g. Thoddoo 387 (route 303 loops via Rasdhoo and Ukulhas), V islands 206–237, Kaashidhoo 165, Huraa 37, Himmafushi 20.
+  - Blank where there's no direct scheduled boat: Mathiveri, Bodufolhudhoo, and the ADh islands except Mahibadhoo.
+- **Still to decide:** synthetic speedboat departures for your four busy fast pairs (Thulusdhoo, Dhiffushi, Himmafushi, Thoddoo → Malé).
 
 ## How to run
 
@@ -107,7 +114,7 @@ Every `main()` and `run_scenario()` takes an optional `cfg` argument, which defa
 |---|---|---|
 | `connections.csv` | 600 | 50 CFN + 250 Villimalé legs per day, Wed + Thu. (`M3_network.md` said "about 40" CFN legs; a hand count gives 50.) |
 | `access_results.csv` | 4,416 | 23 islands × 96 departures × 2 targets. A blank `total_min` means unreachable; `path` then says `unreachable: …`. |
-| `island_summary.csv` | 23 | Target `gm_hospital`. A blank median or worst value means unreachable for most daytime departures. `observed_gap_min` is blank until Eish's file arrives. |
+| `island_summary.csv` | 23 | Target `gm_hospital`. A blank median or worst value means unreachable for most daytime departures. `observed_gap_min` is filled from Eish's data (see Eish's section). |
 | `population_within.csv` | 1,940 | Share within 30/60/90/120/240 min, Kaafu and all 23 islands, both targets, every departure plus `day_median`. |
 | `hdx_comparison.csv` | 10 | Daytime median against HDX car-only: Kaafu against HDX Kaafu, all 23 against HDX Maldives. Percentages only. |
 | `nsds_figures.csv` | 10 | Direct boat to Greater Malé, same-day boat with changes, health facility within 30 min, hospital within 2 h. |
@@ -153,7 +160,7 @@ Every `main()` and `run_scenario()` takes an optional `cfg` argument, which defa
 
 ## Next
 
-1. **Eish's `observed_pairs.csv` is ready on `m2-movement`:** the observed-times switch, synthetic speedboat departures (agree with Saroof) and `observed_gap_min`.
+1. **Synthetic speedboat departures:** decide with Saroof, then add them to the observed switch.
 2. **Merge:** `m3-network` into `main` at H3/H5. Code and outputs are already checked against the shared `config.py`.
 3. **Step 5:**
    - charts for slides 5–6: worst-served islands, population within 1/2/4 h against HDX, share within 2 h through the day, last practical departures, scheduled against observed, best ferry change, NSDS figures;

@@ -8,7 +8,7 @@ import pandas as pd
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "src"))
 
 from kaafu.routing import door_to_door, earliest_arrival  # noqa: E402
-from kaafu.scenarios import adjust_last_mile, extra_run, scale_route  # noqa: E402
+from kaafu.scenarios import adjust_last_mile, extra_run, observed_durations, scale_route  # noqa: E402
 
 CFG = SimpleNamespace(ACCESS_MIN=5, BOAT_TRANSFER_MIN=10, TERMINAL_EXIT_MIN=5, WALK_M_PER_MIN=80)
 
@@ -125,3 +125,21 @@ def test_adjust_last_mile_bus_and_taxi():
     assert out["minutes"].tolist()[:3] == [25.0, 19.0, 23.0]  # bus wait 10 -> 5; taxi retry 2 -> 1
     assert pd.isna(out["minutes"].iloc[3])
     assert adjust_last_mile(lm, cfg).equals(lm.assign(minutes=lm["minutes"].round(1)))
+
+
+def test_observed_durations_replace_guard_and_delay():
+    cfg = SimpleNamespace(OBSERVED_MIN_TRIPS=5, OBSERVED_MAX_SLOWDOWN=1.5)
+    conns = toy([("R1", "A", "B", 400, 440), ("R1", "B", "T_M", 445, 500), ("R2", "A", "C", 600, 620)])
+    conns["estimated"], conns["source"] = "no", "timetable"
+    pairs = pd.DataFrame({
+        "from_key": ["A", "B", "A", "A"], "to_key": ["B", "K.M", "C", "B"],
+        "speed_class": ["slow", "slow", "slow", "fast"], "n_trips": [10, 10, 10, 50],
+        "median_min": [50.0, 30.0, 40.0, 10.0],
+    })
+    out = observed_durations(conns, pairs, {"T_M": "K.M"}, cfg).set_index(["trip_id", "from_stop"])
+    # A->B 40 -> 50 (1.25x, kept), so B->T_M can't leave at 445 and leaves at 450, taking 30.
+    assert out.loc[("R1", "A"), ["dep_min", "arr_min"]].tolist() == [400, 450]
+    assert out.loc[("R1", "B"), ["dep_min", "arr_min"]].tolist() == [450, 480]
+    # A->C 20 -> 40 is 2x, over OBSERVED_MAX_SLOWDOWN: scheduled time stays. Fast trips are ignored.
+    assert out.loc[("R2", "A"), ["dep_min", "arr_min"]].tolist() == [600, 620]
+    assert out.loc[("R2", "A"), "estimated"] == "no"
