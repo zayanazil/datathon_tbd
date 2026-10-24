@@ -131,7 +131,7 @@ day = C.DAY  # M3's engine models one service day
 
 with st.sidebar:
     label("Trip")
-    dep_label = st.select_slider("Leave home at", TIMES, value="08:00")
+    dep_label = st.select_slider("Leave home at", TIMES, value="07:00")
     dep = to_min(dep_label)
     target = st.radio("Destination", list(D.TARGETS), format_func=D.TARGETS.get)
     st.caption(f"Service day: {'Wednesday' if day == 'Wed' else day} timetable, with the next morning's boats.")
