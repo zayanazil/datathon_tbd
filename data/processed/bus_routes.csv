@@ -1,0 +1,196 @@
+route_number,route,order,stop,code,lat,lon
+R1,West Park to HM Phase 1,1,Maafannu Bus Terminal,103,4.169366,73.504676
+R1,West Park to HM Phase 1,2,Tow Yard,304,4.169349,73.510249
+R1,West Park to HM Phase 1,3,STELCO,105,4.17001,73.514746
+R1,West Park to HM Phase 1,4,Hulhumale' Cemetery,106,4.207528,73.539788
+R1,West Park to HM Phase 1,5,Skate Park,107,4.207421,73.541765
+R1,West Park to HM Phase 1,6,Flat No. 137,121,4.209958,73.542596
+R1,West Park to HM Phase 1,7,Fehires Park,108,4.211553,73.543088
+R1,West Park to HM Phase 1,8,Flat No. 147,109,4.213077,73.543635
+R1,West Park to HM Phase 1,9,Ruhgandu 1,110,4.216186,73.54459
+R1,West Park to HM Phase 1,10,Dhiraagu,111,4.219882,73.545734
+R1,West Park to HM Phase 1,11,Hulhumale' Synthetic Track,112,4.219455,73.542702
+R1,West Park to HM Phase 1,12,Hulhumale' Police Station,113,4.21678,73.542108
+R1,West Park to HM Phase 1,13,Amin Avenue,114,4.21442,73.540352
+R1,West Park to HM Phase 1,14,MNDF Flat,115,4.210681,73.539804
+R1,West Park to HM Phase 1,15,Hulhumale' Cemetery OPP,11106,4.207528,73.539788
+R1,West Park to HM Phase 1,16,Male' Swimming Track,117,4.169881,73.514446
+R1,West Park to HM Phase 1,17,Dharumavantha School,118,4.169257,73.509328
+R1,West Park to HM Phase 1,18,Maafannu Bus Terminal OPP,11103,4.169366,73.504676
+R1,Ameenee,19,Dharumavantha Hospital (West Side),120,4.172781,73.500813
+R10,Orchid,1,Maafannu Madharusa,1102,4.175986,73.502422
+R10,Orchid,2,Maafannu Sahara,1103,4.175881,73.503956
+R10,Orchid,3,Maaveyo Maizaan,1004,4.175851,73.505883
+R10,Orchid,4,Hilaaleege,1005,4.177532,73.507219
+R10,Orchid,5,Justice Building,1006,4.178385,73.508454
+R10,Orchid,6,Jumhooree Maidhaan,1007,4.17892,73.51104
+R10,Orchid,7,Jetty NO5,1008,4.178784,73.513422
+R10,Orchid,8,MTCC Tower,1009,4.178174,73.515595
+R10,Orchid,9,Carnival,201,4.176984,73.517896
+R10,Orchid,10,Artificial Beach,1011,4.17513,73.518064
+R10,Orchid,11,Muni Ufaa,1012,4.174327,73.516835
+R10,Orchid,12,Ibrahim Mosque,1013,4.174664,73.514333
+R10,Orchid,13,Olympus,1014,4.174948,73.511412
+R10,Orchid,14,City Square (North Side),1106,4.175205,73.509847
+R10,Orchid,15,Maaveyo Magu,1016,4.175418,73.507406
+R10,Orchid,16,Fini Park,1017,4.175659,73.504966
+R10,Orchid,17,Social Centre,1018,4.174989258645558,73.50252476651059
+R11,Ameenee,1,Raalhugandu (Mini Bus),202,4.17331,73.517863
+R11,Ameenee,2,Dharubaaruge,1111,4.170695,73.516314
+R11,Ameenee,3,Kudakudhinge Bageecha,1112,4.170928,73.514235
+R11,Ameenee,4,Male' Hiya Flat,1113,4.171185,73.512209
+R11,Ameenee,5,Rehendhi Flat,1114,4.17137,73.510187
+R11,Ameenee,6,MIRA,1115,4.171568,73.508277
+R11,Ameenee,7,Maafannu Stadium,1116,4.171871,73.505627
+R11,Ameenee,8,Ministry of Environment,1117,4.17199,73.504227
+R11,Ameenee,9,Maafannu Ferry Terminal,1101,4.172281,73.50206
+R11,Ameenee,10,Dharumavantha Hospital (West Side),120,4.172781,73.500813
+R11,Ameenee,11,Maafannu Madharusa,1102,4.175986,73.502422
+R11,Ameenee,12,Maafannu Sahara,1103,4.175881,73.503956
+R11,Ameenee,13,Odeon,1104,4.175564,73.506684
+R11,Ameenee,14,Zikura Mosque,1105,4.175373,73.508185
+R11,Ameenee,15,City Square,1015,4.17513,73.509529
+R11,Ameenee,16,Billoori Jehige,1107,4.175024,73.511556
+R11,Ameenee,17,Heenaamage,1119,4.17478,73.513774
+R11,Ameenee,18,Dhamanaveshi,1108,4.174643,73.515062
+R11,Ameenee,19,Henveiru Stadium,1109,4.174467,73.517145
+R12,Sosun,1,MTCC Sawmill,1201,4.176728,73.517862
+R12,Sosun,2,Ministry of Foreign Affairs,1202,4.178512,73.514082
+R12,Sosun,3,Jumhooree Maidhaan,1007,4.17892,73.51104
+R12,Sosun,4,Velaanaage,1204,4.17832,73.513278
+R12,Sosun,5,ISRAHVEHINGE NAADHEE STOP,32006,4.178033,73.514222
+R12,Sosun,6,Majeedhiyya School,1205,4.177506,73.515282
+R12,Sosun,7,Islamic University of Maldives,1206,4.175993,73.514973
+R12,Sosun,8,Dhamanaveshi,1108,4.174643,73.515062
+R12,Sosun,9,Henveiru Stadium,1109,4.174467,73.517145
+R13,Villimale Internal,1,Villimale Ferry Terminal,1301,4.175107,73.486942
+R13,Villimale Internal,2,BML Villimale Branch,1302,4.174545,73.48597
+R13,Villimale Internal,3,Muhyiddin School,1303,4.173209,73.485865
+R13,Villimale Internal,4,MNDF Flats,1304,4.17234,73.485594
+R13,Villimale Internal,5,Sinaai Sarahadhu,1305,4.171731,73.485121
+R13,Villimale Internal,6,Salaam Miskiy,1306,4.172177,73.484309
+R13,Villimale Internal,7,Boalha Dhandu,1307,4.173065,73.484268
+R13,Villimale Internal,8,Vaaru Hingun,1308,4.173555,73.483706
+R13,Villimale Internal,9,Viludhooni Park,1309,4.174031,73.483217
+R13,Villimale Internal,10,Jumhooree Hingun,1310,4.174845,73.48366
+R13,Villimale Internal,11,Villimale Beach,1311,4.175424,73.484172
+R13,Villimale Internal,12,Villimale Harbor,1312,4.176026,73.484502
+R13,Villimale Internal,13,Villimale Hospital,1313,4.176059,73.48547
+R14,VILLIMALE INTERNAL 2,1,Villimale Ferry Terminal,1301,4.175107,73.486942
+R14,VILLIMALE INTERNAL 2,2,Villimale Hospital,1313,4.176059,73.48547
+R14,VILLIMALE INTERNAL 2,3,Villimale Harbor,1312,4.176026,73.484502
+R14,VILLIMALE INTERNAL 2,4,Villimale Beach,1311,4.175424,73.484172
+R14,VILLIMALE INTERNAL 2,5,Masjidh Al Ikhlaas Stop,32003,4.174233,73.484285
+R14,VILLIMALE INTERNAL 2,6,Boalha Dhandu,1307,4.173065,73.484268
+R14,VILLIMALE INTERNAL 2,7,Salaam Miskiy,1306,4.172177,73.484309
+R14,VILLIMALE INTERNAL 2,8,Sinaai Sarahadhu,1305,4.171731,73.485121
+R14,VILLIMALE INTERNAL 2,9,MNDF Flats,1304,4.17234,73.485594
+R14,VILLIMALE INTERNAL 2,10,Edhuruvehi Bus Stop,33051,4.172797,73.486062
+R14,VILLIMALE INTERNAL 2,11,Sinamale' Bus Stop,33052,4.174216,73.486783
+R14,VILLIMALE INTERNAL 2,12,Villimale' Ferry Termial Op,32005,4.175078,73.486891
+R15,West Park to Orange Hiya,1,Maafannu Madharusa,1102,4.175986,73.502422
+R15,West Park to Orange Hiya,2,Maafannu Sahara,1103,4.175881,73.503956
+R15,West Park to Orange Hiya,3,City Square,1015,4.17513,73.509529
+R15,West Park to Orange Hiya,4,Heenaamage,1119,4.17478,73.513774
+R15,West Park to Orange Hiya,5,Henveiru Stadium,1109,4.174467,73.517145
+R15,West Park to Orange Hiya,6,Raalhugandu (Schedule Bus),20002,4.172973,73.517814
+R15,West Park to Orange Hiya,7,Orange Hiya Bus Stop,1207,4.20656,73.536385
+R15,West Park to Orange Hiya,8,Senahiya,204,4.172344,73.516718
+R15,West Park to Orange Hiya,9,Muni Ufaa,1012,4.174327,73.516835
+R15,West Park to Orange Hiya,10,Ibrahim Mosque,1013,4.174664,73.514333
+R15,West Park to Orange Hiya,11,City Square (North Side),1106,4.175205,73.509847
+R15,West Park to Orange Hiya,12,Fini Park,1017,4.175659,73.504966
+R15,West Park to Orange Hiya,13,Social Centre,1018,4.174989258645558,73.50252476651059
+R2,Carnival to HM Phase 1,1,Carnival,201,4.176984,73.517896
+R2,Carnival to HM Phase 1,2,Raalhugandu (Schedule Bus),20002,4.172973,73.517814
+R2,Carnival to HM Phase 1,3,Flat No. 120,203,4.210903,73.541829
+R2,Carnival to HM Phase 1,4,Flat No. 147,109,4.213077,73.543635
+R2,Carnival to HM Phase 1,5,Centro Mall,401,4.21635,73.542565
+R2,Carnival to HM Phase 1,6,CHSE,11201,4.220615,73.541345
+R2,Carnival to HM Phase 1,7,Amin Avenue,114,4.21442,73.540352
+R2,Carnival to HM Phase 1,8,MNDF Flat,115,4.210681,73.539804
+R2,Carnival to HM Phase 1,9,Hulhumale' Cemetery,106,4.207528,73.539788
+R2,Carnival to HM Phase 1,10,Senahiya,204,4.172344,73.516718
+R2,Carnival to HM Phase 1,11,Artificial Beach,1011,4.17513,73.518064
+R3,West Park to VIA,1,Maafannu Bus Terminal,103,4.169366,73.504676
+R3,West Park to VIA,2,Tow Yard,304,4.169349,73.510249
+R3,West Park to VIA,3,STELCO,105,4.17001,73.514746
+R3,West Park to VIA,4,VIA Domestic Terminal,306,4.190044,73.527056
+R3,West Park to VIA,5,MACL Office,307,4.191667,73.526898
+R3,West Park to VIA,6,VIA Domestic Terminal OPP,11306,4.190516,73.526887
+R3,West Park to VIA,7,Male' Swimming Track,117,4.169881,73.514446
+R3,West Park to VIA,8,Dharumavantha School,118,4.169257,73.509328
+R3,West Park to VIA,9,Maafannu Bus Terminal OPP,11103,4.169366,73.504676
+R4,HM Phase 1 to VIA,1,Amin Avenue,114,4.21442,73.540352
+R4,HM Phase 1 to VIA,2,Hulhumale' Cemetery,106,4.207528,73.539788
+R4,HM Phase 1 to VIA,3,VIA Domestic Terminal,306,4.190044,73.527056
+R4,HM Phase 1 to VIA,4,MACL Office,307,4.191667,73.526898
+R4,HM Phase 1 to VIA,5,VIA Domestic Terminal OPP,11306,4.190516,73.526887
+R4,HM Phase 1 to VIA,6,Hulhumale' Cemetery OPP,11106,4.207528,73.539788
+R4,HM Phase 1 to VIA,7,Fehires Park,108,4.211553,73.543088
+R4,HM Phase 1 to VIA,8,Centro Mall,401,4.21635,73.542565
+R4,HM Phase 1 to VIA,9,Amin Avenue Opp,11401,4.21442,73.540352
+R5,HM Internal,1,Hiya Flats Stop 1,601,4.23139,73.548899
+R5,HM Internal,2,H 16 Bus Stop,11309,4.234245,73.547805
+R5,HM Internal,3,Hiya Flats Stop 2,602,4.231865,73.546356
+R5,HM Internal,4,VINARES BUS STOP,32001,4.227847160312973,73.54408542858819
+R5,HM Internal,5,MACL Flat Stop,11003,4.22371,73.544066
+R5,HM Internal,6,CHSE,11201,4.220615,73.541345
+R5,HM Internal,7,Hulhumalé Ferry Terminal,507,4.216739,73.537853
+R5,HM Internal,8,Umar Zahir Building,509,4.213758,73.538511
+R5,HM Internal,9,Court Complex Bus Stop,33035,4.211813,73.538368
+R5,HM Internal,10,Orange Hiya Bus Stop,1207,4.20656,73.536385
+R5,HM Internal,11,Hulhumale' Cemetery,106,4.207528,73.539788
+R5,HM Internal,12,Flat No. 137,121,4.209958,73.542596
+R5,HM Internal,13,Ruhgandu 1,110,4.216186,73.54459
+R5,HM Internal,14,Dhiraagu,111,4.219882,73.545734
+R5,HM Internal,15,Masjid Ameel Jaleel,604,4.224619,73.547014
+R6,HM Phase 2 to HM Phase 1,1,Hiya Flats Stop 1,601,4.23139,73.548899
+R6,HM Phase 2 to HM Phase 1,2,H 16 Bus Stop,11309,4.234245,73.547805
+R6,HM Phase 2 to HM Phase 1,3,Hiya Flats Stop 2,602,4.231865,73.546356
+R6,HM Phase 2 to HM Phase 1,4,VINARES BUS STOP,32001,4.227847160312973,73.54408542858819
+R6,HM Phase 2 to HM Phase 1,5,MACL Flat Stop,11003,4.22371,73.544066
+R6,HM Phase 2 to HM Phase 1,6,Hulhumale' Synthetic Track,112,4.219455,73.542702
+R6,HM Phase 2 to HM Phase 1,7,Hulhumalé Police Station,503,4.217746,73.542216
+R6,HM Phase 2 to HM Phase 1,8,Amin Avenue,114,4.21442,73.540352
+R6,HM Phase 2 to HM Phase 1,9,Tree Top Hospital,606,4.211256,73.54048
+R6,HM Phase 2 to HM Phase 1,10,Flat No. 120,203,4.210903,73.541829
+R6,HM Phase 2 to HM Phase 1,11,Fehires Park,108,4.211553,73.543088
+R6,HM Phase 2 to HM Phase 1,12,Flat No. 147,109,4.213077,73.543635
+R6,HM Phase 2 to HM Phase 1,13,Ruhgandu 1,110,4.216186,73.54459
+R6,HM Phase 2 to HM Phase 1,14,Flat No. 2,610,4.217841,73.545131
+R6,HM Phase 2 to HM Phase 1,15,Dhiraagu,111,4.219882,73.545734
+R6,HM Phase 2 to HM Phase 1,16,Masjid Ameel Jaleel,604,4.224619,73.547014
+R7,HM Phase 2 to West Park,1,Hiya Flats Stop 2,602,4.231865,73.546356
+R7,HM Phase 2 to West Park,2,VINARES BUS STOP,32001,4.227847160312973,73.54408542858819
+R7,HM Phase 2 to West Park,3,MACL Flat Stop,11003,4.22371,73.544066
+R7,HM Phase 2 to West Park,4,Male' Swimming Track,117,4.169881,73.514446
+R7,HM Phase 2 to West Park,5,Dharumavantha School,118,4.169257,73.509328
+R7,HM Phase 2 to West Park,6,Maafannu Bus Terminal,103,4.169366,73.504676
+R7,HM Phase 2 to West Park,7,Tow Yard,304,4.169349,73.510249
+R7,HM Phase 2 to West Park,8,STELCO,105,4.17001,73.514746
+R7,HM Phase 2 to West Park,9,MWSC FLAT BUS STOP (DROP-OFF ONLY),32000,4.223651,73.543878
+R7,HM Phase 2 to West Park,10,Masjid Ameel Jaleel,604,4.224619,73.547014
+R7,HM Phase 2 to West Park,11,Hiya Flats Stop 1,601,4.23139,73.548899
+R7,HM Phase 2 to West Park,12,H 16 Bus Stop,11309,4.234245,73.547805
+R8,HM Phase 2 to Carnival,1,Hiya Flats Stop 2,602,4.231865,73.546356
+R8,HM Phase 2 to Carnival,2,VINARES BUS STOP,32001,4.227847160312973,73.54408542858819
+R8,HM Phase 2 to Carnival,3,MACL Flat Stop,11003,4.22371,73.544066
+R8,HM Phase 2 to Carnival,4,Senahiya,204,4.172344,73.516718
+R8,HM Phase 2 to Carnival,5,Artificial Beach West,208,4.174101,73.517817
+R8,HM Phase 2 to Carnival,6,Carnival,201,4.176984,73.517896
+R8,HM Phase 2 to Carnival,7,Raalhugandu (Schedule Bus),20002,4.172973,73.517814
+R8,HM Phase 2 to Carnival,8,MWSC FLAT BUS STOP (DROP-OFF ONLY),32000,4.223651,73.543878
+R8,HM Phase 2 to Carnival,9,Masjid Ameel Jaleel,604,4.224619,73.547014
+R8,HM Phase 2 to Carnival,10,Hiya Flats Stop 1,601,4.23139,73.548899
+R8,HM Phase 2 to Carnival,11,H 16 Bus Stop,11309,4.234245,73.547805
+R9,HM Phase 2 to VIA,1,Hiya Flats Stop 1,601,4.23139,73.548899
+R9,HM Phase 2 to VIA,2,H 16 Bus Stop,11309,4.234245,73.547805
+R9,HM Phase 2 to VIA,3,Hiya Flats Stop 2,602,4.231865,73.546356
+R9,HM Phase 2 to VIA,4,VINARES BUS STOP,32001,4.227847160312973,73.54408542858819
+R9,HM Phase 2 to VIA,5,MACL Flat Stop,11003,4.22371,73.544066
+R9,HM Phase 2 to VIA,6,VIA Domestic Terminal,306,4.190044,73.527056
+R9,HM Phase 2 to VIA,7,MACL Office,307,4.191667,73.526898
+R9,HM Phase 2 to VIA,8,VIA Domestic Terminal OPP,11306,4.190516,73.526887
+R9,HM Phase 2 to VIA,9,MWSC FLAT BUS STOP (DROP-OFF ONLY),32000,4.223651,73.543878
+R9,HM Phase 2 to VIA,10,Masjid Ameel Jaleel,604,4.224619,73.547014
