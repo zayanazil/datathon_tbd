@@ -376,8 +376,8 @@ with tab_bench:
         names = {"scheduled_boat_to_greater_male_direct": "Direct scheduled boat to Greater Malé",
                  "scheduled_boat_to_greater_male_same_day": "Reach Greater Malé by boat the same day",
                  "health_facility_within_30": "Within 30 min of a health facility",
-                 "gm_hospital_within_120_day_median": "Within 2 h of a Greater Malé hospital",
-                 "any_hospital_within_120_day_median": "Within 2 h of any hospital"}
+                 "gm_hospital_within_120_daytime": "Within 2 h of a Greater Malé hospital",
+                 "any_hospital_within_120_daytime": "Within 2 h of any hospital"}
         wide = nsds.pivot_table(index=["indicator", "definition"], columns="area", values="share_pct").reset_index()
         wide["indicator"] = pd.Categorical(wide["indicator"], list(names))
         wide = wide.sort_values("indicator").assign(indicator=lambda d: d["indicator"].map(names))
