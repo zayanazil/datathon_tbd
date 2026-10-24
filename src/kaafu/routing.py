@@ -9,12 +9,9 @@ import math
 
 import pandas as pd
 
-TARGET_FACILITIES = {
-    "gm_hospital": ["H01", "H02", "H03", "H04", "H05", "H06"],
-    "any_hospital": ["H01", "H02", "H03", "H04", "H05", "H06", "H07", "H08", "H09"],
-}
+TARGETS = ("gm_hospital", "any_hospital")
 
-# Placeholder until M1's terminals.csv: the bus stops named in BUILD_PLAN section 4,
+# Used until M1's terminals.csv lands: the bus stops named in BUILD_PLAN section 4,
 # coordinates from Team Kandu's rtl_bus_stops.csv.
 PLACEHOLDER_TERMINALS = {
     "T_MALE_NORTH": ("K.Malé", 4.178784, 73.513422),      # Jetty NO5, code 1008
@@ -25,8 +22,17 @@ PLACEHOLDER_TERMINALS = {
 
 
 def target_hospitals(facilities, target, cfg):
-    ids = [f for f in TARGET_FACILITIES[target] if cfg.INCLUDE_SENAHIYA or f != "H03"]
+    """gm_hospital: GM_HOSPITALS. any_hospital: those plus ATOLL_HOSPITALS."""
+    ids = list(cfg.GM_HOSPITALS)
+    if target == "any_hospital":
+        ids += list(cfg.ATOLL_HOSPITALS.values())
+    ids = [f for f in ids if cfg.INCLUDE_SENAHIYA or f != cfg.SENAHIYA_ID]
     return facilities[facilities["facility_id"].isin(ids)]
+
+
+def terminals_from_csv(terminals):
+    """M1's terminals.csv rows in the {terminal_id: (island_key, lat, lon)} form used here."""
+    return {r.terminal_id: (r.island_key, r.lat, r.lon) for r in terminals.itertuples()}
 
 
 def _metres(lat1, lon1, lat2, lon2):
@@ -41,6 +47,7 @@ def placeholder_last_mile(facilities, cfg, terminals=None):
 
     Terminal to hospital on the same island: TERMINAL_EXIT_MIN + straight line / WALK_M_PER_MIN.
     Atoll-hospital islands: TERMINAL_EXIT_MIN + the hospital's walk_minutes.
+    `terminals` is {terminal_id: (island_key, lat, lon)}; PLACEHOLDER_TERMINALS by default.
     """
     terminals = terminals or PLACEHOLDER_TERMINALS
     rows = []
@@ -174,15 +181,15 @@ ACCESS_COLUMNS = [
 def access_results(conns, origins, facilities, last_mile, cfg, scenario="base", targets=None):
     """access_results.csv: every origin x departure (every STEP_MIN) x target.
 
-    `targets` maps target -> hospital rows; by default TARGET_FACILITIES.
+    `targets` maps target -> hospital rows; by default target_hospitals() for each of TARGETS.
     """
     lm_index = last_mile_index(last_mile)
     if targets is None:
-        targets = {target: target_hospitals(facilities, target, cfg) for target in TARGET_FACILITIES}
+        targets = {target: target_hospitals(facilities, target, cfg) for target in TARGETS}
     conn_rows = as_rows(conns)
     rows = []
     for origin in origins:
-        for t in range(0, 1440, cfg.STEP_MIN):
+        for t in range(0, cfg.MINUTES_PER_DAY, cfg.STEP_MIN):
             scan = earliest_arrival(conn_rows, origin, t, cfg)
             for target, hospitals in targets.items():
                 r = door_to_door(conn_rows, origin, t, hospitals, lm_index, cfg, scan)

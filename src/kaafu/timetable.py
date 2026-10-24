@@ -3,8 +3,6 @@
 Reads data/sheets/ferry_timetable.csv and writes data/processed/connections.csv:
 one row per boat leg on the service day, plus the next day's legs at +1440.
 """
-from pathlib import Path
-
 import pandas as pd
 
 CONNECTION_COLUMNS = [
@@ -13,8 +11,8 @@ CONNECTION_COLUMNS = [
 ]
 
 
-def load_timetable(path):
-    return pd.read_csv(path, encoding="utf-8-sig", dtype={"route_id": str})
+def load_timetable(path, encoding="utf-8-sig"):
+    return pd.read_csv(path, encoding=encoding, dtype={"route_id": str})
 
 
 def check_names(timetable, island_names):
@@ -40,15 +38,15 @@ def _legs(timetable, day, offset, suffix):
     return legs
 
 
-def build_connections(timetable, day, next_day):
-    """Rows running on `day`, plus `next_day`'s rows shifted by +1440.
+def build_connections(timetable, day, next_day, minutes_per_day=1440):
+    """Rows running on `day`, plus `next_day`'s rows shifted by a day (+1440).
 
     The next day uses its own rows, not a copy of `day`: routes 303, 305, 306
     and 307 alternate by day, so the next morning's boats differ.
     """
     conns = pd.concat([
         _legs(timetable, day, 0, ""),
-        _legs(timetable, next_day, 1440, "_d2"),
+        _legs(timetable, next_day, minutes_per_day, "_d2"),
     ])
     conns["day_type"] = day
     conns = conns.sort_values(["dep_min", "arr_min"], kind="stable").reset_index(drop=True)
@@ -59,12 +57,11 @@ def build_connections(timetable, day, next_day):
 def main(cfg=None):
     if cfg is None:
         from kaafu import config as cfg
-    sheets, processed = Path(cfg.SHEETS_DIR), Path(cfg.PROCESSED_DIR)
-    timetable = load_timetable(sheets / "ferry_timetable.csv")
-    check_names(timetable, pd.read_csv(sheets / "island_names.csv", encoding="utf-8-sig"))
-    conns = build_connections(timetable, cfg.DAY, cfg.NEXT_DAY)
-    processed.mkdir(parents=True, exist_ok=True)
-    conns.to_csv(processed / "connections.csv", index=False)
+    timetable = load_timetable(cfg.FERRY_TIMETABLE_CSV, cfg.READ_ENCODING)
+    check_names(timetable, pd.read_csv(cfg.ISLAND_NAMES_CSV, encoding=cfg.READ_ENCODING))
+    conns = build_connections(timetable, cfg.DAY, cfg.NEXT_DAY, cfg.MINUTES_PER_DAY)
+    cfg.CONNECTIONS_CSV.parent.mkdir(parents=True, exist_ok=True)
+    conns.to_csv(cfg.CONNECTIONS_CSV, index=False, encoding=cfg.WRITE_ENCODING)
     return conns
 
 

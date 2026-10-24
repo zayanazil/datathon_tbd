@@ -11,7 +11,6 @@ params (all optional; leaving one out means no change):
     label                the scenario column value (default "base" or "scenario")
 """
 import json
-from pathlib import Path
 
 import pandas as pd
 
@@ -22,6 +21,7 @@ DEFAULTS = dict(ferry_factor={}, extra_runs=[], thulusdhoo_hospital=False, obser
 PENDING = {"observed": "M2's observed_pairs.csv", "bus_factor": "M1's last_mile.csv (bus waits)",
            "taxi_availability": "M1's taxi function"}
 THULUSDHOO_ID = "H10"
+BEST_FERRY_CHANGE_CSV = "best_ferry_change.csv"  # extra table, not in the section 4 contracts
 
 _inputs_cache = {}
 _results_cache = {}
@@ -128,14 +128,7 @@ def thulusdhoo_hospital(facilities, islands, last_mile, cfg):
 def _inputs(cfg):
     key = id(cfg)
     if key not in _inputs_cache:
-        sheets, processed = Path(cfg.SHEETS_DIR), Path(cfg.PROCESSED_DIR)
-        facilities = pd.read_csv(sheets / "facilities.csv", encoding="utf-8-sig")
-        _inputs_cache[key] = dict(
-            conns=pd.read_csv(processed / "connections.csv", dtype={"route_id": str}),
-            islands=pd.read_csv(sheets / "islands.csv", encoding="utf-8-sig"),
-            facilities=facilities,
-            last_mile=indicators.load_last_mile(processed, facilities, cfg),
-        )
+        _inputs_cache[key] = indicators.load_inputs(cfg)
     return _inputs_cache[key]
 
 
@@ -160,7 +153,7 @@ def run_scenario(params=None, cfg=None):
     targets = None
     if params["thulusdhoo_hospital"]:
         facilities, last_mile = thulusdhoo_hospital(facilities, data["islands"], last_mile, cfg)
-        targets = {t: routing.target_hospitals(facilities, t, cfg) for t in routing.TARGET_FACILITIES}
+        targets = {t: routing.target_hospitals(facilities, t, cfg) for t in routing.TARGETS}
         targets["any_hospital"] = pd.concat(
             [targets["any_hospital"], facilities[facilities["facility_id"] == THULUSDHOO_ID]])
 
@@ -168,28 +161,30 @@ def run_scenario(params=None, cfg=None):
     label = params.get("label") or ("scenario" if changed else "base")
     origins = data["islands"].loc[data["islands"]["role"] == "origin", "island_key"].tolist()
     results = routing.access_results(conns, origins, facilities, last_mile, cfg, label, targets)
-    summary = indicators.island_summary(results, data["islands"], conns)
+    summary = indicators.island_summary(results, data["islands"], conns, cfg)
     _results_cache[key] = (results, summary)
     return results, summary
 
 
-def _arrival_or_horizon(results, target):
+def _arrival_or_horizon(results, target, cfg):
     """Total minutes per (origin, dep_min); unreachable counted as arriving at the end of
-    the two-day horizon (2880), so minutes saved on those rows are a lower bound."""
+    the two-day horizon (2 x MINUTES_PER_DAY), so minutes saved on those rows are a lower bound."""
     r = results[results["target"] == target].set_index(["origin_key", "dep_min"])["total_min"]
-    horizon = 2880 - r.index.get_level_values("dep_min")
+    horizon = 2 * cfg.MINUTES_PER_DAY - r.index.get_level_values("dep_min")
     return r.astype(float).fillna(pd.Series(horizon, index=r.index))
 
 
-def best_ferry_change(cfg=None, times=(18 * 60, 20 * 60, 22 * 60), target="gm_hospital", dep_min=None):
+def best_ferry_change(cfg=None, times=None, target="gm_hospital", dep_min=None):
     """Rank one extra run per CFN route x time (BUILD_PLAN 6.6, stretch).
 
+    times: "HH:MM" strings, EVENING_RUN_TIMES by default.
     newly_within_120_pop: people on islands that now reach a hospital within 2 h and didn't
-    before -- at any departure 06:00-18:00, or at dep_min if given. pop_minutes_saved:
+    before -- at any daytime departure, or at dep_min if given. pop_minutes_saved:
     population x mean minutes saved over all departures of the day.
     """
     if cfg is None:
         from kaafu import config as cfg
+    times = [indicators.minutes_of(t) for t in (times or cfg.EVENING_RUN_TIMES)]
     base, _ = run_scenario({}, cfg)
     population = _inputs(cfg)["islands"].set_index("island_key")["population_2022"]
     routes = sorted(r for r in _inputs(cfg)["conns"]["route_id"].unique() if r != "VILI")
@@ -197,16 +192,16 @@ def best_ferry_change(cfg=None, times=(18 * 60, 20 * 60, 22 * 60), target="gm_ho
     def within(results):
         r = results[(results["target"] == target) & results["total_min"].notna()]
         r = r[r["dep_min"] == dep_min] if dep_min is not None else r[
-            r["dep_min"].between(indicators.DAY_START, indicators.DAY_END)]
+            r["dep_min"].between(cfg.DAYTIME_START_MIN, cfg.DAYTIME_END_MIN)]
         return set(r.loc[r["total_min"] <= 120, "origin_key"])
 
-    base_within, base_minutes = within(base), _arrival_or_horizon(base, target)
+    base_within, base_minutes = within(base), _arrival_or_horizon(base, target, cfg)
     rows = []
     for route_id in routes:
         for minute in times:
             results, _ = run_scenario({"extra_runs": [(route_id, minute)],
                                        "label": f"extra_{route_id}_{indicators.hhmm(minute)}"}, cfg)
-            saved = (base_minutes - _arrival_or_horizon(results, target)).groupby("origin_key").mean()
+            saved = (base_minutes - _arrival_or_horizon(results, target, cfg)).groupby("origin_key").mean()
             newly = within(results) - base_within
             helped = saved[saved > 0.05]
             helped_pop = population[helped.index]
@@ -226,7 +221,7 @@ def main(cfg=None):
     if cfg is None:
         from kaafu import config as cfg
     table = best_ferry_change(cfg)
-    table.to_csv(Path(cfg.PROCESSED_DIR) / "best_ferry_change.csv", index=False)
+    table.to_csv(cfg.PROCESSED / BEST_FERRY_CHANGE_CSV, index=False, encoding=cfg.WRITE_ENCODING)
     return table
 
 

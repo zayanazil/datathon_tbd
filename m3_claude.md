@@ -1,6 +1,6 @@
 # M3 network and indicators: status
 
-**Owner:** Al (M3) · **Branch:** `m3-network` · **Last updated:** 24 Oct 2026, after Step 4 (independent parts)
+**Owner:** Al (M3) · **Branch:** `m3-network` · **Last updated:** 24 Oct 2026, after switching to the shared `config.py`
 
 This file says what M3 has built, what it needs from the rest of the team, and what comes next. It's updated after each major step. Team: M1 Zayan (GIS), M2 Eish (movement), M3 Al (network), M4 Saroof (lead, dashboard).
 
@@ -21,7 +21,10 @@ Tests: `python -m pytest tests` → 11 passed.
 
 ### Saroof (M4): config, dashboard, merge
 
-- **`config.py` doesn't exist yet**, so my code takes the config as an argument. When you write it, use the BUILD_PLAN §5 names. My code uses: `DAY`, `NEXT_DAY`, `ACCESS_MIN`, `BOAT_TRANSFER_MIN`, `TERMINAL_EXIT_MIN`, `WALK_M_PER_MIN`, `STEP_MIN`, `THRESHOLDS_MIN`, `INCLUDE_SENAHIYA`, plus two path settings the plan doesn't name: **`SHEETS_DIR`** (`data/sheets`) and **`PROCESSED_DIR`** (`data/processed`). Tell Al if you name them differently.
+- **My code uses the shared `config.py`** (the version with `SHEETS`, `PROCESSED`, the per-file `*_CSV` paths, `GM_HOSPITALS`, `ATOLL_HOSPITALS`, `DAYTIME_START_MIN`/`DAYTIME_END_MIN`, `EVENING_RUN_TIMES`, `READ_ENCODING`/`WRITE_ENCODING` and `MINUTES_PER_DAY`). Nothing is hardcoded on the M3 side.
+  - **It's not committed on this branch:** I have a local copy only, so the official one comes from your branch when we merge.
+  - **If you rename or remove any of those settings, tell Al.**
+  - The M3 settings are the ones under "Routing and indicators (M3)", plus `DAY`, `NEXT_DAY`, `ACCESS_MIN`, `BOAT_TRANSFER_MIN`, `TERMINAL_EXIT_MIN`, `WALK_M_PER_MIN` and `INCLUDE_SENAHIYA`/`SENAHIYA_ID`.
 - **The dashboard entry point is `scenarios.run_scenario(params)`**, which returns `(access_results, island_summary)` and is cached. Its params:
 
   | Param | Status | Meaning |
@@ -44,8 +47,8 @@ Tests: `python -m pytest tests` → 11 passed.
   - terminal to hospital on the same island: `TERMINAL_EXIT_MIN` + straight line ÷ 80 m/min;
   - atoll-hospital islands: `TERMINAL_EXIT_MIN` + the hospital's `walk_minutes`.
 
-  The terminal coordinates are hardcoded from Team Kandu's bus stops (codes 1008, 1101, 507, 1301).
-- **When you drop `data/processed/last_mile.csv` in, my code uses it automatically.** It needs:
+  The terminal coordinates come from your `terminals.csv` (`config.TERMINALS_CSV`) as soon as it exists. Until then they come from Team Kandu's bus stops (codes 1008, 1101, 507, 1301).
+- **When you drop `data/processed/last_mile.csv` (`config.LAST_MILE_CSV`) in, my code uses it automatically.** It needs:
   - columns `stop_id, facility_id, hour, mode, minutes, available, detail`;
   - `stop_id` using the terminal IDs `T_MALE_NORTH`, `T_MALE_WEST`, `T_HULHUMALE`, `T_VILLIMALE`;
   - rows for `AA.Rasdhoo` → H07, `ADh.Mahibadhoo` → H08 and `V.Felidhoo` → H09;
@@ -66,14 +69,16 @@ Tests: `python -m pytest tests` → 11 passed.
 
 ## How to run
 
-Until `config.py` exists, pass any object with the attributes above. Once it exists, from the repo root:
+From the repo root, with `src/kaafu/config.py` in place:
 
 ```bash
 PYTHONPATH=src python -m kaafu.timetable    # data/processed/connections.csv
 PYTHONPATH=src python -m kaafu.indicators   # access_results, island_summary, population_within, hdx_comparison, nsds_figures
-PYTHONPATH=src python -m kaafu.scenarios    # best_ferry_change.csv (~85 s; one-off, not for the live dashboard)
+PYTHONPATH=src python -m kaafu.scenarios    # best_ferry_change.csv (30-90 s; one-off, not for the live dashboard)
 python -m pytest tests
 ```
+
+Every `main()` and `run_scenario()` takes an optional `cfg` argument, which defaults to `kaafu.config`, so a test can pass its own.
 
 ## Files (M3 owns these)
 
@@ -138,7 +143,7 @@ These **will change** once the real last mile and observed speedboat times are i
 
 1. **When Zayan's `last_mile.csv` lands:** rerun `indicators` and `scenarios`, recheck the plausibility numbers, and then wire up `bus_factor` and `taxi_availability`.
 2. **When Eish's `observed_pairs.csv` lands:** the observed-times switch, synthetic speedboat departures (agree with Saroof) and `observed_gap_min`.
-3. **When Saroof's `config.py` lands:** check the names, run everything through `main()`, and merge `m3-network` at H3/H5.
+3. **Merge:** `m3-network` into `main` at H3/H5. Code and outputs are already checked against the shared `config.py`.
 4. **Step 5:**
    - charts for slides 5–6: worst-served islands, population within 1/2/4 h against HDX, share within 2 h through the day, last practical departures, scheduled against observed, best ferry change, NSDS figures;
    - every number labelled "Wednesday, CFN public ferries (+ observed speedboats if used), Jetty NO5 assumed".

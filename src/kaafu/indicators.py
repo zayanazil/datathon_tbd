@@ -2,29 +2,41 @@
 
 main() writes the base scenario's access_results.csv and island_summary.csv.
 """
-from pathlib import Path
-
 import numpy as np
 import pandas as pd
 
 from kaafu import routing
 
-DAY_START, DAY_END = 6 * 60, 18 * 60  # "day" = departures 06:00-18:00
 SUMMARY_COLUMNS = [
     "origin_key", "population", "day_median_min", "best_min", "worst_day_min",
     "last_practical_departure", "boats_per_day", "observed_gap_min",
 ]
+
+# Extra tables for the dashboard and slides 5-6 (not in the section 4 contracts).
+POPULATION_WITHIN_CSV = "population_within.csv"
+HDX_COMPARISON_CSV = "hdx_comparison.csv"
+NSDS_FIGURES_CSV = "nsds_figures.csv"
 
 
 def hhmm(minutes):
     return f"{int(minutes) // 60:02d}:{int(minutes) % 60:02d}"
 
 
+def minutes_of(hh_mm):
+    hours, minutes = hh_mm.split(":")
+    return int(hours) * 60 + int(minutes)
+
+
 def _blank_if_inf(x):
     return None if np.isinf(x) else round(float(x), 1)
 
 
-def island_summary(results, islands, conns, target="gm_hospital"):
+def _daytime(dep_min, cfg):
+    """Departures in the "day" window, DAYTIME_START_MIN to DAYTIME_END_MIN."""
+    return dep_min.between(cfg.DAYTIME_START_MIN, cfg.DAYTIME_END_MIN)
+
+
+def island_summary(results, islands, conns, cfg, target="gm_hospital"):
     """island_summary.csv from access_results rows for one scenario and target.
 
     Unreachable departures count as infinite, so a median or worst value that
@@ -35,9 +47,9 @@ def island_summary(results, islands, conns, target="gm_hospital"):
     rows = []
     for origin, g in res.groupby("origin_key", sort=False):
         total = g["total_min"].astype(float).fillna(np.inf)
-        day = total[g["dep_min"].between(DAY_START, DAY_END)]
-        same_day = g[(g["dep_min"] + total) < 1440]
-        leaving = conns[(conns["from_stop"] == origin) & (conns["dep_min"] < 1440)]
+        day = total[_daytime(g["dep_min"], cfg)]
+        same_day = g[(g["dep_min"] + total) < cfg.MINUTES_PER_DAY]
+        leaving = conns[(conns["from_stop"] == origin) & (conns["dep_min"] < cfg.MINUTES_PER_DAY)]
         rows.append(dict(
             origin_key=origin,
             population=int(population[origin]),
@@ -51,12 +63,12 @@ def island_summary(results, islands, conns, target="gm_hospital"):
     return pd.DataFrame(rows, columns=SUMMARY_COLUMNS)
 
 
-def _per_island_minutes(results, target, dep_min=None):
+def _per_island_minutes(results, target, cfg, dep_min=None):
     """{origin: minutes} at one departure, or the daytime median when dep_min is None.
     Unreachable is infinite."""
     res = results[results["target"] == target]
     if dep_min is None:
-        day = res[res["dep_min"].between(DAY_START, DAY_END)]
+        day = res[_daytime(res["dep_min"], cfg)]
         return day.groupby("origin_key")["total_min"].apply(
             lambda s: np.median(s.astype(float).fillna(np.inf)))
     at = res[res["dep_min"] == dep_min].set_index("origin_key")["total_min"]
@@ -73,7 +85,7 @@ def population_within(results, islands, cfg, target="gm_hospital", dep_min=None)
 
     At one departure time, or for each island's daytime median when dep_min is None.
     """
-    minutes = _per_island_minutes(results, target, dep_min)
+    minutes = _per_island_minutes(results, target, cfg, dep_min)
     origins, areas = _areas(islands)
     rows = []
     for area, mask in areas.items():
@@ -103,9 +115,9 @@ def hdx_comparison(within, hdx):
                 "all23_pct", "hdx_maldives_pct"]]
 
 
-def _direct_boat_islands(conns):
+def _direct_boat_islands(conns, cfg):
     """Islands where a boat leaving on DAY reaches a Greater Malé terminal on the same trip."""
-    day = conns[conns["dep_min"] < 1440].sort_values("dep_min")
+    day = conns[conns["dep_min"] < cfg.MINUTES_PER_DAY].sort_values("dep_min")
     found = set()
     for _, trip in day.groupby("trip_id"):
         stops = trip["from_stop"].tolist() + [trip["to_stop"].iloc[-1]]
@@ -120,13 +132,14 @@ def nsds_figures(results, islands, facilities, conns, cfg):
     reach_same_day = {}
     for origin in origins.index:
         reach, _ = routing.earliest_arrival(conns, origin, 0, cfg)
-        reach_same_day[origin] = any(s.startswith("T_") and at < 1440 for s, at in reach.items())
+        reach_same_day[origin] = any(s.startswith("T_") and at < cfg.MINUTES_PER_DAY
+                                     for s, at in reach.items())
     walk = facilities.set_index("facility_id")["walk_minutes"]
     nearest_facility = origins["health_facility_ids"].map(
         lambda ids: cfg.ACCESS_MIN + min(walk[f] for f in str(ids).split()))
-    direct = _direct_boat_islands(conns)
-    gm_median = _per_island_minutes(results, "gm_hospital")
-    any_median = _per_island_minutes(results, "any_hospital")
+    direct = _direct_boat_islands(conns, cfg)
+    gm_median = _per_island_minutes(results, "gm_hospital", cfg)
+    any_median = _per_island_minutes(results, "any_hospital", cfg)
 
     tests = {
         "scheduled_boat_to_greater_male_direct":
@@ -153,38 +166,49 @@ def nsds_figures(results, islands, facilities, conns, cfg):
     return pd.DataFrame(rows)
 
 
-def load_last_mile(processed, facilities, cfg):
-    """M1's last_mile.csv if it has landed, else the walk-only placeholder."""
-    path = processed / "last_mile.csv"
-    if path.exists():
-        return pd.read_csv(path, encoding="utf-8-sig")
-    return routing.placeholder_last_mile(facilities, cfg)
+def load_last_mile(facilities, cfg):
+    """M1's last_mile.csv if it has landed, else the walk-only placeholder
+    (from M1's terminals.csv if that has landed, else PLACEHOLDER_TERMINALS)."""
+    if cfg.LAST_MILE_CSV.exists():
+        return pd.read_csv(cfg.LAST_MILE_CSV, encoding=cfg.READ_ENCODING)
+    terminals = None
+    if cfg.TERMINALS_CSV.exists():
+        terminals = routing.terminals_from_csv(pd.read_csv(cfg.TERMINALS_CSV, encoding=cfg.READ_ENCODING))
+    return routing.placeholder_last_mile(facilities, cfg, terminals)
+
+
+def load_inputs(cfg):
+    """connections, islands, facilities and last mile, as every M3 run needs them."""
+    facilities = pd.read_csv(cfg.FACILITIES_CSV, encoding=cfg.READ_ENCODING)
+    return dict(
+        conns=pd.read_csv(cfg.CONNECTIONS_CSV, encoding=cfg.READ_ENCODING, dtype={"route_id": str}),
+        islands=pd.read_csv(cfg.ISLANDS_CSV, encoding=cfg.READ_ENCODING),
+        facilities=facilities,
+        last_mile=load_last_mile(facilities, cfg),
+    )
 
 
 def main(cfg=None):
     if cfg is None:
         from kaafu import config as cfg
-    sheets, processed = Path(cfg.SHEETS_DIR), Path(cfg.PROCESSED_DIR)
-    conns = pd.read_csv(processed / "connections.csv", dtype={"route_id": str})
-    islands = pd.read_csv(sheets / "islands.csv", encoding="utf-8-sig")
-    facilities = pd.read_csv(sheets / "facilities.csv", encoding="utf-8-sig")
+    data = load_inputs(cfg)
+    conns, islands, facilities = data["conns"], data["islands"], data["facilities"]
     origins = islands.loc[islands["role"] == "origin", "island_key"].tolist()
 
-    results = routing.access_results(conns, origins, facilities,
-                                     load_last_mile(processed, facilities, cfg), cfg)
-    summary = island_summary(results, islands, conns)
-    results.to_csv(processed / "access_results.csv", index=False)
-    summary.to_csv(processed / "island_summary.csv", index=False)
+    results = routing.access_results(conns, origins, facilities, data["last_mile"], cfg)
+    summary = island_summary(results, islands, conns, cfg)
+    write = dict(index=False, encoding=cfg.WRITE_ENCODING)
+    results.to_csv(cfg.ACCESS_RESULTS_CSV, **write)
+    summary.to_csv(cfg.ISLAND_SUMMARY_CSV, **write)
 
-    # Extra tables for the dashboard and slides 5-6 (not in the section 4 contracts).
     within = pd.concat([population_within(results, islands, cfg, target, dep)
-                        for target in routing.TARGET_FACILITIES
-                        for dep in [None, *range(0, 1440, cfg.STEP_MIN)]])
-    hdx = pd.read_csv(sheets / "hdx_benchmark.csv", encoding="utf-8-sig")
-    within.to_csv(processed / "population_within.csv", index=False)
+                        for target in routing.TARGETS
+                        for dep in [None, *range(0, cfg.MINUTES_PER_DAY, cfg.STEP_MIN)]])
+    hdx = pd.read_csv(cfg.HDX_BENCHMARK_CSV, encoding=cfg.READ_ENCODING)
+    within.to_csv(cfg.PROCESSED / POPULATION_WITHIN_CSV, **write)
     hdx_comparison(within[within["departure"] == "day_median"], hdx).to_csv(
-        processed / "hdx_comparison.csv", index=False)
-    nsds_figures(results, islands, facilities, conns, cfg).to_csv(processed / "nsds_figures.csv", index=False)
+        cfg.PROCESSED / HDX_COMPARISON_CSV, **write)
+    nsds_figures(results, islands, facilities, conns, cfg).to_csv(cfg.PROCESSED / NSDS_FIGURES_CSV, **write)
     return results, summary
 
 
