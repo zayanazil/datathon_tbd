@@ -124,6 +124,7 @@ OBSERVED_MIN_TRIPS = 5        # observed time used only with at least 5 trips be
 MAX_BOAT_KMH = 80             # faster legs or trips are dropped as errors
 MAX_TRIP_HOURS = 6
 PING_MAX_GAP_MIN = 30         # longer gaps between pings: no segment speed
+SPEED_WINDOW_MIN = 5          # stop speed = displacement over +-2.5 min (ping-to-ping is GPS jitter)
 BOAT_MIN_SEA_SHARE = 0.05     # boat = at least 5% of pings at sea...
 BOAT_SEA_DIST_M = 2500        # ...more than 2.5 km from every island point...
 BOAT_MIN_ISLANDS = 2          # ...and at least 2 islands visited
