@@ -1,7 +1,8 @@
 """Places and map layers: terminals, island zones, pydeck layers (M1).
 
-Run `python -m kaafu.geo` to write data/processed/terminals.csv and
-data/processed/island_zones.geojson.
+Run `python -m kaafu.geo` to write data/processed/terminals.csv,
+island_zones.geojson and bus_routes.csv. Building them needs data/raw/; the map
+layers only read the committed files, so the dashboard runs from a fresh clone.
 """
 
 import json
@@ -11,7 +12,7 @@ import geopandas as gpd
 import pandas as pd
 import requests
 from shapely.geometry import LineString, Point, Polygon
-from shapely.ops import linemerge, polygonize, unary_union
+from shapely.ops import linemerge, polygonize
 
 from kaafu import config
 
@@ -54,6 +55,24 @@ def write_terminals() -> pd.DataFrame:
     config.PROCESSED.mkdir(parents=True, exist_ok=True)
     terminals.to_csv(config.TERMINALS_CSV, index=False, encoding=config.WRITE_ENCODING)
     return terminals
+
+
+def load_terminals() -> pd.DataFrame:
+    """terminals.csv as committed (no raw data needed)."""
+    return pd.read_csv(config.TERMINALS_CSV, encoding=config.READ_ENCODING)
+
+
+BUS_ROUTES_CSV = config.PROCESSED / "bus_routes.csv"
+BUS_ROUTE_COLUMNS = ["route_number", "route", "order", "stop", "code", "lat", "lon"]
+
+
+def write_bus_routes() -> pd.DataFrame:
+    """Greater Malé bus stops in route order (with lastmile's added stops), for the map."""
+    from kaafu import lastmile    # lastmile imports geo
+
+    stops = lastmile.BusNetwork().stops[BUS_ROUTE_COLUMNS]
+    stops.to_csv(BUS_ROUTES_CSV, index=False, encoding=config.WRITE_ENCODING)
+    return stops
 
 
 def island_points() -> gpd.GeoDataFrame:
@@ -258,7 +277,7 @@ def stop_positions() -> pd.DataFrame:
     islands = pd.read_csv(config.ISLANDS_CSV, encoding=config.READ_ENCODING)
     islands = islands.rename(columns={"island_key": "stop_id", "harbour_lat": "lat",
                                       "harbour_lon": "lon", "island": "name"})
-    terminals = build_terminals().rename(columns={"terminal_id": "stop_id"})
+    terminals = load_terminals().rename(columns={"terminal_id": "stop_id"})
     return pd.concat([islands[["stop_id", "name", "lat", "lon"]],
                       terminals[["stop_id", "name", "lat", "lon"]]]).set_index("stop_id")
 
@@ -337,7 +356,7 @@ def hospitals_layer() -> pd.DataFrame:
 
 
 def terminals_layer() -> pd.DataFrame:
-    t = build_terminals()
+    t = load_terminals()
     t["colour"] = [TERMINAL_COLOUR] * len(t)
     t["tooltip"] = t.name + " ferry terminal"
     return t[["terminal_id", "name", "island_key", "lat", "lon", "colour", "tooltip"]]
@@ -347,10 +366,11 @@ def bus_routes_layer() -> pd.DataFrame:
     """One path per Greater Malé bus route, stops in route order (PathLayer).
 
     Columns: route_number, route, path ([[lon, lat], ...]), colour, tooltip.
+    Reads data/processed/bus_routes.csv; empty if it hasn't been built.
     """
-    from kaafu import lastmile
-
-    stops = lastmile.BusNetwork().stops
+    if not BUS_ROUTES_CSV.exists():
+        return pd.DataFrame(columns=["route_number", "route", "path", "colour", "tooltip"])
+    stops = pd.read_csv(BUS_ROUTES_CSV, encoding=config.READ_ENCODING)
     paths = (stops.sort_values(["route_number", "order"])
              .groupby("route_number")
              .agg(route=("route", "first"),
@@ -394,6 +414,46 @@ def observed_trips_layer(observed_pairs: pd.DataFrame | None = None) -> pd.DataF
                   "trips_per_day", "median_min", "width_px", "colour", "tooltip"]]
 
 
+def example_deck(access_results: pd.DataFrame, connections: pd.DataFrame, dep_min: int,
+                 target: str = "gm_hospital", scenario: str = "base",
+                 show_bus: bool = False, show_observed: bool = False):
+    """A ready-made pydeck map of all layers, for the dashboard or a preview.
+
+    In Streamlit: st.pydeck_chart(geo.example_deck(access, conns, dep_min, target)).
+    Uses pydeck's default Carto basemap (no Mapbox token needed).
+    """
+    import pydeck as pdk
+
+    layers = []
+    if show_bus:
+        layers.append(pdk.Layer("PathLayer", bus_routes_layer(), get_path="path",
+                                get_color="colour", width_min_pixels=1, pickable=True))
+    layers.append(pdk.Layer("LineLayer", boat_links_layer(connections),
+                            get_source_position=["from_lon", "from_lat"],
+                            get_target_position=["to_lon", "to_lat"],
+                            get_color="colour", get_width="width_px", pickable=True))
+    if show_observed:
+        layers.append(pdk.Layer("LineLayer", observed_trips_layer(),
+                                get_source_position=["from_lon", "from_lat"],
+                                get_target_position=["to_lon", "to_lat"],
+                                get_color="colour", get_width="width_px", pickable=True))
+    layers += [
+        # 2px white ring keeps overlapping island circles apart
+        pdk.Layer("ScatterplotLayer", islands_layer(access_results, dep_min, target, scenario),
+                  get_position=["lon", "lat"], get_radius="radius_m", get_fill_color="colour",
+                  stroked=True, get_line_color=[255, 255, 255], line_width_min_pixels=2,
+                  pickable=True),
+        pdk.Layer("ScatterplotLayer", hospitals_layer(), get_position=["lon", "lat"],
+                  get_radius=150, radius_min_pixels=5, get_fill_color="colour",
+                  stroked=True, get_line_color=[208, 59, 59], line_width_min_pixels=2,
+                  pickable=True),
+        pdk.Layer("ScatterplotLayer", terminals_layer(), get_position=["lon", "lat"],
+                  get_radius=100, radius_min_pixels=4, get_fill_color="colour", pickable=True),
+    ]
+    return pdk.Deck(layers=layers, tooltip={"text": "{tooltip}"},
+                    initial_view_state=pdk.ViewState(latitude=4.1, longitude=73.25, zoom=8))
+
+
 def write_zones(zones: gpd.GeoDataFrame) -> None:
     check_zones(zones)
     config.PROCESSED.mkdir(parents=True, exist_ok=True)
@@ -404,6 +464,10 @@ def write_zones(zones: gpd.GeoDataFrame) -> None:
 if __name__ == "__main__":
     print(write_terminals().to_string(index=False))
     print(f"wrote {config.TERMINALS_CSV.relative_to(config.ROOT)}\n")
+
+    routes = write_bus_routes()
+    print(f"wrote {BUS_ROUTES_CSV.relative_to(config.ROOT)} "
+          f"({routes.route_number.nunique()} routes, {len(routes)} stops)\n")
 
     zones = build_osm_zones()
     write_zones(zones)
