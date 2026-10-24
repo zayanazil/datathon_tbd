@@ -171,10 +171,14 @@ ACCESS_COLUMNS = [
 ]
 
 
-def access_results(conns, origins, facilities, last_mile, cfg, scenario="base"):
-    """access_results.csv: every origin x departure (every STEP_MIN) x target."""
+def access_results(conns, origins, facilities, last_mile, cfg, scenario="base", targets=None):
+    """access_results.csv: every origin x departure (every STEP_MIN) x target.
+
+    `targets` maps target -> hospital rows; by default TARGET_FACILITIES.
+    """
     lm_index = last_mile_index(last_mile)
-    targets = {target: target_hospitals(facilities, target, cfg) for target in TARGET_FACILITIES}
+    if targets is None:
+        targets = {target: target_hospitals(facilities, target, cfg) for target in TARGET_FACILITIES}
     conn_rows = as_rows(conns)
     rows = []
     for origin in origins:

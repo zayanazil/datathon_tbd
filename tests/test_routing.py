@@ -8,6 +8,7 @@ import pandas as pd
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "src"))
 
 from kaafu.routing import door_to_door, earliest_arrival  # noqa: E402
+from kaafu.scenarios import extra_run, scale_route  # noqa: E402
 
 CFG = SimpleNamespace(ACCESS_MIN=5, BOAT_TRANSFER_MIN=10, TERMINAL_EXIT_MIN=5, WALK_M_PER_MIN=80)
 
@@ -90,3 +91,22 @@ def test_own_hospital_scores_access_min():
     conns = toy([("T1", "A", "B", 480, 540)])
     hospitals = pd.DataFrame({"facility_id": ["H1"], "island_key": ["A"]})
     assert door_to_door(conns, "A", 600, hospitals, {}, CFG)["total_min"] == CFG.ACCESS_MIN
+
+
+def test_scale_route_respaces_each_direction_between_first_and_last():
+    conns = toy([("R1_a", "A", "T_M", 400, 460), ("R1_b", "T_M", "A", 800, 860)])
+    conns["route_id"] = "R1"
+    doubled = scale_route(conns, "R1", 2)
+    out = doubled[doubled["from_stop"] == "A"]["dep_min"].tolist()
+    back = doubled[doubled["from_stop"] == "T_M"]["dep_min"].tolist()
+    assert out == [400, 800] and back == [400, 800]
+    assert scale_route(conns, "R1", 1).equals(conns)
+
+
+def test_extra_run_copies_the_inbound_run():
+    conns = toy([("R1_a", "A", "B", 400, 430), ("R1_a", "B", "T_M", 435, 500), ("R1_b", "T_M", "A", 1000, 1100)])
+    conns["route_id"] = "R1"
+    new = extra_run(conns, "R1", 1080)
+    added = new[new["trip_id"] == "R1_a~x1080"]
+    assert added["dep_min"].tolist() == [1080, 1115] and added["to_stop"].tolist() == ["B", "T_M"]
+    assert arrival(new, "A", 1000, "T_M") == 1180
