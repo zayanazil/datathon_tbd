@@ -1,0 +1,20 @@
+# Raw and restricted data: never committed (FollowMe has IMEIs)
+data/raw/
+datathon/
+*.duckdb
+*.duckdb.wal
+*.parquet
+
+# Python
+__pycache__/
+*.pyc
+*.egg-info/
+.pytest_cache/
+.venv/
+venv/
+
+# Editors / OS
+.vscode/
+.idea/
+Thumbs.db
+.DS_Store
