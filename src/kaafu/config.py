@@ -123,6 +123,25 @@ STOP_MIN = 10
 OBSERVED_MIN_TRIPS = 5        # observed time used only with at least 5 trips behind it
 MAX_BOAT_KMH = 80             # faster legs or trips are dropped as errors
 MAX_TRIP_HOURS = 6
+PING_MAX_GAP_MIN = 30         # longer gaps between pings: no segment speed
+BOAT_MIN_SEA_SHARE = 0.05     # boat = at least 5% of pings at sea...
+BOAT_SEA_DIST_M = 2500        # ...more than 2.5 km from every island point...
+BOAT_MIN_ISLANDS = 2          # ...and at least 2 islands visited
+SPEED_CLASS_SPLIT_KMH = 28    # slow/fast split if the trip-speed histogram has no clear dip
+DEVICE_HASH_LEN = 8           # output only this many characters of device_id
+FOLLOWME_DAYS = 31            # August 2025, for trips_per_day
+FOLLOWME_DEV_DAYS = (4, 10)   # one week for development (Step 2)
+
+# ---------------------------------------------------------------------------
+# Avas taxi table (M2)
+# ---------------------------------------------------------------------------
+AVAS_WEEKDAYS = [6, 0, 1, 2, 3]   # pandas dayofweek for Sun-Thu; the build day is Wednesday
+AVAS_ZONES = {                     # pickup boxes: (lat_min, lat_max, lon_min, lon_max)
+    "male": (4.165, 4.182, 73.500, 73.522),
+    "airport": (4.182, 4.207, 73.520, 73.536),
+    "hulhumale": (4.200, 4.245, 73.525, 73.556),   # checked after airport
+}
+AVAS_MIN_RIDES = 20               # fewer rides in a zone-hour: use the "all" speed
 
 # ---------------------------------------------------------------------------
 # Routing and indicators (M3)
