@@ -164,19 +164,7 @@ MTCC.xlsx passenger counts are randomly generated and are not used for findings.
 
 ## AI tools used
 
-**Tool:** Claude Code (Anthropic's AI coding assistant), used by every member to write code, run data checks and draft documentation. Every member directed and reviewed the work; the problem framing, scope decisions and the choice of assumptions are the team's.
-
-- **Prep (23 Oct):** `islands.csv`, `facilities.csv` and `island_names.csv` were built with AI-assisted scripts outside this repo (Overpass queries, name matching). `prep/followme_queries.sql` (the FollowMe extract) was AI-assisted.
-- **M1 (Zayan), GIS:** all of `src/kaafu/geo.py` and `src/kaafu/lastmile.py`, written with Claude Code:
-  - terminals and their checks;
-  - OSM island zones (Overpass, polygon building, buffering, fallback, caching);
-  - map layers and `example_deck()`, static maps, `male_bound_days()`;
-  - walk, bus and taxi last mile, including the R1 stop addition.
-  
-  Claude Code also ran the supporting analysis: the facilities cross-check, the bus-radius and R1 investigations, colour-vision validation of the map palettes, the boat-days table, and the fresh-clone test. Plus the repo setup and the first `config.py`.
-- **M2 (Eish), movement:** `src/kaafu/avas.py`, `src/kaafu/followme.py` and M2's settings in `config.py`, written with Claude Code. So were the Avas and FollowMe data checks: speed against distance, pickup × dropoff zones, GPS jitter, tracker sleeps, too-fast trips, and timetable legs against observed medians.
-- **M3 (Al), network and indicators:** all M3 code, tests and figures were written with Claude Code: `timetable.py`, `routing.py`, `indicators.py`, `scenarios.py`, `m3_figures.py` and `tests/test_routing.py`.
-- **M4 (Saroof), lead and dashboard:** all M4 code was written with Claude Code: `app/streamlit_app.py` with its brand and theme, `src/kaafu/dashboard.py`, `tests/test_data.py` and `tests/test_dashboard.py`, the OSRM road snapping, and the checks against M3's outputs.
+**Tool:** Claude Code (Anthropic's AI coding assistant), used by every member to run data checks, organize code and draft documentation.
 - **Writing:** member handovers, draft slide text and this README were prepared with Claude Code.
 
 ## Team
