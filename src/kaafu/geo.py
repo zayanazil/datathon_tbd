@@ -4,8 +4,14 @@ Run `python -m kaafu.geo` to write data/processed/terminals.csv and
 data/processed/island_zones.geojson.
 """
 
+import json
+import time
+
 import geopandas as gpd
 import pandas as pd
+import requests
+from shapely.geometry import LineString, Point, Polygon
+from shapely.ops import linemerge, polygonize, unary_union
 
 from kaafu import config
 
@@ -79,6 +85,99 @@ def build_circle_zones() -> gpd.GeoDataFrame:
     return zones.to_crs(config.WGS84_CRS)
 
 
+_SESSION = None
+
+
+def _session() -> requests.Session:
+    """One kept-alive connection for all Overpass calls (fresh sockets per call
+    exhaust Windows' local ports: WinError 10048)."""
+    global _SESSION
+    if _SESSION is None:
+        _SESSION = requests.Session()
+        _SESSION.headers["User-Agent"] = config.OVERPASS_USER_AGENT   # else 406
+    return _SESSION
+
+
+def overpass_islands(island_key: str, lat: float, lon: float) -> dict:
+    """OSM island and islet outlines near a point, cached in data/raw/osm/."""
+    cache = config.OSM_CACHE / f"{island_key}.json"
+    if cache.exists():
+        return json.loads(cache.read_text(encoding="utf-8"))
+
+    r = config.OVERPASS_SEARCH_M
+    query = f"""[out:json][timeout:25];
+(way["place"~"^(island|islet)$"](around:{r},{lat},{lon});
+ relation["place"~"^(island|islet)$"](around:{r},{lat},{lon}););
+out geom;"""
+    for attempt in range(4):
+        try:
+            resp = _session().post(config.OVERPASS_URL, data={"data": query}, timeout=60)
+            if resp.status_code == 200:
+                break
+        except requests.ConnectionError:
+            if attempt == 3:
+                raise
+        time.sleep(5 * (attempt + 1))   # 429/502/504 or dropped connection: wait, retry
+    resp.raise_for_status()
+
+    data = resp.json()
+    config.OSM_CACHE.mkdir(parents=True, exist_ok=True)
+    cache.write_text(json.dumps(data), encoding="utf-8")
+    time.sleep(1)                       # be polite between uncached calls
+    return data
+
+
+def osm_polygons(data: dict) -> list:
+    """Polygons from Overpass `out geom` ways (closed rings) and relations (outer members)."""
+    polygons = []
+    for el in data.get("elements", []):
+        if el["type"] == "way" and len(el.get("geometry", [])) >= 4:
+            coords = [(p["lon"], p["lat"]) for p in el["geometry"]]
+            if coords[0] == coords[-1]:
+                polygons.append(Polygon(coords))
+        elif el["type"] == "relation":
+            lines = [LineString([(p["lon"], p["lat"]) for p in m["geometry"]])
+                     for m in el.get("members", [])
+                     if m.get("role") == "outer" and len(m.get("geometry", [])) >= 2]
+            if lines:
+                polygons.extend(polygonize(linemerge(lines)))
+    return [p.buffer(0) if not p.is_valid else p for p in polygons if not p.is_empty]
+
+
+def build_osm_zones() -> gpd.GeoDataFrame:
+    """Island outline buffered by ZONE_BUFFER_M, or the circle where OSM fails.
+
+    The outline used is the one containing the island point, else the nearest
+    one; if even the buffered outline doesn't contain the point, the circle is
+    kept, so every zone still covers its harbour.
+    """
+    circles = build_circle_zones().set_index("island_key")
+    zones = []
+    for island in island_points().itertuples():
+        key = island.island_key
+        try:
+            polygons = osm_polygons(overpass_islands(key, island.harbour_lat, island.harbour_lon))
+        except (requests.RequestException, ValueError) as err:
+            print(f"  {key}: Overpass failed ({err}); circle kept")
+            polygons = []
+
+        zone = None
+        if polygons:
+            point = Point(island.harbour_lon, island.harbour_lat)
+            outlines = gpd.GeoSeries(polygons, crs=config.WGS84_CRS).to_crs(config.UTM_CRS)
+            p_utm = gpd.GeoSeries([point], crs=config.WGS84_CRS).to_crs(config.UTM_CRS).iloc[0]
+            outline = outlines.iloc[outlines.distance(p_utm).argmin()]
+            buffered = outline.buffer(config.ZONE_BUFFER_M)
+            if buffered.contains(p_utm):
+                zone = gpd.GeoSeries([buffered], crs=config.UTM_CRS).to_crs(config.WGS84_CRS).iloc[0]
+
+        if zone is None:
+            zones.append({"island_key": key, "source": "circle", "geometry": circles.loc[key, "geometry"]})
+        else:
+            zones.append({"island_key": key, "source": "osm", "geometry": zone})
+    return gpd.GeoDataFrame(zones, geometry="geometry", crs=config.WGS84_CRS)
+
+
 def check_zones(zones: gpd.GeoDataFrame) -> None:
     """One valid zone per island, each containing its own island point."""
     points = island_points()
@@ -119,9 +218,10 @@ if __name__ == "__main__":
     print(write_terminals().to_string(index=False))
     print(f"wrote {config.TERMINALS_CSV.relative_to(config.ROOT)}\n")
 
-    zones = build_circle_zones()
+    zones = build_osm_zones()
     write_zones(zones)
-    print(zones.groupby(["source", "radius_m"]).size().to_string())
+    print(zones.groupby("source").size().to_string())
+    print("circle fallback:", list(zones.island_key[zones.source == "circle"]) or "none")
     print(f"wrote {config.ISLAND_ZONES_GEOJSON.relative_to(config.ROOT)} ({len(zones)} zones)\n")
     overlaps = zone_overlaps(zones)
     print("overlapping zones:" if len(overlaps) else "no overlapping zones")
