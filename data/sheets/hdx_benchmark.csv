@@ -1,0 +1,17 @@
+﻿area,admin_level,threshold_min,population_within,share_pct,source,notes
+Maldives,ADM0,30,200960,45.39,"HDX Maldives Accessibility Indicators (hospitals, car-only travel time), MDV_hospitals_access_wide.csv",
+Maldives,ADM0,60,202609,45.76,"HDX Maldives Accessibility Indicators (hospitals, car-only travel time), MDV_hospitals_access_wide.csv",
+Maldives,ADM0,90,203091,45.87,"HDX Maldives Accessibility Indicators (hospitals, car-only travel time), MDV_hospitals_access_wide.csv",
+Maldives,ADM0,120,203183,45.89,"HDX Maldives Accessibility Indicators (hospitals, car-only travel time), MDV_hospitals_access_wide.csv",
+Malé,ADM1,30,160502,99.07,"HDX Maldives Accessibility Indicators (hospitals, car-only travel time), MDV_hospitals_access_wide.csv",Malé city
+Malé,ADM1,60,161269,99.54,"HDX Maldives Accessibility Indicators (hospitals, car-only travel time), MDV_hospitals_access_wide.csv",Malé city
+Malé,ADM1,90,161603,99.75,"HDX Maldives Accessibility Indicators (hospitals, car-only travel time), MDV_hospitals_access_wide.csv",Malé city
+Malé,ADM1,120,161620,99.76,"HDX Maldives Accessibility Indicators (hospitals, car-only travel time), MDV_hospitals_access_wide.csv",Malé city
+Alif Alif,ADM1,30,1226,88.2,"HDX Maldives Accessibility Indicators (hospitals, car-only travel time), MDV_hospitals_access_wide.csv",HDX has no Alif Dhaalu or Vaavu rows
+Alif Alif,ADM1,60,1246,89.64,"HDX Maldives Accessibility Indicators (hospitals, car-only travel time), MDV_hospitals_access_wide.csv",HDX has no Alif Dhaalu or Vaavu rows
+Alif Alif,ADM1,90,1246,89.64,"HDX Maldives Accessibility Indicators (hospitals, car-only travel time), MDV_hospitals_access_wide.csv",HDX has no Alif Dhaalu or Vaavu rows
+Alif Alif,ADM1,120,1246,89.64,"HDX Maldives Accessibility Indicators (hospitals, car-only travel time), MDV_hospitals_access_wide.csv",HDX has no Alif Dhaalu or Vaavu rows
+Kaafu,ADM1,30,5888,75.75,"HDX Maldives Accessibility Indicators (hospitals, car-only travel time), MDV_hospitals_access_wide.csv",
+Kaafu,ADM1,60,5968,76.78,"HDX Maldives Accessibility Indicators (hospitals, car-only travel time), MDV_hospitals_access_wide.csv",
+Kaafu,ADM1,90,6007,77.28,"HDX Maldives Accessibility Indicators (hospitals, car-only travel time), MDV_hospitals_access_wide.csv",
+Kaafu,ADM1,120,6017,77.41,"HDX Maldives Accessibility Indicators (hospitals, car-only travel time), MDV_hospitals_access_wide.csv",
