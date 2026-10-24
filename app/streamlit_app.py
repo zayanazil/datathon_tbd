@@ -33,6 +33,10 @@ def to_min(hhmm: str) -> int:
     return int(h) * 60 + int(m)
 
 
+def first_upper(text: str) -> str:
+    return text[:1].upper() + text[1:]
+
+
 def css(rgb: list[int]) -> str:
     return "rgb({},{},{})".format(*rgb)
 
@@ -128,7 +132,7 @@ c3.metric("HDX car-only, Kaafu", f"{hdx_k:.1f}%")
 grey_label = UNREACHABLE[0].replace("Wed-Thu", f"{day}-{next_day(day)}")
 pop = origins.set_index("island_key")["population_2022"]
 grey = now.reindex(pop.index).isna()
-c4.metric(grey_label, f"{int(pop[grey].sum()):,} people",
+c4.metric(first_upper(grey_label), f"{int(pop[grey].sum()):,} people",
           f"{int(grey.sum())} island{'' if grey.sum() == 1 else 's'}, {100 * pop[grey].sum() / pop.sum():.0f}% of the 23", delta_color="off")
 if grey.any():
     st.caption(f"Grey islands at {dep_label} on {day}: their boat to Malé runs only some days, early in the "
@@ -147,43 +151,48 @@ st.dataframe(table, hide_index=True, width="stretch",
 left, right = st.columns([3, 2], gap="large")
 with left:
     st.subheader(f"Minutes to a hospital, leaving at {dep_label}")
-    islands_df = geo.islands_layer(access, dep, target)
+    # islands_layer filters on scenario, so pass this run's name, not the "base" default.
+    islands_df = geo.islands_layer(access, dep, target, scenario=access["scenario"].iloc[0])
     islands_df["tooltip"] = islands_df["tooltip"].str.replace(UNREACHABLE[0], grey_label, regex=False)
     bus_df, obs_df = geo.bus_routes_layer(), geo.observed_trips_layer()
     o1, o2 = st.columns(2)
     show_bus = o1.toggle("Bus routes", disabled=bus_df.empty,
-                         help="Needs the Team Kandu RTL bus files in data/raw/" if bus_df.empty else None)
+                         help="Needs data/processed/bus_routes.csv from M1" if bus_df.empty else None)
     show_obs = o2.toggle("Observed boat trips", disabled=obs_df.empty,
-                         help="Needs observed_trips.csv from M2" if obs_df.empty else None)
+                         help="Needs observed_pairs.csv from M2" if obs_df.empty else None)
 
-    layers = [pdk.Layer("LineLayer", geo.boat_links_layer(conns), id="boat_links",
-                        get_source_position=["from_lon", "from_lat"], get_target_position=["to_lon", "to_lat"],
-                        get_color=[90, 110, 140, 150], get_width="width_px", width_units="pixels", pickable=True)]
+    # Layer styling follows M1's geo.example_deck; colours come from each layer's `colour` column.
+    lines = dict(get_source_position=["from_lon", "from_lat"], get_target_position=["to_lon", "to_lat"],
+                 get_color="colour", get_width="width_px", pickable=True)
+    layers = []
     if show_bus:
-        layers.append(pdk.Layer("PathLayer", bus_df, id="bus_routes", get_path="path", get_color=[27, 175, 122, 160],
-                                get_width=2, width_units="pixels", pickable=True))
+        layers.append(pdk.Layer("PathLayer", bus_df, id="bus_routes", get_path="path", get_color="colour",
+                                width_min_pixels=1, pickable=True))
+    layers.append(pdk.Layer("LineLayer", geo.boat_links_layer(conns), id="boat_links", **lines))
     if show_obs:
-        layers.append(pdk.Layer("LineLayer", obs_df, id="observed_trips",
-                                get_source_position=["from_lon", "from_lat"], get_target_position=["to_lon", "to_lat"],
-                                get_color=[235, 104, 52, 140], get_width=2, width_units="pixels", pickable=True))
+        layers.append(pdk.Layer("LineLayer", obs_df, id="observed_trips", **lines))
     layers += [
+        # 2px white ring keeps overlapping island circles apart
         pdk.Layer("ScatterplotLayer", islands_df, id="islands", get_position=["lon", "lat"], get_radius="radius_m",
-                  get_fill_color="colour", radius_min_pixels=5, stroked=True, get_line_color=[255, 255, 255],
+                  get_fill_color="colour", stroked=True, get_line_color=[255, 255, 255],
                   line_width_min_pixels=2, pickable=True),
         pdk.Layer("ScatterplotLayer", geo.hospitals_layer(), id="hospitals", get_position=["lon", "lat"],
-                  get_fill_color=[20, 20, 20], get_radius=250, radius_min_pixels=4, stroked=True,
-                  get_line_color=[255, 255, 255], line_width_min_pixels=2, pickable=True),
+                  get_radius=150, radius_min_pixels=5, get_fill_color="colour", stroked=True,
+                  get_line_color=[208, 59, 59], line_width_min_pixels=2, pickable=True),
         pdk.Layer("ScatterplotLayer", geo.terminals_layer(), id="terminals", get_position=["lon", "lat"],
-                  get_fill_color=[98, 80, 214], get_radius=150, radius_min_pixels=3, pickable=True),
+                  get_radius=100, radius_min_pixels=4, get_fill_color="colour", pickable=True),
     ]
     st.pydeck_chart(pdk.Deck(layers=layers, map_provider="carto", map_style="light",
                              initial_view_state=pdk.ViewState(latitude=4.1, longitude=73.25, zoom=8),
                              tooltip={"text": "{tooltip}"}), width="stretch")
     bands = [(label, rgb) for label, _, rgb in ACCESS_BANDS] + [(grey_label, UNREACHABLE[1])]
-    legend = " &nbsp; ".join(f"<span style='color:{css(rgb)}'>●</span> {label}" for label, rgb in bands)
-    st.markdown(f"{legend}<br/><b>●</b> hospital &nbsp; <span style='color:#6250d6'>●</span> ferry terminal &nbsp; "
-                "lines = boat links (wider = more boats a day) &nbsp; circle area = population",
-                unsafe_allow_html=True)
+    legend = " &nbsp; ".join(f"<span style='color:{css(rgb)}'>●</span> {first_upper(label)}"
+                             for label, rgb in bands)
+    observed = (" &nbsp; <span style='color:rgb(70,110,150)'>━</span> observed slow boats &nbsp; "
+                "<span style='color:rgb(150,90,170)'>━</span> observed fast boats") if show_obs else ""
+    st.markdown(f"{legend}<br/><span style='color:rgb(208,59,59)'>◉</span> hospital &nbsp; "
+                "<b>●</b> ferry terminal &nbsp; lines = boat links (wider = more boats a day) &nbsp; "
+                f"circle area = population{observed}", unsafe_allow_html=True)
 
 # --- Island panel ----------------------------------------------------------------
 

@@ -21,7 +21,8 @@ def main(skip_followme: bool = False):
     print("Data checks:", "; ".join(check_all()) or "ok")
 
     print("M1 terminals and zones")
-    _write(geo.terminals(), "terminals.csv")
+    _write(geo.terminals()[["terminal_id", "name", "island_key", "lat", "lon", "bus_stop_code",
+                            "walk_to_stop_min"]], "terminals.csv")
     (C.PROCESSED / "island_zones.geojson").write_text(geo.island_zones().to_json(), encoding="utf-8")
 
     print("M2 Avas")
@@ -29,6 +30,8 @@ def main(skip_followme: bool = False):
     if avas.raw_path():
         rides = avas.rides()
         _write(avas.hourly(rides), "avas_hourly.csv")
+    elif load_processed("avas_hourly.csv") is not None:
+        print("  no Avas raw file in data/raw/: using the committed avas_hourly.csv")
     else:
         print("  no Avas raw file in data/raw/: taxi uses the flagged placeholder speed")
 

@@ -1,8 +1,6 @@
 """Terminals, island zones and map layers (M1)."""
 from __future__ import annotations
 
-import math
-
 import numpy as np
 import pandas as pd
 
@@ -20,7 +18,6 @@ _TERMINALS = [
     ("T_MALE_WEST", "Maafannu Ferry Terminal", "K.Malé", 4.172281, 73.502060, "1101", "bus_stop"),
     ("T_HULHUMALE", "Hulhumalé Ferry Terminal", "K.Hulhumalé", 4.216739, 73.537853, "507", "bus_stop"),
     ("T_VILLIMALE", "Villimale Ferry Terminal", "K.Villimalé", 4.175107, 73.486942, "1301", "bus_stop"),
-    ("T_AIRPORT", "Velana Airport jetty", "K.Hulhulé", 4.19183, 73.52910, "", "estimated"),
 ]
 
 
@@ -35,7 +32,7 @@ def haversine_m(a, b) -> np.ndarray:
 def terminals() -> pd.DataFrame:
     df = pd.DataFrame(_TERMINALS, columns=["terminal_id", "name", "island_key", "lat", "lon",
                                            "bus_stop_code", "location_quality"])
-    df["walk_to_stop_min"] = 0.0
+    df["walk_to_stop_min"] = 0
     stops = load_raw_csv("rtl_bus_stops.csv")
     if stops is not None:
         code_col = next(c for c in stops.columns if c.lower() in ("stop_code", "code", "stop_id"))
@@ -114,107 +111,190 @@ def boat_links(conns: pd.DataFrame) -> pd.DataFrame:
     return agg.drop(columns="key")
 
 
-# --- Map layers for the dashboard ------------------------------------------------
-# Each returns a DataFrame for pydeck with lon/lat (or from_/to_ or path) and a `tooltip` column.
+# ---------------------------------------------------------------------------
+# Map layers for the dashboard: M1's code from the zayan branch (6ef0cb2, e4cb7be).
+# Each returns a DataFrame for pydeck with a `tooltip` column. Adapted only to
+# this branch's config and loaders (marked "adapted").
+# ---------------------------------------------------------------------------
 
-# Blue, not green, for the fastest band: green and red look alike to colourblind viewers.
-ACCESS_BANDS = [("Up to 1 hour", 60, [42, 120, 214]), ("1 to 2 hours", 120, [250, 178, 25]),
-                ("Over 2 hours", math.inf, [208, 59, 59])]
-UNREACHABLE = ("No scheduled boat (Wed-Thu)", [138, 137, 132])
-FERRY_TERMINALS = ["T_MALE_NORTH", "T_MALE_WEST", "T_HULHUMALE", "T_VILLIMALE"]
+BUS_ROUTES_CSV = C.PROCESSED / "bus_routes.csv"
+OBSERVED_PAIRS_CSV = C.PROCESSED / "observed_pairs.csv"
+
+# Access bands. Status colours from the dataviz reference palette, with
+# "good" as blue rather than green: green vs red measured dE 4.1 for
+# deuteranopes; blue/amber/red/grey all clear dE 10 (validate_palette.js,
+# all pairs). Each band also has a text label, so colour is never the only cue.
+ACCESS_BANDS = [
+    # (label, upper bound in minutes, RGBA)
+    ("up to 1 hour", 60, [31, 111, 209, 220]),
+    ("1 to 2 hours", 120, [250, 178, 25, 220]),
+    ("over 2 hours", float("inf"), [208, 59, 59, 220]),
+]
+# Blank total_min in access_results: no scheduled boat gets there within the
+# Wed + next-day (Thu) timetable that routing searches.
+UNREACHABLE = ("no scheduled boat (Wed-Thu)", [140, 140, 136, 200])
+RADIUS_M_PER_SQRT_PERSON = 20     # 4,471 people (Maafushi) -> ~1.3 km circle
+HOSPITAL_COLOUR = [255, 255, 255, 255]
+TERMINAL_COLOUR = [40, 40, 40, 255]
+BOAT_LINK_COLOUR = [70, 110, 150, 160]
+BUS_ROUTE_COLOUR = [120, 120, 120, 140]
+OBSERVED_COLOURS = {"slow": [70, 110, 150, 200], "fast": [150, 90, 170, 200]}
 
 
-def access_band(minutes) -> tuple[str, list[int]]:
-    if minutes is None or pd.isna(minutes):
+def access_band(minutes) -> tuple[str, list]:
+    """Band label and colour for a door-to-door time (blank = unreachable)."""
+    if pd.isna(minutes):
         return UNREACHABLE
-    return next((label, rgb) for label, top, rgb in ACCESS_BANDS if minutes <= top)
+    for label, upper, colour in ACCESS_BANDS:
+        if minutes <= upper:
+            return label, colour
+    return ACCESS_BANDS[-1][0], ACCESS_BANDS[-1][2]
 
 
-def islands_layer(access_results: pd.DataFrame, dep_min: int, target: str) -> pd.DataFrame:
-    """ScatterplotLayer: 23 origin islands, circle area by population, colour by minutes to hospital."""
-    dep_min = int(dep_min) // C.STEP_MIN * C.STEP_MIN
-    a = access_results[(access_results["dep_min"] == dep_min) & (access_results["target"] == target)]
-    minutes = a.set_index("origin_key")["total_min"].astype(float)
-    isl = load_islands()
-    df = isl[isl["role"] == "origin"][["island_key", "island", "harbour_lat", "harbour_lon", "population_2022"]]
-    df = df.rename(columns={"harbour_lat": "lat", "harbour_lon": "lon", "population_2022": "population"})
-    df["minutes"] = df["island_key"].map(minutes)
-    df["band"], df["colour"] = zip(*df["minutes"].map(access_band))
-    df["radius_m"] = 40 * np.sqrt(df["population"])  # area proportional to population
-    df["tooltip"] = [f"{k}: {b if pd.isna(m) else f'{m:.0f} min'} · {p:,} people"
-                     for k, m, b, p in zip(df["island_key"], df["minutes"], df["band"], df["population"])]
-    return df.reset_index(drop=True)
+def fmt_minutes(minutes: float) -> str:
+    h, m = divmod(int(round(minutes)), 60)
+    return f"{h} h {m:02d} min" if h else f"{m} min"
+
+
+def stop_positions() -> pd.DataFrame:
+    """lat/lon and display name for every island_key and terminal_id."""
+    islands = load_islands().rename(columns={"island_key": "stop_id", "harbour_lat": "lat",  # adapted
+                                             "harbour_lon": "lon", "island": "name"})
+    t = terminals().rename(columns={"terminal_id": "stop_id"})  # adapted
+    return pd.concat([islands[["stop_id", "name", "lat", "lon"]],
+                      t[["stop_id", "name", "lat", "lon"]]]).set_index("stop_id")
+
+
+def islands_layer(access_results: pd.DataFrame, dep_min: int,
+                  target: str = "gm_hospital", scenario: str = "base") -> pd.DataFrame:
+    """One circle per origin island for a departure time and target.
+
+    Columns: island_key, name, lat, lon, population, total_min, band, colour,
+    radius_m, tooltip. `dep_min` is rounded down to the STEP_MIN grid.
+    Circle area is proportional to population; colour is the access band.
+    """
+    step = (int(dep_min) // C.STEP_MIN) * C.STEP_MIN
+    rows = access_results[(access_results.dep_min == step) & (access_results.target == target)
+                          & (access_results.scenario == scenario)]
+    islands = load_islands()  # adapted
+    origins = islands[islands.role == "origin"][["island_key", "island", "harbour_lat",
+                                                  "harbour_lon", "population_2022"]]
+    origins.columns = ["island_key", "name", "lat", "lon", "population"]
+    from .load import load_facilities  # adapted
+    hospitals = load_facilities().set_index("facility_id").name
+
+    layer = origins.merge(rows[["origin_key", "total_min", "facility_id"]],
+                          left_on="island_key", right_on="origin_key", how="left")
+    bands = layer.total_min.map(access_band)
+    layer["band"] = bands.str[0]
+    layer["colour"] = bands.str[1]
+    layer["radius_m"] = layer.population ** 0.5 * RADIUS_M_PER_SQRT_PERSON
+    layer["tooltip"] = [
+        f"{r.name} ({r.population:,} people): "
+        + (f"{fmt_minutes(r.total_min)} to {hospitals.get(r.facility_id, r.facility_id)}"
+           if pd.notna(r.total_min) else UNREACHABLE[0])
+        for r in layer.itertuples()
+    ]
+    return layer.drop(columns=["origin_key", "facility_id"])
 
 
 def boat_links_layer(connections: pd.DataFrame) -> pd.DataFrame:
-    """LineLayer: island pairs served by boat, wider for more boats a day."""
-    df = boat_links(connections).rename(columns={"a_lat": "from_lat", "a_lon": "from_lon",
-                                                 "b_lat": "to_lat", "b_lon": "to_lon"})
-    df["width_px"] = 1 + 1.5 * np.sqrt(df["boats_per_day"])
-    df["tooltip"] = df["a"] + " – " + df["b"] + ": " + df["boats_per_day"].astype(str) + " boats a day"
-    return df
+    """One line per island/terminal pair, both directions combined.
+
+    Columns: stop_a, stop_b, from_lat, from_lon, to_lat, to_lon, boats_per_day,
+    routes, width_px, colour, tooltip. Counts first-day legs only (the
+    contract repeats every leg at +1440 for the next day).
+    """
+    day = connections[connections.dep_min < 1440].copy()
+    pair = day[["from_stop", "to_stop"]].apply(sorted, axis=1, result_type="expand")
+    day["stop_a"], day["stop_b"] = pair[0], pair[1]
+    links = day.groupby(["stop_a", "stop_b"]).agg(
+        boats_per_day=("conn_id", "size"),
+        routes=("route_id", lambda r: ", ".join(sorted(set(map(str, r))))),
+    ).reset_index()
+
+    pos = stop_positions()
+    links["from_lat"] = links.stop_a.map(pos.lat)
+    links["from_lon"] = links.stop_a.map(pos.lon)
+    links["to_lat"] = links.stop_b.map(pos.lat)
+    links["to_lon"] = links.stop_b.map(pos.lon)
+    # sqrt keeps the Villimalé shuttle (hundreds a day) from drowning the rest
+    links["width_px"] = (1 + links.boats_per_day ** 0.5).clip(upper=12).round(1)
+    links["colour"] = [BOAT_LINK_COLOUR] * len(links)
+    links["tooltip"] = [
+        f"{pos.name.get(r.stop_a, r.stop_a)} - {pos.name.get(r.stop_b, r.stop_b)}: "
+        f"{r.boats_per_day} boats a day (route {r.routes})"
+        for r in links.itertuples()
+    ]
+    return links
 
 
 def hospitals_layer() -> pd.DataFrame:
-    """ScatterplotLayer: the 9 hospitals."""
-    from .load import load_facilities
+    """Hospitals that count as destinations (Senahiya per INCLUDE_SENAHIYA)."""
+    from .load import load_facilities  # adapted: this branch has no lastmile.load_hospitals
 
-    f = load_facilities()
-    df = f[f["type"] == "hospital"][["facility_id", "name", "island_key", "lat", "lon", "level"]].copy()
-    df["tooltip"] = df["name"] + " (" + df["level"] + " hospital)"
-    return df.reset_index(drop=True)
+    h = load_facilities()
+    h = h[(h["type"] == "hospital") & ((h["facility_id"] != "H03") | C.INCLUDE_SENAHIYA)].copy()
+    h["colour"] = [HOSPITAL_COLOUR] * len(h)
+    h["tooltip"] = h.name + " (" + h.level + ")"
+    return h[["facility_id", "name", "level", "island_key", "lat", "lon", "colour", "tooltip"]]
 
 
 def terminals_layer() -> pd.DataFrame:
-    """ScatterplotLayer: the 4 Greater Malé ferry terminals."""
-    t = terminals()
-    df = t[t["terminal_id"].isin(FERRY_TERMINALS)].copy()
-    df["tooltip"] = df["name"] + " (ferry terminal)"
-    return df.reset_index(drop=True)
+    t = terminals()  # adapted
+    t["colour"] = [TERMINAL_COLOUR] * len(t)
+    t["tooltip"] = t.name + " ferry terminal"
+    return t[["terminal_id", "name", "island_key", "lat", "lon", "colour", "tooltip"]]
 
 
 def bus_routes_layer() -> pd.DataFrame:
-    """PathLayer: Greater Malé bus routes in stop order. Empty until the Team Kandu RTL files are in data/raw/."""
-    stops, deps = load_raw_csv("rtl_bus_stops.csv"), load_raw_csv("rtl_bus_departures.csv")
-    empty = pd.DataFrame(columns=["route_id", "path", "tooltip"])
-    if stops is None or deps is None:
-        return empty
-    from .load import hhmm_to_min
+    """One path per Greater Malé bus route, stops in route order (PathLayer).
 
-    def col(df, *names):
-        return next(c for c in df.columns if c.lower() in names)
-
-    try:
-        code, lat, lon = col(stops, "stop_code", "code", "stop_id"), col(stops, "lat", "latitude", "stop_lat"), \
-            col(stops, "lon", "lng", "longitude", "stop_lon")
-        xy = stops.assign(code=stops[code].astype(str)).drop_duplicates("code").set_index("code")[[lon, lat]]
-        route, trip, dcode, time = col(deps, "route_id", "route"), col(deps, "trip_id", "trip"), \
-            col(deps, "stop_code", "code", "stop_id"), col(deps, "time", "departure", "departure_time")
-    except StopIteration:
-        return empty
-    d = deps.assign(code=deps[dcode].astype(str), m=deps[time].map(hhmm_to_min))
-    rows = []
-    for rid, g in d.groupby(route):
-        g = g.assign(rel=g["m"] - g.groupby(trip)["m"].transform("min"))
-        order = g.groupby("code")["rel"].median().sort_values().index
-        path = xy.reindex(order).dropna().to_numpy().tolist()
-        if len(path) >= 2:
-            rows.append({"route_id": str(rid), "path": path, "tooltip": f"Bus {rid}"})
-    return pd.DataFrame(rows) if rows else empty
+    Columns: route_number, route, path ([[lon, lat], ...]), colour, tooltip.
+    Reads data/processed/bus_routes.csv; empty if it hasn't been built.
+    """
+    if not BUS_ROUTES_CSV.exists():
+        return pd.DataFrame(columns=["route_number", "route", "path", "colour", "tooltip"])
+    stops = pd.read_csv(BUS_ROUTES_CSV, encoding="utf-8-sig")
+    paths = (stops.sort_values(["route_number", "order"])
+             .groupby("route_number")
+             .agg(route=("route", "first"),
+                  path=("lat", lambda s: stops.loc[s.index, ["lon", "lat"]].values.tolist()))
+             .reset_index())
+    paths["colour"] = [BUS_ROUTE_COLOUR] * len(paths)
+    paths["tooltip"] = paths.route_number + " " + paths.route
+    return paths
 
 
-def observed_trips_layer() -> pd.DataFrame:
-    """LineLayer: FollowMe island-to-island trips, one line per pair. Empty until observed_trips.csv exists."""
-    path = C.PROCESSED / "observed_trips.csv"
-    cols = ["from_key", "to_key", "n_trips", "median_min", "from_lat", "from_lon", "to_lat", "to_lon", "tooltip"]
-    if not path.exists():
-        return pd.DataFrame(columns=cols)
-    t = pd.read_csv(path)
-    g = t.groupby(["from_key", "to_key"]).agg(n_trips=("duration_min", "size"),
-                                              median_min=("duration_min", "median")).reset_index()
-    pts = load_islands().set_index("island_key")[["harbour_lat", "harbour_lon"]]
-    g[["from_lat", "from_lon"]] = pts.loc[g["from_key"]].to_numpy()
-    g[["to_lat", "to_lon"]] = pts.loc[g["to_key"]].to_numpy()
-    g["tooltip"] = (g["from_key"] + " → " + g["to_key"] + ": " + g["n_trips"].astype(str) + " observed trips, median "
-                    + g["median_min"].round().astype(int).astype(str) + " min")
-    return g[cols]
+OBSERVED_PAIR_COLUMNS = ["from_key", "to_key", "speed_class", "n_trips", "n_devices",
+                         "median_min", "p90_min", "trips_per_day", "first_hour", "last_hour"]
+
+
+def observed_trips_layer(observed_pairs: pd.DataFrame | None = None) -> pd.DataFrame:
+    """Lines for M2's observed boat trips (empty until observed_pairs.csv exists).
+
+    Columns: from_key, to_key, speed_class, from_lat, from_lon, to_lat, to_lon,
+    trips_per_day, median_min, width_px, colour, tooltip. Only pairs with at
+    least OBSERVED_MIN_TRIPS trips are drawn.
+    """
+    if observed_pairs is None:
+        if not OBSERVED_PAIRS_CSV.exists():
+            observed_pairs = pd.DataFrame(columns=OBSERVED_PAIR_COLUMNS)
+        else:
+            observed_pairs = pd.read_csv(OBSERVED_PAIRS_CSV, encoding="utf-8-sig")
+    pairs = observed_pairs[observed_pairs.n_trips >= C.OBSERVED_MIN_TRIPS].copy()
+    pos = stop_positions()
+    pairs["from_lat"] = pairs.from_key.map(pos.lat)
+    pairs["from_lon"] = pairs.from_key.map(pos.lon)
+    pairs["to_lat"] = pairs.to_key.map(pos.lat)
+    pairs["to_lon"] = pairs.to_key.map(pos.lon)
+    pairs["width_px"] = (1 + pairs.trips_per_day.astype(float) ** 0.5).clip(upper=10)
+    pairs["colour"] = pairs.speed_class.map(OBSERVED_COLOURS)
+    pairs["tooltip"] = [
+        f"{pos.name.get(r.from_key, r.from_key)} to {pos.name.get(r.to_key, r.to_key)} "
+        f"({r.speed_class} boats): median {fmt_minutes(r.median_min)}, "
+        f"{r.trips_per_day:.1f} trips a day"
+        for r in pairs.itertuples()
+    ]
+    return pairs[["from_key", "to_key", "speed_class", "from_lat", "from_lon", "to_lat", "to_lon",
+                  "trips_per_day", "median_min", "width_px", "colour", "tooltip"]]
