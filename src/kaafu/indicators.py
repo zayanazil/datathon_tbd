@@ -93,47 +93,58 @@ def boats_per_day(conns: pd.DataFrame, origins: pd.DataFrame) -> pd.Series:
     return day.groupby("from_stop")["trip_id"].nunique().reindex(origins["island_key"]).fillna(0).astype(int)
 
 
-def island_summary(access: pd.DataFrame, origins: pd.DataFrame, conns: pd.DataFrame,
-                   observed_access: pd.DataFrame | None = None) -> pd.DataFrame:
+def island_summary(access: pd.DataFrame, origins: pd.DataFrame, conns: pd.DataFrame) -> pd.DataFrame:
+    """island_summary.csv with M3's definitions (m3-network indicators.island_summary).
+
+    Daytime = departures DAY_START_MIN-DAY_END_MIN. Unreachable counts as infinite, so a median,
+    best or worst that is unreachable is left blank. last_practical_departure: the latest step
+    that reaches the hospital before midnight. observed_gap_min: see observed_gap().
+    """
     gm = access[access["target"] == "gm_hospital"]
-    day = gm[gm["dep_min"].between(C.DAY_START_MIN, C.DAY_END_MIN)]
-    med = daytime_median(access, "gm_hospital")
+    total = gm["total_min"].astype(float).fillna(np.inf)
+    day = total[gm["dep_min"].between(C.DAY_START_MIN, C.DAY_END_MIN)].groupby(gm["origin_key"])
+    same_day = gm[(gm["dep_min"] + total) < 1440].groupby("origin_key")["dep_min"].max()
     s = pd.DataFrame({"origin_key": origins["island_key"],
                       "population": origins["population_2022"].to_numpy()}).set_index("origin_key")
-    s["day_median_min"] = med.replace(np.inf, np.nan)
-    s["best_min"] = gm.groupby("origin_key")["total_min"].min()
-    s["worst_day_min"] = day.groupby("origin_key")["total_min"].max()
-    s["last_practical_departure"] = last_practical_departure(access).map(fmt_min)
+    s["day_median_min"] = day.median().replace(np.inf, np.nan).round(1)
+    s["best_min"] = day.min().replace(np.inf, np.nan).round(1)
+    s["worst_day_min"] = day.max().replace(np.inf, np.nan).round(1)
+    s["last_practical_departure"] = same_day.reindex(s.index).map(
+        lambda m: "none" if pd.isna(m) else f"{int(m) // 60:02d}:{int(m) % 60:02d}")
     s["boats_per_day"] = boats_per_day(conns, origins)
-    if observed_access is not None:
-        s["observed_gap_min"] = s["day_median_min"] - daytime_median(observed_access, "gm_hospital").replace(np.inf, np.nan)
-    else:
-        s["observed_gap_min"] = np.nan
+    s["observed_gap_min"] = observed_gap(conns)
     return s.reset_index()
+
+
+def observed_gap(conns: pd.DataFrame) -> pd.Series:
+    """Scheduled minus observed boat minutes from each island to Greater Malé (M3's definition).
+
+    Scheduled: the quickest timetabled ride from the island to a Greater Malé terminal on one trip.
+    Observed: M2's median of tracked trips from the island to Malé, Hulhumalé or Villimalé, with
+    at least OBSERVED_MIN_TRIPS. Positive = the boats people take are faster than the timetable.
+    """
+    from .load import load_processed
+
+    trips = load_processed("observed_trips.csv")
+    if trips is None:
+        return pd.Series(dtype=float)
+    scheduled: dict[str, float] = {}
+    for _, trip in conns[~conns["mode"].str.contains("observed")].sort_values("dep_min").groupby("trip_id"):
+        legs = list(trip.itertuples())
+        for i, leg in enumerate(legs):
+            if leg.from_stop.startswith("T_"):
+                continue
+            at_gm = next((later.arr_min for later in legs[i:] if later.to_stop.startswith("T_")), None)
+            if at_gm is not None:
+                scheduled[leg.from_stop] = min(scheduled.get(leg.from_stop, at_gm - leg.dep_min), at_gm - leg.dep_min)
+    from .geo import terminals
+
+    terminal_islands = set(terminals()["island_key"])  # Malé, Hulhumalé, Villimalé: not the airport
+    to_gm = trips[trips["to_key"].isin(terminal_islands)].groupby("from_key")["duration_min"]
+    observed = to_gm.median()[to_gm.size() >= C.OBSERVED_MIN_TRIPS]
+    return (pd.Series(scheduled, dtype=float) - observed).dropna().round(1)
 
 
 def hdx_table(ours: pd.DataFrame, hdx: pd.DataFrame) -> pd.DataFrame:
     t = ours.merge(hdx[["threshold_min", "hdx_kaafu_pct", "hdx_maldives_pct"]], on="threshold_min", how="left")
     return t
-
-
-def nsds(access: pd.DataFrame, origins: pd.DataFrame, conns: pd.DataFrame) -> dict[str, float]:
-    """The two NSDS-style indicators with no base year, plus the health-centre comparison."""
-    from .geo import stop_island
-
-    w = _weights(origins)
-    isl = stop_island()
-    day = conns[conns["dep_min"] < 1440]
-    to_gm = day[day["to_stop"].map(isl).isin(C.GREATER_MALE) & ~day["mode"].str.contains("observed")]
-    served = set()
-    for _, g in day[day["trip_id"].isin(to_gm["trip_id"])].groupby("trip_id"):
-        served |= set(g["from_stop"])  # every island the boat calls at before Greater Malé
-    fac = load_facilities()
-    centre = fac.groupby("island_key")["walk_minutes"].min()
-    hc_min = C.ACCESS_MIN + centre.reindex(w.index)
-    med = daytime_median(access, "gm_hospital")
-    return {
-        "pct_with_daily_boat_to_gm": 100 * w[w.index.isin(served)].sum() / w.sum(),
-        "pct_within_30_health_facility": 100 * w[(hc_min <= 30).to_numpy()].sum() / w.sum(),
-        "pct_within_120_hospital_daytime_median": 100 * w[(med.reindex(w.index) <= 120).to_numpy()].sum() / w.sum(),
-    }

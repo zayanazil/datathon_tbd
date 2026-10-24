@@ -7,8 +7,8 @@ import pytest
 
 from kaafu import config as C
 from kaafu.geo import haversine_m, terminals
-from kaafu.load import (check_all, hhmm_to_min, load_facilities, load_ferry, load_islands, load_names,
-                        load_processed)
+from kaafu.load import (check_all, hhmm_to_min, load_facilities, load_ferry, load_islands, load_last_mile,
+                        load_names, load_processed)
 from kaafu.timetable import legs
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -66,10 +66,11 @@ def test_connection_stops_exist():
 
 
 def test_last_mile_rules():
-    lm = load_processed("last_mile.csv")
+    lm = load_last_mile()
     if lm is None:
         pytest.skip("last_mile.csv not built yet")
     walk = lm[lm["mode"] == "walk"]
+    assert lm["available"].dtype == bool
     for t in terminals()["terminal_id"]:
         for h in C.GM_HOSPITALS:
             assert len(walk[(walk["stop_id"] == t) & (walk["facility_id"] == h)]) == 24

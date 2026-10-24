@@ -1,6 +1,11 @@
-threshold_min,kaafu_pct,all23_pct,hdx_kaafu_pct,hdx_maldives_pct
-30,0.0,0.0,75.75,45.39
-60,0.0,0.0,76.78,45.76
-90,0.0,0.0,77.28,45.87
-120,0.0,0.0,77.41,45.89
-240,0.0,0.0,,
+target,departure,threshold_min,kaafu_pct,hdx_kaafu_pct,all23_pct,hdx_maldives_pct
+any_hospital,day_median,30,0.0,75.75,14.3,45.39
+any_hospital,day_median,60,0.0,76.78,14.3,45.76
+any_hospital,day_median,90,0.0,77.28,14.3,45.87
+any_hospital,day_median,120,0.0,77.41,14.3,45.89
+any_hospital,day_median,240,0.0,,18.7,
+gm_hospital,day_median,30,0.0,75.75,0.0,45.39
+gm_hospital,day_median,60,0.0,76.78,0.0,45.76
+gm_hospital,day_median,90,0.0,77.28,0.0,45.87
+gm_hospital,day_median,120,0.0,77.41,0.0,45.89
+gm_hospital,day_median,240,0.0,,0.0,

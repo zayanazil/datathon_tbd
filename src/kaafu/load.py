@@ -1,7 +1,6 @@
 """Load and check every sheet. All sheets are UTF-8 with a BOM, so read with utf-8-sig."""
 from __future__ import annotations
 
-import warnings
 
 import pandas as pd
 
@@ -49,27 +48,12 @@ def _loose(name) -> str:
     return "".join(str(name).casefold().replace("'", "").split())
 
 
-# --- Sheets that may still be missing -----------------------------------------
-
-_WARNED: set[str] = set()
-
+# --- Team sheets ------------------------------------------------------------------
 
 def sheet_path(name: str):
-    """Real sheet if present, else its placeholder. Returns (path, is_placeholder)."""
-    real = C.SHEETS / name
-    if real.exists():
-        return real, False
-    ph = C.PLACEHOLDER / name
-    if ph.exists():
-        if name not in _WARNED:
-            _WARNED.add(name)
-            warnings.warn(f"{name} missing from data/sheets/: using PLACEHOLDER data", stacklevel=3)
-        return ph, True
-    return None, False
-
-
-def using_placeholder(name: str) -> bool:
-    return sheet_path(name)[1]
+    """data/sheets/<name>, or None if it is missing."""
+    path = C.SHEETS / name
+    return path if path.exists() else None
 
 
 FERRY_ALIASES = {
@@ -84,10 +68,9 @@ FERRY_ALIASES = {
 
 def load_ferry() -> pd.DataFrame:
     """ferry_timetable.csv with standard column names: route_id, from, to, depart, arrive, days, ..."""
-    path, _ = sheet_path("ferry_timetable.csv")
+    path = sheet_path("ferry_timetable.csv")
     if path is None:
-        raise DataCheckError("No ferry_timetable.csv in data/sheets/ and no placeholder: "
-                             "run `python tests/make_placeholders.py`")
+        raise DataCheckError("data/sheets/ferry_timetable.csv is missing: take it from the team repo's main branch")
     df = _read(path, dtype=str)
     df.columns = [c.strip().lower() for c in df.columns]
     df = df.rename(columns={c: FERRY_ALIASES[c] for c in df.columns if c in FERRY_ALIASES})
@@ -102,12 +85,12 @@ def load_ferry() -> pd.DataFrame:
 
 
 def load_bus_hours() -> pd.DataFrame | None:
-    path, _ = sheet_path("bus_service_hours.csv")
+    path = sheet_path("bus_service_hours.csv")
     return _read(path) if path else None
 
 
 def load_bus_headways() -> pd.DataFrame | None:
-    path, _ = sheet_path("bus_headways.csv")
+    path = sheet_path("bus_headways.csv")
     return _read(path) if path else None
 
 
@@ -119,6 +102,28 @@ def load_hdx() -> pd.DataFrame:
     wide = df.pivot_table(index="threshold_min", columns="area", values="share_pct").reset_index()
     wide = wide.rename(columns={"Kaafu": "hdx_kaafu_pct", "Maldives": "hdx_maldives_pct"})
     return wide[["threshold_min", "hdx_kaafu_pct", "hdx_maldives_pct"]]
+
+
+def load_last_mile() -> pd.DataFrame | None:
+    """M1's last_mile.csv with `available` as bool, plus two columns the sliders need.
+
+    expired_share (taxi) and bus_wait_min (bus) are read back from `detail`, where M1 writes
+    "wait X": a taxi waits TAXI_BASE_WAIT_MIN + expired_share x TAXI_RETRY_MIN; a bus waits
+    half its headway.
+    """
+    lm = load_processed("last_mile.csv")
+    if lm is None:
+        return None
+    if lm["available"].dtype == object:
+        lm["available"] = lm["available"].astype(str).str.lower().isin(["yes", "true", "1"])
+    wait = lm["detail"].astype(str).str.extract(r"wait (\d+(?:\.\d+)?)")[0].astype(float)
+    if "expired_share" not in lm:
+        taxi = lm["mode"] == "taxi"
+        lm["expired_share"] = ((wait - C.TAXI_BASE_WAIT_MIN) / C.TAXI_RETRY_MIN).clip(lower=0).where(taxi, 0.0)
+    if "bus_wait_min" not in lm:
+        lm["bus_wait_min"] = wait.where(lm["mode"] == "bus", 0.0)
+    lm[["expired_share", "bus_wait_min"]] = lm[["expired_share", "bus_wait_min"]].fillna(0.0)
+    return lm
 
 
 def load_processed(name: str) -> pd.DataFrame | None:
@@ -167,8 +172,6 @@ def check_all() -> list[str]:
         errors.append(str(e))
         ferry = None
     if ferry is not None:
-        if using_placeholder("ferry_timetable.csv"):
-            notes.append("ferry_timetable.csv is a PLACEHOLDER")
         dep = ferry["depart"].map(hhmm_to_min)
         arr = ferry["arrive"].map(hhmm_to_min)
         arr = arr.where(arr > dep, arr + 1440)  # legs that cross midnight

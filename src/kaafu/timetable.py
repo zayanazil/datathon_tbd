@@ -7,7 +7,7 @@ import numpy as np
 import pandas as pd
 
 from . import config as C
-from .load import hhmm_to_min, load_ferry, load_processed, using_placeholder
+from .load import hhmm_to_min, load_ferry, load_processed
 
 TERMINAL_FOR_ISLAND = {"K.Hulhumalé": "T_HULHUMALE", "K.Villimalé": "T_VILLIMALE", "K.Hulhulé": "T_AIRPORT"}
 CONN_COLUMNS = ["conn_id", "trip_id", "route_id", "from_stop", "to_stop", "dep_min", "arr_min",
@@ -116,8 +116,6 @@ def legs() -> pd.DataFrame:
         out["trip_id"] = f["route_id"].astype(str) + ":" + f["trip_id"].astype(str)
     else:
         out["trip_id"] = _infer_trips(out)
-    if using_placeholder("ferry_timetable.csv"):
-        out["source"] = "PLACEHOLDER"
     return out
 
 
@@ -138,39 +136,46 @@ def trip_patterns(dl: pd.DataFrame) -> pd.DataFrame:
 
 
 def apply_observed(conns: pd.DataFrame, pairs: pd.DataFrame | None) -> pd.DataFrame:
-    """Swap in FollowMe medians (slow boats, >= OBSERVED_MIN_TRIPS) and add observed speedboat runs."""
+    """M3's observed switch (m3-network scenarios.observed_durations / speedboat_departures).
+
+    1. A leg takes its island pair's observed `slow` median where n_trips >= OBSERVED_MIN_TRIPS and
+       the median is at most OBSERVED_MAX_SLOWDOWN x the scheduled time. Departures stay as
+       scheduled, except a boat can't leave a stop before it arrives there.
+    2. Island -> Greater Malé pairs whose `fast` trips average >= SPEEDBOAT_MIN_TRIPS_PER_DAY get a
+       departure every (last_hour - first_hour) x 60 / trips_per_day minutes, taking the fast
+       median, today and tomorrow. Observed boat movements, not a published schedule.
+    """
     if pairs is None or pairs.empty:
         return conns
     from .geo import stop_island
 
     isl = stop_island()
-    ok = pairs[pairs["n_trips"] >= C.OBSERVED_MIN_TRIPS]
-    slow = ok[ok["speed_class"] == "slow"].set_index(["from_key", "to_key"])["median_min"].to_dict()
+    slow = pairs[(pairs["speed_class"] == "slow") & (pairs["n_trips"] >= C.OBSERVED_MIN_TRIPS)]
+    median = slow.set_index(["from_key", "to_key"])["median_min"].to_dict()
     c = conns.sort_values(["trip_id", "dep_min"]).copy()
-    new_dep, new_arr = [], []
-    for _, g in c.groupby("trip_id", sort=False):
-        prev_arr, shift = None, 0
-        for _, r in g.iterrows():
-            dep = r["dep_min"] + shift if prev_arr is None else max(r["dep_min"] + shift, prev_arr)
-            dur = slow.get((isl[r["from_stop"]], isl[r["to_stop"]]), r["arr_min"] - r["dep_min"])
-            arr = dep + int(round(dur))
-            shift = arr - r["arr_min"]
-            prev_arr = arr
-            new_dep.append(dep)
-            new_arr.append(arr)
-    c["dep_min"], c["arr_min"] = new_dep, new_arr
+    arrived: dict[str, int] = {}
+    for i, r in zip(c.index, c.itertuples()):
+        dep = max(r.dep_min, arrived.get(r.trip_id, r.dep_min))
+        scheduled = r.arr_min - r.dep_min
+        observed = median.get((isl[r.from_stop], isl[r.to_stop]))
+        duration = round(observed) if observed is not None and observed <= C.OBSERVED_MAX_SLOWDOWN * scheduled \
+            else scheduled
+        c.loc[i, ["dep_min", "arr_min"]] = [dep, dep + duration]
+        arrived[r.trip_id] = dep + duration
 
+    busy = pairs[(pairs["speed_class"] == "fast") & (pairs["trips_per_day"] >= C.SPEEDBOAT_MIN_TRIPS_PER_DAY)
+                 & pairs["to_key"].isin(C.GREATER_MALE) & ~pairs["from_key"].isin(C.GREATER_MALE)]
     extra = []
-    for _, p in ok[ok["speed_class"] == "fast"].iterrows():
-        n = max(int(round(p["trips_per_day"])), 1)
-        for day_off in (0, 1440):
-            for k, dep in enumerate(np.linspace(p["first_hour"] * 60, p["last_hour"] * 60, n).round().astype(int)):
-                extra.append({"trip_id": f"OBS:{p['from_key']}>{p['to_key']}:{k}{'+1' if day_off else ''}",
-                              "route_id": "observed speedboat", "from_stop": _stop(p["from_key"], None),
-                              "to_stop": _stop(p["to_key"], None), "dep_min": dep + day_off,
-                              "arr_min": dep + day_off + int(round(p["median_min"])), "mode": "speedboat_observed",
-                              "operator": "various", "day_type": c["day_type"].iloc[0], "estimated": "yes",
-                              "source": "FollowMe Aug 2025"})
+    for p in busy.itertuples():
+        every = round((p.last_hour - p.first_hour) * 60 / p.trips_per_day)
+        for k, dep in enumerate(range(p.first_hour * 60, p.last_hour * 60 + 1, every)):
+            for day_off in (0, 1440):
+                extra.append({"trip_id": f"OBS:{p.from_key}:{k:02d}{'+1' if day_off else ''}",
+                              "route_id": "observed speedboat", "from_stop": p.from_key,
+                              "to_stop": _stop(p.to_key, None), "dep_min": dep + day_off,
+                              "arr_min": dep + day_off + round(p.median_min), "mode": "speedboat_observed",
+                              "operator": "observed (FollowMe)", "day_type": c["day_type"].iloc[0],
+                              "estimated": "yes", "source": "observed boat movements, not a published schedule"})
     if extra:
         c = pd.concat([c, pd.DataFrame(extra)], ignore_index=True)
     return c

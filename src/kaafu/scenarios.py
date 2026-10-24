@@ -22,7 +22,7 @@ from .geo import footpaths
 from .indicators import access_results, island_summary, targets
 from .lastmile import atoll_rows
 from .lastmile import build as build_lastmile
-from .load import load_facilities, load_origins, load_processed
+from .load import load_facilities, load_last_mile, load_origins, load_processed
 from .routing import Network
 from .timetable import build_connections, legs, trip_patterns
 
@@ -37,7 +37,8 @@ def _legs() -> pd.DataFrame:
 
 @lru_cache(maxsize=1)
 def base_last_mile() -> pd.DataFrame:
-    lm = load_processed("last_mile.csv")
+    """M1's last_mile.csv (data/processed); built from avas_hourly.csv only if it is missing."""
+    lm = load_last_mile()
     return lm if lm is not None else build_lastmile(load_processed("avas_hourly.csv"))
 
 
@@ -121,13 +122,7 @@ def run_scenario(params: dict | None = None, departures=None, with_summary: bool
     access = access_results(net, origins, scenario_name(p), p["day"], targets(p["thulusdhoo_hospital"]), departures)
     if not with_summary:
         return access, None
-    observed = None
-    if not p["observed"] and load_processed("observed_pairs.csv") is not None:
-        oconns = connections_for({**p, "observed": True})
-        onet = Network.build(oconns, scenario_last_mile(p), footpaths())
-        observed = access_results(onet, origins, "observed", p["day"], {"gm_hospital": targets()["gm_hospital"]},
-                                  departures)
-    return access, island_summary(access, origins, conns, observed)
+    return access, island_summary(access, origins, conns)
 
 
 def best_ferry_change(params: dict | None = None, window=(12 * 60, 1440)) -> pd.DataFrame:

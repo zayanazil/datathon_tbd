@@ -21,7 +21,6 @@ A Streamlit dashboard with:
 ```bash
 python -m venv .venv && source .venv/bin/activate     # Python 3.11+
 pip install -r requirements.txt                       # also installs src/kaafu in editable mode
-python -m kaafu.pipeline                              # builds data/processed/ (add --skip-followme to skip GPS)
 pytest
 streamlit run app/streamlit_app.py
 ```
@@ -32,11 +31,23 @@ streamlit run app/streamlit_app.py
 - Team Kandu `rtl_bus_stops.csv`, `rtl_bus_routes.csv`, `rtl_bus_departures.csv` → bus last mile and exact terminal coordinates;
 - optional Geofabrik `gis_osm_places_a_free_1.shp` → island outlines (otherwise 600 m circles).
 
-Every step works without its raw file and says what it fell back to. The app runs from a fresh clone with only the committed `data/sheets/` and `data/processed/`.
+The app runs from a fresh clone with only the committed `data/sheets/` and `data/processed/`: no raw data needed.
 
-### Sheets
+### Where the data comes from
 
-`data/sheets/` holds the team's sheets from `main`, including the real CFN ferry timetable (effective 1 Aug 2026), bus service hours and headways, and the HDX benchmark. If `ferry_timetable.csv` is ever missing, `python tests/make_placeholders.py` writes an invented stand-in to `data/placeholder/` (git-ignored) and the app shows a red banner.
+All data is the team's own; there is no placeholder or dummy data.
+
+| Files | Owner (branch) |
+|---|---|
+| `data/sheets/`: ferry timetable (CFN, effective 1 Aug 2026), bus hours and headways, islands, facilities, names, HDX | team (`main`) |
+| `terminals.csv`, `island_zones.geojson`, `last_mile.csv`, `bus_routes.csv` | M1 (`zayan`) |
+| `avas_hourly.csv`, `observed_trips.csv`, `observed_pairs.csv` | M2 (`m2-movement`) |
+| `connections.csv`, `access_results.csv`, `island_summary.csv`, `best_ferry_change.csv`, `nsds_figures.csv`, `hdx_comparison.csv`, `population_within.csv` | M3 (`m3-network`) |
+| `bus_road_paths.json`: M1's bus routes snapped to OSM roads via OSRM | this branch |
+
+With the default settings (Wednesday, scheduled boats, no what-ifs) the dashboard shows M3's `access_results.csv` and `island_summary.csv` as published. Any other setting is recomputed by `kaafu.scenarios` from the same inputs; on the base run it reproduces M3's results exactly (all 4,416 journeys and every `island_summary` column), and the observed switch follows M3's rules (slow medians within 1.5x of the timetable; speedboat runs for pairs with 5+ fast trips a day).
+
+`python -m kaafu.pipeline` only fills in a processed file that is missing, so it never overwrites a teammate's output; `--rebuild` regenerates everything from `data/sheets/` and `data/raw/`.
 
 ## Repository layout
 
@@ -44,9 +55,8 @@ Every step works without its raw file and says what it fell back to. The app run
 CLAUDE.md                one line: read docs/CLAUDE_HANDOVER.md, then docs/BUILD_PLAN.md
 docs/                    handover, build plan, model note (PDF), sheet notes, members/
 data/sheets/             islands, facilities, island_names, hdx_benchmark (committed)
-data/placeholder/        stand-in ferry timetable (generated)
 data/raw/                restricted raw data (git-ignored)
-data/processed/          pipeline outputs (BUILD_PLAN section 4 contracts)
+data/processed/          the team's outputs (BUILD_PLAN section 4 contracts)
 src/kaafu/
   config.py              every parameter (BUILD_PLAN section 5)
   load.py                sheet loaders and data checks
@@ -58,9 +68,9 @@ src/kaafu/
   routing.py             connection scan, door-to-door breakdown
   indicators.py          shares within X, last practical departure, HDX, NSDS
   scenarios.py           what-if levers, run_scenario(), best_ferry_change()
-  pipeline.py            builds every processed output in order
+  pipeline.py            fills in missing processed outputs (--rebuild for all)
 app/streamlit_app.py     the dashboard
-tests/                   test_data.py, test_routing.py, make_placeholders.py
+tests/                   test_data.py, test_routing.py
 ```
 
 ## Method
@@ -95,4 +105,4 @@ MTCC.xlsx passenger counts are randomly generated and are not used for findings.
 ## AI-assisted parts
 
 - **Prep (23 Oct):** `islands.csv`, `facilities.csv` and `island_names.csv` were built with AI-assisted scripts outside this repo (Overpass queries, name matching).
-- **Build (24 Oct), Claude Code:** the project scaffold, every module in `src/kaafu/`, `app/streamlit_app.py`, the tests, `tests/make_placeholders.py` (the placeholder timetable) and this README. The team reviewed the method against `docs/BUILD_PLAN.md`; add each member's own session notes here.
+- **Build (24 Oct), Claude Code:** the project scaffold, every module in `src/kaafu/`, `app/streamlit_app.py`, the tests and this README. The team reviewed the method against `docs/BUILD_PLAN.md`; add each member's own session notes here.

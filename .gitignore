@@ -19,5 +19,3 @@ venv/
 Thumbs.db
 .DS_Store
 
-# Invented stand-in timetable: never published
-data/placeholder/

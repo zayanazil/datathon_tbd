@@ -6,7 +6,6 @@ DATA = ROOT / "data"
 SHEETS = DATA / "sheets"            # committed hand-built sheets
 RAW = DATA / "raw"                  # FollowMe, Avas, Team Kandu files (never committed)
 PROCESSED = DATA / "processed"      # pipeline outputs (committed, no IMEIs)
-PLACEHOLDER = DATA / "placeholder"  # stand-ins used until a real sheet arrives
 
 # --- Journey legs -----------------------------------------------------------
 WALK_M_PER_MIN = 80        # straight-line walking speed
@@ -16,7 +15,6 @@ TERMINAL_EXIT_MIN = 5      # boat to street
 TAXI_BASE_WAIT_MIN = 5     # Avas has no pickup-wait field
 TAXI_RETRY_MIN = 10        # added in proportion to the unserved share that hour
 TAXI_DETOUR = 1.4          # road / straight-line distance, taxi fallback only
-TAXI_PLACEHOLDER_KMH = 20  # flagged speed used until avas_hourly.csv exists
 TAXI_MIN_RIDES = 10        # rides needed for a terminal-to-hospital median
 TAXI_MATCH_M = 400         # pickup/dropoff radius for that median
 MAX_BOAT_KMH = 80          # anything faster is a data error
@@ -28,6 +26,11 @@ ZONE_BUFFER_M = 300
 ZONE_FALLBACK_RADIUS_M = 600
 MAX_TRIP_HOURS = 6
 OBSERVED_MIN_TRIPS = 5
+# M3's observed-times rules (m3-network config.py): a slow median replaces a scheduled leg only
+# if it is at most this many times the scheduled duration (the slow class also holds cargo dhonis) ...
+OBSERVED_MAX_SLOWDOWN = 1.5
+# ... and island -> Greater Malé pairs with at least this many fast trips a day get speedboat runs.
+SPEEDBOAT_MIN_TRIPS_PER_DAY = 5
 FOLLOWME_UTC_OFFSET_H = 5  # device_date is UTC
 FOLLOWME_BBOX = (3.40, 5.00, 72.70, 73.80)  # lat_min, lat_max, lon_min, lon_max
 UTM_CRS = "EPSG:32643"

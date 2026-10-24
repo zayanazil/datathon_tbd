@@ -14,9 +14,8 @@ from kaafu import config as C  # noqa: E402
 from kaafu import indicators as ind  # noqa: E402
 from kaafu import geo  # noqa: E402
 from kaafu.geo import ACCESS_BANDS, UNREACHABLE, terminals  # noqa: E402
-from kaafu.load import check_all, load_facilities, load_hdx, load_islands, load_origins, load_processed, \
-    using_placeholder  # noqa: E402
-from kaafu.scenarios import best_ferry_change, connections_for, run_scenario, DEFAULTS  # noqa: E402
+from kaafu.load import check_all, load_facilities, load_hdx, load_islands, load_origins, load_processed  # noqa: E402
+from kaafu.scenarios import connections_for, run_scenario, DEFAULTS  # noqa: E402
 from kaafu.timetable import legs, next_day  # noqa: E402
 
 ASSETS = Path(__file__).parent / "assets"
@@ -116,16 +115,23 @@ def static_data():
         load_processed("avas_hourly.csv"), load_processed("observed_pairs.csv")
 
 
+TEAM_RESULTS = "M3's published results (m3-network): access_results.csv, island_summary.csv, connections.csv"
+
+
 @st.cache_data(show_spinner="Routing 23 islands × 96 departures…")
 def scenario(params: tuple):
-    p = dict(params)
+    """(access, summary, connections, source). The team's published base run is read as is;
+    any other setting is recomputed with the same engine on the same inputs (it reproduces
+    M3's base run exactly: all 4,416 journeys and every island_summary column)."""
+    p = {**DEFAULTS, **dict(params)}
+    if p == {**DEFAULTS, "day": C.DAY}:
+        access, summary, conns = (load_processed(f) for f in
+                                  ("access_results.csv", "island_summary.csv", "connections.csv"))
+        if access is not None and summary is not None and conns is not None:
+            return access, summary, conns.assign(route_id=conns["route_id"].astype(str)), TEAM_RESULTS
     access, summary = run_scenario(p)
-    return access, summary, connections_for({**DEFAULTS, **p})
-
-
-@st.cache_data(show_spinner="Trying an extra evening run on every route…")
-def ferry_changes(params: tuple):
-    return best_ferry_change(dict(params))
+    return access, summary, connections_for(p), ("Recomputed for these settings from the team's timetable, "
+                                                  "M1's last_mile.csv and M2's observed_pairs.csv")
 
 
 @st.cache_data
@@ -165,7 +171,7 @@ with st.sidebar:
 params = (("day", day), ("observed", observed), ("ferry_factor", ferry_factor),
           ("ferry_route", None if ferry_route == "All routes" else ferry_route), ("extra_run", extra_run),
           ("bus_factor", bus_factor), ("taxi_availability", taxi), ("thulusdhoo_hospital", thul))
-access, summary, conns = scenario(params)
+access, summary, conns, results_source = scenario(params)
 base_access = scenario((("day", day), ("observed", observed)))[0]
 is_base = access["scenario"].iloc[0] == "base"
 
@@ -193,11 +199,8 @@ st.markdown(f"""<div class="kc-top">
   <div class="kc-chips">{''.join(f'<span class="kc-chip">{c}</span>' for c in chips)}</div>
 </div>""", unsafe_allow_html=True)
 
-if using_placeholder("ferry_timetable.csv"):
-    st.error("**Placeholder ferry timetable.** `data/sheets/ferry_timetable.csv` is missing, so boat times are "
-             "invented stand-ins. Do not present these numbers as findings.", icon=":material/warning:")
 if avas_hourly is None:
-    st.warning("Taxi times use a flagged 20 km/h placeholder until `avas_hourly.csv` is built.",
+    st.warning("No taxi option in the last mile: M2's `avas_hourly.csv` is missing from data/processed/.",
                icon=":material/local_taxi:")
 
 st.markdown(f"""<div class="kc-eyebrow">Share of Kaafu within 2 hours of a hospital</div>
@@ -380,23 +383,47 @@ with tab_bench:
     st.caption("HDX is a car-only model with its own population base: compare percentages, not head counts.")
 
     st.markdown("### NSDS-style indicators")
-    n = ind.nsds(access, origins, conns)
-    k1, k2, k3 = st.columns(3)
-    k1.metric("Daily scheduled boat to Greater Malé", f"{n['pct_with_daily_boat_to_gm']:.1f}%",
-              help="Share of people on islands with at least one daily scheduled boat to Greater Malé")
-    k2.metric("Within 30 min of a health facility", f"{n['pct_within_30_health_facility']:.1f}%",
-              help="On-island health centres")
-    k3.metric("Within 2 h of a Greater Malé hospital", f"{n['pct_within_120_hospital_daytime_median']:.1f}%",
-              help="Daytime median trip, departures 06:00–18:00")
+    nsds = load_processed("nsds_figures.csv")
+    if nsds is None:
+        st.info("M3's `nsds_figures.csv` is missing from data/processed/.")
+    else:
+        names = {"scheduled_boat_to_greater_male_direct": "Direct scheduled boat to Greater Malé",
+                 "scheduled_boat_to_greater_male_same_day": "Reach Greater Malé by boat the same day",
+                 "health_facility_within_30": "Within 30 min of a health facility",
+                 "gm_hospital_within_120_day_median": "Within 2 h of a Greater Malé hospital",
+                 "any_hospital_within_120_day_median": "Within 2 h of any hospital"}
+        wide = nsds.pivot_table(index=["indicator", "definition"], columns="area", values="share_pct").reset_index()
+        wide["indicator"] = pd.Categorical(wide["indicator"], list(names))
+        wide = wide.sort_values("indicator").assign(indicator=lambda d: d["indicator"].map(names))
+        st.dataframe(wide[["indicator", "Kaafu", "All 23", "definition"]].rename(columns={
+            "indicator": "Indicator", "Kaafu": "Kaafu (%)", "All 23": "All 23 (%)", "definition": "Definition"}),
+            hide_index=True, width="stretch",
+            column_config={"Kaafu (%)": st.column_config.NumberColumn(format="%.1f"),
+                           "All 23 (%)": st.column_config.NumberColumn(format="%.1f")})
+        st.caption("M3's figures for the published Wednesday timetable (nsds_figures.csv).")
 
 # --- Ferry changes ---------------------------------------------------------------
 
 with tab_ferry:
     st.markdown("### Which one extra ferry helps most?")
-    st.caption("One extra Malé-bound departure per route at 18:00, 20:00 or 22:00, ranked by people newly within "
-               "2 h (population × share of 12:00–23:45 departures), then population-weighted minutes saved.")
-    if st.button("Rank the changes", type="primary", icon=":material/sort:"):
-        st.dataframe(ferry_changes(params), hide_index=True, width="stretch")
+    best = load_processed("best_ferry_change.csv")
+    if best is None:
+        st.info("M3's `best_ferry_change.csv` is missing from data/processed/.")
+    else:
+        st.caption("M3's ranking (best_ferry_change.csv): one extra Malé-bound departure per route at 18:00, "
+                   "20:00 or 22:00 on the published Wednesday timetable, ranked by people newly within 2 h, "
+                   "then person-minutes saved.")
+        best = best.assign(islands_helped=best["islands_helped"].fillna("").map(
+            lambda keys: ", ".join(k.split(".", 1)[1] for k in str(keys).split())))
+        st.dataframe(best.rename(columns={
+            "route_id": "Route", "run_time": "Extra run", "newly_within_120_pop": "Newly within 2 h (people)",
+            "pop_minutes_saved": "Person-minutes saved", "people_helped": "People helped",
+            "avg_min_saved_per_person": "Avg min saved per person", "islands_helped": "Islands helped"}),
+            hide_index=True, width="stretch",
+            column_config={c: st.column_config.NumberColumn(format="localized") for c in
+                           ("Newly within 2 h (people)", "Person-minutes saved", "People helped",
+                            "Avg min saved per person")})
+        st.caption("To see one change on the map, set it with \u201cAdd an evening run\u201d in the sidebar.")
 
 # --- Data -------------------------------------------------------------------------
 
@@ -415,5 +442,12 @@ with tab_data:
         "Out of scope: flights, chartered speedboats, ambulance boats.",
         "FollowMe is Aug 2025, Avas is Aug–Sep 2026: different years from the timetable.",
         *notes]))
+    st.markdown("### Where these numbers come from")
+    st.markdown(f"- Journeys and island summary: {results_source}.\n"
+                "- Last mile (walk, bus, taxi): M1's `last_mile.csv` (zayan) · map layers, island zones, "
+                "terminals and bus routes: M1.\n"
+                "- Taxi speeds and unserved share: M2's `avas_hourly.csv` · observed boat trips: M2's "
+                "`observed_trips.csv` and `observed_pairs.csv` (m2-movement).\n"
+                "- Indicators and ferry ranking: M3's `nsds_figures.csv` and `best_ferry_change.csv` (m3-network).")
     st.caption("Sources: MTCC/RTL ferry and bus timetables · Census 2022 (MBS) via Team Kandu · "
                "© OpenStreetMap contributors (ODbL) · OSRM · FollowMe and Avas (organisers) · HDX.")

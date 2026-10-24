@@ -112,11 +112,11 @@ def build(avas_hourly: pd.DataFrame | None = None, avas_rides: pd.DataFrame | No
                 if not (linked and zone):
                     rows.append([t["terminal_id"], fid, hour, "taxi", np.nan, False, "no road link", 0.0, 0.0])
                     continue
-                if av is not None:
-                    rec = av.loc[(zone, hour)] if (zone, hour) in av.index else av.loc[("all", hour)]
-                    share, speed, src = float(rec["expired_share"]), float(rec["median_speed_kmh"]), "Avas"
-                else:
-                    share, speed, src = 0.07, C.TAXI_PLACEHOLDER_KMH, "PLACEHOLDER speed"
+                if av is None:
+                    rows.append([t["terminal_id"], fid, hour, "taxi", np.nan, False, "no Avas data", 0.0, 0.0])
+                    continue
+                rec = av.loc[(zone, hour)] if (zone, hour) in av.index else av.loc[("all", hour)]
+                share, speed, src = float(rec["expired_share"]), float(rec["median_speed_kmh"]), "Avas"
                 if hour in od:
                     drive, how = od[hour], "Avas OD median"
                 else:

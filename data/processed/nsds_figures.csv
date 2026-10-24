@@ -1,0 +1,11 @@
+indicator,area,population_within,population,share_pct,definition
+scheduled_boat_to_greater_male_direct,Kaafu,17749,17749,100.0,a boat on Wed reaches Greater Malé without changing
+scheduled_boat_to_greater_male_direct,All 23,24158,31414,76.9,a boat on Wed reaches Greater Malé without changing
+scheduled_boat_to_greater_male_same_day,Kaafu,17749,17749,100.0,"Greater Malé reachable by boat before 24:00 on Wed, changes allowed"
+scheduled_boat_to_greater_male_same_day,All 23,25740,31414,81.9,"Greater Malé reachable by boat before 24:00 on Wed, changes allowed"
+health_facility_within_30,Kaafu,17749,17749,100.0,ACCESS_MIN + walk from the harbour to the on-island facility
+health_facility_within_30,All 23,31414,31414,100.0,ACCESS_MIN + walk from the harbour to the on-island facility
+gm_hospital_within_120_day_median,Kaafu,0,17749,0.0,"daytime median, Greater Malé hospital"
+gm_hospital_within_120_day_median,All 23,0,31414,0.0,"daytime median, Greater Malé hospital"
+any_hospital_within_120_day_median,Kaafu,0,17749,0.0,"daytime median, any hospital incl. atoll"
+any_hospital_within_120_day_median,All 23,4482,31414,14.3,"daytime median, any hospital incl. atoll"
