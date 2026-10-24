@@ -1,0 +1,5 @@
+terminal_id,name,island_key,lat,lon,bus_stop_code,walk_to_stop_min
+T_MALE_NORTH,Jetty NO5,K.Malé,4.178784,73.513422,1008,0
+T_MALE_WEST,Maafannu Ferry Terminal,K.Malé,4.172281,73.50206,1101,0
+T_HULHUMALE,Hulhumalé Ferry Terminal,K.Hulhumalé,4.216739,73.537853,507,0
+T_VILLIMALE,Villimale Ferry Terminal,K.Villimalé,4.175107,73.486942,1301,0
