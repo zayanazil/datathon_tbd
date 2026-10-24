@@ -1,14 +1,14 @@
 area,target,departure,threshold_min,population_within,population,share_pct
-Kaafu,gm_hospital,day_median,30,0,17749,0.0
-Kaafu,gm_hospital,day_median,60,0,17749,0.0
-Kaafu,gm_hospital,day_median,90,0,17749,0.0
-Kaafu,gm_hospital,day_median,120,0,17749,0.0
-Kaafu,gm_hospital,day_median,240,0,17749,0.0
-All 23,gm_hospital,day_median,30,0,31414,0.0
-All 23,gm_hospital,day_median,60,0,31414,0.0
-All 23,gm_hospital,day_median,90,0,31414,0.0
-All 23,gm_hospital,day_median,120,0,31414,0.0
-All 23,gm_hospital,day_median,240,0,31414,0.0
+Kaafu,gm_hospital,daytime,30,0,17749,0.0
+Kaafu,gm_hospital,daytime,60,0,17749,0.0
+Kaafu,gm_hospital,daytime,90,116,17749,0.7
+Kaafu,gm_hospital,daytime,120,433,17749,2.4
+Kaafu,gm_hospital,daytime,240,2524,17749,14.2
+All 23,gm_hospital,daytime,30,0,31414,0.0
+All 23,gm_hospital,daytime,60,0,31414,0.0
+All 23,gm_hospital,daytime,90,116,31414,0.4
+All 23,gm_hospital,daytime,120,433,31414,1.4
+All 23,gm_hospital,daytime,240,2584,31414,8.2
 Kaafu,gm_hospital,00:00,30,0,17749,0.0
 Kaafu,gm_hospital,00:00,60,0,17749,0.0
 Kaafu,gm_hospital,00:00,90,0,17749,0.0
@@ -969,16 +969,16 @@ All 23,gm_hospital,23:45,60,0,31414,0.0
 All 23,gm_hospital,23:45,90,0,31414,0.0
 All 23,gm_hospital,23:45,120,0,31414,0.0
 All 23,gm_hospital,23:45,240,0,31414,0.0
-Kaafu,any_hospital,day_median,30,0,17749,0.0
-Kaafu,any_hospital,day_median,60,0,17749,0.0
-Kaafu,any_hospital,day_median,90,0,17749,0.0
-Kaafu,any_hospital,day_median,120,0,17749,0.0
-Kaafu,any_hospital,day_median,240,0,17749,0.0
-All 23,any_hospital,day_median,30,4482,31414,14.3
-All 23,any_hospital,day_median,60,4482,31414,14.3
-All 23,any_hospital,day_median,90,4482,31414,14.3
-All 23,any_hospital,day_median,120,4482,31414,14.3
-All 23,any_hospital,day_median,240,5879,31414,18.7
+Kaafu,any_hospital,daytime,30,0,17749,0.0
+Kaafu,any_hospital,daytime,60,0,17749,0.0
+Kaafu,any_hospital,daytime,90,116,17749,0.7
+Kaafu,any_hospital,daytime,120,433,17749,2.4
+Kaafu,any_hospital,daytime,240,2524,17749,14.2
+All 23,any_hospital,daytime,30,4495,31414,14.3
+All 23,any_hospital,daytime,60,4568,31414,14.5
+All 23,any_hospital,daytime,90,4904,31414,15.6
+All 23,any_hospital,daytime,120,5560,31414,17.7
+All 23,any_hospital,daytime,240,8899,31414,28.3
 Kaafu,any_hospital,00:00,30,0,17749,0.0
 Kaafu,any_hospital,00:00,60,0,17749,0.0
 Kaafu,any_hospital,00:00,90,0,17749,0.0

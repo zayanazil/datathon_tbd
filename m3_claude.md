@@ -2,7 +2,7 @@
 
 **Owner:** Al (M3) · **Branch:** `m3-network` · **Last updated:** 24 Oct 2026, after Step 5 (final figures for slides 5–6)
 
-**Full write-up (decisions, doubts, links to M1/M2, slide content): [`m3_handover.md`](m3_handover.md).**
+**Full write-up (decisions, doubts, links to M1/M2, slide content): [`docs/handovers/m3_handover.md`](docs/handovers/m3_handover.md).**
 
 This file says what M3 has built, what it needs from the rest of the team, and what comes next. It's updated after each major step. Team: M1 Zayan (GIS), M2 Eish (movement), M3 Al (network), M4 Saroof (lead, dashboard).
 
@@ -81,7 +81,7 @@ Tests: `python -m pytest` → 14 passed.
   - It doesn't if the median is more than **`OBSERVED_MAX_SLOWDOWN` (1.5×, new in `config.py`)** times the scheduled time. That's your cargo-dhoni suggestion.
   - A boat can't leave a stop before it arrives, so a slowed leg delays the rest of its trip.
   - 55 CFN legs are re-timed, mostly by a few minutes. The Villimalé ferry is unchanged (7.7 rounds to 8).
-- **Effect on results:** island times move by −6 to +37 min, and the headline stays at 0% within 2 h. On their own, re-timed ferries don't change the picture.
+- **Effect on results:** island times move by −6 to +37 min, and Kaafu within 2 h goes only from 2.4% to 2.8%. On their own, re-timed ferries don't change the picture.
 - **`observed_gap_min`:**
   - Definition: scheduled minutes from the island to a Greater Malé terminal on one timetabled trip, minus your median of **all** tracked trips from the island to Malé/Hulhumalé/Villimalé (≥ 5 trips).
   - Positive means boats are faster than the timetable. E.g. Thoddoo 387 (route 303 loops via Rasdhoo and Ukulhas), V islands 206–237, Kaashidhoo 165, Huraa 37, Himmafushi 20.
@@ -120,8 +120,8 @@ Every `main()` and `run_scenario()` takes an optional `cfg` argument, which defa
 | `connections.csv` | 600 | 50 CFN + 250 Villimalé legs per day, Wed + Thu. (`M3_network.md` said "about 40" CFN legs; a hand count gives 50.) |
 | `access_results.csv` | 4,416 | 23 islands × 96 departures × 2 targets. A blank `total_min` means unreachable; `path` then says `unreachable: …`. |
 | `island_summary.csv` | 23 | Target `gm_hospital`. A blank median or worst value means unreachable for most daytime departures. `observed_gap_min` is filled from Eish's data (see Eish's section). |
-| `population_within.csv` | 1,940 | Share within 30/60/90/120/240 min, Kaafu and all 23 islands, both targets, every departure plus `day_median`. |
-| `hdx_comparison.csv` | 10 | Daytime median against HDX car-only: Kaafu against HDX Kaafu, all 23 against HDX Maldives. Percentages only. |
+| `population_within.csv` | 1,940 | Share within 30/60/90/120/240 min, Kaafu and all 23 islands, both targets, every departure plus `daytime` (averaged over 06:00–18:00 departures, see "Within 2 h" below). |
+| `hdx_comparison.csv` | 10 | Daytime average against HDX car-only: Kaafu against HDX Kaafu, all 23 against HDX Maldives. Percentages only. |
 | `nsds_figures.csv` | 10 | Direct boat to Greater Malé, same-day boat with changes, health facility within 30 min, hospital within 2 h. |
 | `best_ferry_change.csv` | 27 | One extra run per CFN route × 18:00/20:00/22:00, ranked. |
 
@@ -131,7 +131,7 @@ Every `main()` and `run_scenario()` takes an optional `cfg` argument, which defa
 
 **Why:**
 - The timetable has public ferries only, once or twice a day, but Eish's FollowMe data shows that most trips from the islands near Malé are speedboats running all day (e.g. 87% of Thulusdhoo's trips).
-- Re-timing the ferries alone leaves the headline at 0% within 2 h, so `observed: True` also adds these boats.
+- Re-timing the ferries alone barely moves the headline (2.4% → 2.8% of Kaafu within 2 h), so `observed: True` also adds these boats.
 
 **How (`scenarios.speedboat_departures`):**
 - **Which pairs:** island → Greater Malé pairs whose `fast` trips average at least **`SPEEDBOAT_MIN_TRIPS_PER_DAY` (5, new in `config.py`)** a day.
@@ -153,12 +153,12 @@ Every `main()` and `run_scenario()` takes an optional `cfg` argument, which defa
 - Departures are spread evenly across the hours seen.
 - The ferry-only result stays the default (`observed: False`). Always say which one a number comes from.
 
-**Effect** (within 2 h of a Greater Malé hospital, daytime median):
+**Effect** (within 2 h of a Greater Malé hospital, averaged over daytime departures):
 
 | | Ferries only | Re-timed ferries only | + speedboats |
 |---|---|---|---|
-| Kaafu | 0% | 0% | **21.5%** |
-| All 23 islands | 0% | 0% | **12.1%** |
+| Kaafu | 2.4% | 2.8% | **22.6%** |
+| All 23 islands | 1.4% | 1.6% | **13.7%** |
 
 - **Daytime medians:**
   - Thulusdhoo: 1,176 → 83 min.
@@ -173,7 +173,15 @@ Every `main()` and `run_scenario()` takes an optional `cfg` argument, which defa
 - **These are the ferry-only numbers.** For the speedboat effect, see the section above.
 - **The real last mile changed nothing:** the nearest hospital is always a short walk from the terminal.
 
-- **Within 2 h of any hospital (daytime median):** 0% of Kaafu and 14.3% of all 23 islands. The 14.3% is just the three islands with their own atoll hospital. HDX's car-only estimate is 77.4% of Kaafu and 45.9% of the Maldives.
+- **Within 2 h of any hospital (averaged over daytime departures):** 2.4% of Kaafu and 17.7% of all 23 islands. Most of the 17.7% is the three islands with their own atoll hospital (14.3%). HDX's car-only estimate is 77.4% of Kaafu and 45.9% of the Maldives.
+- **Ferry windows that make it within 2 h** (Greater Malé hospital, leaving 06:00–18:00): Himmafushi 07:00–07:45, Huraa 07:00–07:30, Gulhi 07:30–07:45, Thulusdhoo 07:00, Maafushi 12:30. Every other daytime departure from every island misses.
+
+### Within 2 h: averaged over the day, not the median (changed 24 Oct)
+- **Before:** an island counted only if its *median* daytime trip was ≤ 2 h, so each island was all or nothing and Kaafu showed 0%, hiding the people who do catch the morning boat.
+- **Now:** each island contributes its population × the share of its 49 daytime departures (06:00–18:00) that arrive within 2 h. That is the chance that someone who needs a hospital at a random daytime moment gets there in time.
+- **Changed:** `population_within.csv` (`departure = daytime`, was `day_median`), `hdx_comparison.csv`, the two hospital rows of `nsds_figures.csv` (renamed `*_within_120_daytime`), `m3_within_vs_hdx.png`, `m3_slide_numbers.md`.
+- **Unchanged:** `access_results.csv` and `island_summary.csv` (`day_median_min` still describes each island's typical trip), and every per-departure number, e.g. 30.8% leaving at 07:00.
+- **Saroof:** the dashboard's daytime cards still use the median. Switch them to this rule so they match the slides.
 - **Direct scheduled boat to Greater Malé on Wednesday:** 100% of Kaafu and 76.9% of all 23. Mathiveri, Bodufolhudhoo (they change at Ukulhas) and all of Alif Dhaalu are missing. With changes allowed, same day: 81.9%.
 - **Last practical departure to reach a Greater Malé hospital before midnight:**
   - K.Maafushi: 12:30.
@@ -217,7 +225,7 @@ Every chart has the same colours: orange ring = public ferries only, blue dot = 
 
 | File | Slide | What it shows |
 |---|---|---|
-| `m3_within_vs_hdx.png` | 5 | Share within 30 min–4 h of the nearest hospital (daytime median) against HDX: Kaafu 0% / 22% against 77% at 2 h |
+| `m3_within_vs_hdx.png` | 5 | Share within 30 min–4 h of the nearest hospital (averaged over daytime departures) against HDX: Kaafu 2% / 23% against 77% at 2 h |
 | `m3_within_2h_through_day.png` | 5 | Share of Kaafu within 2 h of a Malé hospital by departure time, with HDX as a line |
 | `m3_worst_served.png` | 5 | Daytime median per island, worst first, with an "unreachable today" column |
 | `m3_last_departure.png` | 5 | Last practical departure per island; ADh has none on Wednesday |

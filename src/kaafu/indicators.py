@@ -96,16 +96,14 @@ def observed_gap(conns, observed_trips, stop_island, cfg):
     return (both["scheduled_min"] - both["observed_min"]).dropna().round(1)
 
 
-def _per_island_minutes(results, target, cfg, dep_min=None):
-    """{origin: minutes} at one departure, or the daytime median when dep_min is None.
-    Unreachable is infinite."""
+def _per_island_share(results, target, cfg, threshold, dep_min=None):
+    """{origin: share of departures within threshold} at one departure (0 or 1), or over
+    every daytime departure when dep_min is None: the chance that someone who needs a
+    hospital at a random daytime moment gets there in time. Unreachable never counts."""
     res = results[results["target"] == target]
-    if dep_min is None:
-        day = res[_daytime(res["dep_min"], cfg)]
-        return day.groupby("origin_key")["total_min"].apply(
-            lambda s: np.median(s.astype(float).fillna(np.inf)))
-    at = res[res["dep_min"] == dep_min].set_index("origin_key")["total_min"]
-    return at.astype(float).fillna(np.inf)
+    res = res[_daytime(res["dep_min"], cfg)] if dep_min is None else res[res["dep_min"] == dep_min]
+    within = res["total_min"].astype(float).fillna(np.inf) <= threshold
+    return within.groupby(res["origin_key"]).mean()
 
 
 def _areas(islands):
@@ -116,18 +114,18 @@ def _areas(islands):
 def population_within(results, islands, cfg, target="gm_hospital", dep_min=None):
     """Share of population within each of THRESHOLDS_MIN, for Kaafu and all 23 islands.
 
-    At one departure time, or for each island's daytime median when dep_min is None.
+    At one departure time, or averaged over every daytime departure when dep_min is None
+    (each island's population times its share of daytime departures that make it).
     """
-    minutes = _per_island_minutes(results, target, cfg, dep_min)
     origins, areas = _areas(islands)
     rows = []
     for area, mask in areas.items():
         pop = origins.loc[mask, "population_2022"]
-        island_minutes = minutes.reindex(pop.index).fillna(np.inf)
         for threshold in cfg.THRESHOLDS_MIN:
-            within = int(pop[island_minutes <= threshold].sum())
+            share = _per_island_share(results, target, cfg, threshold, dep_min).reindex(pop.index).fillna(0)
+            within = int(round((pop * share).sum()))
             rows.append(dict(area=area, target=target,
-                             departure="day_median" if dep_min is None else hhmm(dep_min),
+                             departure="daytime" if dep_min is None else hhmm(dep_min),
                              threshold_min=threshold, population_within=within,
                              population=int(pop.sum()), share_pct=round(100 * within / pop.sum(), 1)))
     return pd.DataFrame(rows)
@@ -171,8 +169,8 @@ def nsds_figures(results, islands, facilities, conns, cfg):
     nearest_facility = origins["health_facility_ids"].map(
         lambda ids: cfg.ACCESS_MIN + min(walk[f] for f in str(ids).split()))
     direct = _direct_boat_islands(conns, cfg)
-    gm_median = _per_island_minutes(results, "gm_hospital", cfg)
-    any_median = _per_island_minutes(results, "any_hospital", cfg)
+    gm_share = _per_island_share(results, "gm_hospital", cfg, 120)
+    any_share = _per_island_share(results, "any_hospital", cfg, 120)
 
     tests = {
         "scheduled_boat_to_greater_male_direct":
@@ -182,17 +180,19 @@ def nsds_figures(results, islands, facilities, conns, cfg):
              f"Greater Malé reachable by boat before 24:00 on {cfg.DAY}, changes allowed"),
         "health_facility_within_30":
             (nearest_facility <= 30, "ACCESS_MIN + walk from the harbour to the on-island facility"),
-        "gm_hospital_within_120_day_median":
-            (gm_median.reindex(origins.index) <= 120, "daytime median, Greater Malé hospital"),
-        "any_hospital_within_120_day_median":
-            (any_median.reindex(origins.index) <= 120, "daytime median, any hospital incl. atoll"),
+        "gm_hospital_within_120_daytime":
+            (gm_share.reindex(origins.index).fillna(0),
+             "averaged over daytime departures, Greater Malé hospital"),
+        "any_hospital_within_120_daytime":
+            (any_share.reindex(origins.index).fillna(0),
+             "averaged over daytime departures, any hospital incl. atoll"),
     }
     rows = []
     for indicator, (passes, definition) in tests.items():
-        passes = pd.Series(np.asarray(passes), index=origins.index)
+        passes = pd.Series(np.asarray(passes, dtype=float), index=origins.index)
         for area, mask in areas.items():
             pop = origins.loc[mask, "population_2022"]
-            within = int(pop[passes[mask]].sum())
+            within = int(round((pop * passes[mask]).sum()))
             rows.append(dict(indicator=indicator, area=area, population_within=within,
                              population=int(pop.sum()), share_pct=round(100 * within / pop.sum(), 1),
                              definition=definition))
@@ -254,7 +254,7 @@ def main(cfg=None):
                         for dep in [None, *range(0, cfg.MINUTES_PER_DAY, cfg.STEP_MIN)]])
     hdx = pd.read_csv(cfg.HDX_BENCHMARK_CSV, encoding=cfg.READ_ENCODING)
     within.to_csv(cfg.PROCESSED / POPULATION_WITHIN_CSV, **write)
-    hdx_comparison(within[within["departure"] == "day_median"], hdx).to_csv(
+    hdx_comparison(within[within["departure"] == "daytime"], hdx).to_csv(
         cfg.PROCESSED / HDX_COMPARISON_CSV, **write)
     nsds_figures(results, islands, facilities, conns, cfg).to_csv(cfg.PROCESSED / NSDS_FIGURES_CSV, **write)
     return results, summary
