@@ -864,76 +864,76 @@ T_MALE_WEST,H06,23,walk,,no,different island
 T_MALE_WEST,H06,23,bus,,no,no route links terminal and hospital
 T_MALE_WEST,H06,23,taxi,,no,no road link
 T_HULHUMALE,H01,0,walk,,no,different island
-T_HULHUMALE,H01,0,bus,,no,no route links terminal and hospital
+T_HULHUMALE,H01,0,bus,57.0,yes,"R1 from Amin Avenue to Dharumavantha Hospital (West Side), wait 15, ride 31, estimated, walk 6"
 T_HULHUMALE,H01,0,taxi,24.6,yes,"taxi, Avas median of 28 rides, wait 5.7, placeholder speed and wait"
 T_HULHUMALE,H01,1,walk,,no,different island
-T_HULHUMALE,H01,1,bus,,no,no route links terminal and hospital
+T_HULHUMALE,H01,1,bus,,no,outside service hours
 T_HULHUMALE,H01,1,taxi,24.6,yes,"taxi, Avas median of 24 rides, wait 5.7, placeholder speed and wait"
 T_HULHUMALE,H01,2,walk,,no,different island
-T_HULHUMALE,H01,2,bus,,no,no route links terminal and hospital
+T_HULHUMALE,H01,2,bus,,no,outside service hours
 T_HULHUMALE,H01,2,taxi,25.2,yes,"taxi, Avas median of 14 rides, wait 5.7, placeholder speed and wait"
 T_HULHUMALE,H01,3,walk,,no,different island
-T_HULHUMALE,H01,3,bus,,no,no route links terminal and hospital
+T_HULHUMALE,H01,3,bus,,no,outside service hours
 T_HULHUMALE,H01,3,taxi,37.1,yes,"taxi, 8.8 km at 20 km/h, wait 5.7, placeholder speed and wait"
 T_HULHUMALE,H01,4,walk,,no,different island
-T_HULHUMALE,H01,4,bus,,no,no route links terminal and hospital
+T_HULHUMALE,H01,4,bus,,no,outside service hours
 T_HULHUMALE,H01,4,taxi,37.1,yes,"taxi, 8.8 km at 20 km/h, wait 5.7, placeholder speed and wait"
 T_HULHUMALE,H01,5,walk,,no,different island
-T_HULHUMALE,H01,5,bus,,no,no route links terminal and hospital
+T_HULHUMALE,H01,5,bus,52.0,yes,"R1 from Amin Avenue to Dharumavantha Hospital (West Side), wait 10, ride 31, estimated, walk 6"
 T_HULHUMALE,H01,5,taxi,37.1,yes,"taxi, 8.8 km at 20 km/h, wait 5.7, placeholder speed and wait"
 T_HULHUMALE,H01,6,walk,,no,different island
-T_HULHUMALE,H01,6,bus,,no,no route links terminal and hospital
+T_HULHUMALE,H01,6,bus,52.0,yes,"R1 from Amin Avenue to Dharumavantha Hospital (West Side), wait 10, ride 31, estimated, walk 6"
 T_HULHUMALE,H01,6,taxi,24.9,yes,"taxi, Avas median of 32 rides, wait 5.7, placeholder speed and wait"
 T_HULHUMALE,H01,7,walk,,no,different island
-T_HULHUMALE,H01,7,bus,,no,no route links terminal and hospital
+T_HULHUMALE,H01,7,bus,49.5,yes,"R1 from Amin Avenue to Dharumavantha Hospital (West Side), wait 7.5, ride 31, estimated, walk 6"
 T_HULHUMALE,H01,7,taxi,25.0,yes,"taxi, Avas median of 96 rides, wait 5.7, placeholder speed and wait"
 T_HULHUMALE,H01,8,walk,,no,different island
-T_HULHUMALE,H01,8,bus,,no,no route links terminal and hospital
+T_HULHUMALE,H01,8,bus,49.5,yes,"R1 from Amin Avenue to Dharumavantha Hospital (West Side), wait 7.5, ride 31, estimated, walk 6"
 T_HULHUMALE,H01,8,taxi,24.7,yes,"taxi, Avas median of 88 rides, wait 5.7, placeholder speed and wait"
 T_HULHUMALE,H01,9,walk,,no,different island
-T_HULHUMALE,H01,9,bus,,no,no route links terminal and hospital
+T_HULHUMALE,H01,9,bus,52.0,yes,"R1 from Amin Avenue to Dharumavantha Hospital (West Side), wait 10, ride 31, estimated, walk 6"
 T_HULHUMALE,H01,9,taxi,24.6,yes,"taxi, Avas median of 47 rides, wait 5.7, placeholder speed and wait"
 T_HULHUMALE,H01,10,walk,,no,different island
-T_HULHUMALE,H01,10,bus,,no,no route links terminal and hospital
+T_HULHUMALE,H01,10,bus,52.0,yes,"R1 from Amin Avenue to Dharumavantha Hospital (West Side), wait 10, ride 31, estimated, walk 6"
 T_HULHUMALE,H01,10,taxi,24.7,yes,"taxi, Avas median of 53 rides, wait 5.7, placeholder speed and wait"
 T_HULHUMALE,H01,11,walk,,no,different island
-T_HULHUMALE,H01,11,bus,,no,no route links terminal and hospital
+T_HULHUMALE,H01,11,bus,52.0,yes,"R1 from Amin Avenue to Dharumavantha Hospital (West Side), wait 10, ride 31, estimated, walk 6"
 T_HULHUMALE,H01,11,taxi,24.7,yes,"taxi, Avas median of 34 rides, wait 5.7, placeholder speed and wait"
 T_HULHUMALE,H01,12,walk,,no,different island
-T_HULHUMALE,H01,12,bus,,no,no route links terminal and hospital
+T_HULHUMALE,H01,12,bus,49.5,yes,"R1 from Amin Avenue to Dharumavantha Hospital (West Side), wait 7.5, ride 31, estimated, walk 6"
 T_HULHUMALE,H01,12,taxi,24.8,yes,"taxi, Avas median of 73 rides, wait 5.7, placeholder speed and wait"
 T_HULHUMALE,H01,13,walk,,no,different island
-T_HULHUMALE,H01,13,bus,,no,no route links terminal and hospital
+T_HULHUMALE,H01,13,bus,49.5,yes,"R1 from Amin Avenue to Dharumavantha Hospital (West Side), wait 7.5, ride 31, estimated, walk 6"
 T_HULHUMALE,H01,13,taxi,24.7,yes,"taxi, Avas median of 63 rides, wait 5.7, placeholder speed and wait"
 T_HULHUMALE,H01,14,walk,,no,different island
-T_HULHUMALE,H01,14,bus,,no,no route links terminal and hospital
+T_HULHUMALE,H01,14,bus,49.5,yes,"R1 from Amin Avenue to Dharumavantha Hospital (West Side), wait 7.5, ride 31, estimated, walk 6"
 T_HULHUMALE,H01,14,taxi,24.7,yes,"taxi, Avas median of 73 rides, wait 5.7, placeholder speed and wait"
 T_HULHUMALE,H01,15,walk,,no,different island
-T_HULHUMALE,H01,15,bus,,no,no route links terminal and hospital
+T_HULHUMALE,H01,15,bus,49.5,yes,"R1 from Amin Avenue to Dharumavantha Hospital (West Side), wait 7.5, ride 31, estimated, walk 6"
 T_HULHUMALE,H01,15,taxi,24.9,yes,"taxi, Avas median of 72 rides, wait 5.7, placeholder speed and wait"
 T_HULHUMALE,H01,16,walk,,no,different island
-T_HULHUMALE,H01,16,bus,,no,no route links terminal and hospital
+T_HULHUMALE,H01,16,bus,49.5,yes,"R1 from Amin Avenue to Dharumavantha Hospital (West Side), wait 7.5, ride 31, estimated, walk 6"
 T_HULHUMALE,H01,16,taxi,25.0,yes,"taxi, Avas median of 70 rides, wait 5.7, placeholder speed and wait"
 T_HULHUMALE,H01,17,walk,,no,different island
-T_HULHUMALE,H01,17,bus,,no,no route links terminal and hospital
+T_HULHUMALE,H01,17,bus,49.5,yes,"R1 from Amin Avenue to Dharumavantha Hospital (West Side), wait 7.5, ride 31, estimated, walk 6"
 T_HULHUMALE,H01,17,taxi,25.0,yes,"taxi, Avas median of 67 rides, wait 5.7, placeholder speed and wait"
 T_HULHUMALE,H01,18,walk,,no,different island
-T_HULHUMALE,H01,18,bus,,no,no route links terminal and hospital
+T_HULHUMALE,H01,18,bus,49.5,yes,"R1 from Amin Avenue to Dharumavantha Hospital (West Side), wait 7.5, ride 31, estimated, walk 6"
 T_HULHUMALE,H01,18,taxi,25.0,yes,"taxi, Avas median of 99 rides, wait 5.7, placeholder speed and wait"
 T_HULHUMALE,H01,19,walk,,no,different island
-T_HULHUMALE,H01,19,bus,,no,no route links terminal and hospital
+T_HULHUMALE,H01,19,bus,49.5,yes,"R1 from Amin Avenue to Dharumavantha Hospital (West Side), wait 7.5, ride 31, estimated, walk 6"
 T_HULHUMALE,H01,19,taxi,24.9,yes,"taxi, Avas median of 72 rides, wait 5.7, placeholder speed and wait"
 T_HULHUMALE,H01,20,walk,,no,different island
-T_HULHUMALE,H01,20,bus,,no,no route links terminal and hospital
+T_HULHUMALE,H01,20,bus,52.0,yes,"R1 from Amin Avenue to Dharumavantha Hospital (West Side), wait 10, ride 31, estimated, walk 6"
 T_HULHUMALE,H01,20,taxi,25.0,yes,"taxi, Avas median of 79 rides, wait 5.7, placeholder speed and wait"
 T_HULHUMALE,H01,21,walk,,no,different island
-T_HULHUMALE,H01,21,bus,,no,no route links terminal and hospital
+T_HULHUMALE,H01,21,bus,52.0,yes,"R1 from Amin Avenue to Dharumavantha Hospital (West Side), wait 10, ride 31, estimated, walk 6"
 T_HULHUMALE,H01,21,taxi,25.0,yes,"taxi, Avas median of 59 rides, wait 5.7, placeholder speed and wait"
 T_HULHUMALE,H01,22,walk,,no,different island
-T_HULHUMALE,H01,22,bus,,no,no route links terminal and hospital
+T_HULHUMALE,H01,22,bus,52.0,yes,"R1 from Amin Avenue to Dharumavantha Hospital (West Side), wait 10, ride 31, estimated, walk 6"
 T_HULHUMALE,H01,22,taxi,24.6,yes,"taxi, Avas median of 81 rides, wait 5.7, placeholder speed and wait"
 T_HULHUMALE,H01,23,walk,,no,different island
-T_HULHUMALE,H01,23,bus,,no,no route links terminal and hospital
+T_HULHUMALE,H01,23,bus,57.0,yes,"R1 from Amin Avenue to Dharumavantha Hospital (West Side), wait 15, ride 31, estimated, walk 6"
 T_HULHUMALE,H01,23,taxi,24.8,yes,"taxi, Avas median of 57 rides, wait 5.7, placeholder speed and wait"
 T_HULHUMALE,H02,0,walk,,no,different island
 T_HULHUMALE,H02,0,bus,54.9,yes,"R2 from Amin Avenue to Senahiya, wait 15, ride 26, walk 9"

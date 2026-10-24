@@ -18,6 +18,13 @@ COLUMNS = ["stop_id", "facility_id", "hour", "mode", "minutes", "available", "de
 HOURS = range(24)
 COMPLETED = ("ride_completed", "payment_completed")
 
+# Stops missing from Team Kandu's rtl_bus_stops.csv, as (route, order, code).
+# R1 loops through West Park at the Malé end (MTCC/RTL R1 route map): after
+# Maafannu Bus Terminal OPP it carries on past Food Court to Dharumavantha
+# Hospital (West Side), next to IGMH. Only that stop has coordinates in the
+# file (from R11), so it is the only one added.
+BUS_STOP_ADDITIONS = [("R1", 19, 120)]
+
 
 def haversine_m(lat1, lon1, lat2, lon2):
     """Straight-line distance in metres; works on scalars or arrays."""
@@ -68,7 +75,11 @@ class BusNetwork:
         self.bands = bands[bands.day_type == config.BUS_DAY_TYPE]
 
         stops = pd.read_csv(config.RTL_BUS_STOPS_CSV, encoding=config.READ_ENCODING)
-        self.stops = stops[stops.route_number.isin(self.hours.index)].sort_values(
+        stops = stops[stops.route_number.isin(self.hours.index)]
+        by_code = stops.drop_duplicates("code").set_index("code")
+        added = [{**by_code.loc[code].to_dict(), "route_number": route, "order": order, "code": code}
+                 for route, order, code in BUS_STOP_ADDITIONS]
+        self.stops = pd.concat([stops, pd.DataFrame(added)], ignore_index=True).sort_values(
             ["route_number", "order"])
 
         deps = pd.read_csv(config.RTL_BUS_DEPARTURES_CSV, encoding=config.READ_ENCODING)
@@ -97,13 +108,8 @@ class BusNetwork:
                             "walk": walk, "ride": ride, "estimated": estimated}
         return best
 
-    def ride_minutes(self, route, stops, i, j):
-        """Median timetabled gap between two stops on the same trip.
-
-        Falls back to distance along the route at MINIBUS_SPEED_KMH where the
-        departures file has no trips (minibuses) or no trip serves both stops.
-        """
-        board, alight = stops.stop.iat[i], stops.stop.iat[j]
+    def timed_gap(self, route, board, alight):
+        """Median timetabled minutes from `board` to `alight` on the same trip, or None."""
         deps = self.departures[self.departures.route_number == route]
         gaps = []
         for _, trip in deps.groupby("trip"):
@@ -116,13 +122,26 @@ class BusNetwork:
             after = rel[(trip.stop == alight) & (rel > t_board.min())]
             if not after.empty:
                 gaps.append(after.min() - t_board.min())
-        if gaps:
-            return float(np.median(gaps)), False
+        return float(np.median(gaps)) if gaps else None
 
-        seg = stops.iloc[i:j + 1]
+    def ride_minutes(self, route, stops, i, j):
+        """Ride time from stop i to stop j (positions in the route's stop list).
+
+        Uses the timetable as far as it goes: the median gap to the last stop
+        at or before j that has times, plus the rest by distance along the
+        route at MINIBUS_SPEED_KMH (estimated). Minibuses have no times at all.
+        """
+        for k in range(j, i, -1):
+            timed = self.timed_gap(route, stops.stop.iat[i], stops.stop.iat[k])
+            if timed is not None:
+                break
+        else:
+            timed, k = 0.0, i
+
+        seg = stops.iloc[k:j + 1]
         metres = haversine_m(seg.lat.values[:-1], seg.lon.values[:-1],
                              seg.lat.values[1:], seg.lon.values[1:]).sum()
-        return metres / 1000 / config.MINIBUS_SPEED_KMH * 60, True
+        return timed + metres / 1000 / config.MINIBUS_SPEED_KMH * 60, k != j
 
     def wait_at(self, route: str, hour: int):
         """Wait in minutes for a bus at the start of `hour`, or None if not running.
