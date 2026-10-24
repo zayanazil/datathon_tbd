@@ -406,7 +406,8 @@ def observed_trips_layer(observed_pairs: pd.DataFrame | None = None) -> pd.DataF
     pairs["width_px"] = (1 + pairs.trips_per_day.astype(float) ** 0.5).clip(upper=10)
     pairs["colour"] = pairs.speed_class.map(OBSERVED_COLOURS)
     pairs["tooltip"] = [
-        f"{r.from_key} to {r.to_key} ({r.speed_class}): median {fmt_minutes(r.median_min)}, "
+        f"{pos.name.get(r.from_key, r.from_key)} to {pos.name.get(r.to_key, r.to_key)} "
+        f"({r.speed_class} boats): median {fmt_minutes(r.median_min)}, "
         f"{r.trips_per_day:.1f} trips a day"
         for r in pairs.itertuples()
     ]
