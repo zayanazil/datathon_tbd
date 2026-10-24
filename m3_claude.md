@@ -123,6 +123,8 @@ Every `main()` and `run_scenario()` takes an optional `cfg` argument, which defa
 
 ## Synthetic speedboat departures (observed switch)
 
+**Agreed with Saroof (M4).** Eish's hours are taken as recorded, including Dhiffushi's boats from 01:00.
+
 **Why:**
 - The timetable has public ferries only, once or twice a day, but Eish's FollowMe data shows that most trips from the islands near Malé are speedboats running all day (e.g. 87% of Thulusdhoo's trips).
 - Re-timing the ferries alone leaves the headline at 0% within 2 h, so `observed: True` also adds these boats.
