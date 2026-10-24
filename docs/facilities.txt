@@ -75,16 +75,15 @@ To check before relying on it
        Fulidhoo, Keyodhoo, Thinadhoo.
      Villimalé Hospital: placed at the "Villimale Hospital" bus stop
        (code 1313).
-2. H01: OSM maps IGMH and "Dharumavantha Hospital" on the same site. They are
-   treated as one destination. Confirm whether it is a rename or a separate
-   building.
-3. H03 Senahiya is a military hospital. Confirm it takes public emergencies;
-   if not, drop it as a destination.
-4. Names that may be wrong in OSM:
-     H07  Rasdhoo "Rasdhoo hospital" assumed to be the AA atoll hospital
-     H08  Mahibadhoo "South Ari District Medical Center" assumed to be the
-          ADh atoll hospital
-     C07  Gulhi "Island Clinic" assumed to be the government health centre
+2. DONE 23 Oct 2026: H01 IGMH and "Dharumavantha Hospital" are the same
+   destination. One row kept, renamed "IGMH (Dharumavantha Hospital)".
+3. DONE 23 Oct 2026: H03 Senahiya takes public emergencies 24/7 and is
+   covered by Aasandha. Keep it: INCLUDE_SENAHIYA = True in config.py
+   (BUILD_PLAN section 5 default).
+4. DONE 23 Oct 2026: H07 Rasdhoo and H08 Mahibadhoo confirmed as the AA
+   and ADh atoll hospitals, same places as mapped.
+   Still unconfirmed (low impact): C07 Gulhi "Island Clinic" assumed to be
+   the government health centre.
 5. Thulusdhoo: a new K. Thulusdhoo Hospital is under construction (OSM way
    1466963363). Good scenario for the "what if" slider.
 
