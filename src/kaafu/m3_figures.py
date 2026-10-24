@@ -300,6 +300,8 @@ def slide_numbers(base, observed, base_summary, obs_summary, islands, hdx, nsds,
 
 
 def main(cfg=None):
+    """Slide charts: reruns the base and observed-times scenarios, then draws
+    each figure to docs/figures/m3_*.png and writes the slide numbers."""
     if cfg is None:
         from kaafu import config as cfg
     data = scenarios._inputs(cfg)

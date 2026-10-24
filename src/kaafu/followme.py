@@ -330,6 +330,14 @@ def summary(info, trips, keys, islands, days, split, clear, counts, edges):
 
 
 def main(cfg=None, month=False):
+    """FollowMe pings -> observed_trips.csv and observed_pairs.csv.
+
+    Steps: load pings (+5 h to local time, de-duplicated, smoothed speeds),
+    tag each ping with its island zone, keep devices that behave like boats,
+    find stops inside zones, join consecutive stops into trips, split trips
+    into slow/fast at the speed-histogram dip, aggregate per island pair.
+    month=False runs the development week only.
+    """
     if cfg is None:
         from kaafu import config as cfg
     start = time.time()

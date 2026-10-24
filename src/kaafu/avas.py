@@ -172,6 +172,11 @@ def plot_zones(rides, zones, path, sample=30_000):
 
 
 def main(cfg=None, plot_path=None):
+    """Avas requests -> data/processed/avas_hourly.csv (zone x hour: unserved share, median speed).
+
+    Steps: load Sun-Thu requests, assign pickup and dropoff zones, build the
+    hourly table with fallbacks for thin zone-hours, check it, write it.
+    """
     if cfg is None:
         from kaafu import config as cfg
     rides = load_rides(cfg.AVAS_RIDES_CSV, cfg.AVAS_WEEKDAYS)

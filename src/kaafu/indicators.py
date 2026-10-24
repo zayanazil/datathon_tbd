@@ -237,6 +237,12 @@ def load_inputs(cfg):
 
 
 def main(cfg=None):
+    """Base run: door-to-door results and the indicators built from them.
+
+    Writes access_results.csv (every island x 15-min departure x target),
+    island_summary.csv, population_within.csv, hdx_comparison.csv and
+    nsds_figures.csv to data/processed/.
+    """
     if cfg is None:
         from kaafu import config as cfg
     data = load_inputs(cfg)

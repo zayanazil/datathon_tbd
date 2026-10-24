@@ -232,6 +232,13 @@ def observed_drives(rides: pd.DataFrame, terminal, hospital) -> pd.DataFrame:
 
 
 def taxi_option(terminal, hospital, hour, hourly, placeholder, drives) -> dict:
+    """Taxi from terminal to hospital at `hour`.
+
+    minutes = exit + base wait + unserved share x retry penalty + drive, where
+    drive is the median of real Avas rides for this pair and hour if there are
+    at least TAXI_MIN_RIDES, else straight-line km x TAXI_DETOUR at the zone's
+    median speed. No taxis from Villimalé or across a missing road link.
+    """
     zone = config.TAXI_ZONE.get(terminal.island_key)
     if zone is None:
         return {"available": "no", "detail": "no taxis from this terminal"}
@@ -256,6 +263,9 @@ def taxi_option(terminal, hospital, hour, hourly, placeholder, drives) -> dict:
 # Table
 # ---------------------------------------------------------------------------
 def build_last_mile() -> pd.DataFrame:
+    """The full last-mile table: every terminal x Greater Malé hospital x hour
+    x mode (walk, bus, taxi), plus walk rows from the harbour to each atoll
+    hospital. Unavailable options are kept with the reason in `detail`."""
     terminals = geo.build_terminals()
     hospitals = load_hospitals()
     bus = BusNetwork()

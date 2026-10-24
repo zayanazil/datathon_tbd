@@ -55,6 +55,11 @@ def build_connections(timetable, day, next_day, minutes_per_day=1440):
 
 
 def main(cfg=None):
+    """Ferry timetable -> data/processed/connections.csv.
+
+    Checks every stop name, keeps the service day's legs (config.DAY) and adds
+    the next day's legs shifted by 1440 min, so late starts find tomorrow's boat.
+    """
     if cfg is None:
         from kaafu import config as cfg
     timetable = load_timetable(cfg.FERRY_TIMETABLE_CSV, cfg.READ_ENCODING)

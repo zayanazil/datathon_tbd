@@ -67,6 +67,8 @@ data/raw/team_kandu/rtl_bus_stops.csv          RTL bus stops (Team Kandu)
 data/raw/team_kandu/rtl_bus_departures.csv     RTL bus departures (Team Kandu)
 ```
 
+The FollowMe parquet is made from the organisers' raw daily CSVs by `prep/followme_queries.sql` (DuckDB CLI; it replaces each IMEI with its md5 hash). The input sheets in `data/sheets/` were compiled before the build from the sources below; how each was made is documented beside it in `docs/*.txt`.
+
 Run from the repo root, with the package importable (`pip install -e .` once, or set `PYTHONPATH=src`), in this order:
 
 ```
@@ -90,6 +92,7 @@ data/sheets/             input sheets: ferry timetable, bus hours and headways, 
 data/processed/          model outputs (committed, no IMEIs)
 data/raw/                restricted raw data (git-ignored)
 docs/                    notes on each input sheet (*.txt) and figures/ (slide maps and charts)
+prep/followme_queries.sql  DuckDB query that made the FollowMe extract from the raw files
 src/kaafu/
   config.py              paths and every parameter and assumption
   geo.py                 terminals, island zones, map layers, static maps          M1
@@ -159,11 +162,11 @@ All parameters are in `src/kaafu/config.py`.
 
 MTCC.xlsx passenger counts are randomly generated and are not used for findings. MACL flight data is not used.
 
-## AI-assisted parts
+## AI tools used
 
-Claude Code was used throughout, directed and reviewed by each member.
+**Tool:** Claude Code (Anthropic's AI coding assistant), used by every member to write code, run data checks and draft documentation. Every member directed and reviewed the work; the problem framing, scope decisions and the choice of assumptions are the team's.
 
-- **Prep (23 Oct):** `islands.csv`, `facilities.csv` and `island_names.csv` were built with AI-assisted scripts outside this repo (Overpass queries, name matching). The FollowMe prep queries (DuckDB CLI) were AI-assisted.
+- **Prep (23 Oct):** `islands.csv`, `facilities.csv` and `island_names.csv` were built with AI-assisted scripts outside this repo (Overpass queries, name matching). `prep/followme_queries.sql` (the FollowMe extract) was AI-assisted.
 - **M1 (Zayan), GIS:** all of `src/kaafu/geo.py` and `src/kaafu/lastmile.py`, written with Claude Code:
   - terminals and their checks;
   - OSM island zones (Overpass, polygon building, buffering, fallback, caching);
