@@ -1,0 +1,2233 @@
+stop_id,facility_id,hour,mode,minutes,available,detail,expired_share,bus_wait_min
+T_MALE_NORTH,H01,0,walk,23.03234800942753,True,1443 m straight line,0.0,0.0
+T_MALE_NORTH,H01,0,bus,,False,no bus data,0.0,0.0
+T_MALE_NORTH,H01,0,taxi,16.758868931167648,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_MALE_NORTH,H01,1,walk,23.03234800942753,True,1443 m straight line,0.0,0.0
+T_MALE_NORTH,H01,1,bus,,False,no bus data,0.0,0.0
+T_MALE_NORTH,H01,1,taxi,16.758868931167648,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_MALE_NORTH,H01,2,walk,23.03234800942753,True,1443 m straight line,0.0,0.0
+T_MALE_NORTH,H01,2,bus,,False,no bus data,0.0,0.0
+T_MALE_NORTH,H01,2,taxi,16.758868931167648,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_MALE_NORTH,H01,3,walk,23.03234800942753,True,1443 m straight line,0.0,0.0
+T_MALE_NORTH,H01,3,bus,,False,no bus data,0.0,0.0
+T_MALE_NORTH,H01,3,taxi,16.758868931167648,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_MALE_NORTH,H01,4,walk,23.03234800942753,True,1443 m straight line,0.0,0.0
+T_MALE_NORTH,H01,4,bus,,False,no bus data,0.0,0.0
+T_MALE_NORTH,H01,4,taxi,16.758868931167648,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_MALE_NORTH,H01,5,walk,23.03234800942753,True,1443 m straight line,0.0,0.0
+T_MALE_NORTH,H01,5,bus,,False,no bus data,0.0,0.0
+T_MALE_NORTH,H01,5,taxi,16.758868931167648,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_MALE_NORTH,H01,6,walk,23.03234800942753,True,1443 m straight line,0.0,0.0
+T_MALE_NORTH,H01,6,bus,,False,no bus data,0.0,0.0
+T_MALE_NORTH,H01,6,taxi,16.758868931167648,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_MALE_NORTH,H01,7,walk,23.03234800942753,True,1443 m straight line,0.0,0.0
+T_MALE_NORTH,H01,7,bus,,False,no bus data,0.0,0.0
+T_MALE_NORTH,H01,7,taxi,16.758868931167648,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_MALE_NORTH,H01,8,walk,23.03234800942753,True,1443 m straight line,0.0,0.0
+T_MALE_NORTH,H01,8,bus,,False,no bus data,0.0,0.0
+T_MALE_NORTH,H01,8,taxi,16.758868931167648,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_MALE_NORTH,H01,9,walk,23.03234800942753,True,1443 m straight line,0.0,0.0
+T_MALE_NORTH,H01,9,bus,,False,no bus data,0.0,0.0
+T_MALE_NORTH,H01,9,taxi,16.758868931167648,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_MALE_NORTH,H01,10,walk,23.03234800942753,True,1443 m straight line,0.0,0.0
+T_MALE_NORTH,H01,10,bus,,False,no bus data,0.0,0.0
+T_MALE_NORTH,H01,10,taxi,16.758868931167648,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_MALE_NORTH,H01,11,walk,23.03234800942753,True,1443 m straight line,0.0,0.0
+T_MALE_NORTH,H01,11,bus,,False,no bus data,0.0,0.0
+T_MALE_NORTH,H01,11,taxi,16.758868931167648,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_MALE_NORTH,H01,12,walk,23.03234800942753,True,1443 m straight line,0.0,0.0
+T_MALE_NORTH,H01,12,bus,,False,no bus data,0.0,0.0
+T_MALE_NORTH,H01,12,taxi,16.758868931167648,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_MALE_NORTH,H01,13,walk,23.03234800942753,True,1443 m straight line,0.0,0.0
+T_MALE_NORTH,H01,13,bus,,False,no bus data,0.0,0.0
+T_MALE_NORTH,H01,13,taxi,16.758868931167648,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_MALE_NORTH,H01,14,walk,23.03234800942753,True,1443 m straight line,0.0,0.0
+T_MALE_NORTH,H01,14,bus,,False,no bus data,0.0,0.0
+T_MALE_NORTH,H01,14,taxi,16.758868931167648,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_MALE_NORTH,H01,15,walk,23.03234800942753,True,1443 m straight line,0.0,0.0
+T_MALE_NORTH,H01,15,bus,,False,no bus data,0.0,0.0
+T_MALE_NORTH,H01,15,taxi,16.758868931167648,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_MALE_NORTH,H01,16,walk,23.03234800942753,True,1443 m straight line,0.0,0.0
+T_MALE_NORTH,H01,16,bus,,False,no bus data,0.0,0.0
+T_MALE_NORTH,H01,16,taxi,16.758868931167648,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_MALE_NORTH,H01,17,walk,23.03234800942753,True,1443 m straight line,0.0,0.0
+T_MALE_NORTH,H01,17,bus,,False,no bus data,0.0,0.0
+T_MALE_NORTH,H01,17,taxi,16.758868931167648,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_MALE_NORTH,H01,18,walk,23.03234800942753,True,1443 m straight line,0.0,0.0
+T_MALE_NORTH,H01,18,bus,,False,no bus data,0.0,0.0
+T_MALE_NORTH,H01,18,taxi,16.758868931167648,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_MALE_NORTH,H01,19,walk,23.03234800942753,True,1443 m straight line,0.0,0.0
+T_MALE_NORTH,H01,19,bus,,False,no bus data,0.0,0.0
+T_MALE_NORTH,H01,19,taxi,16.758868931167648,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_MALE_NORTH,H01,20,walk,23.03234800942753,True,1443 m straight line,0.0,0.0
+T_MALE_NORTH,H01,20,bus,,False,no bus data,0.0,0.0
+T_MALE_NORTH,H01,20,taxi,16.758868931167648,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_MALE_NORTH,H01,21,walk,23.03234800942753,True,1443 m straight line,0.0,0.0
+T_MALE_NORTH,H01,21,bus,,False,no bus data,0.0,0.0
+T_MALE_NORTH,H01,21,taxi,16.758868931167648,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_MALE_NORTH,H01,22,walk,23.03234800942753,True,1443 m straight line,0.0,0.0
+T_MALE_NORTH,H01,22,bus,,False,no bus data,0.0,0.0
+T_MALE_NORTH,H01,22,taxi,16.758868931167648,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_MALE_NORTH,H01,23,walk,23.03234800942753,True,1443 m straight line,0.0,0.0
+T_MALE_NORTH,H01,23,bus,,False,no bus data,0.0,0.0
+T_MALE_NORTH,H01,23,taxi,16.758868931167648,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_MALE_NORTH,H02,0,walk,10.931331259788394,True,475 m straight line,0.0,0.0
+T_MALE_NORTH,H02,0,bus,,False,no bus data,0.0,0.0
+T_MALE_NORTH,H02,0,taxi,12.692927303288899,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_MALE_NORTH,H02,1,walk,10.931331259788394,True,475 m straight line,0.0,0.0
+T_MALE_NORTH,H02,1,bus,,False,no bus data,0.0,0.0
+T_MALE_NORTH,H02,1,taxi,12.692927303288899,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_MALE_NORTH,H02,2,walk,10.931331259788394,True,475 m straight line,0.0,0.0
+T_MALE_NORTH,H02,2,bus,,False,no bus data,0.0,0.0
+T_MALE_NORTH,H02,2,taxi,12.692927303288899,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_MALE_NORTH,H02,3,walk,10.931331259788394,True,475 m straight line,0.0,0.0
+T_MALE_NORTH,H02,3,bus,,False,no bus data,0.0,0.0
+T_MALE_NORTH,H02,3,taxi,12.692927303288899,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_MALE_NORTH,H02,4,walk,10.931331259788394,True,475 m straight line,0.0,0.0
+T_MALE_NORTH,H02,4,bus,,False,no bus data,0.0,0.0
+T_MALE_NORTH,H02,4,taxi,12.692927303288899,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_MALE_NORTH,H02,5,walk,10.931331259788394,True,475 m straight line,0.0,0.0
+T_MALE_NORTH,H02,5,bus,,False,no bus data,0.0,0.0
+T_MALE_NORTH,H02,5,taxi,12.692927303288899,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_MALE_NORTH,H02,6,walk,10.931331259788394,True,475 m straight line,0.0,0.0
+T_MALE_NORTH,H02,6,bus,,False,no bus data,0.0,0.0
+T_MALE_NORTH,H02,6,taxi,12.692927303288899,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_MALE_NORTH,H02,7,walk,10.931331259788394,True,475 m straight line,0.0,0.0
+T_MALE_NORTH,H02,7,bus,,False,no bus data,0.0,0.0
+T_MALE_NORTH,H02,7,taxi,12.692927303288899,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_MALE_NORTH,H02,8,walk,10.931331259788394,True,475 m straight line,0.0,0.0
+T_MALE_NORTH,H02,8,bus,,False,no bus data,0.0,0.0
+T_MALE_NORTH,H02,8,taxi,12.692927303288899,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_MALE_NORTH,H02,9,walk,10.931331259788394,True,475 m straight line,0.0,0.0
+T_MALE_NORTH,H02,9,bus,,False,no bus data,0.0,0.0
+T_MALE_NORTH,H02,9,taxi,12.692927303288899,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_MALE_NORTH,H02,10,walk,10.931331259788394,True,475 m straight line,0.0,0.0
+T_MALE_NORTH,H02,10,bus,,False,no bus data,0.0,0.0
+T_MALE_NORTH,H02,10,taxi,12.692927303288899,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_MALE_NORTH,H02,11,walk,10.931331259788394,True,475 m straight line,0.0,0.0
+T_MALE_NORTH,H02,11,bus,,False,no bus data,0.0,0.0
+T_MALE_NORTH,H02,11,taxi,12.692927303288899,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_MALE_NORTH,H02,12,walk,10.931331259788394,True,475 m straight line,0.0,0.0
+T_MALE_NORTH,H02,12,bus,,False,no bus data,0.0,0.0
+T_MALE_NORTH,H02,12,taxi,12.692927303288899,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_MALE_NORTH,H02,13,walk,10.931331259788394,True,475 m straight line,0.0,0.0
+T_MALE_NORTH,H02,13,bus,,False,no bus data,0.0,0.0
+T_MALE_NORTH,H02,13,taxi,12.692927303288899,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_MALE_NORTH,H02,14,walk,10.931331259788394,True,475 m straight line,0.0,0.0
+T_MALE_NORTH,H02,14,bus,,False,no bus data,0.0,0.0
+T_MALE_NORTH,H02,14,taxi,12.692927303288899,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_MALE_NORTH,H02,15,walk,10.931331259788394,True,475 m straight line,0.0,0.0
+T_MALE_NORTH,H02,15,bus,,False,no bus data,0.0,0.0
+T_MALE_NORTH,H02,15,taxi,12.692927303288899,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_MALE_NORTH,H02,16,walk,10.931331259788394,True,475 m straight line,0.0,0.0
+T_MALE_NORTH,H02,16,bus,,False,no bus data,0.0,0.0
+T_MALE_NORTH,H02,16,taxi,12.692927303288899,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_MALE_NORTH,H02,17,walk,10.931331259788394,True,475 m straight line,0.0,0.0
+T_MALE_NORTH,H02,17,bus,,False,no bus data,0.0,0.0
+T_MALE_NORTH,H02,17,taxi,12.692927303288899,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_MALE_NORTH,H02,18,walk,10.931331259788394,True,475 m straight line,0.0,0.0
+T_MALE_NORTH,H02,18,bus,,False,no bus data,0.0,0.0
+T_MALE_NORTH,H02,18,taxi,12.692927303288899,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_MALE_NORTH,H02,19,walk,10.931331259788394,True,475 m straight line,0.0,0.0
+T_MALE_NORTH,H02,19,bus,,False,no bus data,0.0,0.0
+T_MALE_NORTH,H02,19,taxi,12.692927303288899,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_MALE_NORTH,H02,20,walk,10.931331259788394,True,475 m straight line,0.0,0.0
+T_MALE_NORTH,H02,20,bus,,False,no bus data,0.0,0.0
+T_MALE_NORTH,H02,20,taxi,12.692927303288899,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_MALE_NORTH,H02,21,walk,10.931331259788394,True,475 m straight line,0.0,0.0
+T_MALE_NORTH,H02,21,bus,,False,no bus data,0.0,0.0
+T_MALE_NORTH,H02,21,taxi,12.692927303288899,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_MALE_NORTH,H02,22,walk,10.931331259788394,True,475 m straight line,0.0,0.0
+T_MALE_NORTH,H02,22,bus,,False,no bus data,0.0,0.0
+T_MALE_NORTH,H02,22,taxi,12.692927303288899,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_MALE_NORTH,H02,23,walk,10.931331259788394,True,475 m straight line,0.0,0.0
+T_MALE_NORTH,H02,23,bus,,False,no bus data,0.0,0.0
+T_MALE_NORTH,H02,23,taxi,12.692927303288899,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_MALE_NORTH,H03,0,walk,15.749345043986342,True,860 m straight line,0.0,0.0
+T_MALE_NORTH,H03,0,bus,,False,no bus data,0.0,0.0
+T_MALE_NORTH,H03,0,taxi,14.31177993477941,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_MALE_NORTH,H03,1,walk,15.749345043986342,True,860 m straight line,0.0,0.0
+T_MALE_NORTH,H03,1,bus,,False,no bus data,0.0,0.0
+T_MALE_NORTH,H03,1,taxi,14.31177993477941,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_MALE_NORTH,H03,2,walk,15.749345043986342,True,860 m straight line,0.0,0.0
+T_MALE_NORTH,H03,2,bus,,False,no bus data,0.0,0.0
+T_MALE_NORTH,H03,2,taxi,14.31177993477941,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_MALE_NORTH,H03,3,walk,15.749345043986342,True,860 m straight line,0.0,0.0
+T_MALE_NORTH,H03,3,bus,,False,no bus data,0.0,0.0
+T_MALE_NORTH,H03,3,taxi,14.31177993477941,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_MALE_NORTH,H03,4,walk,15.749345043986342,True,860 m straight line,0.0,0.0
+T_MALE_NORTH,H03,4,bus,,False,no bus data,0.0,0.0
+T_MALE_NORTH,H03,4,taxi,14.31177993477941,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_MALE_NORTH,H03,5,walk,15.749345043986342,True,860 m straight line,0.0,0.0
+T_MALE_NORTH,H03,5,bus,,False,no bus data,0.0,0.0
+T_MALE_NORTH,H03,5,taxi,14.31177993477941,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_MALE_NORTH,H03,6,walk,15.749345043986342,True,860 m straight line,0.0,0.0
+T_MALE_NORTH,H03,6,bus,,False,no bus data,0.0,0.0
+T_MALE_NORTH,H03,6,taxi,14.31177993477941,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_MALE_NORTH,H03,7,walk,15.749345043986342,True,860 m straight line,0.0,0.0
+T_MALE_NORTH,H03,7,bus,,False,no bus data,0.0,0.0
+T_MALE_NORTH,H03,7,taxi,14.31177993477941,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_MALE_NORTH,H03,8,walk,15.749345043986342,True,860 m straight line,0.0,0.0
+T_MALE_NORTH,H03,8,bus,,False,no bus data,0.0,0.0
+T_MALE_NORTH,H03,8,taxi,14.31177993477941,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_MALE_NORTH,H03,9,walk,15.749345043986342,True,860 m straight line,0.0,0.0
+T_MALE_NORTH,H03,9,bus,,False,no bus data,0.0,0.0
+T_MALE_NORTH,H03,9,taxi,14.31177993477941,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_MALE_NORTH,H03,10,walk,15.749345043986342,True,860 m straight line,0.0,0.0
+T_MALE_NORTH,H03,10,bus,,False,no bus data,0.0,0.0
+T_MALE_NORTH,H03,10,taxi,14.31177993477941,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_MALE_NORTH,H03,11,walk,15.749345043986342,True,860 m straight line,0.0,0.0
+T_MALE_NORTH,H03,11,bus,,False,no bus data,0.0,0.0
+T_MALE_NORTH,H03,11,taxi,14.31177993477941,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_MALE_NORTH,H03,12,walk,15.749345043986342,True,860 m straight line,0.0,0.0
+T_MALE_NORTH,H03,12,bus,,False,no bus data,0.0,0.0
+T_MALE_NORTH,H03,12,taxi,14.31177993477941,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_MALE_NORTH,H03,13,walk,15.749345043986342,True,860 m straight line,0.0,0.0
+T_MALE_NORTH,H03,13,bus,,False,no bus data,0.0,0.0
+T_MALE_NORTH,H03,13,taxi,14.31177993477941,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_MALE_NORTH,H03,14,walk,15.749345043986342,True,860 m straight line,0.0,0.0
+T_MALE_NORTH,H03,14,bus,,False,no bus data,0.0,0.0
+T_MALE_NORTH,H03,14,taxi,14.31177993477941,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_MALE_NORTH,H03,15,walk,15.749345043986342,True,860 m straight line,0.0,0.0
+T_MALE_NORTH,H03,15,bus,,False,no bus data,0.0,0.0
+T_MALE_NORTH,H03,15,taxi,14.31177993477941,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_MALE_NORTH,H03,16,walk,15.749345043986342,True,860 m straight line,0.0,0.0
+T_MALE_NORTH,H03,16,bus,,False,no bus data,0.0,0.0
+T_MALE_NORTH,H03,16,taxi,14.31177993477941,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_MALE_NORTH,H03,17,walk,15.749345043986342,True,860 m straight line,0.0,0.0
+T_MALE_NORTH,H03,17,bus,,False,no bus data,0.0,0.0
+T_MALE_NORTH,H03,17,taxi,14.31177993477941,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_MALE_NORTH,H03,18,walk,15.749345043986342,True,860 m straight line,0.0,0.0
+T_MALE_NORTH,H03,18,bus,,False,no bus data,0.0,0.0
+T_MALE_NORTH,H03,18,taxi,14.31177993477941,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_MALE_NORTH,H03,19,walk,15.749345043986342,True,860 m straight line,0.0,0.0
+T_MALE_NORTH,H03,19,bus,,False,no bus data,0.0,0.0
+T_MALE_NORTH,H03,19,taxi,14.31177993477941,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_MALE_NORTH,H03,20,walk,15.749345043986342,True,860 m straight line,0.0,0.0
+T_MALE_NORTH,H03,20,bus,,False,no bus data,0.0,0.0
+T_MALE_NORTH,H03,20,taxi,14.31177993477941,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_MALE_NORTH,H03,21,walk,15.749345043986342,True,860 m straight line,0.0,0.0
+T_MALE_NORTH,H03,21,bus,,False,no bus data,0.0,0.0
+T_MALE_NORTH,H03,21,taxi,14.31177993477941,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_MALE_NORTH,H03,22,walk,15.749345043986342,True,860 m straight line,0.0,0.0
+T_MALE_NORTH,H03,22,bus,,False,no bus data,0.0,0.0
+T_MALE_NORTH,H03,22,taxi,14.31177993477941,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_MALE_NORTH,H03,23,walk,15.749345043986342,True,860 m straight line,0.0,0.0
+T_MALE_NORTH,H03,23,bus,,False,no bus data,0.0,0.0
+T_MALE_NORTH,H03,23,taxi,14.31177993477941,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_MALE_NORTH,H04,0,walk,70.8537482514591,False,different island,0.0,0.0
+T_MALE_NORTH,H04,0,bus,,False,no bus data,0.0,0.0
+T_MALE_NORTH,H04,0,taxi,32.82685941249025,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_MALE_NORTH,H04,1,walk,70.8537482514591,False,different island,0.0,0.0
+T_MALE_NORTH,H04,1,bus,,False,no bus data,0.0,0.0
+T_MALE_NORTH,H04,1,taxi,32.82685941249025,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_MALE_NORTH,H04,2,walk,70.8537482514591,False,different island,0.0,0.0
+T_MALE_NORTH,H04,2,bus,,False,no bus data,0.0,0.0
+T_MALE_NORTH,H04,2,taxi,32.82685941249025,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_MALE_NORTH,H04,3,walk,70.8537482514591,False,different island,0.0,0.0
+T_MALE_NORTH,H04,3,bus,,False,no bus data,0.0,0.0
+T_MALE_NORTH,H04,3,taxi,32.82685941249025,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_MALE_NORTH,H04,4,walk,70.8537482514591,False,different island,0.0,0.0
+T_MALE_NORTH,H04,4,bus,,False,no bus data,0.0,0.0
+T_MALE_NORTH,H04,4,taxi,32.82685941249025,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_MALE_NORTH,H04,5,walk,70.8537482514591,False,different island,0.0,0.0
+T_MALE_NORTH,H04,5,bus,,False,no bus data,0.0,0.0
+T_MALE_NORTH,H04,5,taxi,32.82685941249025,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_MALE_NORTH,H04,6,walk,70.8537482514591,False,different island,0.0,0.0
+T_MALE_NORTH,H04,6,bus,,False,no bus data,0.0,0.0
+T_MALE_NORTH,H04,6,taxi,32.82685941249025,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_MALE_NORTH,H04,7,walk,70.8537482514591,False,different island,0.0,0.0
+T_MALE_NORTH,H04,7,bus,,False,no bus data,0.0,0.0
+T_MALE_NORTH,H04,7,taxi,32.82685941249025,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_MALE_NORTH,H04,8,walk,70.8537482514591,False,different island,0.0,0.0
+T_MALE_NORTH,H04,8,bus,,False,no bus data,0.0,0.0
+T_MALE_NORTH,H04,8,taxi,32.82685941249025,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_MALE_NORTH,H04,9,walk,70.8537482514591,False,different island,0.0,0.0
+T_MALE_NORTH,H04,9,bus,,False,no bus data,0.0,0.0
+T_MALE_NORTH,H04,9,taxi,32.82685941249025,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_MALE_NORTH,H04,10,walk,70.8537482514591,False,different island,0.0,0.0
+T_MALE_NORTH,H04,10,bus,,False,no bus data,0.0,0.0
+T_MALE_NORTH,H04,10,taxi,32.82685941249025,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_MALE_NORTH,H04,11,walk,70.8537482514591,False,different island,0.0,0.0
+T_MALE_NORTH,H04,11,bus,,False,no bus data,0.0,0.0
+T_MALE_NORTH,H04,11,taxi,32.82685941249025,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_MALE_NORTH,H04,12,walk,70.8537482514591,False,different island,0.0,0.0
+T_MALE_NORTH,H04,12,bus,,False,no bus data,0.0,0.0
+T_MALE_NORTH,H04,12,taxi,32.82685941249025,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_MALE_NORTH,H04,13,walk,70.8537482514591,False,different island,0.0,0.0
+T_MALE_NORTH,H04,13,bus,,False,no bus data,0.0,0.0
+T_MALE_NORTH,H04,13,taxi,32.82685941249025,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_MALE_NORTH,H04,14,walk,70.8537482514591,False,different island,0.0,0.0
+T_MALE_NORTH,H04,14,bus,,False,no bus data,0.0,0.0
+T_MALE_NORTH,H04,14,taxi,32.82685941249025,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_MALE_NORTH,H04,15,walk,70.8537482514591,False,different island,0.0,0.0
+T_MALE_NORTH,H04,15,bus,,False,no bus data,0.0,0.0
+T_MALE_NORTH,H04,15,taxi,32.82685941249025,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_MALE_NORTH,H04,16,walk,70.8537482514591,False,different island,0.0,0.0
+T_MALE_NORTH,H04,16,bus,,False,no bus data,0.0,0.0
+T_MALE_NORTH,H04,16,taxi,32.82685941249025,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_MALE_NORTH,H04,17,walk,70.8537482514591,False,different island,0.0,0.0
+T_MALE_NORTH,H04,17,bus,,False,no bus data,0.0,0.0
+T_MALE_NORTH,H04,17,taxi,32.82685941249025,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_MALE_NORTH,H04,18,walk,70.8537482514591,False,different island,0.0,0.0
+T_MALE_NORTH,H04,18,bus,,False,no bus data,0.0,0.0
+T_MALE_NORTH,H04,18,taxi,32.82685941249025,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_MALE_NORTH,H04,19,walk,70.8537482514591,False,different island,0.0,0.0
+T_MALE_NORTH,H04,19,bus,,False,no bus data,0.0,0.0
+T_MALE_NORTH,H04,19,taxi,32.82685941249025,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_MALE_NORTH,H04,20,walk,70.8537482514591,False,different island,0.0,0.0
+T_MALE_NORTH,H04,20,bus,,False,no bus data,0.0,0.0
+T_MALE_NORTH,H04,20,taxi,32.82685941249025,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_MALE_NORTH,H04,21,walk,70.8537482514591,False,different island,0.0,0.0
+T_MALE_NORTH,H04,21,bus,,False,no bus data,0.0,0.0
+T_MALE_NORTH,H04,21,taxi,32.82685941249025,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_MALE_NORTH,H04,22,walk,70.8537482514591,False,different island,0.0,0.0
+T_MALE_NORTH,H04,22,bus,,False,no bus data,0.0,0.0
+T_MALE_NORTH,H04,22,taxi,32.82685941249025,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_MALE_NORTH,H04,23,walk,70.8537482514591,False,different island,0.0,0.0
+T_MALE_NORTH,H04,23,bus,,False,no bus data,0.0,0.0
+T_MALE_NORTH,H04,23,taxi,32.82685941249025,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_MALE_NORTH,H05,0,walk,63.75977637811959,False,different island,0.0,0.0
+T_MALE_NORTH,H05,0,bus,,False,no bus data,0.0,0.0
+T_MALE_NORTH,H05,0,taxi,30.44328486304818,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_MALE_NORTH,H05,1,walk,63.75977637811959,False,different island,0.0,0.0
+T_MALE_NORTH,H05,1,bus,,False,no bus data,0.0,0.0
+T_MALE_NORTH,H05,1,taxi,30.44328486304818,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_MALE_NORTH,H05,2,walk,63.75977637811959,False,different island,0.0,0.0
+T_MALE_NORTH,H05,2,bus,,False,no bus data,0.0,0.0
+T_MALE_NORTH,H05,2,taxi,30.44328486304818,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_MALE_NORTH,H05,3,walk,63.75977637811959,False,different island,0.0,0.0
+T_MALE_NORTH,H05,3,bus,,False,no bus data,0.0,0.0
+T_MALE_NORTH,H05,3,taxi,30.44328486304818,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_MALE_NORTH,H05,4,walk,63.75977637811959,False,different island,0.0,0.0
+T_MALE_NORTH,H05,4,bus,,False,no bus data,0.0,0.0
+T_MALE_NORTH,H05,4,taxi,30.44328486304818,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_MALE_NORTH,H05,5,walk,63.75977637811959,False,different island,0.0,0.0
+T_MALE_NORTH,H05,5,bus,,False,no bus data,0.0,0.0
+T_MALE_NORTH,H05,5,taxi,30.44328486304818,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_MALE_NORTH,H05,6,walk,63.75977637811959,False,different island,0.0,0.0
+T_MALE_NORTH,H05,6,bus,,False,no bus data,0.0,0.0
+T_MALE_NORTH,H05,6,taxi,30.44328486304818,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_MALE_NORTH,H05,7,walk,63.75977637811959,False,different island,0.0,0.0
+T_MALE_NORTH,H05,7,bus,,False,no bus data,0.0,0.0
+T_MALE_NORTH,H05,7,taxi,30.44328486304818,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_MALE_NORTH,H05,8,walk,63.75977637811959,False,different island,0.0,0.0
+T_MALE_NORTH,H05,8,bus,,False,no bus data,0.0,0.0
+T_MALE_NORTH,H05,8,taxi,30.44328486304818,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_MALE_NORTH,H05,9,walk,63.75977637811959,False,different island,0.0,0.0
+T_MALE_NORTH,H05,9,bus,,False,no bus data,0.0,0.0
+T_MALE_NORTH,H05,9,taxi,30.44328486304818,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_MALE_NORTH,H05,10,walk,63.75977637811959,False,different island,0.0,0.0
+T_MALE_NORTH,H05,10,bus,,False,no bus data,0.0,0.0
+T_MALE_NORTH,H05,10,taxi,30.44328486304818,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_MALE_NORTH,H05,11,walk,63.75977637811959,False,different island,0.0,0.0
+T_MALE_NORTH,H05,11,bus,,False,no bus data,0.0,0.0
+T_MALE_NORTH,H05,11,taxi,30.44328486304818,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_MALE_NORTH,H05,12,walk,63.75977637811959,False,different island,0.0,0.0
+T_MALE_NORTH,H05,12,bus,,False,no bus data,0.0,0.0
+T_MALE_NORTH,H05,12,taxi,30.44328486304818,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_MALE_NORTH,H05,13,walk,63.75977637811959,False,different island,0.0,0.0
+T_MALE_NORTH,H05,13,bus,,False,no bus data,0.0,0.0
+T_MALE_NORTH,H05,13,taxi,30.44328486304818,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_MALE_NORTH,H05,14,walk,63.75977637811959,False,different island,0.0,0.0
+T_MALE_NORTH,H05,14,bus,,False,no bus data,0.0,0.0
+T_MALE_NORTH,H05,14,taxi,30.44328486304818,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_MALE_NORTH,H05,15,walk,63.75977637811959,False,different island,0.0,0.0
+T_MALE_NORTH,H05,15,bus,,False,no bus data,0.0,0.0
+T_MALE_NORTH,H05,15,taxi,30.44328486304818,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_MALE_NORTH,H05,16,walk,63.75977637811959,False,different island,0.0,0.0
+T_MALE_NORTH,H05,16,bus,,False,no bus data,0.0,0.0
+T_MALE_NORTH,H05,16,taxi,30.44328486304818,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_MALE_NORTH,H05,17,walk,63.75977637811959,False,different island,0.0,0.0
+T_MALE_NORTH,H05,17,bus,,False,no bus data,0.0,0.0
+T_MALE_NORTH,H05,17,taxi,30.44328486304818,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_MALE_NORTH,H05,18,walk,63.75977637811959,False,different island,0.0,0.0
+T_MALE_NORTH,H05,18,bus,,False,no bus data,0.0,0.0
+T_MALE_NORTH,H05,18,taxi,30.44328486304818,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_MALE_NORTH,H05,19,walk,63.75977637811959,False,different island,0.0,0.0
+T_MALE_NORTH,H05,19,bus,,False,no bus data,0.0,0.0
+T_MALE_NORTH,H05,19,taxi,30.44328486304818,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_MALE_NORTH,H05,20,walk,63.75977637811959,False,different island,0.0,0.0
+T_MALE_NORTH,H05,20,bus,,False,no bus data,0.0,0.0
+T_MALE_NORTH,H05,20,taxi,30.44328486304818,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_MALE_NORTH,H05,21,walk,63.75977637811959,False,different island,0.0,0.0
+T_MALE_NORTH,H05,21,bus,,False,no bus data,0.0,0.0
+T_MALE_NORTH,H05,21,taxi,30.44328486304818,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_MALE_NORTH,H05,22,walk,63.75977637811959,False,different island,0.0,0.0
+T_MALE_NORTH,H05,22,bus,,False,no bus data,0.0,0.0
+T_MALE_NORTH,H05,22,taxi,30.44328486304818,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_MALE_NORTH,H05,23,walk,63.75977637811959,False,different island,0.0,0.0
+T_MALE_NORTH,H05,23,bus,,False,no bus data,0.0,0.0
+T_MALE_NORTH,H05,23,taxi,30.44328486304818,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_MALE_NORTH,H06,0,walk,43.932828247177845,False,different island,0.0,0.0
+T_MALE_NORTH,H06,0,bus,,False,no bus data,0.0,0.0
+T_MALE_NORTH,H06,0,taxi,,False,no road link,0.0,0.0
+T_MALE_NORTH,H06,1,walk,43.932828247177845,False,different island,0.0,0.0
+T_MALE_NORTH,H06,1,bus,,False,no bus data,0.0,0.0
+T_MALE_NORTH,H06,1,taxi,,False,no road link,0.0,0.0
+T_MALE_NORTH,H06,2,walk,43.932828247177845,False,different island,0.0,0.0
+T_MALE_NORTH,H06,2,bus,,False,no bus data,0.0,0.0
+T_MALE_NORTH,H06,2,taxi,,False,no road link,0.0,0.0
+T_MALE_NORTH,H06,3,walk,43.932828247177845,False,different island,0.0,0.0
+T_MALE_NORTH,H06,3,bus,,False,no bus data,0.0,0.0
+T_MALE_NORTH,H06,3,taxi,,False,no road link,0.0,0.0
+T_MALE_NORTH,H06,4,walk,43.932828247177845,False,different island,0.0,0.0
+T_MALE_NORTH,H06,4,bus,,False,no bus data,0.0,0.0
+T_MALE_NORTH,H06,4,taxi,,False,no road link,0.0,0.0
+T_MALE_NORTH,H06,5,walk,43.932828247177845,False,different island,0.0,0.0
+T_MALE_NORTH,H06,5,bus,,False,no bus data,0.0,0.0
+T_MALE_NORTH,H06,5,taxi,,False,no road link,0.0,0.0
+T_MALE_NORTH,H06,6,walk,43.932828247177845,False,different island,0.0,0.0
+T_MALE_NORTH,H06,6,bus,,False,no bus data,0.0,0.0
+T_MALE_NORTH,H06,6,taxi,,False,no road link,0.0,0.0
+T_MALE_NORTH,H06,7,walk,43.932828247177845,False,different island,0.0,0.0
+T_MALE_NORTH,H06,7,bus,,False,no bus data,0.0,0.0
+T_MALE_NORTH,H06,7,taxi,,False,no road link,0.0,0.0
+T_MALE_NORTH,H06,8,walk,43.932828247177845,False,different island,0.0,0.0
+T_MALE_NORTH,H06,8,bus,,False,no bus data,0.0,0.0
+T_MALE_NORTH,H06,8,taxi,,False,no road link,0.0,0.0
+T_MALE_NORTH,H06,9,walk,43.932828247177845,False,different island,0.0,0.0
+T_MALE_NORTH,H06,9,bus,,False,no bus data,0.0,0.0
+T_MALE_NORTH,H06,9,taxi,,False,no road link,0.0,0.0
+T_MALE_NORTH,H06,10,walk,43.932828247177845,False,different island,0.0,0.0
+T_MALE_NORTH,H06,10,bus,,False,no bus data,0.0,0.0
+T_MALE_NORTH,H06,10,taxi,,False,no road link,0.0,0.0
+T_MALE_NORTH,H06,11,walk,43.932828247177845,False,different island,0.0,0.0
+T_MALE_NORTH,H06,11,bus,,False,no bus data,0.0,0.0
+T_MALE_NORTH,H06,11,taxi,,False,no road link,0.0,0.0
+T_MALE_NORTH,H06,12,walk,43.932828247177845,False,different island,0.0,0.0
+T_MALE_NORTH,H06,12,bus,,False,no bus data,0.0,0.0
+T_MALE_NORTH,H06,12,taxi,,False,no road link,0.0,0.0
+T_MALE_NORTH,H06,13,walk,43.932828247177845,False,different island,0.0,0.0
+T_MALE_NORTH,H06,13,bus,,False,no bus data,0.0,0.0
+T_MALE_NORTH,H06,13,taxi,,False,no road link,0.0,0.0
+T_MALE_NORTH,H06,14,walk,43.932828247177845,False,different island,0.0,0.0
+T_MALE_NORTH,H06,14,bus,,False,no bus data,0.0,0.0
+T_MALE_NORTH,H06,14,taxi,,False,no road link,0.0,0.0
+T_MALE_NORTH,H06,15,walk,43.932828247177845,False,different island,0.0,0.0
+T_MALE_NORTH,H06,15,bus,,False,no bus data,0.0,0.0
+T_MALE_NORTH,H06,15,taxi,,False,no road link,0.0,0.0
+T_MALE_NORTH,H06,16,walk,43.932828247177845,False,different island,0.0,0.0
+T_MALE_NORTH,H06,16,bus,,False,no bus data,0.0,0.0
+T_MALE_NORTH,H06,16,taxi,,False,no road link,0.0,0.0
+T_MALE_NORTH,H06,17,walk,43.932828247177845,False,different island,0.0,0.0
+T_MALE_NORTH,H06,17,bus,,False,no bus data,0.0,0.0
+T_MALE_NORTH,H06,17,taxi,,False,no road link,0.0,0.0
+T_MALE_NORTH,H06,18,walk,43.932828247177845,False,different island,0.0,0.0
+T_MALE_NORTH,H06,18,bus,,False,no bus data,0.0,0.0
+T_MALE_NORTH,H06,18,taxi,,False,no road link,0.0,0.0
+T_MALE_NORTH,H06,19,walk,43.932828247177845,False,different island,0.0,0.0
+T_MALE_NORTH,H06,19,bus,,False,no bus data,0.0,0.0
+T_MALE_NORTH,H06,19,taxi,,False,no road link,0.0,0.0
+T_MALE_NORTH,H06,20,walk,43.932828247177845,False,different island,0.0,0.0
+T_MALE_NORTH,H06,20,bus,,False,no bus data,0.0,0.0
+T_MALE_NORTH,H06,20,taxi,,False,no road link,0.0,0.0
+T_MALE_NORTH,H06,21,walk,43.932828247177845,False,different island,0.0,0.0
+T_MALE_NORTH,H06,21,bus,,False,no bus data,0.0,0.0
+T_MALE_NORTH,H06,21,taxi,,False,no road link,0.0,0.0
+T_MALE_NORTH,H06,22,walk,43.932828247177845,False,different island,0.0,0.0
+T_MALE_NORTH,H06,22,bus,,False,no bus data,0.0,0.0
+T_MALE_NORTH,H06,22,taxi,,False,no road link,0.0,0.0
+T_MALE_NORTH,H06,23,walk,43.932828247177845,False,different island,0.0,0.0
+T_MALE_NORTH,H06,23,bus,,False,no bus data,0.0,0.0
+T_MALE_NORTH,H06,23,taxi,,False,no road link,0.0,0.0
+T_MALE_WEST,H01,0,walk,6.611480758057851,True,129 m straight line,0.0,0.0
+T_MALE_WEST,H01,0,bus,,False,no bus data,0.0,0.0
+T_MALE_WEST,H01,0,taxi,11.241457534707438,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_MALE_WEST,H01,1,walk,6.611480758057851,True,129 m straight line,0.0,0.0
+T_MALE_WEST,H01,1,bus,,False,no bus data,0.0,0.0
+T_MALE_WEST,H01,1,taxi,11.241457534707438,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_MALE_WEST,H01,2,walk,6.611480758057851,True,129 m straight line,0.0,0.0
+T_MALE_WEST,H01,2,bus,,False,no bus data,0.0,0.0
+T_MALE_WEST,H01,2,taxi,11.241457534707438,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_MALE_WEST,H01,3,walk,6.611480758057851,True,129 m straight line,0.0,0.0
+T_MALE_WEST,H01,3,bus,,False,no bus data,0.0,0.0
+T_MALE_WEST,H01,3,taxi,11.241457534707438,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_MALE_WEST,H01,4,walk,6.611480758057851,True,129 m straight line,0.0,0.0
+T_MALE_WEST,H01,4,bus,,False,no bus data,0.0,0.0
+T_MALE_WEST,H01,4,taxi,11.241457534707438,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_MALE_WEST,H01,5,walk,6.611480758057851,True,129 m straight line,0.0,0.0
+T_MALE_WEST,H01,5,bus,,False,no bus data,0.0,0.0
+T_MALE_WEST,H01,5,taxi,11.241457534707438,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_MALE_WEST,H01,6,walk,6.611480758057851,True,129 m straight line,0.0,0.0
+T_MALE_WEST,H01,6,bus,,False,no bus data,0.0,0.0
+T_MALE_WEST,H01,6,taxi,11.241457534707438,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_MALE_WEST,H01,7,walk,6.611480758057851,True,129 m straight line,0.0,0.0
+T_MALE_WEST,H01,7,bus,,False,no bus data,0.0,0.0
+T_MALE_WEST,H01,7,taxi,11.241457534707438,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_MALE_WEST,H01,8,walk,6.611480758057851,True,129 m straight line,0.0,0.0
+T_MALE_WEST,H01,8,bus,,False,no bus data,0.0,0.0
+T_MALE_WEST,H01,8,taxi,11.241457534707438,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_MALE_WEST,H01,9,walk,6.611480758057851,True,129 m straight line,0.0,0.0
+T_MALE_WEST,H01,9,bus,,False,no bus data,0.0,0.0
+T_MALE_WEST,H01,9,taxi,11.241457534707438,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_MALE_WEST,H01,10,walk,6.611480758057851,True,129 m straight line,0.0,0.0
+T_MALE_WEST,H01,10,bus,,False,no bus data,0.0,0.0
+T_MALE_WEST,H01,10,taxi,11.241457534707438,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_MALE_WEST,H01,11,walk,6.611480758057851,True,129 m straight line,0.0,0.0
+T_MALE_WEST,H01,11,bus,,False,no bus data,0.0,0.0
+T_MALE_WEST,H01,11,taxi,11.241457534707438,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_MALE_WEST,H01,12,walk,6.611480758057851,True,129 m straight line,0.0,0.0
+T_MALE_WEST,H01,12,bus,,False,no bus data,0.0,0.0
+T_MALE_WEST,H01,12,taxi,11.241457534707438,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_MALE_WEST,H01,13,walk,6.611480758057851,True,129 m straight line,0.0,0.0
+T_MALE_WEST,H01,13,bus,,False,no bus data,0.0,0.0
+T_MALE_WEST,H01,13,taxi,11.241457534707438,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_MALE_WEST,H01,14,walk,6.611480758057851,True,129 m straight line,0.0,0.0
+T_MALE_WEST,H01,14,bus,,False,no bus data,0.0,0.0
+T_MALE_WEST,H01,14,taxi,11.241457534707438,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_MALE_WEST,H01,15,walk,6.611480758057851,True,129 m straight line,0.0,0.0
+T_MALE_WEST,H01,15,bus,,False,no bus data,0.0,0.0
+T_MALE_WEST,H01,15,taxi,11.241457534707438,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_MALE_WEST,H01,16,walk,6.611480758057851,True,129 m straight line,0.0,0.0
+T_MALE_WEST,H01,16,bus,,False,no bus data,0.0,0.0
+T_MALE_WEST,H01,16,taxi,11.241457534707438,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_MALE_WEST,H01,17,walk,6.611480758057851,True,129 m straight line,0.0,0.0
+T_MALE_WEST,H01,17,bus,,False,no bus data,0.0,0.0
+T_MALE_WEST,H01,17,taxi,11.241457534707438,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_MALE_WEST,H01,18,walk,6.611480758057851,True,129 m straight line,0.0,0.0
+T_MALE_WEST,H01,18,bus,,False,no bus data,0.0,0.0
+T_MALE_WEST,H01,18,taxi,11.241457534707438,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_MALE_WEST,H01,19,walk,6.611480758057851,True,129 m straight line,0.0,0.0
+T_MALE_WEST,H01,19,bus,,False,no bus data,0.0,0.0
+T_MALE_WEST,H01,19,taxi,11.241457534707438,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_MALE_WEST,H01,20,walk,6.611480758057851,True,129 m straight line,0.0,0.0
+T_MALE_WEST,H01,20,bus,,False,no bus data,0.0,0.0
+T_MALE_WEST,H01,20,taxi,11.241457534707438,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_MALE_WEST,H01,21,walk,6.611480758057851,True,129 m straight line,0.0,0.0
+T_MALE_WEST,H01,21,bus,,False,no bus data,0.0,0.0
+T_MALE_WEST,H01,21,taxi,11.241457534707438,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_MALE_WEST,H01,22,walk,6.611480758057851,True,129 m straight line,0.0,0.0
+T_MALE_WEST,H01,22,bus,,False,no bus data,0.0,0.0
+T_MALE_WEST,H01,22,taxi,11.241457534707438,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_MALE_WEST,H01,23,walk,6.611480758057851,True,129 m straight line,0.0,0.0
+T_MALE_WEST,H01,23,bus,,False,no bus data,0.0,0.0
+T_MALE_WEST,H01,23,taxi,11.241457534707438,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_MALE_WEST,H02,0,walk,23.69518826761715,True,1496 m straight line,0.0,0.0
+T_MALE_WEST,H02,0,bus,,False,no bus data,0.0,0.0
+T_MALE_WEST,H02,0,taxi,16.98158325791936,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_MALE_WEST,H02,1,walk,23.69518826761715,True,1496 m straight line,0.0,0.0
+T_MALE_WEST,H02,1,bus,,False,no bus data,0.0,0.0
+T_MALE_WEST,H02,1,taxi,16.98158325791936,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_MALE_WEST,H02,2,walk,23.69518826761715,True,1496 m straight line,0.0,0.0
+T_MALE_WEST,H02,2,bus,,False,no bus data,0.0,0.0
+T_MALE_WEST,H02,2,taxi,16.98158325791936,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_MALE_WEST,H02,3,walk,23.69518826761715,True,1496 m straight line,0.0,0.0
+T_MALE_WEST,H02,3,bus,,False,no bus data,0.0,0.0
+T_MALE_WEST,H02,3,taxi,16.98158325791936,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_MALE_WEST,H02,4,walk,23.69518826761715,True,1496 m straight line,0.0,0.0
+T_MALE_WEST,H02,4,bus,,False,no bus data,0.0,0.0
+T_MALE_WEST,H02,4,taxi,16.98158325791936,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_MALE_WEST,H02,5,walk,23.69518826761715,True,1496 m straight line,0.0,0.0
+T_MALE_WEST,H02,5,bus,,False,no bus data,0.0,0.0
+T_MALE_WEST,H02,5,taxi,16.98158325791936,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_MALE_WEST,H02,6,walk,23.69518826761715,True,1496 m straight line,0.0,0.0
+T_MALE_WEST,H02,6,bus,,False,no bus data,0.0,0.0
+T_MALE_WEST,H02,6,taxi,16.98158325791936,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_MALE_WEST,H02,7,walk,23.69518826761715,True,1496 m straight line,0.0,0.0
+T_MALE_WEST,H02,7,bus,,False,no bus data,0.0,0.0
+T_MALE_WEST,H02,7,taxi,16.98158325791936,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_MALE_WEST,H02,8,walk,23.69518826761715,True,1496 m straight line,0.0,0.0
+T_MALE_WEST,H02,8,bus,,False,no bus data,0.0,0.0
+T_MALE_WEST,H02,8,taxi,16.98158325791936,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_MALE_WEST,H02,9,walk,23.69518826761715,True,1496 m straight line,0.0,0.0
+T_MALE_WEST,H02,9,bus,,False,no bus data,0.0,0.0
+T_MALE_WEST,H02,9,taxi,16.98158325791936,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_MALE_WEST,H02,10,walk,23.69518826761715,True,1496 m straight line,0.0,0.0
+T_MALE_WEST,H02,10,bus,,False,no bus data,0.0,0.0
+T_MALE_WEST,H02,10,taxi,16.98158325791936,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_MALE_WEST,H02,11,walk,23.69518826761715,True,1496 m straight line,0.0,0.0
+T_MALE_WEST,H02,11,bus,,False,no bus data,0.0,0.0
+T_MALE_WEST,H02,11,taxi,16.98158325791936,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_MALE_WEST,H02,12,walk,23.69518826761715,True,1496 m straight line,0.0,0.0
+T_MALE_WEST,H02,12,bus,,False,no bus data,0.0,0.0
+T_MALE_WEST,H02,12,taxi,16.98158325791936,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_MALE_WEST,H02,13,walk,23.69518826761715,True,1496 m straight line,0.0,0.0
+T_MALE_WEST,H02,13,bus,,False,no bus data,0.0,0.0
+T_MALE_WEST,H02,13,taxi,16.98158325791936,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_MALE_WEST,H02,14,walk,23.69518826761715,True,1496 m straight line,0.0,0.0
+T_MALE_WEST,H02,14,bus,,False,no bus data,0.0,0.0
+T_MALE_WEST,H02,14,taxi,16.98158325791936,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_MALE_WEST,H02,15,walk,23.69518826761715,True,1496 m straight line,0.0,0.0
+T_MALE_WEST,H02,15,bus,,False,no bus data,0.0,0.0
+T_MALE_WEST,H02,15,taxi,16.98158325791936,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_MALE_WEST,H02,16,walk,23.69518826761715,True,1496 m straight line,0.0,0.0
+T_MALE_WEST,H02,16,bus,,False,no bus data,0.0,0.0
+T_MALE_WEST,H02,16,taxi,16.98158325791936,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_MALE_WEST,H02,17,walk,23.69518826761715,True,1496 m straight line,0.0,0.0
+T_MALE_WEST,H02,17,bus,,False,no bus data,0.0,0.0
+T_MALE_WEST,H02,17,taxi,16.98158325791936,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_MALE_WEST,H02,18,walk,23.69518826761715,True,1496 m straight line,0.0,0.0
+T_MALE_WEST,H02,18,bus,,False,no bus data,0.0,0.0
+T_MALE_WEST,H02,18,taxi,16.98158325791936,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_MALE_WEST,H02,19,walk,23.69518826761715,True,1496 m straight line,0.0,0.0
+T_MALE_WEST,H02,19,bus,,False,no bus data,0.0,0.0
+T_MALE_WEST,H02,19,taxi,16.98158325791936,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_MALE_WEST,H02,20,walk,23.69518826761715,True,1496 m straight line,0.0,0.0
+T_MALE_WEST,H02,20,bus,,False,no bus data,0.0,0.0
+T_MALE_WEST,H02,20,taxi,16.98158325791936,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_MALE_WEST,H02,21,walk,23.69518826761715,True,1496 m straight line,0.0,0.0
+T_MALE_WEST,H02,21,bus,,False,no bus data,0.0,0.0
+T_MALE_WEST,H02,21,taxi,16.98158325791936,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_MALE_WEST,H02,22,walk,23.69518826761715,True,1496 m straight line,0.0,0.0
+T_MALE_WEST,H02,22,bus,,False,no bus data,0.0,0.0
+T_MALE_WEST,H02,22,taxi,16.98158325791936,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_MALE_WEST,H02,23,walk,23.69518826761715,True,1496 m straight line,0.0,0.0
+T_MALE_WEST,H02,23,bus,,False,no bus data,0.0,0.0
+T_MALE_WEST,H02,23,taxi,16.98158325791936,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_MALE_WEST,H03,0,walk,25.048198960250737,True,1604 m straight line,0.0,0.0
+T_MALE_WEST,H03,0,bus,,False,no bus data,0.0,0.0
+T_MALE_WEST,H03,0,taxi,17.43619485064425,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_MALE_WEST,H03,1,walk,25.048198960250737,True,1604 m straight line,0.0,0.0
+T_MALE_WEST,H03,1,bus,,False,no bus data,0.0,0.0
+T_MALE_WEST,H03,1,taxi,17.43619485064425,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_MALE_WEST,H03,2,walk,25.048198960250737,True,1604 m straight line,0.0,0.0
+T_MALE_WEST,H03,2,bus,,False,no bus data,0.0,0.0
+T_MALE_WEST,H03,2,taxi,17.43619485064425,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_MALE_WEST,H03,3,walk,25.048198960250737,True,1604 m straight line,0.0,0.0
+T_MALE_WEST,H03,3,bus,,False,no bus data,0.0,0.0
+T_MALE_WEST,H03,3,taxi,17.43619485064425,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_MALE_WEST,H03,4,walk,25.048198960250737,True,1604 m straight line,0.0,0.0
+T_MALE_WEST,H03,4,bus,,False,no bus data,0.0,0.0
+T_MALE_WEST,H03,4,taxi,17.43619485064425,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_MALE_WEST,H03,5,walk,25.048198960250737,True,1604 m straight line,0.0,0.0
+T_MALE_WEST,H03,5,bus,,False,no bus data,0.0,0.0
+T_MALE_WEST,H03,5,taxi,17.43619485064425,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_MALE_WEST,H03,6,walk,25.048198960250737,True,1604 m straight line,0.0,0.0
+T_MALE_WEST,H03,6,bus,,False,no bus data,0.0,0.0
+T_MALE_WEST,H03,6,taxi,17.43619485064425,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_MALE_WEST,H03,7,walk,25.048198960250737,True,1604 m straight line,0.0,0.0
+T_MALE_WEST,H03,7,bus,,False,no bus data,0.0,0.0
+T_MALE_WEST,H03,7,taxi,17.43619485064425,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_MALE_WEST,H03,8,walk,25.048198960250737,True,1604 m straight line,0.0,0.0
+T_MALE_WEST,H03,8,bus,,False,no bus data,0.0,0.0
+T_MALE_WEST,H03,8,taxi,17.43619485064425,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_MALE_WEST,H03,9,walk,25.048198960250737,True,1604 m straight line,0.0,0.0
+T_MALE_WEST,H03,9,bus,,False,no bus data,0.0,0.0
+T_MALE_WEST,H03,9,taxi,17.43619485064425,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_MALE_WEST,H03,10,walk,25.048198960250737,True,1604 m straight line,0.0,0.0
+T_MALE_WEST,H03,10,bus,,False,no bus data,0.0,0.0
+T_MALE_WEST,H03,10,taxi,17.43619485064425,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_MALE_WEST,H03,11,walk,25.048198960250737,True,1604 m straight line,0.0,0.0
+T_MALE_WEST,H03,11,bus,,False,no bus data,0.0,0.0
+T_MALE_WEST,H03,11,taxi,17.43619485064425,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_MALE_WEST,H03,12,walk,25.048198960250737,True,1604 m straight line,0.0,0.0
+T_MALE_WEST,H03,12,bus,,False,no bus data,0.0,0.0
+T_MALE_WEST,H03,12,taxi,17.43619485064425,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_MALE_WEST,H03,13,walk,25.048198960250737,True,1604 m straight line,0.0,0.0
+T_MALE_WEST,H03,13,bus,,False,no bus data,0.0,0.0
+T_MALE_WEST,H03,13,taxi,17.43619485064425,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_MALE_WEST,H03,14,walk,25.048198960250737,True,1604 m straight line,0.0,0.0
+T_MALE_WEST,H03,14,bus,,False,no bus data,0.0,0.0
+T_MALE_WEST,H03,14,taxi,17.43619485064425,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_MALE_WEST,H03,15,walk,25.048198960250737,True,1604 m straight line,0.0,0.0
+T_MALE_WEST,H03,15,bus,,False,no bus data,0.0,0.0
+T_MALE_WEST,H03,15,taxi,17.43619485064425,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_MALE_WEST,H03,16,walk,25.048198960250737,True,1604 m straight line,0.0,0.0
+T_MALE_WEST,H03,16,bus,,False,no bus data,0.0,0.0
+T_MALE_WEST,H03,16,taxi,17.43619485064425,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_MALE_WEST,H03,17,walk,25.048198960250737,True,1604 m straight line,0.0,0.0
+T_MALE_WEST,H03,17,bus,,False,no bus data,0.0,0.0
+T_MALE_WEST,H03,17,taxi,17.43619485064425,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_MALE_WEST,H03,18,walk,25.048198960250737,True,1604 m straight line,0.0,0.0
+T_MALE_WEST,H03,18,bus,,False,no bus data,0.0,0.0
+T_MALE_WEST,H03,18,taxi,17.43619485064425,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_MALE_WEST,H03,19,walk,25.048198960250737,True,1604 m straight line,0.0,0.0
+T_MALE_WEST,H03,19,bus,,False,no bus data,0.0,0.0
+T_MALE_WEST,H03,19,taxi,17.43619485064425,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_MALE_WEST,H03,20,walk,25.048198960250737,True,1604 m straight line,0.0,0.0
+T_MALE_WEST,H03,20,bus,,False,no bus data,0.0,0.0
+T_MALE_WEST,H03,20,taxi,17.43619485064425,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_MALE_WEST,H03,21,walk,25.048198960250737,True,1604 m straight line,0.0,0.0
+T_MALE_WEST,H03,21,bus,,False,no bus data,0.0,0.0
+T_MALE_WEST,H03,21,taxi,17.43619485064425,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_MALE_WEST,H03,22,walk,25.048198960250737,True,1604 m straight line,0.0,0.0
+T_MALE_WEST,H03,22,bus,,False,no bus data,0.0,0.0
+T_MALE_WEST,H03,22,taxi,17.43619485064425,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_MALE_WEST,H03,23,walk,25.048198960250737,True,1604 m straight line,0.0,0.0
+T_MALE_WEST,H03,23,bus,,False,no bus data,0.0,0.0
+T_MALE_WEST,H03,23,taxi,17.43619485064425,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_MALE_WEST,H04,0,walk,88.02520922414979,False,different island,0.0,0.0
+T_MALE_WEST,H04,0,bus,,False,no bus data,0.0,0.0
+T_MALE_WEST,H04,0,taxi,38.59647029931433,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_MALE_WEST,H04,1,walk,88.02520922414979,False,different island,0.0,0.0
+T_MALE_WEST,H04,1,bus,,False,no bus data,0.0,0.0
+T_MALE_WEST,H04,1,taxi,38.59647029931433,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_MALE_WEST,H04,2,walk,88.02520922414979,False,different island,0.0,0.0
+T_MALE_WEST,H04,2,bus,,False,no bus data,0.0,0.0
+T_MALE_WEST,H04,2,taxi,38.59647029931433,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_MALE_WEST,H04,3,walk,88.02520922414979,False,different island,0.0,0.0
+T_MALE_WEST,H04,3,bus,,False,no bus data,0.0,0.0
+T_MALE_WEST,H04,3,taxi,38.59647029931433,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_MALE_WEST,H04,4,walk,88.02520922414979,False,different island,0.0,0.0
+T_MALE_WEST,H04,4,bus,,False,no bus data,0.0,0.0
+T_MALE_WEST,H04,4,taxi,38.59647029931433,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_MALE_WEST,H04,5,walk,88.02520922414979,False,different island,0.0,0.0
+T_MALE_WEST,H04,5,bus,,False,no bus data,0.0,0.0
+T_MALE_WEST,H04,5,taxi,38.59647029931433,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_MALE_WEST,H04,6,walk,88.02520922414979,False,different island,0.0,0.0
+T_MALE_WEST,H04,6,bus,,False,no bus data,0.0,0.0
+T_MALE_WEST,H04,6,taxi,38.59647029931433,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_MALE_WEST,H04,7,walk,88.02520922414979,False,different island,0.0,0.0
+T_MALE_WEST,H04,7,bus,,False,no bus data,0.0,0.0
+T_MALE_WEST,H04,7,taxi,38.59647029931433,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_MALE_WEST,H04,8,walk,88.02520922414979,False,different island,0.0,0.0
+T_MALE_WEST,H04,8,bus,,False,no bus data,0.0,0.0
+T_MALE_WEST,H04,8,taxi,38.59647029931433,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_MALE_WEST,H04,9,walk,88.02520922414979,False,different island,0.0,0.0
+T_MALE_WEST,H04,9,bus,,False,no bus data,0.0,0.0
+T_MALE_WEST,H04,9,taxi,38.59647029931433,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_MALE_WEST,H04,10,walk,88.02520922414979,False,different island,0.0,0.0
+T_MALE_WEST,H04,10,bus,,False,no bus data,0.0,0.0
+T_MALE_WEST,H04,10,taxi,38.59647029931433,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_MALE_WEST,H04,11,walk,88.02520922414979,False,different island,0.0,0.0
+T_MALE_WEST,H04,11,bus,,False,no bus data,0.0,0.0
+T_MALE_WEST,H04,11,taxi,38.59647029931433,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_MALE_WEST,H04,12,walk,88.02520922414979,False,different island,0.0,0.0
+T_MALE_WEST,H04,12,bus,,False,no bus data,0.0,0.0
+T_MALE_WEST,H04,12,taxi,38.59647029931433,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_MALE_WEST,H04,13,walk,88.02520922414979,False,different island,0.0,0.0
+T_MALE_WEST,H04,13,bus,,False,no bus data,0.0,0.0
+T_MALE_WEST,H04,13,taxi,38.59647029931433,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_MALE_WEST,H04,14,walk,88.02520922414979,False,different island,0.0,0.0
+T_MALE_WEST,H04,14,bus,,False,no bus data,0.0,0.0
+T_MALE_WEST,H04,14,taxi,38.59647029931433,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_MALE_WEST,H04,15,walk,88.02520922414979,False,different island,0.0,0.0
+T_MALE_WEST,H04,15,bus,,False,no bus data,0.0,0.0
+T_MALE_WEST,H04,15,taxi,38.59647029931433,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_MALE_WEST,H04,16,walk,88.02520922414979,False,different island,0.0,0.0
+T_MALE_WEST,H04,16,bus,,False,no bus data,0.0,0.0
+T_MALE_WEST,H04,16,taxi,38.59647029931433,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_MALE_WEST,H04,17,walk,88.02520922414979,False,different island,0.0,0.0
+T_MALE_WEST,H04,17,bus,,False,no bus data,0.0,0.0
+T_MALE_WEST,H04,17,taxi,38.59647029931433,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_MALE_WEST,H04,18,walk,88.02520922414979,False,different island,0.0,0.0
+T_MALE_WEST,H04,18,bus,,False,no bus data,0.0,0.0
+T_MALE_WEST,H04,18,taxi,38.59647029931433,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_MALE_WEST,H04,19,walk,88.02520922414979,False,different island,0.0,0.0
+T_MALE_WEST,H04,19,bus,,False,no bus data,0.0,0.0
+T_MALE_WEST,H04,19,taxi,38.59647029931433,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_MALE_WEST,H04,20,walk,88.02520922414979,False,different island,0.0,0.0
+T_MALE_WEST,H04,20,bus,,False,no bus data,0.0,0.0
+T_MALE_WEST,H04,20,taxi,38.59647029931433,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_MALE_WEST,H04,21,walk,88.02520922414979,False,different island,0.0,0.0
+T_MALE_WEST,H04,21,bus,,False,no bus data,0.0,0.0
+T_MALE_WEST,H04,21,taxi,38.59647029931433,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_MALE_WEST,H04,22,walk,88.02520922414979,False,different island,0.0,0.0
+T_MALE_WEST,H04,22,bus,,False,no bus data,0.0,0.0
+T_MALE_WEST,H04,22,taxi,38.59647029931433,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_MALE_WEST,H04,23,walk,88.02520922414979,False,different island,0.0,0.0
+T_MALE_WEST,H04,23,bus,,False,no bus data,0.0,0.0
+T_MALE_WEST,H04,23,taxi,38.59647029931433,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_MALE_WEST,H05,0,walk,80.81504669386862,False,different island,0.0,0.0
+T_MALE_WEST,H05,0,bus,,False,no bus data,0.0,0.0
+T_MALE_WEST,H05,0,taxi,36.173855689139856,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_MALE_WEST,H05,1,walk,80.81504669386862,False,different island,0.0,0.0
+T_MALE_WEST,H05,1,bus,,False,no bus data,0.0,0.0
+T_MALE_WEST,H05,1,taxi,36.173855689139856,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_MALE_WEST,H05,2,walk,80.81504669386862,False,different island,0.0,0.0
+T_MALE_WEST,H05,2,bus,,False,no bus data,0.0,0.0
+T_MALE_WEST,H05,2,taxi,36.173855689139856,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_MALE_WEST,H05,3,walk,80.81504669386862,False,different island,0.0,0.0
+T_MALE_WEST,H05,3,bus,,False,no bus data,0.0,0.0
+T_MALE_WEST,H05,3,taxi,36.173855689139856,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_MALE_WEST,H05,4,walk,80.81504669386862,False,different island,0.0,0.0
+T_MALE_WEST,H05,4,bus,,False,no bus data,0.0,0.0
+T_MALE_WEST,H05,4,taxi,36.173855689139856,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_MALE_WEST,H05,5,walk,80.81504669386862,False,different island,0.0,0.0
+T_MALE_WEST,H05,5,bus,,False,no bus data,0.0,0.0
+T_MALE_WEST,H05,5,taxi,36.173855689139856,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_MALE_WEST,H05,6,walk,80.81504669386862,False,different island,0.0,0.0
+T_MALE_WEST,H05,6,bus,,False,no bus data,0.0,0.0
+T_MALE_WEST,H05,6,taxi,36.173855689139856,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_MALE_WEST,H05,7,walk,80.81504669386862,False,different island,0.0,0.0
+T_MALE_WEST,H05,7,bus,,False,no bus data,0.0,0.0
+T_MALE_WEST,H05,7,taxi,36.173855689139856,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_MALE_WEST,H05,8,walk,80.81504669386862,False,different island,0.0,0.0
+T_MALE_WEST,H05,8,bus,,False,no bus data,0.0,0.0
+T_MALE_WEST,H05,8,taxi,36.173855689139856,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_MALE_WEST,H05,9,walk,80.81504669386862,False,different island,0.0,0.0
+T_MALE_WEST,H05,9,bus,,False,no bus data,0.0,0.0
+T_MALE_WEST,H05,9,taxi,36.173855689139856,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_MALE_WEST,H05,10,walk,80.81504669386862,False,different island,0.0,0.0
+T_MALE_WEST,H05,10,bus,,False,no bus data,0.0,0.0
+T_MALE_WEST,H05,10,taxi,36.173855689139856,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_MALE_WEST,H05,11,walk,80.81504669386862,False,different island,0.0,0.0
+T_MALE_WEST,H05,11,bus,,False,no bus data,0.0,0.0
+T_MALE_WEST,H05,11,taxi,36.173855689139856,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_MALE_WEST,H05,12,walk,80.81504669386862,False,different island,0.0,0.0
+T_MALE_WEST,H05,12,bus,,False,no bus data,0.0,0.0
+T_MALE_WEST,H05,12,taxi,36.173855689139856,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_MALE_WEST,H05,13,walk,80.81504669386862,False,different island,0.0,0.0
+T_MALE_WEST,H05,13,bus,,False,no bus data,0.0,0.0
+T_MALE_WEST,H05,13,taxi,36.173855689139856,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_MALE_WEST,H05,14,walk,80.81504669386862,False,different island,0.0,0.0
+T_MALE_WEST,H05,14,bus,,False,no bus data,0.0,0.0
+T_MALE_WEST,H05,14,taxi,36.173855689139856,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_MALE_WEST,H05,15,walk,80.81504669386862,False,different island,0.0,0.0
+T_MALE_WEST,H05,15,bus,,False,no bus data,0.0,0.0
+T_MALE_WEST,H05,15,taxi,36.173855689139856,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_MALE_WEST,H05,16,walk,80.81504669386862,False,different island,0.0,0.0
+T_MALE_WEST,H05,16,bus,,False,no bus data,0.0,0.0
+T_MALE_WEST,H05,16,taxi,36.173855689139856,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_MALE_WEST,H05,17,walk,80.81504669386862,False,different island,0.0,0.0
+T_MALE_WEST,H05,17,bus,,False,no bus data,0.0,0.0
+T_MALE_WEST,H05,17,taxi,36.173855689139856,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_MALE_WEST,H05,18,walk,80.81504669386862,False,different island,0.0,0.0
+T_MALE_WEST,H05,18,bus,,False,no bus data,0.0,0.0
+T_MALE_WEST,H05,18,taxi,36.173855689139856,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_MALE_WEST,H05,19,walk,80.81504669386862,False,different island,0.0,0.0
+T_MALE_WEST,H05,19,bus,,False,no bus data,0.0,0.0
+T_MALE_WEST,H05,19,taxi,36.173855689139856,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_MALE_WEST,H05,20,walk,80.81504669386862,False,different island,0.0,0.0
+T_MALE_WEST,H05,20,bus,,False,no bus data,0.0,0.0
+T_MALE_WEST,H05,20,taxi,36.173855689139856,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_MALE_WEST,H05,21,walk,80.81504669386862,False,different island,0.0,0.0
+T_MALE_WEST,H05,21,bus,,False,no bus data,0.0,0.0
+T_MALE_WEST,H05,21,taxi,36.173855689139856,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_MALE_WEST,H05,22,walk,80.81504669386862,False,different island,0.0,0.0
+T_MALE_WEST,H05,22,bus,,False,no bus data,0.0,0.0
+T_MALE_WEST,H05,22,taxi,36.173855689139856,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_MALE_WEST,H05,23,walk,80.81504669386862,False,different island,0.0,0.0
+T_MALE_WEST,H05,23,bus,,False,no bus data,0.0,0.0
+T_MALE_WEST,H05,23,taxi,36.173855689139856,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_MALE_WEST,H06,0,walk,28.590083502108534,False,different island,0.0,0.0
+T_MALE_WEST,H06,0,bus,,False,no bus data,0.0,0.0
+T_MALE_WEST,H06,0,taxi,,False,no road link,0.0,0.0
+T_MALE_WEST,H06,1,walk,28.590083502108534,False,different island,0.0,0.0
+T_MALE_WEST,H06,1,bus,,False,no bus data,0.0,0.0
+T_MALE_WEST,H06,1,taxi,,False,no road link,0.0,0.0
+T_MALE_WEST,H06,2,walk,28.590083502108534,False,different island,0.0,0.0
+T_MALE_WEST,H06,2,bus,,False,no bus data,0.0,0.0
+T_MALE_WEST,H06,2,taxi,,False,no road link,0.0,0.0
+T_MALE_WEST,H06,3,walk,28.590083502108534,False,different island,0.0,0.0
+T_MALE_WEST,H06,3,bus,,False,no bus data,0.0,0.0
+T_MALE_WEST,H06,3,taxi,,False,no road link,0.0,0.0
+T_MALE_WEST,H06,4,walk,28.590083502108534,False,different island,0.0,0.0
+T_MALE_WEST,H06,4,bus,,False,no bus data,0.0,0.0
+T_MALE_WEST,H06,4,taxi,,False,no road link,0.0,0.0
+T_MALE_WEST,H06,5,walk,28.590083502108534,False,different island,0.0,0.0
+T_MALE_WEST,H06,5,bus,,False,no bus data,0.0,0.0
+T_MALE_WEST,H06,5,taxi,,False,no road link,0.0,0.0
+T_MALE_WEST,H06,6,walk,28.590083502108534,False,different island,0.0,0.0
+T_MALE_WEST,H06,6,bus,,False,no bus data,0.0,0.0
+T_MALE_WEST,H06,6,taxi,,False,no road link,0.0,0.0
+T_MALE_WEST,H06,7,walk,28.590083502108534,False,different island,0.0,0.0
+T_MALE_WEST,H06,7,bus,,False,no bus data,0.0,0.0
+T_MALE_WEST,H06,7,taxi,,False,no road link,0.0,0.0
+T_MALE_WEST,H06,8,walk,28.590083502108534,False,different island,0.0,0.0
+T_MALE_WEST,H06,8,bus,,False,no bus data,0.0,0.0
+T_MALE_WEST,H06,8,taxi,,False,no road link,0.0,0.0
+T_MALE_WEST,H06,9,walk,28.590083502108534,False,different island,0.0,0.0
+T_MALE_WEST,H06,9,bus,,False,no bus data,0.0,0.0
+T_MALE_WEST,H06,9,taxi,,False,no road link,0.0,0.0
+T_MALE_WEST,H06,10,walk,28.590083502108534,False,different island,0.0,0.0
+T_MALE_WEST,H06,10,bus,,False,no bus data,0.0,0.0
+T_MALE_WEST,H06,10,taxi,,False,no road link,0.0,0.0
+T_MALE_WEST,H06,11,walk,28.590083502108534,False,different island,0.0,0.0
+T_MALE_WEST,H06,11,bus,,False,no bus data,0.0,0.0
+T_MALE_WEST,H06,11,taxi,,False,no road link,0.0,0.0
+T_MALE_WEST,H06,12,walk,28.590083502108534,False,different island,0.0,0.0
+T_MALE_WEST,H06,12,bus,,False,no bus data,0.0,0.0
+T_MALE_WEST,H06,12,taxi,,False,no road link,0.0,0.0
+T_MALE_WEST,H06,13,walk,28.590083502108534,False,different island,0.0,0.0
+T_MALE_WEST,H06,13,bus,,False,no bus data,0.0,0.0
+T_MALE_WEST,H06,13,taxi,,False,no road link,0.0,0.0
+T_MALE_WEST,H06,14,walk,28.590083502108534,False,different island,0.0,0.0
+T_MALE_WEST,H06,14,bus,,False,no bus data,0.0,0.0
+T_MALE_WEST,H06,14,taxi,,False,no road link,0.0,0.0
+T_MALE_WEST,H06,15,walk,28.590083502108534,False,different island,0.0,0.0
+T_MALE_WEST,H06,15,bus,,False,no bus data,0.0,0.0
+T_MALE_WEST,H06,15,taxi,,False,no road link,0.0,0.0
+T_MALE_WEST,H06,16,walk,28.590083502108534,False,different island,0.0,0.0
+T_MALE_WEST,H06,16,bus,,False,no bus data,0.0,0.0
+T_MALE_WEST,H06,16,taxi,,False,no road link,0.0,0.0
+T_MALE_WEST,H06,17,walk,28.590083502108534,False,different island,0.0,0.0
+T_MALE_WEST,H06,17,bus,,False,no bus data,0.0,0.0
+T_MALE_WEST,H06,17,taxi,,False,no road link,0.0,0.0
+T_MALE_WEST,H06,18,walk,28.590083502108534,False,different island,0.0,0.0
+T_MALE_WEST,H06,18,bus,,False,no bus data,0.0,0.0
+T_MALE_WEST,H06,18,taxi,,False,no road link,0.0,0.0
+T_MALE_WEST,H06,19,walk,28.590083502108534,False,different island,0.0,0.0
+T_MALE_WEST,H06,19,bus,,False,no bus data,0.0,0.0
+T_MALE_WEST,H06,19,taxi,,False,no road link,0.0,0.0
+T_MALE_WEST,H06,20,walk,28.590083502108534,False,different island,0.0,0.0
+T_MALE_WEST,H06,20,bus,,False,no bus data,0.0,0.0
+T_MALE_WEST,H06,20,taxi,,False,no road link,0.0,0.0
+T_MALE_WEST,H06,21,walk,28.590083502108534,False,different island,0.0,0.0
+T_MALE_WEST,H06,21,bus,,False,no bus data,0.0,0.0
+T_MALE_WEST,H06,21,taxi,,False,no road link,0.0,0.0
+T_MALE_WEST,H06,22,walk,28.590083502108534,False,different island,0.0,0.0
+T_MALE_WEST,H06,22,bus,,False,no bus data,0.0,0.0
+T_MALE_WEST,H06,22,taxi,,False,no road link,0.0,0.0
+T_MALE_WEST,H06,23,walk,28.590083502108534,False,different island,0.0,0.0
+T_MALE_WEST,H06,23,bus,,False,no bus data,0.0,0.0
+T_MALE_WEST,H06,23,taxi,,False,no road link,0.0,0.0
+T_HULHUMALE,H01,0,walk,83.49304534761633,False,different island,0.0,0.0
+T_HULHUMALE,H01,0,bus,,False,no bus data,0.0,0.0
+T_HULHUMALE,H01,0,taxi,37.07366323679908,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_HULHUMALE,H01,1,walk,83.49304534761633,False,different island,0.0,0.0
+T_HULHUMALE,H01,1,bus,,False,no bus data,0.0,0.0
+T_HULHUMALE,H01,1,taxi,37.07366323679908,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_HULHUMALE,H01,2,walk,83.49304534761633,False,different island,0.0,0.0
+T_HULHUMALE,H01,2,bus,,False,no bus data,0.0,0.0
+T_HULHUMALE,H01,2,taxi,37.07366323679908,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_HULHUMALE,H01,3,walk,83.49304534761633,False,different island,0.0,0.0
+T_HULHUMALE,H01,3,bus,,False,no bus data,0.0,0.0
+T_HULHUMALE,H01,3,taxi,37.07366323679908,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_HULHUMALE,H01,4,walk,83.49304534761633,False,different island,0.0,0.0
+T_HULHUMALE,H01,4,bus,,False,no bus data,0.0,0.0
+T_HULHUMALE,H01,4,taxi,37.07366323679908,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_HULHUMALE,H01,5,walk,83.49304534761633,False,different island,0.0,0.0
+T_HULHUMALE,H01,5,bus,,False,no bus data,0.0,0.0
+T_HULHUMALE,H01,5,taxi,37.07366323679908,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_HULHUMALE,H01,6,walk,83.49304534761633,False,different island,0.0,0.0
+T_HULHUMALE,H01,6,bus,,False,no bus data,0.0,0.0
+T_HULHUMALE,H01,6,taxi,37.07366323679908,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_HULHUMALE,H01,7,walk,83.49304534761633,False,different island,0.0,0.0
+T_HULHUMALE,H01,7,bus,,False,no bus data,0.0,0.0
+T_HULHUMALE,H01,7,taxi,37.07366323679908,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_HULHUMALE,H01,8,walk,83.49304534761633,False,different island,0.0,0.0
+T_HULHUMALE,H01,8,bus,,False,no bus data,0.0,0.0
+T_HULHUMALE,H01,8,taxi,37.07366323679908,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_HULHUMALE,H01,9,walk,83.49304534761633,False,different island,0.0,0.0
+T_HULHUMALE,H01,9,bus,,False,no bus data,0.0,0.0
+T_HULHUMALE,H01,9,taxi,37.07366323679908,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_HULHUMALE,H01,10,walk,83.49304534761633,False,different island,0.0,0.0
+T_HULHUMALE,H01,10,bus,,False,no bus data,0.0,0.0
+T_HULHUMALE,H01,10,taxi,37.07366323679908,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_HULHUMALE,H01,11,walk,83.49304534761633,False,different island,0.0,0.0
+T_HULHUMALE,H01,11,bus,,False,no bus data,0.0,0.0
+T_HULHUMALE,H01,11,taxi,37.07366323679908,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_HULHUMALE,H01,12,walk,83.49304534761633,False,different island,0.0,0.0
+T_HULHUMALE,H01,12,bus,,False,no bus data,0.0,0.0
+T_HULHUMALE,H01,12,taxi,37.07366323679908,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_HULHUMALE,H01,13,walk,83.49304534761633,False,different island,0.0,0.0
+T_HULHUMALE,H01,13,bus,,False,no bus data,0.0,0.0
+T_HULHUMALE,H01,13,taxi,37.07366323679908,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_HULHUMALE,H01,14,walk,83.49304534761633,False,different island,0.0,0.0
+T_HULHUMALE,H01,14,bus,,False,no bus data,0.0,0.0
+T_HULHUMALE,H01,14,taxi,37.07366323679908,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_HULHUMALE,H01,15,walk,83.49304534761633,False,different island,0.0,0.0
+T_HULHUMALE,H01,15,bus,,False,no bus data,0.0,0.0
+T_HULHUMALE,H01,15,taxi,37.07366323679908,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_HULHUMALE,H01,16,walk,83.49304534761633,False,different island,0.0,0.0
+T_HULHUMALE,H01,16,bus,,False,no bus data,0.0,0.0
+T_HULHUMALE,H01,16,taxi,37.07366323679908,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_HULHUMALE,H01,17,walk,83.49304534761633,False,different island,0.0,0.0
+T_HULHUMALE,H01,17,bus,,False,no bus data,0.0,0.0
+T_HULHUMALE,H01,17,taxi,37.07366323679908,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_HULHUMALE,H01,18,walk,83.49304534761633,False,different island,0.0,0.0
+T_HULHUMALE,H01,18,bus,,False,no bus data,0.0,0.0
+T_HULHUMALE,H01,18,taxi,37.07366323679908,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_HULHUMALE,H01,19,walk,83.49304534761633,False,different island,0.0,0.0
+T_HULHUMALE,H01,19,bus,,False,no bus data,0.0,0.0
+T_HULHUMALE,H01,19,taxi,37.07366323679908,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_HULHUMALE,H01,20,walk,83.49304534761633,False,different island,0.0,0.0
+T_HULHUMALE,H01,20,bus,,False,no bus data,0.0,0.0
+T_HULHUMALE,H01,20,taxi,37.07366323679908,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_HULHUMALE,H01,21,walk,83.49304534761633,False,different island,0.0,0.0
+T_HULHUMALE,H01,21,bus,,False,no bus data,0.0,0.0
+T_HULHUMALE,H01,21,taxi,37.07366323679908,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_HULHUMALE,H01,22,walk,83.49304534761633,False,different island,0.0,0.0
+T_HULHUMALE,H01,22,bus,,False,no bus data,0.0,0.0
+T_HULHUMALE,H01,22,taxi,37.07366323679908,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_HULHUMALE,H01,23,walk,83.49304534761633,False,different island,0.0,0.0
+T_HULHUMALE,H01,23,bus,,False,no bus data,0.0,0.0
+T_HULHUMALE,H01,23,taxi,37.07366323679908,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_HULHUMALE,H02,0,walk,70.98860644057469,False,different island,0.0,0.0
+T_HULHUMALE,H02,0,bus,,False,no bus data,0.0,0.0
+T_HULHUMALE,H02,0,taxi,32.87217176403309,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_HULHUMALE,H02,1,walk,70.98860644057469,False,different island,0.0,0.0
+T_HULHUMALE,H02,1,bus,,False,no bus data,0.0,0.0
+T_HULHUMALE,H02,1,taxi,32.87217176403309,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_HULHUMALE,H02,2,walk,70.98860644057469,False,different island,0.0,0.0
+T_HULHUMALE,H02,2,bus,,False,no bus data,0.0,0.0
+T_HULHUMALE,H02,2,taxi,32.87217176403309,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_HULHUMALE,H02,3,walk,70.98860644057469,False,different island,0.0,0.0
+T_HULHUMALE,H02,3,bus,,False,no bus data,0.0,0.0
+T_HULHUMALE,H02,3,taxi,32.87217176403309,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_HULHUMALE,H02,4,walk,70.98860644057469,False,different island,0.0,0.0
+T_HULHUMALE,H02,4,bus,,False,no bus data,0.0,0.0
+T_HULHUMALE,H02,4,taxi,32.87217176403309,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_HULHUMALE,H02,5,walk,70.98860644057469,False,different island,0.0,0.0
+T_HULHUMALE,H02,5,bus,,False,no bus data,0.0,0.0
+T_HULHUMALE,H02,5,taxi,32.87217176403309,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_HULHUMALE,H02,6,walk,70.98860644057469,False,different island,0.0,0.0
+T_HULHUMALE,H02,6,bus,,False,no bus data,0.0,0.0
+T_HULHUMALE,H02,6,taxi,32.87217176403309,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_HULHUMALE,H02,7,walk,70.98860644057469,False,different island,0.0,0.0
+T_HULHUMALE,H02,7,bus,,False,no bus data,0.0,0.0
+T_HULHUMALE,H02,7,taxi,32.87217176403309,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_HULHUMALE,H02,8,walk,70.98860644057469,False,different island,0.0,0.0
+T_HULHUMALE,H02,8,bus,,False,no bus data,0.0,0.0
+T_HULHUMALE,H02,8,taxi,32.87217176403309,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_HULHUMALE,H02,9,walk,70.98860644057469,False,different island,0.0,0.0
+T_HULHUMALE,H02,9,bus,,False,no bus data,0.0,0.0
+T_HULHUMALE,H02,9,taxi,32.87217176403309,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_HULHUMALE,H02,10,walk,70.98860644057469,False,different island,0.0,0.0
+T_HULHUMALE,H02,10,bus,,False,no bus data,0.0,0.0
+T_HULHUMALE,H02,10,taxi,32.87217176403309,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_HULHUMALE,H02,11,walk,70.98860644057469,False,different island,0.0,0.0
+T_HULHUMALE,H02,11,bus,,False,no bus data,0.0,0.0
+T_HULHUMALE,H02,11,taxi,32.87217176403309,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_HULHUMALE,H02,12,walk,70.98860644057469,False,different island,0.0,0.0
+T_HULHUMALE,H02,12,bus,,False,no bus data,0.0,0.0
+T_HULHUMALE,H02,12,taxi,32.87217176403309,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_HULHUMALE,H02,13,walk,70.98860644057469,False,different island,0.0,0.0
+T_HULHUMALE,H02,13,bus,,False,no bus data,0.0,0.0
+T_HULHUMALE,H02,13,taxi,32.87217176403309,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_HULHUMALE,H02,14,walk,70.98860644057469,False,different island,0.0,0.0
+T_HULHUMALE,H02,14,bus,,False,no bus data,0.0,0.0
+T_HULHUMALE,H02,14,taxi,32.87217176403309,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_HULHUMALE,H02,15,walk,70.98860644057469,False,different island,0.0,0.0
+T_HULHUMALE,H02,15,bus,,False,no bus data,0.0,0.0
+T_HULHUMALE,H02,15,taxi,32.87217176403309,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_HULHUMALE,H02,16,walk,70.98860644057469,False,different island,0.0,0.0
+T_HULHUMALE,H02,16,bus,,False,no bus data,0.0,0.0
+T_HULHUMALE,H02,16,taxi,32.87217176403309,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_HULHUMALE,H02,17,walk,70.98860644057469,False,different island,0.0,0.0
+T_HULHUMALE,H02,17,bus,,False,no bus data,0.0,0.0
+T_HULHUMALE,H02,17,taxi,32.87217176403309,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_HULHUMALE,H02,18,walk,70.98860644057469,False,different island,0.0,0.0
+T_HULHUMALE,H02,18,bus,,False,no bus data,0.0,0.0
+T_HULHUMALE,H02,18,taxi,32.87217176403309,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_HULHUMALE,H02,19,walk,70.98860644057469,False,different island,0.0,0.0
+T_HULHUMALE,H02,19,bus,,False,no bus data,0.0,0.0
+T_HULHUMALE,H02,19,taxi,32.87217176403309,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_HULHUMALE,H02,20,walk,70.98860644057469,False,different island,0.0,0.0
+T_HULHUMALE,H02,20,bus,,False,no bus data,0.0,0.0
+T_HULHUMALE,H02,20,taxi,32.87217176403309,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_HULHUMALE,H02,21,walk,70.98860644057469,False,different island,0.0,0.0
+T_HULHUMALE,H02,21,bus,,False,no bus data,0.0,0.0
+T_HULHUMALE,H02,21,taxi,32.87217176403309,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_HULHUMALE,H02,22,walk,70.98860644057469,False,different island,0.0,0.0
+T_HULHUMALE,H02,22,bus,,False,no bus data,0.0,0.0
+T_HULHUMALE,H02,22,taxi,32.87217176403309,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_HULHUMALE,H02,23,walk,70.98860644057469,False,different island,0.0,0.0
+T_HULHUMALE,H02,23,bus,,False,no bus data,0.0,0.0
+T_HULHUMALE,H02,23,taxi,32.87217176403309,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_HULHUMALE,H03,0,walk,74.25315455026575,False,different island,0.0,0.0
+T_HULHUMALE,H03,0,bus,,False,no bus data,0.0,0.0
+T_HULHUMALE,H03,0,taxi,33.969059928889294,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_HULHUMALE,H03,1,walk,74.25315455026575,False,different island,0.0,0.0
+T_HULHUMALE,H03,1,bus,,False,no bus data,0.0,0.0
+T_HULHUMALE,H03,1,taxi,33.969059928889294,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_HULHUMALE,H03,2,walk,74.25315455026575,False,different island,0.0,0.0
+T_HULHUMALE,H03,2,bus,,False,no bus data,0.0,0.0
+T_HULHUMALE,H03,2,taxi,33.969059928889294,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_HULHUMALE,H03,3,walk,74.25315455026575,False,different island,0.0,0.0
+T_HULHUMALE,H03,3,bus,,False,no bus data,0.0,0.0
+T_HULHUMALE,H03,3,taxi,33.969059928889294,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_HULHUMALE,H03,4,walk,74.25315455026575,False,different island,0.0,0.0
+T_HULHUMALE,H03,4,bus,,False,no bus data,0.0,0.0
+T_HULHUMALE,H03,4,taxi,33.969059928889294,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_HULHUMALE,H03,5,walk,74.25315455026575,False,different island,0.0,0.0
+T_HULHUMALE,H03,5,bus,,False,no bus data,0.0,0.0
+T_HULHUMALE,H03,5,taxi,33.969059928889294,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_HULHUMALE,H03,6,walk,74.25315455026575,False,different island,0.0,0.0
+T_HULHUMALE,H03,6,bus,,False,no bus data,0.0,0.0
+T_HULHUMALE,H03,6,taxi,33.969059928889294,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_HULHUMALE,H03,7,walk,74.25315455026575,False,different island,0.0,0.0
+T_HULHUMALE,H03,7,bus,,False,no bus data,0.0,0.0
+T_HULHUMALE,H03,7,taxi,33.969059928889294,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_HULHUMALE,H03,8,walk,74.25315455026575,False,different island,0.0,0.0
+T_HULHUMALE,H03,8,bus,,False,no bus data,0.0,0.0
+T_HULHUMALE,H03,8,taxi,33.969059928889294,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_HULHUMALE,H03,9,walk,74.25315455026575,False,different island,0.0,0.0
+T_HULHUMALE,H03,9,bus,,False,no bus data,0.0,0.0
+T_HULHUMALE,H03,9,taxi,33.969059928889294,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_HULHUMALE,H03,10,walk,74.25315455026575,False,different island,0.0,0.0
+T_HULHUMALE,H03,10,bus,,False,no bus data,0.0,0.0
+T_HULHUMALE,H03,10,taxi,33.969059928889294,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_HULHUMALE,H03,11,walk,74.25315455026575,False,different island,0.0,0.0
+T_HULHUMALE,H03,11,bus,,False,no bus data,0.0,0.0
+T_HULHUMALE,H03,11,taxi,33.969059928889294,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_HULHUMALE,H03,12,walk,74.25315455026575,False,different island,0.0,0.0
+T_HULHUMALE,H03,12,bus,,False,no bus data,0.0,0.0
+T_HULHUMALE,H03,12,taxi,33.969059928889294,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_HULHUMALE,H03,13,walk,74.25315455026575,False,different island,0.0,0.0
+T_HULHUMALE,H03,13,bus,,False,no bus data,0.0,0.0
+T_HULHUMALE,H03,13,taxi,33.969059928889294,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_HULHUMALE,H03,14,walk,74.25315455026575,False,different island,0.0,0.0
+T_HULHUMALE,H03,14,bus,,False,no bus data,0.0,0.0
+T_HULHUMALE,H03,14,taxi,33.969059928889294,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_HULHUMALE,H03,15,walk,74.25315455026575,False,different island,0.0,0.0
+T_HULHUMALE,H03,15,bus,,False,no bus data,0.0,0.0
+T_HULHUMALE,H03,15,taxi,33.969059928889294,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_HULHUMALE,H03,16,walk,74.25315455026575,False,different island,0.0,0.0
+T_HULHUMALE,H03,16,bus,,False,no bus data,0.0,0.0
+T_HULHUMALE,H03,16,taxi,33.969059928889294,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_HULHUMALE,H03,17,walk,74.25315455026575,False,different island,0.0,0.0
+T_HULHUMALE,H03,17,bus,,False,no bus data,0.0,0.0
+T_HULHUMALE,H03,17,taxi,33.969059928889294,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_HULHUMALE,H03,18,walk,74.25315455026575,False,different island,0.0,0.0
+T_HULHUMALE,H03,18,bus,,False,no bus data,0.0,0.0
+T_HULHUMALE,H03,18,taxi,33.969059928889294,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_HULHUMALE,H03,19,walk,74.25315455026575,False,different island,0.0,0.0
+T_HULHUMALE,H03,19,bus,,False,no bus data,0.0,0.0
+T_HULHUMALE,H03,19,taxi,33.969059928889294,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_HULHUMALE,H03,20,walk,74.25315455026575,False,different island,0.0,0.0
+T_HULHUMALE,H03,20,bus,,False,no bus data,0.0,0.0
+T_HULHUMALE,H03,20,taxi,33.969059928889294,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_HULHUMALE,H03,21,walk,74.25315455026575,False,different island,0.0,0.0
+T_HULHUMALE,H03,21,bus,,False,no bus data,0.0,0.0
+T_HULHUMALE,H03,21,taxi,33.969059928889294,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_HULHUMALE,H03,22,walk,74.25315455026575,False,different island,0.0,0.0
+T_HULHUMALE,H03,22,bus,,False,no bus data,0.0,0.0
+T_HULHUMALE,H03,22,taxi,33.969059928889294,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_HULHUMALE,H03,23,walk,74.25315455026575,False,different island,0.0,0.0
+T_HULHUMALE,H03,23,bus,,False,no bus data,0.0,0.0
+T_HULHUMALE,H03,23,taxi,33.969059928889294,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_HULHUMALE,H04,0,walk,12.472708912853058,True,598 m straight line,0.0,0.0
+T_HULHUMALE,H04,0,bus,,False,no bus data,0.0,0.0
+T_HULHUMALE,H04,0,taxi,13.210830194718627,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_HULHUMALE,H04,1,walk,12.472708912853058,True,598 m straight line,0.0,0.0
+T_HULHUMALE,H04,1,bus,,False,no bus data,0.0,0.0
+T_HULHUMALE,H04,1,taxi,13.210830194718627,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_HULHUMALE,H04,2,walk,12.472708912853058,True,598 m straight line,0.0,0.0
+T_HULHUMALE,H04,2,bus,,False,no bus data,0.0,0.0
+T_HULHUMALE,H04,2,taxi,13.210830194718627,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_HULHUMALE,H04,3,walk,12.472708912853058,True,598 m straight line,0.0,0.0
+T_HULHUMALE,H04,3,bus,,False,no bus data,0.0,0.0
+T_HULHUMALE,H04,3,taxi,13.210830194718627,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_HULHUMALE,H04,4,walk,12.472708912853058,True,598 m straight line,0.0,0.0
+T_HULHUMALE,H04,4,bus,,False,no bus data,0.0,0.0
+T_HULHUMALE,H04,4,taxi,13.210830194718627,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_HULHUMALE,H04,5,walk,12.472708912853058,True,598 m straight line,0.0,0.0
+T_HULHUMALE,H04,5,bus,,False,no bus data,0.0,0.0
+T_HULHUMALE,H04,5,taxi,13.210830194718627,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_HULHUMALE,H04,6,walk,12.472708912853058,True,598 m straight line,0.0,0.0
+T_HULHUMALE,H04,6,bus,,False,no bus data,0.0,0.0
+T_HULHUMALE,H04,6,taxi,13.210830194718627,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_HULHUMALE,H04,7,walk,12.472708912853058,True,598 m straight line,0.0,0.0
+T_HULHUMALE,H04,7,bus,,False,no bus data,0.0,0.0
+T_HULHUMALE,H04,7,taxi,13.210830194718627,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_HULHUMALE,H04,8,walk,12.472708912853058,True,598 m straight line,0.0,0.0
+T_HULHUMALE,H04,8,bus,,False,no bus data,0.0,0.0
+T_HULHUMALE,H04,8,taxi,13.210830194718627,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_HULHUMALE,H04,9,walk,12.472708912853058,True,598 m straight line,0.0,0.0
+T_HULHUMALE,H04,9,bus,,False,no bus data,0.0,0.0
+T_HULHUMALE,H04,9,taxi,13.210830194718627,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_HULHUMALE,H04,10,walk,12.472708912853058,True,598 m straight line,0.0,0.0
+T_HULHUMALE,H04,10,bus,,False,no bus data,0.0,0.0
+T_HULHUMALE,H04,10,taxi,13.210830194718627,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_HULHUMALE,H04,11,walk,12.472708912853058,True,598 m straight line,0.0,0.0
+T_HULHUMALE,H04,11,bus,,False,no bus data,0.0,0.0
+T_HULHUMALE,H04,11,taxi,13.210830194718627,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_HULHUMALE,H04,12,walk,12.472708912853058,True,598 m straight line,0.0,0.0
+T_HULHUMALE,H04,12,bus,,False,no bus data,0.0,0.0
+T_HULHUMALE,H04,12,taxi,13.210830194718627,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_HULHUMALE,H04,13,walk,12.472708912853058,True,598 m straight line,0.0,0.0
+T_HULHUMALE,H04,13,bus,,False,no bus data,0.0,0.0
+T_HULHUMALE,H04,13,taxi,13.210830194718627,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_HULHUMALE,H04,14,walk,12.472708912853058,True,598 m straight line,0.0,0.0
+T_HULHUMALE,H04,14,bus,,False,no bus data,0.0,0.0
+T_HULHUMALE,H04,14,taxi,13.210830194718627,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_HULHUMALE,H04,15,walk,12.472708912853058,True,598 m straight line,0.0,0.0
+T_HULHUMALE,H04,15,bus,,False,no bus data,0.0,0.0
+T_HULHUMALE,H04,15,taxi,13.210830194718627,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_HULHUMALE,H04,16,walk,12.472708912853058,True,598 m straight line,0.0,0.0
+T_HULHUMALE,H04,16,bus,,False,no bus data,0.0,0.0
+T_HULHUMALE,H04,16,taxi,13.210830194718627,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_HULHUMALE,H04,17,walk,12.472708912853058,True,598 m straight line,0.0,0.0
+T_HULHUMALE,H04,17,bus,,False,no bus data,0.0,0.0
+T_HULHUMALE,H04,17,taxi,13.210830194718627,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_HULHUMALE,H04,18,walk,12.472708912853058,True,598 m straight line,0.0,0.0
+T_HULHUMALE,H04,18,bus,,False,no bus data,0.0,0.0
+T_HULHUMALE,H04,18,taxi,13.210830194718627,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_HULHUMALE,H04,19,walk,12.472708912853058,True,598 m straight line,0.0,0.0
+T_HULHUMALE,H04,19,bus,,False,no bus data,0.0,0.0
+T_HULHUMALE,H04,19,taxi,13.210830194718627,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_HULHUMALE,H04,20,walk,12.472708912853058,True,598 m straight line,0.0,0.0
+T_HULHUMALE,H04,20,bus,,False,no bus data,0.0,0.0
+T_HULHUMALE,H04,20,taxi,13.210830194718627,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_HULHUMALE,H04,21,walk,12.472708912853058,True,598 m straight line,0.0,0.0
+T_HULHUMALE,H04,21,bus,,False,no bus data,0.0,0.0
+T_HULHUMALE,H04,21,taxi,13.210830194718627,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_HULHUMALE,H04,22,walk,12.472708912853058,True,598 m straight line,0.0,0.0
+T_HULHUMALE,H04,22,bus,,False,no bus data,0.0,0.0
+T_HULHUMALE,H04,22,taxi,13.210830194718627,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_HULHUMALE,H04,23,walk,12.472708912853058,True,598 m straight line,0.0,0.0
+T_HULHUMALE,H04,23,bus,,False,no bus data,0.0,0.0
+T_HULHUMALE,H04,23,taxi,13.210830194718627,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_HULHUMALE,H05,0,walk,11.191773790055684,True,495 m straight line,0.0,0.0
+T_HULHUMALE,H05,0,bus,,False,no bus data,0.0,0.0
+T_HULHUMALE,H05,0,taxi,12.78043599345871,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_HULHUMALE,H05,1,walk,11.191773790055684,True,495 m straight line,0.0,0.0
+T_HULHUMALE,H05,1,bus,,False,no bus data,0.0,0.0
+T_HULHUMALE,H05,1,taxi,12.78043599345871,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_HULHUMALE,H05,2,walk,11.191773790055684,True,495 m straight line,0.0,0.0
+T_HULHUMALE,H05,2,bus,,False,no bus data,0.0,0.0
+T_HULHUMALE,H05,2,taxi,12.78043599345871,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_HULHUMALE,H05,3,walk,11.191773790055684,True,495 m straight line,0.0,0.0
+T_HULHUMALE,H05,3,bus,,False,no bus data,0.0,0.0
+T_HULHUMALE,H05,3,taxi,12.78043599345871,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_HULHUMALE,H05,4,walk,11.191773790055684,True,495 m straight line,0.0,0.0
+T_HULHUMALE,H05,4,bus,,False,no bus data,0.0,0.0
+T_HULHUMALE,H05,4,taxi,12.78043599345871,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_HULHUMALE,H05,5,walk,11.191773790055684,True,495 m straight line,0.0,0.0
+T_HULHUMALE,H05,5,bus,,False,no bus data,0.0,0.0
+T_HULHUMALE,H05,5,taxi,12.78043599345871,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_HULHUMALE,H05,6,walk,11.191773790055684,True,495 m straight line,0.0,0.0
+T_HULHUMALE,H05,6,bus,,False,no bus data,0.0,0.0
+T_HULHUMALE,H05,6,taxi,12.78043599345871,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_HULHUMALE,H05,7,walk,11.191773790055684,True,495 m straight line,0.0,0.0
+T_HULHUMALE,H05,7,bus,,False,no bus data,0.0,0.0
+T_HULHUMALE,H05,7,taxi,12.78043599345871,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_HULHUMALE,H05,8,walk,11.191773790055684,True,495 m straight line,0.0,0.0
+T_HULHUMALE,H05,8,bus,,False,no bus data,0.0,0.0
+T_HULHUMALE,H05,8,taxi,12.78043599345871,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_HULHUMALE,H05,9,walk,11.191773790055684,True,495 m straight line,0.0,0.0
+T_HULHUMALE,H05,9,bus,,False,no bus data,0.0,0.0
+T_HULHUMALE,H05,9,taxi,12.78043599345871,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_HULHUMALE,H05,10,walk,11.191773790055684,True,495 m straight line,0.0,0.0
+T_HULHUMALE,H05,10,bus,,False,no bus data,0.0,0.0
+T_HULHUMALE,H05,10,taxi,12.78043599345871,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_HULHUMALE,H05,11,walk,11.191773790055684,True,495 m straight line,0.0,0.0
+T_HULHUMALE,H05,11,bus,,False,no bus data,0.0,0.0
+T_HULHUMALE,H05,11,taxi,12.78043599345871,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_HULHUMALE,H05,12,walk,11.191773790055684,True,495 m straight line,0.0,0.0
+T_HULHUMALE,H05,12,bus,,False,no bus data,0.0,0.0
+T_HULHUMALE,H05,12,taxi,12.78043599345871,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_HULHUMALE,H05,13,walk,11.191773790055684,True,495 m straight line,0.0,0.0
+T_HULHUMALE,H05,13,bus,,False,no bus data,0.0,0.0
+T_HULHUMALE,H05,13,taxi,12.78043599345871,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_HULHUMALE,H05,14,walk,11.191773790055684,True,495 m straight line,0.0,0.0
+T_HULHUMALE,H05,14,bus,,False,no bus data,0.0,0.0
+T_HULHUMALE,H05,14,taxi,12.78043599345871,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_HULHUMALE,H05,15,walk,11.191773790055684,True,495 m straight line,0.0,0.0
+T_HULHUMALE,H05,15,bus,,False,no bus data,0.0,0.0
+T_HULHUMALE,H05,15,taxi,12.78043599345871,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_HULHUMALE,H05,16,walk,11.191773790055684,True,495 m straight line,0.0,0.0
+T_HULHUMALE,H05,16,bus,,False,no bus data,0.0,0.0
+T_HULHUMALE,H05,16,taxi,12.78043599345871,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_HULHUMALE,H05,17,walk,11.191773790055684,True,495 m straight line,0.0,0.0
+T_HULHUMALE,H05,17,bus,,False,no bus data,0.0,0.0
+T_HULHUMALE,H05,17,taxi,12.78043599345871,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_HULHUMALE,H05,18,walk,11.191773790055684,True,495 m straight line,0.0,0.0
+T_HULHUMALE,H05,18,bus,,False,no bus data,0.0,0.0
+T_HULHUMALE,H05,18,taxi,12.78043599345871,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_HULHUMALE,H05,19,walk,11.191773790055684,True,495 m straight line,0.0,0.0
+T_HULHUMALE,H05,19,bus,,False,no bus data,0.0,0.0
+T_HULHUMALE,H05,19,taxi,12.78043599345871,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_HULHUMALE,H05,20,walk,11.191773790055684,True,495 m straight line,0.0,0.0
+T_HULHUMALE,H05,20,bus,,False,no bus data,0.0,0.0
+T_HULHUMALE,H05,20,taxi,12.78043599345871,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_HULHUMALE,H05,21,walk,11.191773790055684,True,495 m straight line,0.0,0.0
+T_HULHUMALE,H05,21,bus,,False,no bus data,0.0,0.0
+T_HULHUMALE,H05,21,taxi,12.78043599345871,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_HULHUMALE,H05,22,walk,11.191773790055684,True,495 m straight line,0.0,0.0
+T_HULHUMALE,H05,22,bus,,False,no bus data,0.0,0.0
+T_HULHUMALE,H05,22,taxi,12.78043599345871,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_HULHUMALE,H05,23,walk,11.191773790055684,True,495 m straight line,0.0,0.0
+T_HULHUMALE,H05,23,bus,,False,no bus data,0.0,0.0
+T_HULHUMALE,H05,23,taxi,12.78043599345871,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_HULHUMALE,H06,0,walk,97.03087571602438,False,different island,0.0,0.0
+T_HULHUMALE,H06,0,bus,,False,no bus data,0.0,0.0
+T_HULHUMALE,H06,0,taxi,,False,no road link,0.0,0.0
+T_HULHUMALE,H06,1,walk,97.03087571602438,False,different island,0.0,0.0
+T_HULHUMALE,H06,1,bus,,False,no bus data,0.0,0.0
+T_HULHUMALE,H06,1,taxi,,False,no road link,0.0,0.0
+T_HULHUMALE,H06,2,walk,97.03087571602438,False,different island,0.0,0.0
+T_HULHUMALE,H06,2,bus,,False,no bus data,0.0,0.0
+T_HULHUMALE,H06,2,taxi,,False,no road link,0.0,0.0
+T_HULHUMALE,H06,3,walk,97.03087571602438,False,different island,0.0,0.0
+T_HULHUMALE,H06,3,bus,,False,no bus data,0.0,0.0
+T_HULHUMALE,H06,3,taxi,,False,no road link,0.0,0.0
+T_HULHUMALE,H06,4,walk,97.03087571602438,False,different island,0.0,0.0
+T_HULHUMALE,H06,4,bus,,False,no bus data,0.0,0.0
+T_HULHUMALE,H06,4,taxi,,False,no road link,0.0,0.0
+T_HULHUMALE,H06,5,walk,97.03087571602438,False,different island,0.0,0.0
+T_HULHUMALE,H06,5,bus,,False,no bus data,0.0,0.0
+T_HULHUMALE,H06,5,taxi,,False,no road link,0.0,0.0
+T_HULHUMALE,H06,6,walk,97.03087571602438,False,different island,0.0,0.0
+T_HULHUMALE,H06,6,bus,,False,no bus data,0.0,0.0
+T_HULHUMALE,H06,6,taxi,,False,no road link,0.0,0.0
+T_HULHUMALE,H06,7,walk,97.03087571602438,False,different island,0.0,0.0
+T_HULHUMALE,H06,7,bus,,False,no bus data,0.0,0.0
+T_HULHUMALE,H06,7,taxi,,False,no road link,0.0,0.0
+T_HULHUMALE,H06,8,walk,97.03087571602438,False,different island,0.0,0.0
+T_HULHUMALE,H06,8,bus,,False,no bus data,0.0,0.0
+T_HULHUMALE,H06,8,taxi,,False,no road link,0.0,0.0
+T_HULHUMALE,H06,9,walk,97.03087571602438,False,different island,0.0,0.0
+T_HULHUMALE,H06,9,bus,,False,no bus data,0.0,0.0
+T_HULHUMALE,H06,9,taxi,,False,no road link,0.0,0.0
+T_HULHUMALE,H06,10,walk,97.03087571602438,False,different island,0.0,0.0
+T_HULHUMALE,H06,10,bus,,False,no bus data,0.0,0.0
+T_HULHUMALE,H06,10,taxi,,False,no road link,0.0,0.0
+T_HULHUMALE,H06,11,walk,97.03087571602438,False,different island,0.0,0.0
+T_HULHUMALE,H06,11,bus,,False,no bus data,0.0,0.0
+T_HULHUMALE,H06,11,taxi,,False,no road link,0.0,0.0
+T_HULHUMALE,H06,12,walk,97.03087571602438,False,different island,0.0,0.0
+T_HULHUMALE,H06,12,bus,,False,no bus data,0.0,0.0
+T_HULHUMALE,H06,12,taxi,,False,no road link,0.0,0.0
+T_HULHUMALE,H06,13,walk,97.03087571602438,False,different island,0.0,0.0
+T_HULHUMALE,H06,13,bus,,False,no bus data,0.0,0.0
+T_HULHUMALE,H06,13,taxi,,False,no road link,0.0,0.0
+T_HULHUMALE,H06,14,walk,97.03087571602438,False,different island,0.0,0.0
+T_HULHUMALE,H06,14,bus,,False,no bus data,0.0,0.0
+T_HULHUMALE,H06,14,taxi,,False,no road link,0.0,0.0
+T_HULHUMALE,H06,15,walk,97.03087571602438,False,different island,0.0,0.0
+T_HULHUMALE,H06,15,bus,,False,no bus data,0.0,0.0
+T_HULHUMALE,H06,15,taxi,,False,no road link,0.0,0.0
+T_HULHUMALE,H06,16,walk,97.03087571602438,False,different island,0.0,0.0
+T_HULHUMALE,H06,16,bus,,False,no bus data,0.0,0.0
+T_HULHUMALE,H06,16,taxi,,False,no road link,0.0,0.0
+T_HULHUMALE,H06,17,walk,97.03087571602438,False,different island,0.0,0.0
+T_HULHUMALE,H06,17,bus,,False,no bus data,0.0,0.0
+T_HULHUMALE,H06,17,taxi,,False,no road link,0.0,0.0
+T_HULHUMALE,H06,18,walk,97.03087571602438,False,different island,0.0,0.0
+T_HULHUMALE,H06,18,bus,,False,no bus data,0.0,0.0
+T_HULHUMALE,H06,18,taxi,,False,no road link,0.0,0.0
+T_HULHUMALE,H06,19,walk,97.03087571602438,False,different island,0.0,0.0
+T_HULHUMALE,H06,19,bus,,False,no bus data,0.0,0.0
+T_HULHUMALE,H06,19,taxi,,False,no road link,0.0,0.0
+T_HULHUMALE,H06,20,walk,97.03087571602438,False,different island,0.0,0.0
+T_HULHUMALE,H06,20,bus,,False,no bus data,0.0,0.0
+T_HULHUMALE,H06,20,taxi,,False,no road link,0.0,0.0
+T_HULHUMALE,H06,21,walk,97.03087571602438,False,different island,0.0,0.0
+T_HULHUMALE,H06,21,bus,,False,no bus data,0.0,0.0
+T_HULHUMALE,H06,21,taxi,,False,no road link,0.0,0.0
+T_HULHUMALE,H06,22,walk,97.03087571602438,False,different island,0.0,0.0
+T_HULHUMALE,H06,22,bus,,False,no bus data,0.0,0.0
+T_HULHUMALE,H06,22,taxi,,False,no road link,0.0,0.0
+T_HULHUMALE,H06,23,walk,97.03087571602438,False,different island,0.0,0.0
+T_HULHUMALE,H06,23,bus,,False,no bus data,0.0,0.0
+T_HULHUMALE,H06,23,taxi,,False,no road link,0.0,0.0
+T_VILLIMALE,H01,0,walk,25.47963602158115,False,different island,0.0,0.0
+T_VILLIMALE,H01,0,bus,,False,no bus data,0.0,0.0
+T_VILLIMALE,H01,0,taxi,,False,no road link,0.0,0.0
+T_VILLIMALE,H01,1,walk,25.47963602158115,False,different island,0.0,0.0
+T_VILLIMALE,H01,1,bus,,False,no bus data,0.0,0.0
+T_VILLIMALE,H01,1,taxi,,False,no road link,0.0,0.0
+T_VILLIMALE,H01,2,walk,25.47963602158115,False,different island,0.0,0.0
+T_VILLIMALE,H01,2,bus,,False,no bus data,0.0,0.0
+T_VILLIMALE,H01,2,taxi,,False,no road link,0.0,0.0
+T_VILLIMALE,H01,3,walk,25.47963602158115,False,different island,0.0,0.0
+T_VILLIMALE,H01,3,bus,,False,no bus data,0.0,0.0
+T_VILLIMALE,H01,3,taxi,,False,no road link,0.0,0.0
+T_VILLIMALE,H01,4,walk,25.47963602158115,False,different island,0.0,0.0
+T_VILLIMALE,H01,4,bus,,False,no bus data,0.0,0.0
+T_VILLIMALE,H01,4,taxi,,False,no road link,0.0,0.0
+T_VILLIMALE,H01,5,walk,25.47963602158115,False,different island,0.0,0.0
+T_VILLIMALE,H01,5,bus,,False,no bus data,0.0,0.0
+T_VILLIMALE,H01,5,taxi,,False,no road link,0.0,0.0
+T_VILLIMALE,H01,6,walk,25.47963602158115,False,different island,0.0,0.0
+T_VILLIMALE,H01,6,bus,,False,no bus data,0.0,0.0
+T_VILLIMALE,H01,6,taxi,,False,no road link,0.0,0.0
+T_VILLIMALE,H01,7,walk,25.47963602158115,False,different island,0.0,0.0
+T_VILLIMALE,H01,7,bus,,False,no bus data,0.0,0.0
+T_VILLIMALE,H01,7,taxi,,False,no road link,0.0,0.0
+T_VILLIMALE,H01,8,walk,25.47963602158115,False,different island,0.0,0.0
+T_VILLIMALE,H01,8,bus,,False,no bus data,0.0,0.0
+T_VILLIMALE,H01,8,taxi,,False,no road link,0.0,0.0
+T_VILLIMALE,H01,9,walk,25.47963602158115,False,different island,0.0,0.0
+T_VILLIMALE,H01,9,bus,,False,no bus data,0.0,0.0
+T_VILLIMALE,H01,9,taxi,,False,no road link,0.0,0.0
+T_VILLIMALE,H01,10,walk,25.47963602158115,False,different island,0.0,0.0
+T_VILLIMALE,H01,10,bus,,False,no bus data,0.0,0.0
+T_VILLIMALE,H01,10,taxi,,False,no road link,0.0,0.0
+T_VILLIMALE,H01,11,walk,25.47963602158115,False,different island,0.0,0.0
+T_VILLIMALE,H01,11,bus,,False,no bus data,0.0,0.0
+T_VILLIMALE,H01,11,taxi,,False,no road link,0.0,0.0
+T_VILLIMALE,H01,12,walk,25.47963602158115,False,different island,0.0,0.0
+T_VILLIMALE,H01,12,bus,,False,no bus data,0.0,0.0
+T_VILLIMALE,H01,12,taxi,,False,no road link,0.0,0.0
+T_VILLIMALE,H01,13,walk,25.47963602158115,False,different island,0.0,0.0
+T_VILLIMALE,H01,13,bus,,False,no bus data,0.0,0.0
+T_VILLIMALE,H01,13,taxi,,False,no road link,0.0,0.0
+T_VILLIMALE,H01,14,walk,25.47963602158115,False,different island,0.0,0.0
+T_VILLIMALE,H01,14,bus,,False,no bus data,0.0,0.0
+T_VILLIMALE,H01,14,taxi,,False,no road link,0.0,0.0
+T_VILLIMALE,H01,15,walk,25.47963602158115,False,different island,0.0,0.0
+T_VILLIMALE,H01,15,bus,,False,no bus data,0.0,0.0
+T_VILLIMALE,H01,15,taxi,,False,no road link,0.0,0.0
+T_VILLIMALE,H01,16,walk,25.47963602158115,False,different island,0.0,0.0
+T_VILLIMALE,H01,16,bus,,False,no bus data,0.0,0.0
+T_VILLIMALE,H01,16,taxi,,False,no road link,0.0,0.0
+T_VILLIMALE,H01,17,walk,25.47963602158115,False,different island,0.0,0.0
+T_VILLIMALE,H01,17,bus,,False,no bus data,0.0,0.0
+T_VILLIMALE,H01,17,taxi,,False,no road link,0.0,0.0
+T_VILLIMALE,H01,18,walk,25.47963602158115,False,different island,0.0,0.0
+T_VILLIMALE,H01,18,bus,,False,no bus data,0.0,0.0
+T_VILLIMALE,H01,18,taxi,,False,no road link,0.0,0.0
+T_VILLIMALE,H01,19,walk,25.47963602158115,False,different island,0.0,0.0
+T_VILLIMALE,H01,19,bus,,False,no bus data,0.0,0.0
+T_VILLIMALE,H01,19,taxi,,False,no road link,0.0,0.0
+T_VILLIMALE,H01,20,walk,25.47963602158115,False,different island,0.0,0.0
+T_VILLIMALE,H01,20,bus,,False,no bus data,0.0,0.0
+T_VILLIMALE,H01,20,taxi,,False,no road link,0.0,0.0
+T_VILLIMALE,H01,21,walk,25.47963602158115,False,different island,0.0,0.0
+T_VILLIMALE,H01,21,bus,,False,no bus data,0.0,0.0
+T_VILLIMALE,H01,21,taxi,,False,no road link,0.0,0.0
+T_VILLIMALE,H01,22,walk,25.47963602158115,False,different island,0.0,0.0
+T_VILLIMALE,H01,22,bus,,False,no bus data,0.0,0.0
+T_VILLIMALE,H01,22,taxi,,False,no road link,0.0,0.0
+T_VILLIMALE,H01,23,walk,25.47963602158115,False,different island,0.0,0.0
+T_VILLIMALE,H01,23,bus,,False,no bus data,0.0,0.0
+T_VILLIMALE,H01,23,taxi,,False,no road link,0.0,0.0
+T_VILLIMALE,H02,0,walk,44.28418500238216,False,different island,0.0,0.0
+T_VILLIMALE,H02,0,bus,,False,no bus data,0.0,0.0
+T_VILLIMALE,H02,0,taxi,,False,no road link,0.0,0.0
+T_VILLIMALE,H02,1,walk,44.28418500238216,False,different island,0.0,0.0
+T_VILLIMALE,H02,1,bus,,False,no bus data,0.0,0.0
+T_VILLIMALE,H02,1,taxi,,False,no road link,0.0,0.0
+T_VILLIMALE,H02,2,walk,44.28418500238216,False,different island,0.0,0.0
+T_VILLIMALE,H02,2,bus,,False,no bus data,0.0,0.0
+T_VILLIMALE,H02,2,taxi,,False,no road link,0.0,0.0
+T_VILLIMALE,H02,3,walk,44.28418500238216,False,different island,0.0,0.0
+T_VILLIMALE,H02,3,bus,,False,no bus data,0.0,0.0
+T_VILLIMALE,H02,3,taxi,,False,no road link,0.0,0.0
+T_VILLIMALE,H02,4,walk,44.28418500238216,False,different island,0.0,0.0
+T_VILLIMALE,H02,4,bus,,False,no bus data,0.0,0.0
+T_VILLIMALE,H02,4,taxi,,False,no road link,0.0,0.0
+T_VILLIMALE,H02,5,walk,44.28418500238216,False,different island,0.0,0.0
+T_VILLIMALE,H02,5,bus,,False,no bus data,0.0,0.0
+T_VILLIMALE,H02,5,taxi,,False,no road link,0.0,0.0
+T_VILLIMALE,H02,6,walk,44.28418500238216,False,different island,0.0,0.0
+T_VILLIMALE,H02,6,bus,,False,no bus data,0.0,0.0
+T_VILLIMALE,H02,6,taxi,,False,no road link,0.0,0.0
+T_VILLIMALE,H02,7,walk,44.28418500238216,False,different island,0.0,0.0
+T_VILLIMALE,H02,7,bus,,False,no bus data,0.0,0.0
+T_VILLIMALE,H02,7,taxi,,False,no road link,0.0,0.0
+T_VILLIMALE,H02,8,walk,44.28418500238216,False,different island,0.0,0.0
+T_VILLIMALE,H02,8,bus,,False,no bus data,0.0,0.0
+T_VILLIMALE,H02,8,taxi,,False,no road link,0.0,0.0
+T_VILLIMALE,H02,9,walk,44.28418500238216,False,different island,0.0,0.0
+T_VILLIMALE,H02,9,bus,,False,no bus data,0.0,0.0
+T_VILLIMALE,H02,9,taxi,,False,no road link,0.0,0.0
+T_VILLIMALE,H02,10,walk,44.28418500238216,False,different island,0.0,0.0
+T_VILLIMALE,H02,10,bus,,False,no bus data,0.0,0.0
+T_VILLIMALE,H02,10,taxi,,False,no road link,0.0,0.0
+T_VILLIMALE,H02,11,walk,44.28418500238216,False,different island,0.0,0.0
+T_VILLIMALE,H02,11,bus,,False,no bus data,0.0,0.0
+T_VILLIMALE,H02,11,taxi,,False,no road link,0.0,0.0
+T_VILLIMALE,H02,12,walk,44.28418500238216,False,different island,0.0,0.0
+T_VILLIMALE,H02,12,bus,,False,no bus data,0.0,0.0
+T_VILLIMALE,H02,12,taxi,,False,no road link,0.0,0.0
+T_VILLIMALE,H02,13,walk,44.28418500238216,False,different island,0.0,0.0
+T_VILLIMALE,H02,13,bus,,False,no bus data,0.0,0.0
+T_VILLIMALE,H02,13,taxi,,False,no road link,0.0,0.0
+T_VILLIMALE,H02,14,walk,44.28418500238216,False,different island,0.0,0.0
+T_VILLIMALE,H02,14,bus,,False,no bus data,0.0,0.0
+T_VILLIMALE,H02,14,taxi,,False,no road link,0.0,0.0
+T_VILLIMALE,H02,15,walk,44.28418500238216,False,different island,0.0,0.0
+T_VILLIMALE,H02,15,bus,,False,no bus data,0.0,0.0
+T_VILLIMALE,H02,15,taxi,,False,no road link,0.0,0.0
+T_VILLIMALE,H02,16,walk,44.28418500238216,False,different island,0.0,0.0
+T_VILLIMALE,H02,16,bus,,False,no bus data,0.0,0.0
+T_VILLIMALE,H02,16,taxi,,False,no road link,0.0,0.0
+T_VILLIMALE,H02,17,walk,44.28418500238216,False,different island,0.0,0.0
+T_VILLIMALE,H02,17,bus,,False,no bus data,0.0,0.0
+T_VILLIMALE,H02,17,taxi,,False,no road link,0.0,0.0
+T_VILLIMALE,H02,18,walk,44.28418500238216,False,different island,0.0,0.0
+T_VILLIMALE,H02,18,bus,,False,no bus data,0.0,0.0
+T_VILLIMALE,H02,18,taxi,,False,no road link,0.0,0.0
+T_VILLIMALE,H02,19,walk,44.28418500238216,False,different island,0.0,0.0
+T_VILLIMALE,H02,19,bus,,False,no bus data,0.0,0.0
+T_VILLIMALE,H02,19,taxi,,False,no road link,0.0,0.0
+T_VILLIMALE,H02,20,walk,44.28418500238216,False,different island,0.0,0.0
+T_VILLIMALE,H02,20,bus,,False,no bus data,0.0,0.0
+T_VILLIMALE,H02,20,taxi,,False,no road link,0.0,0.0
+T_VILLIMALE,H02,21,walk,44.28418500238216,False,different island,0.0,0.0
+T_VILLIMALE,H02,21,bus,,False,no bus data,0.0,0.0
+T_VILLIMALE,H02,21,taxi,,False,no road link,0.0,0.0
+T_VILLIMALE,H02,22,walk,44.28418500238216,False,different island,0.0,0.0
+T_VILLIMALE,H02,22,bus,,False,no bus data,0.0,0.0
+T_VILLIMALE,H02,22,taxi,,False,no road link,0.0,0.0
+T_VILLIMALE,H02,23,walk,44.28418500238216,False,different island,0.0,0.0
+T_VILLIMALE,H02,23,bus,,False,no bus data,0.0,0.0
+T_VILLIMALE,H02,23,taxi,,False,no road link,0.0,0.0
+T_VILLIMALE,H03,0,walk,46.262912331940285,False,different island,0.0,0.0
+T_VILLIMALE,H03,0,bus,,False,no bus data,0.0,0.0
+T_VILLIMALE,H03,0,taxi,,False,no road link,0.0,0.0
+T_VILLIMALE,H03,1,walk,46.262912331940285,False,different island,0.0,0.0
+T_VILLIMALE,H03,1,bus,,False,no bus data,0.0,0.0
+T_VILLIMALE,H03,1,taxi,,False,no road link,0.0,0.0
+T_VILLIMALE,H03,2,walk,46.262912331940285,False,different island,0.0,0.0
+T_VILLIMALE,H03,2,bus,,False,no bus data,0.0,0.0
+T_VILLIMALE,H03,2,taxi,,False,no road link,0.0,0.0
+T_VILLIMALE,H03,3,walk,46.262912331940285,False,different island,0.0,0.0
+T_VILLIMALE,H03,3,bus,,False,no bus data,0.0,0.0
+T_VILLIMALE,H03,3,taxi,,False,no road link,0.0,0.0
+T_VILLIMALE,H03,4,walk,46.262912331940285,False,different island,0.0,0.0
+T_VILLIMALE,H03,4,bus,,False,no bus data,0.0,0.0
+T_VILLIMALE,H03,4,taxi,,False,no road link,0.0,0.0
+T_VILLIMALE,H03,5,walk,46.262912331940285,False,different island,0.0,0.0
+T_VILLIMALE,H03,5,bus,,False,no bus data,0.0,0.0
+T_VILLIMALE,H03,5,taxi,,False,no road link,0.0,0.0
+T_VILLIMALE,H03,6,walk,46.262912331940285,False,different island,0.0,0.0
+T_VILLIMALE,H03,6,bus,,False,no bus data,0.0,0.0
+T_VILLIMALE,H03,6,taxi,,False,no road link,0.0,0.0
+T_VILLIMALE,H03,7,walk,46.262912331940285,False,different island,0.0,0.0
+T_VILLIMALE,H03,7,bus,,False,no bus data,0.0,0.0
+T_VILLIMALE,H03,7,taxi,,False,no road link,0.0,0.0
+T_VILLIMALE,H03,8,walk,46.262912331940285,False,different island,0.0,0.0
+T_VILLIMALE,H03,8,bus,,False,no bus data,0.0,0.0
+T_VILLIMALE,H03,8,taxi,,False,no road link,0.0,0.0
+T_VILLIMALE,H03,9,walk,46.262912331940285,False,different island,0.0,0.0
+T_VILLIMALE,H03,9,bus,,False,no bus data,0.0,0.0
+T_VILLIMALE,H03,9,taxi,,False,no road link,0.0,0.0
+T_VILLIMALE,H03,10,walk,46.262912331940285,False,different island,0.0,0.0
+T_VILLIMALE,H03,10,bus,,False,no bus data,0.0,0.0
+T_VILLIMALE,H03,10,taxi,,False,no road link,0.0,0.0
+T_VILLIMALE,H03,11,walk,46.262912331940285,False,different island,0.0,0.0
+T_VILLIMALE,H03,11,bus,,False,no bus data,0.0,0.0
+T_VILLIMALE,H03,11,taxi,,False,no road link,0.0,0.0
+T_VILLIMALE,H03,12,walk,46.262912331940285,False,different island,0.0,0.0
+T_VILLIMALE,H03,12,bus,,False,no bus data,0.0,0.0
+T_VILLIMALE,H03,12,taxi,,False,no road link,0.0,0.0
+T_VILLIMALE,H03,13,walk,46.262912331940285,False,different island,0.0,0.0
+T_VILLIMALE,H03,13,bus,,False,no bus data,0.0,0.0
+T_VILLIMALE,H03,13,taxi,,False,no road link,0.0,0.0
+T_VILLIMALE,H03,14,walk,46.262912331940285,False,different island,0.0,0.0
+T_VILLIMALE,H03,14,bus,,False,no bus data,0.0,0.0
+T_VILLIMALE,H03,14,taxi,,False,no road link,0.0,0.0
+T_VILLIMALE,H03,15,walk,46.262912331940285,False,different island,0.0,0.0
+T_VILLIMALE,H03,15,bus,,False,no bus data,0.0,0.0
+T_VILLIMALE,H03,15,taxi,,False,no road link,0.0,0.0
+T_VILLIMALE,H03,16,walk,46.262912331940285,False,different island,0.0,0.0
+T_VILLIMALE,H03,16,bus,,False,no bus data,0.0,0.0
+T_VILLIMALE,H03,16,taxi,,False,no road link,0.0,0.0
+T_VILLIMALE,H03,17,walk,46.262912331940285,False,different island,0.0,0.0
+T_VILLIMALE,H03,17,bus,,False,no bus data,0.0,0.0
+T_VILLIMALE,H03,17,taxi,,False,no road link,0.0,0.0
+T_VILLIMALE,H03,18,walk,46.262912331940285,False,different island,0.0,0.0
+T_VILLIMALE,H03,18,bus,,False,no bus data,0.0,0.0
+T_VILLIMALE,H03,18,taxi,,False,no road link,0.0,0.0
+T_VILLIMALE,H03,19,walk,46.262912331940285,False,different island,0.0,0.0
+T_VILLIMALE,H03,19,bus,,False,no bus data,0.0,0.0
+T_VILLIMALE,H03,19,taxi,,False,no road link,0.0,0.0
+T_VILLIMALE,H03,20,walk,46.262912331940285,False,different island,0.0,0.0
+T_VILLIMALE,H03,20,bus,,False,no bus data,0.0,0.0
+T_VILLIMALE,H03,20,taxi,,False,no road link,0.0,0.0
+T_VILLIMALE,H03,21,walk,46.262912331940285,False,different island,0.0,0.0
+T_VILLIMALE,H03,21,bus,,False,no bus data,0.0,0.0
+T_VILLIMALE,H03,21,taxi,,False,no road link,0.0,0.0
+T_VILLIMALE,H03,22,walk,46.262912331940285,False,different island,0.0,0.0
+T_VILLIMALE,H03,22,bus,,False,no bus data,0.0,0.0
+T_VILLIMALE,H03,22,taxi,,False,no road link,0.0,0.0
+T_VILLIMALE,H03,23,walk,46.262912331940285,False,different island,0.0,0.0
+T_VILLIMALE,H03,23,bus,,False,no bus data,0.0,0.0
+T_VILLIMALE,H03,23,taxi,,False,no road link,0.0,0.0
+T_VILLIMALE,H04,0,walk,101.2321114448218,False,different island,0.0,0.0
+T_VILLIMALE,H04,0,bus,,False,no bus data,0.0,0.0
+T_VILLIMALE,H04,0,taxi,,False,no road link,0.0,0.0
+T_VILLIMALE,H04,1,walk,101.2321114448218,False,different island,0.0,0.0
+T_VILLIMALE,H04,1,bus,,False,no bus data,0.0,0.0
+T_VILLIMALE,H04,1,taxi,,False,no road link,0.0,0.0
+T_VILLIMALE,H04,2,walk,101.2321114448218,False,different island,0.0,0.0
+T_VILLIMALE,H04,2,bus,,False,no bus data,0.0,0.0
+T_VILLIMALE,H04,2,taxi,,False,no road link,0.0,0.0
+T_VILLIMALE,H04,3,walk,101.2321114448218,False,different island,0.0,0.0
+T_VILLIMALE,H04,3,bus,,False,no bus data,0.0,0.0
+T_VILLIMALE,H04,3,taxi,,False,no road link,0.0,0.0
+T_VILLIMALE,H04,4,walk,101.2321114448218,False,different island,0.0,0.0
+T_VILLIMALE,H04,4,bus,,False,no bus data,0.0,0.0
+T_VILLIMALE,H04,4,taxi,,False,no road link,0.0,0.0
+T_VILLIMALE,H04,5,walk,101.2321114448218,False,different island,0.0,0.0
+T_VILLIMALE,H04,5,bus,,False,no bus data,0.0,0.0
+T_VILLIMALE,H04,5,taxi,,False,no road link,0.0,0.0
+T_VILLIMALE,H04,6,walk,101.2321114448218,False,different island,0.0,0.0
+T_VILLIMALE,H04,6,bus,,False,no bus data,0.0,0.0
+T_VILLIMALE,H04,6,taxi,,False,no road link,0.0,0.0
+T_VILLIMALE,H04,7,walk,101.2321114448218,False,different island,0.0,0.0
+T_VILLIMALE,H04,7,bus,,False,no bus data,0.0,0.0
+T_VILLIMALE,H04,7,taxi,,False,no road link,0.0,0.0
+T_VILLIMALE,H04,8,walk,101.2321114448218,False,different island,0.0,0.0
+T_VILLIMALE,H04,8,bus,,False,no bus data,0.0,0.0
+T_VILLIMALE,H04,8,taxi,,False,no road link,0.0,0.0
+T_VILLIMALE,H04,9,walk,101.2321114448218,False,different island,0.0,0.0
+T_VILLIMALE,H04,9,bus,,False,no bus data,0.0,0.0
+T_VILLIMALE,H04,9,taxi,,False,no road link,0.0,0.0
+T_VILLIMALE,H04,10,walk,101.2321114448218,False,different island,0.0,0.0
+T_VILLIMALE,H04,10,bus,,False,no bus data,0.0,0.0
+T_VILLIMALE,H04,10,taxi,,False,no road link,0.0,0.0
+T_VILLIMALE,H04,11,walk,101.2321114448218,False,different island,0.0,0.0
+T_VILLIMALE,H04,11,bus,,False,no bus data,0.0,0.0
+T_VILLIMALE,H04,11,taxi,,False,no road link,0.0,0.0
+T_VILLIMALE,H04,12,walk,101.2321114448218,False,different island,0.0,0.0
+T_VILLIMALE,H04,12,bus,,False,no bus data,0.0,0.0
+T_VILLIMALE,H04,12,taxi,,False,no road link,0.0,0.0
+T_VILLIMALE,H04,13,walk,101.2321114448218,False,different island,0.0,0.0
+T_VILLIMALE,H04,13,bus,,False,no bus data,0.0,0.0
+T_VILLIMALE,H04,13,taxi,,False,no road link,0.0,0.0
+T_VILLIMALE,H04,14,walk,101.2321114448218,False,different island,0.0,0.0
+T_VILLIMALE,H04,14,bus,,False,no bus data,0.0,0.0
+T_VILLIMALE,H04,14,taxi,,False,no road link,0.0,0.0
+T_VILLIMALE,H04,15,walk,101.2321114448218,False,different island,0.0,0.0
+T_VILLIMALE,H04,15,bus,,False,no bus data,0.0,0.0
+T_VILLIMALE,H04,15,taxi,,False,no road link,0.0,0.0
+T_VILLIMALE,H04,16,walk,101.2321114448218,False,different island,0.0,0.0
+T_VILLIMALE,H04,16,bus,,False,no bus data,0.0,0.0
+T_VILLIMALE,H04,16,taxi,,False,no road link,0.0,0.0
+T_VILLIMALE,H04,17,walk,101.2321114448218,False,different island,0.0,0.0
+T_VILLIMALE,H04,17,bus,,False,no bus data,0.0,0.0
+T_VILLIMALE,H04,17,taxi,,False,no road link,0.0,0.0
+T_VILLIMALE,H04,18,walk,101.2321114448218,False,different island,0.0,0.0
+T_VILLIMALE,H04,18,bus,,False,no bus data,0.0,0.0
+T_VILLIMALE,H04,18,taxi,,False,no road link,0.0,0.0
+T_VILLIMALE,H04,19,walk,101.2321114448218,False,different island,0.0,0.0
+T_VILLIMALE,H04,19,bus,,False,no bus data,0.0,0.0
+T_VILLIMALE,H04,19,taxi,,False,no road link,0.0,0.0
+T_VILLIMALE,H04,20,walk,101.2321114448218,False,different island,0.0,0.0
+T_VILLIMALE,H04,20,bus,,False,no bus data,0.0,0.0
+T_VILLIMALE,H04,20,taxi,,False,no road link,0.0,0.0
+T_VILLIMALE,H04,21,walk,101.2321114448218,False,different island,0.0,0.0
+T_VILLIMALE,H04,21,bus,,False,no bus data,0.0,0.0
+T_VILLIMALE,H04,21,taxi,,False,no road link,0.0,0.0
+T_VILLIMALE,H04,22,walk,101.2321114448218,False,different island,0.0,0.0
+T_VILLIMALE,H04,22,bus,,False,no bus data,0.0,0.0
+T_VILLIMALE,H04,22,taxi,,False,no road link,0.0,0.0
+T_VILLIMALE,H04,23,walk,101.2321114448218,False,different island,0.0,0.0
+T_VILLIMALE,H04,23,bus,,False,no bus data,0.0,0.0
+T_VILLIMALE,H04,23,taxi,,False,no road link,0.0,0.0
+T_VILLIMALE,H05,0,walk,93.95875181854998,False,different island,0.0,0.0
+T_VILLIMALE,H05,0,bus,,False,no bus data,0.0,0.0
+T_VILLIMALE,H05,0,taxi,,False,no road link,0.0,0.0
+T_VILLIMALE,H05,1,walk,93.95875181854998,False,different island,0.0,0.0
+T_VILLIMALE,H05,1,bus,,False,no bus data,0.0,0.0
+T_VILLIMALE,H05,1,taxi,,False,no road link,0.0,0.0
+T_VILLIMALE,H05,2,walk,93.95875181854998,False,different island,0.0,0.0
+T_VILLIMALE,H05,2,bus,,False,no bus data,0.0,0.0
+T_VILLIMALE,H05,2,taxi,,False,no road link,0.0,0.0
+T_VILLIMALE,H05,3,walk,93.95875181854998,False,different island,0.0,0.0
+T_VILLIMALE,H05,3,bus,,False,no bus data,0.0,0.0
+T_VILLIMALE,H05,3,taxi,,False,no road link,0.0,0.0
+T_VILLIMALE,H05,4,walk,93.95875181854998,False,different island,0.0,0.0
+T_VILLIMALE,H05,4,bus,,False,no bus data,0.0,0.0
+T_VILLIMALE,H05,4,taxi,,False,no road link,0.0,0.0
+T_VILLIMALE,H05,5,walk,93.95875181854998,False,different island,0.0,0.0
+T_VILLIMALE,H05,5,bus,,False,no bus data,0.0,0.0
+T_VILLIMALE,H05,5,taxi,,False,no road link,0.0,0.0
+T_VILLIMALE,H05,6,walk,93.95875181854998,False,different island,0.0,0.0
+T_VILLIMALE,H05,6,bus,,False,no bus data,0.0,0.0
+T_VILLIMALE,H05,6,taxi,,False,no road link,0.0,0.0
+T_VILLIMALE,H05,7,walk,93.95875181854998,False,different island,0.0,0.0
+T_VILLIMALE,H05,7,bus,,False,no bus data,0.0,0.0
+T_VILLIMALE,H05,7,taxi,,False,no road link,0.0,0.0
+T_VILLIMALE,H05,8,walk,93.95875181854998,False,different island,0.0,0.0
+T_VILLIMALE,H05,8,bus,,False,no bus data,0.0,0.0
+T_VILLIMALE,H05,8,taxi,,False,no road link,0.0,0.0
+T_VILLIMALE,H05,9,walk,93.95875181854998,False,different island,0.0,0.0
+T_VILLIMALE,H05,9,bus,,False,no bus data,0.0,0.0
+T_VILLIMALE,H05,9,taxi,,False,no road link,0.0,0.0
+T_VILLIMALE,H05,10,walk,93.95875181854998,False,different island,0.0,0.0
+T_VILLIMALE,H05,10,bus,,False,no bus data,0.0,0.0
+T_VILLIMALE,H05,10,taxi,,False,no road link,0.0,0.0
+T_VILLIMALE,H05,11,walk,93.95875181854998,False,different island,0.0,0.0
+T_VILLIMALE,H05,11,bus,,False,no bus data,0.0,0.0
+T_VILLIMALE,H05,11,taxi,,False,no road link,0.0,0.0
+T_VILLIMALE,H05,12,walk,93.95875181854998,False,different island,0.0,0.0
+T_VILLIMALE,H05,12,bus,,False,no bus data,0.0,0.0
+T_VILLIMALE,H05,12,taxi,,False,no road link,0.0,0.0
+T_VILLIMALE,H05,13,walk,93.95875181854998,False,different island,0.0,0.0
+T_VILLIMALE,H05,13,bus,,False,no bus data,0.0,0.0
+T_VILLIMALE,H05,13,taxi,,False,no road link,0.0,0.0
+T_VILLIMALE,H05,14,walk,93.95875181854998,False,different island,0.0,0.0
+T_VILLIMALE,H05,14,bus,,False,no bus data,0.0,0.0
+T_VILLIMALE,H05,14,taxi,,False,no road link,0.0,0.0
+T_VILLIMALE,H05,15,walk,93.95875181854998,False,different island,0.0,0.0
+T_VILLIMALE,H05,15,bus,,False,no bus data,0.0,0.0
+T_VILLIMALE,H05,15,taxi,,False,no road link,0.0,0.0
+T_VILLIMALE,H05,16,walk,93.95875181854998,False,different island,0.0,0.0
+T_VILLIMALE,H05,16,bus,,False,no bus data,0.0,0.0
+T_VILLIMALE,H05,16,taxi,,False,no road link,0.0,0.0
+T_VILLIMALE,H05,17,walk,93.95875181854998,False,different island,0.0,0.0
+T_VILLIMALE,H05,17,bus,,False,no bus data,0.0,0.0
+T_VILLIMALE,H05,17,taxi,,False,no road link,0.0,0.0
+T_VILLIMALE,H05,18,walk,93.95875181854998,False,different island,0.0,0.0
+T_VILLIMALE,H05,18,bus,,False,no bus data,0.0,0.0
+T_VILLIMALE,H05,18,taxi,,False,no road link,0.0,0.0
+T_VILLIMALE,H05,19,walk,93.95875181854998,False,different island,0.0,0.0
+T_VILLIMALE,H05,19,bus,,False,no bus data,0.0,0.0
+T_VILLIMALE,H05,19,taxi,,False,no road link,0.0,0.0
+T_VILLIMALE,H05,20,walk,93.95875181854998,False,different island,0.0,0.0
+T_VILLIMALE,H05,20,bus,,False,no bus data,0.0,0.0
+T_VILLIMALE,H05,20,taxi,,False,no road link,0.0,0.0
+T_VILLIMALE,H05,21,walk,93.95875181854998,False,different island,0.0,0.0
+T_VILLIMALE,H05,21,bus,,False,no bus data,0.0,0.0
+T_VILLIMALE,H05,21,taxi,,False,no road link,0.0,0.0
+T_VILLIMALE,H05,22,walk,93.95875181854998,False,different island,0.0,0.0
+T_VILLIMALE,H05,22,bus,,False,no bus data,0.0,0.0
+T_VILLIMALE,H05,22,taxi,,False,no road link,0.0,0.0
+T_VILLIMALE,H05,23,walk,93.95875181854998,False,different island,0.0,0.0
+T_VILLIMALE,H05,23,bus,,False,no bus data,0.0,0.0
+T_VILLIMALE,H05,23,taxi,,False,no road link,0.0,0.0
+T_VILLIMALE,H06,0,walk,7.432788189646223,True,195 m straight line,0.0,0.0
+T_VILLIMALE,H06,0,bus,,False,no bus data,0.0,0.0
+T_VILLIMALE,H06,0,taxi,,False,no road link,0.0,0.0
+T_VILLIMALE,H06,1,walk,7.432788189646223,True,195 m straight line,0.0,0.0
+T_VILLIMALE,H06,1,bus,,False,no bus data,0.0,0.0
+T_VILLIMALE,H06,1,taxi,,False,no road link,0.0,0.0
+T_VILLIMALE,H06,2,walk,7.432788189646223,True,195 m straight line,0.0,0.0
+T_VILLIMALE,H06,2,bus,,False,no bus data,0.0,0.0
+T_VILLIMALE,H06,2,taxi,,False,no road link,0.0,0.0
+T_VILLIMALE,H06,3,walk,7.432788189646223,True,195 m straight line,0.0,0.0
+T_VILLIMALE,H06,3,bus,,False,no bus data,0.0,0.0
+T_VILLIMALE,H06,3,taxi,,False,no road link,0.0,0.0
+T_VILLIMALE,H06,4,walk,7.432788189646223,True,195 m straight line,0.0,0.0
+T_VILLIMALE,H06,4,bus,,False,no bus data,0.0,0.0
+T_VILLIMALE,H06,4,taxi,,False,no road link,0.0,0.0
+T_VILLIMALE,H06,5,walk,7.432788189646223,True,195 m straight line,0.0,0.0
+T_VILLIMALE,H06,5,bus,,False,no bus data,0.0,0.0
+T_VILLIMALE,H06,5,taxi,,False,no road link,0.0,0.0
+T_VILLIMALE,H06,6,walk,7.432788189646223,True,195 m straight line,0.0,0.0
+T_VILLIMALE,H06,6,bus,,False,no bus data,0.0,0.0
+T_VILLIMALE,H06,6,taxi,,False,no road link,0.0,0.0
+T_VILLIMALE,H06,7,walk,7.432788189646223,True,195 m straight line,0.0,0.0
+T_VILLIMALE,H06,7,bus,,False,no bus data,0.0,0.0
+T_VILLIMALE,H06,7,taxi,,False,no road link,0.0,0.0
+T_VILLIMALE,H06,8,walk,7.432788189646223,True,195 m straight line,0.0,0.0
+T_VILLIMALE,H06,8,bus,,False,no bus data,0.0,0.0
+T_VILLIMALE,H06,8,taxi,,False,no road link,0.0,0.0
+T_VILLIMALE,H06,9,walk,7.432788189646223,True,195 m straight line,0.0,0.0
+T_VILLIMALE,H06,9,bus,,False,no bus data,0.0,0.0
+T_VILLIMALE,H06,9,taxi,,False,no road link,0.0,0.0
+T_VILLIMALE,H06,10,walk,7.432788189646223,True,195 m straight line,0.0,0.0
+T_VILLIMALE,H06,10,bus,,False,no bus data,0.0,0.0
+T_VILLIMALE,H06,10,taxi,,False,no road link,0.0,0.0
+T_VILLIMALE,H06,11,walk,7.432788189646223,True,195 m straight line,0.0,0.0
+T_VILLIMALE,H06,11,bus,,False,no bus data,0.0,0.0
+T_VILLIMALE,H06,11,taxi,,False,no road link,0.0,0.0
+T_VILLIMALE,H06,12,walk,7.432788189646223,True,195 m straight line,0.0,0.0
+T_VILLIMALE,H06,12,bus,,False,no bus data,0.0,0.0
+T_VILLIMALE,H06,12,taxi,,False,no road link,0.0,0.0
+T_VILLIMALE,H06,13,walk,7.432788189646223,True,195 m straight line,0.0,0.0
+T_VILLIMALE,H06,13,bus,,False,no bus data,0.0,0.0
+T_VILLIMALE,H06,13,taxi,,False,no road link,0.0,0.0
+T_VILLIMALE,H06,14,walk,7.432788189646223,True,195 m straight line,0.0,0.0
+T_VILLIMALE,H06,14,bus,,False,no bus data,0.0,0.0
+T_VILLIMALE,H06,14,taxi,,False,no road link,0.0,0.0
+T_VILLIMALE,H06,15,walk,7.432788189646223,True,195 m straight line,0.0,0.0
+T_VILLIMALE,H06,15,bus,,False,no bus data,0.0,0.0
+T_VILLIMALE,H06,15,taxi,,False,no road link,0.0,0.0
+T_VILLIMALE,H06,16,walk,7.432788189646223,True,195 m straight line,0.0,0.0
+T_VILLIMALE,H06,16,bus,,False,no bus data,0.0,0.0
+T_VILLIMALE,H06,16,taxi,,False,no road link,0.0,0.0
+T_VILLIMALE,H06,17,walk,7.432788189646223,True,195 m straight line,0.0,0.0
+T_VILLIMALE,H06,17,bus,,False,no bus data,0.0,0.0
+T_VILLIMALE,H06,17,taxi,,False,no road link,0.0,0.0
+T_VILLIMALE,H06,18,walk,7.432788189646223,True,195 m straight line,0.0,0.0
+T_VILLIMALE,H06,18,bus,,False,no bus data,0.0,0.0
+T_VILLIMALE,H06,18,taxi,,False,no road link,0.0,0.0
+T_VILLIMALE,H06,19,walk,7.432788189646223,True,195 m straight line,0.0,0.0
+T_VILLIMALE,H06,19,bus,,False,no bus data,0.0,0.0
+T_VILLIMALE,H06,19,taxi,,False,no road link,0.0,0.0
+T_VILLIMALE,H06,20,walk,7.432788189646223,True,195 m straight line,0.0,0.0
+T_VILLIMALE,H06,20,bus,,False,no bus data,0.0,0.0
+T_VILLIMALE,H06,20,taxi,,False,no road link,0.0,0.0
+T_VILLIMALE,H06,21,walk,7.432788189646223,True,195 m straight line,0.0,0.0
+T_VILLIMALE,H06,21,bus,,False,no bus data,0.0,0.0
+T_VILLIMALE,H06,21,taxi,,False,no road link,0.0,0.0
+T_VILLIMALE,H06,22,walk,7.432788189646223,True,195 m straight line,0.0,0.0
+T_VILLIMALE,H06,22,bus,,False,no bus data,0.0,0.0
+T_VILLIMALE,H06,22,taxi,,False,no road link,0.0,0.0
+T_VILLIMALE,H06,23,walk,7.432788189646223,True,195 m straight line,0.0,0.0
+T_VILLIMALE,H06,23,bus,,False,no bus data,0.0,0.0
+T_VILLIMALE,H06,23,taxi,,False,no road link,0.0,0.0
+T_AIRPORT,H01,0,walk,50.956073360687874,False,different island,0.0,0.0
+T_AIRPORT,H01,0,bus,,False,no bus data,0.0,0.0
+T_AIRPORT,H01,0,taxi,26.141240649191126,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_AIRPORT,H01,1,walk,50.956073360687874,False,different island,0.0,0.0
+T_AIRPORT,H01,1,bus,,False,no bus data,0.0,0.0
+T_AIRPORT,H01,1,taxi,26.141240649191126,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_AIRPORT,H01,2,walk,50.956073360687874,False,different island,0.0,0.0
+T_AIRPORT,H01,2,bus,,False,no bus data,0.0,0.0
+T_AIRPORT,H01,2,taxi,26.141240649191126,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_AIRPORT,H01,3,walk,50.956073360687874,False,different island,0.0,0.0
+T_AIRPORT,H01,3,bus,,False,no bus data,0.0,0.0
+T_AIRPORT,H01,3,taxi,26.141240649191126,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_AIRPORT,H01,4,walk,50.956073360687874,False,different island,0.0,0.0
+T_AIRPORT,H01,4,bus,,False,no bus data,0.0,0.0
+T_AIRPORT,H01,4,taxi,26.141240649191126,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_AIRPORT,H01,5,walk,50.956073360687874,False,different island,0.0,0.0
+T_AIRPORT,H01,5,bus,,False,no bus data,0.0,0.0
+T_AIRPORT,H01,5,taxi,26.141240649191126,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_AIRPORT,H01,6,walk,50.956073360687874,False,different island,0.0,0.0
+T_AIRPORT,H01,6,bus,,False,no bus data,0.0,0.0
+T_AIRPORT,H01,6,taxi,26.141240649191126,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_AIRPORT,H01,7,walk,50.956073360687874,False,different island,0.0,0.0
+T_AIRPORT,H01,7,bus,,False,no bus data,0.0,0.0
+T_AIRPORT,H01,7,taxi,26.141240649191126,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_AIRPORT,H01,8,walk,50.956073360687874,False,different island,0.0,0.0
+T_AIRPORT,H01,8,bus,,False,no bus data,0.0,0.0
+T_AIRPORT,H01,8,taxi,26.141240649191126,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_AIRPORT,H01,9,walk,50.956073360687874,False,different island,0.0,0.0
+T_AIRPORT,H01,9,bus,,False,no bus data,0.0,0.0
+T_AIRPORT,H01,9,taxi,26.141240649191126,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_AIRPORT,H01,10,walk,50.956073360687874,False,different island,0.0,0.0
+T_AIRPORT,H01,10,bus,,False,no bus data,0.0,0.0
+T_AIRPORT,H01,10,taxi,26.141240649191126,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_AIRPORT,H01,11,walk,50.956073360687874,False,different island,0.0,0.0
+T_AIRPORT,H01,11,bus,,False,no bus data,0.0,0.0
+T_AIRPORT,H01,11,taxi,26.141240649191126,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_AIRPORT,H01,12,walk,50.956073360687874,False,different island,0.0,0.0
+T_AIRPORT,H01,12,bus,,False,no bus data,0.0,0.0
+T_AIRPORT,H01,12,taxi,26.141240649191126,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_AIRPORT,H01,13,walk,50.956073360687874,False,different island,0.0,0.0
+T_AIRPORT,H01,13,bus,,False,no bus data,0.0,0.0
+T_AIRPORT,H01,13,taxi,26.141240649191126,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_AIRPORT,H01,14,walk,50.956073360687874,False,different island,0.0,0.0
+T_AIRPORT,H01,14,bus,,False,no bus data,0.0,0.0
+T_AIRPORT,H01,14,taxi,26.141240649191126,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_AIRPORT,H01,15,walk,50.956073360687874,False,different island,0.0,0.0
+T_AIRPORT,H01,15,bus,,False,no bus data,0.0,0.0
+T_AIRPORT,H01,15,taxi,26.141240649191126,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_AIRPORT,H01,16,walk,50.956073360687874,False,different island,0.0,0.0
+T_AIRPORT,H01,16,bus,,False,no bus data,0.0,0.0
+T_AIRPORT,H01,16,taxi,26.141240649191126,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_AIRPORT,H01,17,walk,50.956073360687874,False,different island,0.0,0.0
+T_AIRPORT,H01,17,bus,,False,no bus data,0.0,0.0
+T_AIRPORT,H01,17,taxi,26.141240649191126,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_AIRPORT,H01,18,walk,50.956073360687874,False,different island,0.0,0.0
+T_AIRPORT,H01,18,bus,,False,no bus data,0.0,0.0
+T_AIRPORT,H01,18,taxi,26.141240649191126,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_AIRPORT,H01,19,walk,50.956073360687874,False,different island,0.0,0.0
+T_AIRPORT,H01,19,bus,,False,no bus data,0.0,0.0
+T_AIRPORT,H01,19,taxi,26.141240649191126,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_AIRPORT,H01,20,walk,50.956073360687874,False,different island,0.0,0.0
+T_AIRPORT,H01,20,bus,,False,no bus data,0.0,0.0
+T_AIRPORT,H01,20,taxi,26.141240649191126,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_AIRPORT,H01,21,walk,50.956073360687874,False,different island,0.0,0.0
+T_AIRPORT,H01,21,bus,,False,no bus data,0.0,0.0
+T_AIRPORT,H01,21,taxi,26.141240649191126,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_AIRPORT,H01,22,walk,50.956073360687874,False,different island,0.0,0.0
+T_AIRPORT,H01,22,bus,,False,no bus data,0.0,0.0
+T_AIRPORT,H01,22,taxi,26.141240649191126,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_AIRPORT,H01,23,walk,50.956073360687874,False,different island,0.0,0.0
+T_AIRPORT,H01,23,bus,,False,no bus data,0.0,0.0
+T_AIRPORT,H01,23,taxi,26.141240649191126,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_AIRPORT,H02,0,walk,35.3008764365526,False,different island,0.0,0.0
+T_AIRPORT,H02,0,bus,,False,no bus data,0.0,0.0
+T_AIRPORT,H02,0,taxi,20.88109448268167,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_AIRPORT,H02,1,walk,35.3008764365526,False,different island,0.0,0.0
+T_AIRPORT,H02,1,bus,,False,no bus data,0.0,0.0
+T_AIRPORT,H02,1,taxi,20.88109448268167,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_AIRPORT,H02,2,walk,35.3008764365526,False,different island,0.0,0.0
+T_AIRPORT,H02,2,bus,,False,no bus data,0.0,0.0
+T_AIRPORT,H02,2,taxi,20.88109448268167,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_AIRPORT,H02,3,walk,35.3008764365526,False,different island,0.0,0.0
+T_AIRPORT,H02,3,bus,,False,no bus data,0.0,0.0
+T_AIRPORT,H02,3,taxi,20.88109448268167,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_AIRPORT,H02,4,walk,35.3008764365526,False,different island,0.0,0.0
+T_AIRPORT,H02,4,bus,,False,no bus data,0.0,0.0
+T_AIRPORT,H02,4,taxi,20.88109448268167,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_AIRPORT,H02,5,walk,35.3008764365526,False,different island,0.0,0.0
+T_AIRPORT,H02,5,bus,,False,no bus data,0.0,0.0
+T_AIRPORT,H02,5,taxi,20.88109448268167,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_AIRPORT,H02,6,walk,35.3008764365526,False,different island,0.0,0.0
+T_AIRPORT,H02,6,bus,,False,no bus data,0.0,0.0
+T_AIRPORT,H02,6,taxi,20.88109448268167,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_AIRPORT,H02,7,walk,35.3008764365526,False,different island,0.0,0.0
+T_AIRPORT,H02,7,bus,,False,no bus data,0.0,0.0
+T_AIRPORT,H02,7,taxi,20.88109448268167,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_AIRPORT,H02,8,walk,35.3008764365526,False,different island,0.0,0.0
+T_AIRPORT,H02,8,bus,,False,no bus data,0.0,0.0
+T_AIRPORT,H02,8,taxi,20.88109448268167,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_AIRPORT,H02,9,walk,35.3008764365526,False,different island,0.0,0.0
+T_AIRPORT,H02,9,bus,,False,no bus data,0.0,0.0
+T_AIRPORT,H02,9,taxi,20.88109448268167,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_AIRPORT,H02,10,walk,35.3008764365526,False,different island,0.0,0.0
+T_AIRPORT,H02,10,bus,,False,no bus data,0.0,0.0
+T_AIRPORT,H02,10,taxi,20.88109448268167,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_AIRPORT,H02,11,walk,35.3008764365526,False,different island,0.0,0.0
+T_AIRPORT,H02,11,bus,,False,no bus data,0.0,0.0
+T_AIRPORT,H02,11,taxi,20.88109448268167,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_AIRPORT,H02,12,walk,35.3008764365526,False,different island,0.0,0.0
+T_AIRPORT,H02,12,bus,,False,no bus data,0.0,0.0
+T_AIRPORT,H02,12,taxi,20.88109448268167,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_AIRPORT,H02,13,walk,35.3008764365526,False,different island,0.0,0.0
+T_AIRPORT,H02,13,bus,,False,no bus data,0.0,0.0
+T_AIRPORT,H02,13,taxi,20.88109448268167,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_AIRPORT,H02,14,walk,35.3008764365526,False,different island,0.0,0.0
+T_AIRPORT,H02,14,bus,,False,no bus data,0.0,0.0
+T_AIRPORT,H02,14,taxi,20.88109448268167,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_AIRPORT,H02,15,walk,35.3008764365526,False,different island,0.0,0.0
+T_AIRPORT,H02,15,bus,,False,no bus data,0.0,0.0
+T_AIRPORT,H02,15,taxi,20.88109448268167,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_AIRPORT,H02,16,walk,35.3008764365526,False,different island,0.0,0.0
+T_AIRPORT,H02,16,bus,,False,no bus data,0.0,0.0
+T_AIRPORT,H02,16,taxi,20.88109448268167,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_AIRPORT,H02,17,walk,35.3008764365526,False,different island,0.0,0.0
+T_AIRPORT,H02,17,bus,,False,no bus data,0.0,0.0
+T_AIRPORT,H02,17,taxi,20.88109448268167,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_AIRPORT,H02,18,walk,35.3008764365526,False,different island,0.0,0.0
+T_AIRPORT,H02,18,bus,,False,no bus data,0.0,0.0
+T_AIRPORT,H02,18,taxi,20.88109448268167,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_AIRPORT,H02,19,walk,35.3008764365526,False,different island,0.0,0.0
+T_AIRPORT,H02,19,bus,,False,no bus data,0.0,0.0
+T_AIRPORT,H02,19,taxi,20.88109448268167,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_AIRPORT,H02,20,walk,35.3008764365526,False,different island,0.0,0.0
+T_AIRPORT,H02,20,bus,,False,no bus data,0.0,0.0
+T_AIRPORT,H02,20,taxi,20.88109448268167,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_AIRPORT,H02,21,walk,35.3008764365526,False,different island,0.0,0.0
+T_AIRPORT,H02,21,bus,,False,no bus data,0.0,0.0
+T_AIRPORT,H02,21,taxi,20.88109448268167,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_AIRPORT,H02,22,walk,35.3008764365526,False,different island,0.0,0.0
+T_AIRPORT,H02,22,bus,,False,no bus data,0.0,0.0
+T_AIRPORT,H02,22,taxi,20.88109448268167,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_AIRPORT,H02,23,walk,35.3008764365526,False,different island,0.0,0.0
+T_AIRPORT,H02,23,bus,,False,no bus data,0.0,0.0
+T_AIRPORT,H02,23,taxi,20.88109448268167,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_AIRPORT,H03,0,walk,37.9882303334277,False,different island,0.0,0.0
+T_AIRPORT,H03,0,bus,,False,no bus data,0.0,0.0
+T_AIRPORT,H03,0,taxi,21.784045392031707,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_AIRPORT,H03,1,walk,37.9882303334277,False,different island,0.0,0.0
+T_AIRPORT,H03,1,bus,,False,no bus data,0.0,0.0
+T_AIRPORT,H03,1,taxi,21.784045392031707,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_AIRPORT,H03,2,walk,37.9882303334277,False,different island,0.0,0.0
+T_AIRPORT,H03,2,bus,,False,no bus data,0.0,0.0
+T_AIRPORT,H03,2,taxi,21.784045392031707,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_AIRPORT,H03,3,walk,37.9882303334277,False,different island,0.0,0.0
+T_AIRPORT,H03,3,bus,,False,no bus data,0.0,0.0
+T_AIRPORT,H03,3,taxi,21.784045392031707,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_AIRPORT,H03,4,walk,37.9882303334277,False,different island,0.0,0.0
+T_AIRPORT,H03,4,bus,,False,no bus data,0.0,0.0
+T_AIRPORT,H03,4,taxi,21.784045392031707,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_AIRPORT,H03,5,walk,37.9882303334277,False,different island,0.0,0.0
+T_AIRPORT,H03,5,bus,,False,no bus data,0.0,0.0
+T_AIRPORT,H03,5,taxi,21.784045392031707,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_AIRPORT,H03,6,walk,37.9882303334277,False,different island,0.0,0.0
+T_AIRPORT,H03,6,bus,,False,no bus data,0.0,0.0
+T_AIRPORT,H03,6,taxi,21.784045392031707,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_AIRPORT,H03,7,walk,37.9882303334277,False,different island,0.0,0.0
+T_AIRPORT,H03,7,bus,,False,no bus data,0.0,0.0
+T_AIRPORT,H03,7,taxi,21.784045392031707,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_AIRPORT,H03,8,walk,37.9882303334277,False,different island,0.0,0.0
+T_AIRPORT,H03,8,bus,,False,no bus data,0.0,0.0
+T_AIRPORT,H03,8,taxi,21.784045392031707,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_AIRPORT,H03,9,walk,37.9882303334277,False,different island,0.0,0.0
+T_AIRPORT,H03,9,bus,,False,no bus data,0.0,0.0
+T_AIRPORT,H03,9,taxi,21.784045392031707,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_AIRPORT,H03,10,walk,37.9882303334277,False,different island,0.0,0.0
+T_AIRPORT,H03,10,bus,,False,no bus data,0.0,0.0
+T_AIRPORT,H03,10,taxi,21.784045392031707,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_AIRPORT,H03,11,walk,37.9882303334277,False,different island,0.0,0.0
+T_AIRPORT,H03,11,bus,,False,no bus data,0.0,0.0
+T_AIRPORT,H03,11,taxi,21.784045392031707,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_AIRPORT,H03,12,walk,37.9882303334277,False,different island,0.0,0.0
+T_AIRPORT,H03,12,bus,,False,no bus data,0.0,0.0
+T_AIRPORT,H03,12,taxi,21.784045392031707,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_AIRPORT,H03,13,walk,37.9882303334277,False,different island,0.0,0.0
+T_AIRPORT,H03,13,bus,,False,no bus data,0.0,0.0
+T_AIRPORT,H03,13,taxi,21.784045392031707,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_AIRPORT,H03,14,walk,37.9882303334277,False,different island,0.0,0.0
+T_AIRPORT,H03,14,bus,,False,no bus data,0.0,0.0
+T_AIRPORT,H03,14,taxi,21.784045392031707,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_AIRPORT,H03,15,walk,37.9882303334277,False,different island,0.0,0.0
+T_AIRPORT,H03,15,bus,,False,no bus data,0.0,0.0
+T_AIRPORT,H03,15,taxi,21.784045392031707,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_AIRPORT,H03,16,walk,37.9882303334277,False,different island,0.0,0.0
+T_AIRPORT,H03,16,bus,,False,no bus data,0.0,0.0
+T_AIRPORT,H03,16,taxi,21.784045392031707,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_AIRPORT,H03,17,walk,37.9882303334277,False,different island,0.0,0.0
+T_AIRPORT,H03,17,bus,,False,no bus data,0.0,0.0
+T_AIRPORT,H03,17,taxi,21.784045392031707,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_AIRPORT,H03,18,walk,37.9882303334277,False,different island,0.0,0.0
+T_AIRPORT,H03,18,bus,,False,no bus data,0.0,0.0
+T_AIRPORT,H03,18,taxi,21.784045392031707,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_AIRPORT,H03,19,walk,37.9882303334277,False,different island,0.0,0.0
+T_AIRPORT,H03,19,bus,,False,no bus data,0.0,0.0
+T_AIRPORT,H03,19,taxi,21.784045392031707,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_AIRPORT,H03,20,walk,37.9882303334277,False,different island,0.0,0.0
+T_AIRPORT,H03,20,bus,,False,no bus data,0.0,0.0
+T_AIRPORT,H03,20,taxi,21.784045392031707,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_AIRPORT,H03,21,walk,37.9882303334277,False,different island,0.0,0.0
+T_AIRPORT,H03,21,bus,,False,no bus data,0.0,0.0
+T_AIRPORT,H03,21,taxi,21.784045392031707,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_AIRPORT,H03,22,walk,37.9882303334277,False,different island,0.0,0.0
+T_AIRPORT,H03,22,bus,,False,no bus data,0.0,0.0
+T_AIRPORT,H03,22,taxi,21.784045392031707,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_AIRPORT,H03,23,walk,37.9882303334277,False,different island,0.0,0.0
+T_AIRPORT,H03,23,bus,,False,no bus data,0.0,0.0
+T_AIRPORT,H03,23,taxi,21.784045392031707,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_AIRPORT,H04,0,walk,43.51980123278763,False,different island,0.0,0.0
+T_AIRPORT,H04,0,bus,,False,no bus data,0.0,0.0
+T_AIRPORT,H04,0,taxi,23.642653214216644,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_AIRPORT,H04,1,walk,43.51980123278763,False,different island,0.0,0.0
+T_AIRPORT,H04,1,bus,,False,no bus data,0.0,0.0
+T_AIRPORT,H04,1,taxi,23.642653214216644,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_AIRPORT,H04,2,walk,43.51980123278763,False,different island,0.0,0.0
+T_AIRPORT,H04,2,bus,,False,no bus data,0.0,0.0
+T_AIRPORT,H04,2,taxi,23.642653214216644,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_AIRPORT,H04,3,walk,43.51980123278763,False,different island,0.0,0.0
+T_AIRPORT,H04,3,bus,,False,no bus data,0.0,0.0
+T_AIRPORT,H04,3,taxi,23.642653214216644,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_AIRPORT,H04,4,walk,43.51980123278763,False,different island,0.0,0.0
+T_AIRPORT,H04,4,bus,,False,no bus data,0.0,0.0
+T_AIRPORT,H04,4,taxi,23.642653214216644,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_AIRPORT,H04,5,walk,43.51980123278763,False,different island,0.0,0.0
+T_AIRPORT,H04,5,bus,,False,no bus data,0.0,0.0
+T_AIRPORT,H04,5,taxi,23.642653214216644,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_AIRPORT,H04,6,walk,43.51980123278763,False,different island,0.0,0.0
+T_AIRPORT,H04,6,bus,,False,no bus data,0.0,0.0
+T_AIRPORT,H04,6,taxi,23.642653214216644,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_AIRPORT,H04,7,walk,43.51980123278763,False,different island,0.0,0.0
+T_AIRPORT,H04,7,bus,,False,no bus data,0.0,0.0
+T_AIRPORT,H04,7,taxi,23.642653214216644,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_AIRPORT,H04,8,walk,43.51980123278763,False,different island,0.0,0.0
+T_AIRPORT,H04,8,bus,,False,no bus data,0.0,0.0
+T_AIRPORT,H04,8,taxi,23.642653214216644,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_AIRPORT,H04,9,walk,43.51980123278763,False,different island,0.0,0.0
+T_AIRPORT,H04,9,bus,,False,no bus data,0.0,0.0
+T_AIRPORT,H04,9,taxi,23.642653214216644,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_AIRPORT,H04,10,walk,43.51980123278763,False,different island,0.0,0.0
+T_AIRPORT,H04,10,bus,,False,no bus data,0.0,0.0
+T_AIRPORT,H04,10,taxi,23.642653214216644,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_AIRPORT,H04,11,walk,43.51980123278763,False,different island,0.0,0.0
+T_AIRPORT,H04,11,bus,,False,no bus data,0.0,0.0
+T_AIRPORT,H04,11,taxi,23.642653214216644,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_AIRPORT,H04,12,walk,43.51980123278763,False,different island,0.0,0.0
+T_AIRPORT,H04,12,bus,,False,no bus data,0.0,0.0
+T_AIRPORT,H04,12,taxi,23.642653214216644,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_AIRPORT,H04,13,walk,43.51980123278763,False,different island,0.0,0.0
+T_AIRPORT,H04,13,bus,,False,no bus data,0.0,0.0
+T_AIRPORT,H04,13,taxi,23.642653214216644,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_AIRPORT,H04,14,walk,43.51980123278763,False,different island,0.0,0.0
+T_AIRPORT,H04,14,bus,,False,no bus data,0.0,0.0
+T_AIRPORT,H04,14,taxi,23.642653214216644,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_AIRPORT,H04,15,walk,43.51980123278763,False,different island,0.0,0.0
+T_AIRPORT,H04,15,bus,,False,no bus data,0.0,0.0
+T_AIRPORT,H04,15,taxi,23.642653214216644,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_AIRPORT,H04,16,walk,43.51980123278763,False,different island,0.0,0.0
+T_AIRPORT,H04,16,bus,,False,no bus data,0.0,0.0
+T_AIRPORT,H04,16,taxi,23.642653214216644,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_AIRPORT,H04,17,walk,43.51980123278763,False,different island,0.0,0.0
+T_AIRPORT,H04,17,bus,,False,no bus data,0.0,0.0
+T_AIRPORT,H04,17,taxi,23.642653214216644,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_AIRPORT,H04,18,walk,43.51980123278763,False,different island,0.0,0.0
+T_AIRPORT,H04,18,bus,,False,no bus data,0.0,0.0
+T_AIRPORT,H04,18,taxi,23.642653214216644,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_AIRPORT,H04,19,walk,43.51980123278763,False,different island,0.0,0.0
+T_AIRPORT,H04,19,bus,,False,no bus data,0.0,0.0
+T_AIRPORT,H04,19,taxi,23.642653214216644,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_AIRPORT,H04,20,walk,43.51980123278763,False,different island,0.0,0.0
+T_AIRPORT,H04,20,bus,,False,no bus data,0.0,0.0
+T_AIRPORT,H04,20,taxi,23.642653214216644,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_AIRPORT,H04,21,walk,43.51980123278763,False,different island,0.0,0.0
+T_AIRPORT,H04,21,bus,,False,no bus data,0.0,0.0
+T_AIRPORT,H04,21,taxi,23.642653214216644,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_AIRPORT,H04,22,walk,43.51980123278763,False,different island,0.0,0.0
+T_AIRPORT,H04,22,bus,,False,no bus data,0.0,0.0
+T_AIRPORT,H04,22,taxi,23.642653214216644,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_AIRPORT,H04,23,walk,43.51980123278763,False,different island,0.0,0.0
+T_AIRPORT,H04,23,bus,,False,no bus data,0.0,0.0
+T_AIRPORT,H04,23,taxi,23.642653214216644,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_AIRPORT,H05,0,walk,36.8126502764257,False,different island,0.0,0.0
+T_AIRPORT,H05,0,bus,,False,no bus data,0.0,0.0
+T_AIRPORT,H05,0,taxi,21.389050492879036,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_AIRPORT,H05,1,walk,36.8126502764257,False,different island,0.0,0.0
+T_AIRPORT,H05,1,bus,,False,no bus data,0.0,0.0
+T_AIRPORT,H05,1,taxi,21.389050492879036,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_AIRPORT,H05,2,walk,36.8126502764257,False,different island,0.0,0.0
+T_AIRPORT,H05,2,bus,,False,no bus data,0.0,0.0
+T_AIRPORT,H05,2,taxi,21.389050492879036,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_AIRPORT,H05,3,walk,36.8126502764257,False,different island,0.0,0.0
+T_AIRPORT,H05,3,bus,,False,no bus data,0.0,0.0
+T_AIRPORT,H05,3,taxi,21.389050492879036,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_AIRPORT,H05,4,walk,36.8126502764257,False,different island,0.0,0.0
+T_AIRPORT,H05,4,bus,,False,no bus data,0.0,0.0
+T_AIRPORT,H05,4,taxi,21.389050492879036,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_AIRPORT,H05,5,walk,36.8126502764257,False,different island,0.0,0.0
+T_AIRPORT,H05,5,bus,,False,no bus data,0.0,0.0
+T_AIRPORT,H05,5,taxi,21.389050492879036,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_AIRPORT,H05,6,walk,36.8126502764257,False,different island,0.0,0.0
+T_AIRPORT,H05,6,bus,,False,no bus data,0.0,0.0
+T_AIRPORT,H05,6,taxi,21.389050492879036,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_AIRPORT,H05,7,walk,36.8126502764257,False,different island,0.0,0.0
+T_AIRPORT,H05,7,bus,,False,no bus data,0.0,0.0
+T_AIRPORT,H05,7,taxi,21.389050492879036,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_AIRPORT,H05,8,walk,36.8126502764257,False,different island,0.0,0.0
+T_AIRPORT,H05,8,bus,,False,no bus data,0.0,0.0
+T_AIRPORT,H05,8,taxi,21.389050492879036,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_AIRPORT,H05,9,walk,36.8126502764257,False,different island,0.0,0.0
+T_AIRPORT,H05,9,bus,,False,no bus data,0.0,0.0
+T_AIRPORT,H05,9,taxi,21.389050492879036,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_AIRPORT,H05,10,walk,36.8126502764257,False,different island,0.0,0.0
+T_AIRPORT,H05,10,bus,,False,no bus data,0.0,0.0
+T_AIRPORT,H05,10,taxi,21.389050492879036,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_AIRPORT,H05,11,walk,36.8126502764257,False,different island,0.0,0.0
+T_AIRPORT,H05,11,bus,,False,no bus data,0.0,0.0
+T_AIRPORT,H05,11,taxi,21.389050492879036,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_AIRPORT,H05,12,walk,36.8126502764257,False,different island,0.0,0.0
+T_AIRPORT,H05,12,bus,,False,no bus data,0.0,0.0
+T_AIRPORT,H05,12,taxi,21.389050492879036,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_AIRPORT,H05,13,walk,36.8126502764257,False,different island,0.0,0.0
+T_AIRPORT,H05,13,bus,,False,no bus data,0.0,0.0
+T_AIRPORT,H05,13,taxi,21.389050492879036,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_AIRPORT,H05,14,walk,36.8126502764257,False,different island,0.0,0.0
+T_AIRPORT,H05,14,bus,,False,no bus data,0.0,0.0
+T_AIRPORT,H05,14,taxi,21.389050492879036,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_AIRPORT,H05,15,walk,36.8126502764257,False,different island,0.0,0.0
+T_AIRPORT,H05,15,bus,,False,no bus data,0.0,0.0
+T_AIRPORT,H05,15,taxi,21.389050492879036,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_AIRPORT,H05,16,walk,36.8126502764257,False,different island,0.0,0.0
+T_AIRPORT,H05,16,bus,,False,no bus data,0.0,0.0
+T_AIRPORT,H05,16,taxi,21.389050492879036,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_AIRPORT,H05,17,walk,36.8126502764257,False,different island,0.0,0.0
+T_AIRPORT,H05,17,bus,,False,no bus data,0.0,0.0
+T_AIRPORT,H05,17,taxi,21.389050492879036,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_AIRPORT,H05,18,walk,36.8126502764257,False,different island,0.0,0.0
+T_AIRPORT,H05,18,bus,,False,no bus data,0.0,0.0
+T_AIRPORT,H05,18,taxi,21.389050492879036,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_AIRPORT,H05,19,walk,36.8126502764257,False,different island,0.0,0.0
+T_AIRPORT,H05,19,bus,,False,no bus data,0.0,0.0
+T_AIRPORT,H05,19,taxi,21.389050492879036,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_AIRPORT,H05,20,walk,36.8126502764257,False,different island,0.0,0.0
+T_AIRPORT,H05,20,bus,,False,no bus data,0.0,0.0
+T_AIRPORT,H05,20,taxi,21.389050492879036,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_AIRPORT,H05,21,walk,36.8126502764257,False,different island,0.0,0.0
+T_AIRPORT,H05,21,bus,,False,no bus data,0.0,0.0
+T_AIRPORT,H05,21,taxi,21.389050492879036,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_AIRPORT,H05,22,walk,36.8126502764257,False,different island,0.0,0.0
+T_AIRPORT,H05,22,bus,,False,no bus data,0.0,0.0
+T_AIRPORT,H05,22,taxi,21.389050492879036,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_AIRPORT,H05,23,walk,36.8126502764257,False,different island,0.0,0.0
+T_AIRPORT,H05,23,bus,,False,no bus data,0.0,0.0
+T_AIRPORT,H05,23,taxi,21.389050492879036,True,PLACEHOLDER speed 20 km/h ×1.4,0.07,0.0
+T_AIRPORT,H06,0,walk,69.3307502388514,False,different island,0.0,0.0
+T_AIRPORT,H06,0,bus,,False,no bus data,0.0,0.0
+T_AIRPORT,H06,0,taxi,,False,no road link,0.0,0.0
+T_AIRPORT,H06,1,walk,69.3307502388514,False,different island,0.0,0.0
+T_AIRPORT,H06,1,bus,,False,no bus data,0.0,0.0
+T_AIRPORT,H06,1,taxi,,False,no road link,0.0,0.0
+T_AIRPORT,H06,2,walk,69.3307502388514,False,different island,0.0,0.0
+T_AIRPORT,H06,2,bus,,False,no bus data,0.0,0.0
+T_AIRPORT,H06,2,taxi,,False,no road link,0.0,0.0
+T_AIRPORT,H06,3,walk,69.3307502388514,False,different island,0.0,0.0
+T_AIRPORT,H06,3,bus,,False,no bus data,0.0,0.0
+T_AIRPORT,H06,3,taxi,,False,no road link,0.0,0.0
+T_AIRPORT,H06,4,walk,69.3307502388514,False,different island,0.0,0.0
+T_AIRPORT,H06,4,bus,,False,no bus data,0.0,0.0
+T_AIRPORT,H06,4,taxi,,False,no road link,0.0,0.0
+T_AIRPORT,H06,5,walk,69.3307502388514,False,different island,0.0,0.0
+T_AIRPORT,H06,5,bus,,False,no bus data,0.0,0.0
+T_AIRPORT,H06,5,taxi,,False,no road link,0.0,0.0
+T_AIRPORT,H06,6,walk,69.3307502388514,False,different island,0.0,0.0
+T_AIRPORT,H06,6,bus,,False,no bus data,0.0,0.0
+T_AIRPORT,H06,6,taxi,,False,no road link,0.0,0.0
+T_AIRPORT,H06,7,walk,69.3307502388514,False,different island,0.0,0.0
+T_AIRPORT,H06,7,bus,,False,no bus data,0.0,0.0
+T_AIRPORT,H06,7,taxi,,False,no road link,0.0,0.0
+T_AIRPORT,H06,8,walk,69.3307502388514,False,different island,0.0,0.0
+T_AIRPORT,H06,8,bus,,False,no bus data,0.0,0.0
+T_AIRPORT,H06,8,taxi,,False,no road link,0.0,0.0
+T_AIRPORT,H06,9,walk,69.3307502388514,False,different island,0.0,0.0
+T_AIRPORT,H06,9,bus,,False,no bus data,0.0,0.0
+T_AIRPORT,H06,9,taxi,,False,no road link,0.0,0.0
+T_AIRPORT,H06,10,walk,69.3307502388514,False,different island,0.0,0.0
+T_AIRPORT,H06,10,bus,,False,no bus data,0.0,0.0
+T_AIRPORT,H06,10,taxi,,False,no road link,0.0,0.0
+T_AIRPORT,H06,11,walk,69.3307502388514,False,different island,0.0,0.0
+T_AIRPORT,H06,11,bus,,False,no bus data,0.0,0.0
+T_AIRPORT,H06,11,taxi,,False,no road link,0.0,0.0
+T_AIRPORT,H06,12,walk,69.3307502388514,False,different island,0.0,0.0
+T_AIRPORT,H06,12,bus,,False,no bus data,0.0,0.0
+T_AIRPORT,H06,12,taxi,,False,no road link,0.0,0.0
+T_AIRPORT,H06,13,walk,69.3307502388514,False,different island,0.0,0.0
+T_AIRPORT,H06,13,bus,,False,no bus data,0.0,0.0
+T_AIRPORT,H06,13,taxi,,False,no road link,0.0,0.0
+T_AIRPORT,H06,14,walk,69.3307502388514,False,different island,0.0,0.0
+T_AIRPORT,H06,14,bus,,False,no bus data,0.0,0.0
+T_AIRPORT,H06,14,taxi,,False,no road link,0.0,0.0
+T_AIRPORT,H06,15,walk,69.3307502388514,False,different island,0.0,0.0
+T_AIRPORT,H06,15,bus,,False,no bus data,0.0,0.0
+T_AIRPORT,H06,15,taxi,,False,no road link,0.0,0.0
+T_AIRPORT,H06,16,walk,69.3307502388514,False,different island,0.0,0.0
+T_AIRPORT,H06,16,bus,,False,no bus data,0.0,0.0
+T_AIRPORT,H06,16,taxi,,False,no road link,0.0,0.0
+T_AIRPORT,H06,17,walk,69.3307502388514,False,different island,0.0,0.0
+T_AIRPORT,H06,17,bus,,False,no bus data,0.0,0.0
+T_AIRPORT,H06,17,taxi,,False,no road link,0.0,0.0
+T_AIRPORT,H06,18,walk,69.3307502388514,False,different island,0.0,0.0
+T_AIRPORT,H06,18,bus,,False,no bus data,0.0,0.0
+T_AIRPORT,H06,18,taxi,,False,no road link,0.0,0.0
+T_AIRPORT,H06,19,walk,69.3307502388514,False,different island,0.0,0.0
+T_AIRPORT,H06,19,bus,,False,no bus data,0.0,0.0
+T_AIRPORT,H06,19,taxi,,False,no road link,0.0,0.0
+T_AIRPORT,H06,20,walk,69.3307502388514,False,different island,0.0,0.0
+T_AIRPORT,H06,20,bus,,False,no bus data,0.0,0.0
+T_AIRPORT,H06,20,taxi,,False,no road link,0.0,0.0
+T_AIRPORT,H06,21,walk,69.3307502388514,False,different island,0.0,0.0
+T_AIRPORT,H06,21,bus,,False,no bus data,0.0,0.0
+T_AIRPORT,H06,21,taxi,,False,no road link,0.0,0.0
+T_AIRPORT,H06,22,walk,69.3307502388514,False,different island,0.0,0.0
+T_AIRPORT,H06,22,bus,,False,no bus data,0.0,0.0
+T_AIRPORT,H06,22,taxi,,False,no road link,0.0,0.0
+T_AIRPORT,H06,23,walk,69.3307502388514,False,different island,0.0,0.0
+T_AIRPORT,H06,23,bus,,False,no bus data,0.0,0.0
+T_AIRPORT,H06,23,taxi,,False,no road link,0.0,0.0
+AA.Rasdhoo,H07,0,walk,7.0,True,harbour to atoll hospital,0.0,0.0
+AA.Rasdhoo,H07,1,walk,7.0,True,harbour to atoll hospital,0.0,0.0
+AA.Rasdhoo,H07,2,walk,7.0,True,harbour to atoll hospital,0.0,0.0
+AA.Rasdhoo,H07,3,walk,7.0,True,harbour to atoll hospital,0.0,0.0
+AA.Rasdhoo,H07,4,walk,7.0,True,harbour to atoll hospital,0.0,0.0
+AA.Rasdhoo,H07,5,walk,7.0,True,harbour to atoll hospital,0.0,0.0
+AA.Rasdhoo,H07,6,walk,7.0,True,harbour to atoll hospital,0.0,0.0
+AA.Rasdhoo,H07,7,walk,7.0,True,harbour to atoll hospital,0.0,0.0
+AA.Rasdhoo,H07,8,walk,7.0,True,harbour to atoll hospital,0.0,0.0
+AA.Rasdhoo,H07,9,walk,7.0,True,harbour to atoll hospital,0.0,0.0
+AA.Rasdhoo,H07,10,walk,7.0,True,harbour to atoll hospital,0.0,0.0
+AA.Rasdhoo,H07,11,walk,7.0,True,harbour to atoll hospital,0.0,0.0
+AA.Rasdhoo,H07,12,walk,7.0,True,harbour to atoll hospital,0.0,0.0
+AA.Rasdhoo,H07,13,walk,7.0,True,harbour to atoll hospital,0.0,0.0
+AA.Rasdhoo,H07,14,walk,7.0,True,harbour to atoll hospital,0.0,0.0
+AA.Rasdhoo,H07,15,walk,7.0,True,harbour to atoll hospital,0.0,0.0
+AA.Rasdhoo,H07,16,walk,7.0,True,harbour to atoll hospital,0.0,0.0
+AA.Rasdhoo,H07,17,walk,7.0,True,harbour to atoll hospital,0.0,0.0
+AA.Rasdhoo,H07,18,walk,7.0,True,harbour to atoll hospital,0.0,0.0
+AA.Rasdhoo,H07,19,walk,7.0,True,harbour to atoll hospital,0.0,0.0
+AA.Rasdhoo,H07,20,walk,7.0,True,harbour to atoll hospital,0.0,0.0
+AA.Rasdhoo,H07,21,walk,7.0,True,harbour to atoll hospital,0.0,0.0
+AA.Rasdhoo,H07,22,walk,7.0,True,harbour to atoll hospital,0.0,0.0
+AA.Rasdhoo,H07,23,walk,7.0,True,harbour to atoll hospital,0.0,0.0
+ADh.Mahibadhoo,H08,0,walk,8.5,True,harbour to atoll hospital,0.0,0.0
+ADh.Mahibadhoo,H08,1,walk,8.5,True,harbour to atoll hospital,0.0,0.0
+ADh.Mahibadhoo,H08,2,walk,8.5,True,harbour to atoll hospital,0.0,0.0
+ADh.Mahibadhoo,H08,3,walk,8.5,True,harbour to atoll hospital,0.0,0.0
+ADh.Mahibadhoo,H08,4,walk,8.5,True,harbour to atoll hospital,0.0,0.0
+ADh.Mahibadhoo,H08,5,walk,8.5,True,harbour to atoll hospital,0.0,0.0
+ADh.Mahibadhoo,H08,6,walk,8.5,True,harbour to atoll hospital,0.0,0.0
+ADh.Mahibadhoo,H08,7,walk,8.5,True,harbour to atoll hospital,0.0,0.0
+ADh.Mahibadhoo,H08,8,walk,8.5,True,harbour to atoll hospital,0.0,0.0
+ADh.Mahibadhoo,H08,9,walk,8.5,True,harbour to atoll hospital,0.0,0.0
+ADh.Mahibadhoo,H08,10,walk,8.5,True,harbour to atoll hospital,0.0,0.0
+ADh.Mahibadhoo,H08,11,walk,8.5,True,harbour to atoll hospital,0.0,0.0
+ADh.Mahibadhoo,H08,12,walk,8.5,True,harbour to atoll hospital,0.0,0.0
+ADh.Mahibadhoo,H08,13,walk,8.5,True,harbour to atoll hospital,0.0,0.0
+ADh.Mahibadhoo,H08,14,walk,8.5,True,harbour to atoll hospital,0.0,0.0
+ADh.Mahibadhoo,H08,15,walk,8.5,True,harbour to atoll hospital,0.0,0.0
+ADh.Mahibadhoo,H08,16,walk,8.5,True,harbour to atoll hospital,0.0,0.0
+ADh.Mahibadhoo,H08,17,walk,8.5,True,harbour to atoll hospital,0.0,0.0
+ADh.Mahibadhoo,H08,18,walk,8.5,True,harbour to atoll hospital,0.0,0.0
+ADh.Mahibadhoo,H08,19,walk,8.5,True,harbour to atoll hospital,0.0,0.0
+ADh.Mahibadhoo,H08,20,walk,8.5,True,harbour to atoll hospital,0.0,0.0
+ADh.Mahibadhoo,H08,21,walk,8.5,True,harbour to atoll hospital,0.0,0.0
+ADh.Mahibadhoo,H08,22,walk,8.5,True,harbour to atoll hospital,0.0,0.0
+ADh.Mahibadhoo,H08,23,walk,8.5,True,harbour to atoll hospital,0.0,0.0
+V.Felidhoo,H09,0,walk,7.0,True,harbour to atoll hospital,0.0,0.0
+V.Felidhoo,H09,1,walk,7.0,True,harbour to atoll hospital,0.0,0.0
+V.Felidhoo,H09,2,walk,7.0,True,harbour to atoll hospital,0.0,0.0
+V.Felidhoo,H09,3,walk,7.0,True,harbour to atoll hospital,0.0,0.0
+V.Felidhoo,H09,4,walk,7.0,True,harbour to atoll hospital,0.0,0.0
+V.Felidhoo,H09,5,walk,7.0,True,harbour to atoll hospital,0.0,0.0
+V.Felidhoo,H09,6,walk,7.0,True,harbour to atoll hospital,0.0,0.0
+V.Felidhoo,H09,7,walk,7.0,True,harbour to atoll hospital,0.0,0.0
+V.Felidhoo,H09,8,walk,7.0,True,harbour to atoll hospital,0.0,0.0
+V.Felidhoo,H09,9,walk,7.0,True,harbour to atoll hospital,0.0,0.0
+V.Felidhoo,H09,10,walk,7.0,True,harbour to atoll hospital,0.0,0.0
+V.Felidhoo,H09,11,walk,7.0,True,harbour to atoll hospital,0.0,0.0
+V.Felidhoo,H09,12,walk,7.0,True,harbour to atoll hospital,0.0,0.0
+V.Felidhoo,H09,13,walk,7.0,True,harbour to atoll hospital,0.0,0.0
+V.Felidhoo,H09,14,walk,7.0,True,harbour to atoll hospital,0.0,0.0
+V.Felidhoo,H09,15,walk,7.0,True,harbour to atoll hospital,0.0,0.0
+V.Felidhoo,H09,16,walk,7.0,True,harbour to atoll hospital,0.0,0.0
+V.Felidhoo,H09,17,walk,7.0,True,harbour to atoll hospital,0.0,0.0
+V.Felidhoo,H09,18,walk,7.0,True,harbour to atoll hospital,0.0,0.0
+V.Felidhoo,H09,19,walk,7.0,True,harbour to atoll hospital,0.0,0.0
+V.Felidhoo,H09,20,walk,7.0,True,harbour to atoll hospital,0.0,0.0
+V.Felidhoo,H09,21,walk,7.0,True,harbour to atoll hospital,0.0,0.0
+V.Felidhoo,H09,22,walk,7.0,True,harbour to atoll hospital,0.0,0.0
+V.Felidhoo,H09,23,walk,7.0,True,harbour to atoll hospital,0.0,0.0
