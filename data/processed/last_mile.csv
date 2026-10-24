@@ -1,6 +1,6 @@
 stop_id,facility_id,hour,mode,minutes,available,detail
 T_MALE_NORTH,H01,0,walk,23.0,yes,walk 1.4 km
-T_MALE_NORTH,H01,0,bus,30.2,yes,"R10 from Jetty NO5 to Social Centre, wait 10, ride 13, estimated, walk 3"
+T_MALE_NORTH,H01,0,bus,28.6,yes,"R10 from Olympus to Social Centre, wait 10, ride 5, estimated, walk 9"
 T_MALE_NORTH,H01,0,taxi,16.8,yes,"taxi, 2.0 km at 20 km/h, wait 5.7, placeholder speed and wait"
 T_MALE_NORTH,H01,1,walk,23.0,yes,walk 1.4 km
 T_MALE_NORTH,H01,1,bus,,no,outside service hours
@@ -15,61 +15,61 @@ T_MALE_NORTH,H01,4,walk,23.0,yes,walk 1.4 km
 T_MALE_NORTH,H01,4,bus,,no,outside service hours
 T_MALE_NORTH,H01,4,taxi,16.8,yes,"taxi, 2.0 km at 20 km/h, wait 5.7, placeholder speed and wait"
 T_MALE_NORTH,H01,5,walk,23.0,yes,walk 1.4 km
-T_MALE_NORTH,H01,5,bus,30.2,yes,"R10 from Jetty NO5 to Social Centre, wait 10, ride 13, estimated, walk 3"
+T_MALE_NORTH,H01,5,bus,28.6,yes,"R10 from Olympus to Social Centre, wait 10, ride 5, estimated, walk 9"
 T_MALE_NORTH,H01,5,taxi,16.8,yes,"taxi, 2.0 km at 20 km/h, wait 5.7, placeholder speed and wait"
 T_MALE_NORTH,H01,6,walk,23.0,yes,walk 1.4 km
-T_MALE_NORTH,H01,6,bus,30.2,yes,"R10 from Jetty NO5 to Social Centre, wait 10, ride 13, estimated, walk 3"
+T_MALE_NORTH,H01,6,bus,28.6,yes,"R10 from Olympus to Social Centre, wait 10, ride 5, estimated, walk 9"
 T_MALE_NORTH,H01,6,taxi,16.8,yes,"taxi, 2.0 km at 20 km/h, wait 5.7, placeholder speed and wait"
 T_MALE_NORTH,H01,7,walk,23.0,yes,walk 1.4 km
-T_MALE_NORTH,H01,7,bus,30.2,yes,"R10 from Jetty NO5 to Social Centre, wait 10, ride 13, estimated, walk 3"
+T_MALE_NORTH,H01,7,bus,28.6,yes,"R10 from Olympus to Social Centre, wait 10, ride 5, estimated, walk 9"
 T_MALE_NORTH,H01,7,taxi,16.8,yes,"taxi, 2.0 km at 20 km/h, wait 5.7, placeholder speed and wait"
 T_MALE_NORTH,H01,8,walk,23.0,yes,walk 1.4 km
-T_MALE_NORTH,H01,8,bus,30.2,yes,"R10 from Jetty NO5 to Social Centre, wait 10, ride 13, estimated, walk 3"
+T_MALE_NORTH,H01,8,bus,28.6,yes,"R10 from Olympus to Social Centre, wait 10, ride 5, estimated, walk 9"
 T_MALE_NORTH,H01,8,taxi,16.8,yes,"taxi, 2.0 km at 20 km/h, wait 5.7, placeholder speed and wait"
 T_MALE_NORTH,H01,9,walk,23.0,yes,walk 1.4 km
-T_MALE_NORTH,H01,9,bus,30.2,yes,"R10 from Jetty NO5 to Social Centre, wait 10, ride 13, estimated, walk 3"
+T_MALE_NORTH,H01,9,bus,28.6,yes,"R10 from Olympus to Social Centre, wait 10, ride 5, estimated, walk 9"
 T_MALE_NORTH,H01,9,taxi,16.8,yes,"taxi, 2.0 km at 20 km/h, wait 5.7, placeholder speed and wait"
 T_MALE_NORTH,H01,10,walk,23.0,yes,walk 1.4 km
-T_MALE_NORTH,H01,10,bus,30.2,yes,"R10 from Jetty NO5 to Social Centre, wait 10, ride 13, estimated, walk 3"
+T_MALE_NORTH,H01,10,bus,28.6,yes,"R10 from Olympus to Social Centre, wait 10, ride 5, estimated, walk 9"
 T_MALE_NORTH,H01,10,taxi,16.8,yes,"taxi, 2.0 km at 20 km/h, wait 5.7, placeholder speed and wait"
 T_MALE_NORTH,H01,11,walk,23.0,yes,walk 1.4 km
-T_MALE_NORTH,H01,11,bus,30.2,yes,"R10 from Jetty NO5 to Social Centre, wait 10, ride 13, estimated, walk 3"
+T_MALE_NORTH,H01,11,bus,28.6,yes,"R10 from Olympus to Social Centre, wait 10, ride 5, estimated, walk 9"
 T_MALE_NORTH,H01,11,taxi,16.8,yes,"taxi, 2.0 km at 20 km/h, wait 5.7, placeholder speed and wait"
 T_MALE_NORTH,H01,12,walk,23.0,yes,walk 1.4 km
-T_MALE_NORTH,H01,12,bus,30.2,yes,"R10 from Jetty NO5 to Social Centre, wait 10, ride 13, estimated, walk 3"
+T_MALE_NORTH,H01,12,bus,28.6,yes,"R10 from Olympus to Social Centre, wait 10, ride 5, estimated, walk 9"
 T_MALE_NORTH,H01,12,taxi,16.8,yes,"taxi, 2.0 km at 20 km/h, wait 5.7, placeholder speed and wait"
 T_MALE_NORTH,H01,13,walk,23.0,yes,walk 1.4 km
-T_MALE_NORTH,H01,13,bus,30.2,yes,"R10 from Jetty NO5 to Social Centre, wait 10, ride 13, estimated, walk 3"
+T_MALE_NORTH,H01,13,bus,28.6,yes,"R10 from Olympus to Social Centre, wait 10, ride 5, estimated, walk 9"
 T_MALE_NORTH,H01,13,taxi,16.8,yes,"taxi, 2.0 km at 20 km/h, wait 5.7, placeholder speed and wait"
 T_MALE_NORTH,H01,14,walk,23.0,yes,walk 1.4 km
-T_MALE_NORTH,H01,14,bus,30.2,yes,"R10 from Jetty NO5 to Social Centre, wait 10, ride 13, estimated, walk 3"
+T_MALE_NORTH,H01,14,bus,28.6,yes,"R10 from Olympus to Social Centre, wait 10, ride 5, estimated, walk 9"
 T_MALE_NORTH,H01,14,taxi,16.8,yes,"taxi, 2.0 km at 20 km/h, wait 5.7, placeholder speed and wait"
 T_MALE_NORTH,H01,15,walk,23.0,yes,walk 1.4 km
-T_MALE_NORTH,H01,15,bus,30.2,yes,"R10 from Jetty NO5 to Social Centre, wait 10, ride 13, estimated, walk 3"
+T_MALE_NORTH,H01,15,bus,28.6,yes,"R10 from Olympus to Social Centre, wait 10, ride 5, estimated, walk 9"
 T_MALE_NORTH,H01,15,taxi,16.8,yes,"taxi, 2.0 km at 20 km/h, wait 5.7, placeholder speed and wait"
 T_MALE_NORTH,H01,16,walk,23.0,yes,walk 1.4 km
-T_MALE_NORTH,H01,16,bus,30.2,yes,"R10 from Jetty NO5 to Social Centre, wait 10, ride 13, estimated, walk 3"
+T_MALE_NORTH,H01,16,bus,28.6,yes,"R10 from Olympus to Social Centre, wait 10, ride 5, estimated, walk 9"
 T_MALE_NORTH,H01,16,taxi,16.8,yes,"taxi, 2.0 km at 20 km/h, wait 5.7, placeholder speed and wait"
 T_MALE_NORTH,H01,17,walk,23.0,yes,walk 1.4 km
-T_MALE_NORTH,H01,17,bus,30.2,yes,"R10 from Jetty NO5 to Social Centre, wait 10, ride 13, estimated, walk 3"
+T_MALE_NORTH,H01,17,bus,28.6,yes,"R10 from Olympus to Social Centre, wait 10, ride 5, estimated, walk 9"
 T_MALE_NORTH,H01,17,taxi,16.8,yes,"taxi, 2.0 km at 20 km/h, wait 5.7, placeholder speed and wait"
 T_MALE_NORTH,H01,18,walk,23.0,yes,walk 1.4 km
-T_MALE_NORTH,H01,18,bus,30.2,yes,"R10 from Jetty NO5 to Social Centre, wait 10, ride 13, estimated, walk 3"
+T_MALE_NORTH,H01,18,bus,28.6,yes,"R10 from Olympus to Social Centre, wait 10, ride 5, estimated, walk 9"
 T_MALE_NORTH,H01,18,taxi,16.8,yes,"taxi, 2.0 km at 20 km/h, wait 5.7, placeholder speed and wait"
 T_MALE_NORTH,H01,19,walk,23.0,yes,walk 1.4 km
-T_MALE_NORTH,H01,19,bus,30.2,yes,"R10 from Jetty NO5 to Social Centre, wait 10, ride 13, estimated, walk 3"
+T_MALE_NORTH,H01,19,bus,28.6,yes,"R10 from Olympus to Social Centre, wait 10, ride 5, estimated, walk 9"
 T_MALE_NORTH,H01,19,taxi,16.8,yes,"taxi, 2.0 km at 20 km/h, wait 5.7, placeholder speed and wait"
 T_MALE_NORTH,H01,20,walk,23.0,yes,walk 1.4 km
-T_MALE_NORTH,H01,20,bus,30.2,yes,"R10 from Jetty NO5 to Social Centre, wait 10, ride 13, estimated, walk 3"
+T_MALE_NORTH,H01,20,bus,28.6,yes,"R10 from Olympus to Social Centre, wait 10, ride 5, estimated, walk 9"
 T_MALE_NORTH,H01,20,taxi,16.8,yes,"taxi, 2.0 km at 20 km/h, wait 5.7, placeholder speed and wait"
 T_MALE_NORTH,H01,21,walk,23.0,yes,walk 1.4 km
-T_MALE_NORTH,H01,21,bus,30.2,yes,"R10 from Jetty NO5 to Social Centre, wait 10, ride 13, estimated, walk 3"
+T_MALE_NORTH,H01,21,bus,28.6,yes,"R10 from Olympus to Social Centre, wait 10, ride 5, estimated, walk 9"
 T_MALE_NORTH,H01,21,taxi,16.8,yes,"taxi, 2.0 km at 20 km/h, wait 5.7, placeholder speed and wait"
 T_MALE_NORTH,H01,22,walk,23.0,yes,walk 1.4 km
-T_MALE_NORTH,H01,22,bus,30.2,yes,"R10 from Jetty NO5 to Social Centre, wait 10, ride 13, estimated, walk 3"
+T_MALE_NORTH,H01,22,bus,28.6,yes,"R10 from Olympus to Social Centre, wait 10, ride 5, estimated, walk 9"
 T_MALE_NORTH,H01,22,taxi,16.8,yes,"taxi, 2.0 km at 20 km/h, wait 5.7, placeholder speed and wait"
 T_MALE_NORTH,H01,23,walk,23.0,yes,walk 1.4 km
-T_MALE_NORTH,H01,23,bus,30.2,yes,"R10 from Jetty NO5 to Social Centre, wait 10, ride 13, estimated, walk 3"
+T_MALE_NORTH,H01,23,bus,28.6,yes,"R10 from Olympus to Social Centre, wait 10, ride 5, estimated, walk 9"
 T_MALE_NORTH,H01,23,taxi,16.8,yes,"taxi, 2.0 km at 20 km/h, wait 5.7, placeholder speed and wait"
 T_MALE_NORTH,H02,0,walk,10.9,yes,walk 0.5 km
 T_MALE_NORTH,H02,0,bus,20.8,yes,"R10 from Jetty NO5 to MTCC Tower, wait 10, ride 1, estimated, walk 5"
@@ -216,148 +216,148 @@ T_MALE_NORTH,H03,23,walk,15.7,yes,walk 0.9 km
 T_MALE_NORTH,H03,23,bus,23.2,yes,"R10 from Jetty NO5 to Muni Ufaa, wait 10, ride 5, estimated, walk 4"
 T_MALE_NORTH,H03,23,taxi,14.3,yes,"taxi, 1.2 km at 20 km/h, wait 5.7, placeholder speed and wait"
 T_MALE_NORTH,H04,0,walk,,no,different island
-T_MALE_NORTH,H04,0,bus,,no,no route links terminal and hospital
+T_MALE_NORTH,H04,0,bus,56.4,yes,"R2 from Carnival to Flat No. 147, wait 15, ride 26, walk 10"
 T_MALE_NORTH,H04,0,taxi,23.2,yes,"taxi, Avas median of 70 rides, wait 5.7, placeholder speed and wait"
 T_MALE_NORTH,H04,1,walk,,no,different island
-T_MALE_NORTH,H04,1,bus,,no,no route links terminal and hospital
+T_MALE_NORTH,H04,1,bus,,no,outside service hours
 T_MALE_NORTH,H04,1,taxi,23.0,yes,"taxi, Avas median of 24 rides, wait 5.7, placeholder speed and wait"
 T_MALE_NORTH,H04,2,walk,,no,different island
-T_MALE_NORTH,H04,2,bus,,no,no route links terminal and hospital
+T_MALE_NORTH,H04,2,bus,,no,outside service hours
 T_MALE_NORTH,H04,2,taxi,32.8,yes,"taxi, 7.4 km at 20 km/h, wait 5.7, placeholder speed and wait"
 T_MALE_NORTH,H04,3,walk,,no,different island
-T_MALE_NORTH,H04,3,bus,,no,no route links terminal and hospital
+T_MALE_NORTH,H04,3,bus,,no,outside service hours
 T_MALE_NORTH,H04,3,taxi,32.8,yes,"taxi, 7.4 km at 20 km/h, wait 5.7, placeholder speed and wait"
 T_MALE_NORTH,H04,4,walk,,no,different island
-T_MALE_NORTH,H04,4,bus,,no,no route links terminal and hospital
+T_MALE_NORTH,H04,4,bus,,no,outside service hours
 T_MALE_NORTH,H04,4,taxi,32.8,yes,"taxi, 7.4 km at 20 km/h, wait 5.7, placeholder speed and wait"
 T_MALE_NORTH,H04,5,walk,,no,different island
-T_MALE_NORTH,H04,5,bus,,no,no route links terminal and hospital
+T_MALE_NORTH,H04,5,bus,51.4,yes,"R2 from Carnival to Flat No. 147, wait 10, ride 26, walk 10"
 T_MALE_NORTH,H04,5,taxi,23.0,yes,"taxi, Avas median of 11 rides, wait 5.7, placeholder speed and wait"
 T_MALE_NORTH,H04,6,walk,,no,different island
-T_MALE_NORTH,H04,6,bus,,no,no route links terminal and hospital
+T_MALE_NORTH,H04,6,bus,51.4,yes,"R2 from Carnival to Flat No. 147, wait 10, ride 26, walk 10"
 T_MALE_NORTH,H04,6,taxi,23.7,yes,"taxi, Avas median of 17 rides, wait 5.7, placeholder speed and wait"
 T_MALE_NORTH,H04,7,walk,,no,different island
-T_MALE_NORTH,H04,7,bus,,no,no route links terminal and hospital
+T_MALE_NORTH,H04,7,bus,48.9,yes,"R2 from Carnival to Flat No. 147, wait 7.5, ride 26, walk 10"
 T_MALE_NORTH,H04,7,taxi,23.7,yes,"taxi, Avas median of 48 rides, wait 5.7, placeholder speed and wait"
 T_MALE_NORTH,H04,8,walk,,no,different island
-T_MALE_NORTH,H04,8,bus,,no,no route links terminal and hospital
+T_MALE_NORTH,H04,8,bus,48.9,yes,"R2 from Carnival to Flat No. 147, wait 7.5, ride 26, walk 10"
 T_MALE_NORTH,H04,8,taxi,23.4,yes,"taxi, Avas median of 99 rides, wait 5.7, placeholder speed and wait"
 T_MALE_NORTH,H04,9,walk,,no,different island
-T_MALE_NORTH,H04,9,bus,,no,no route links terminal and hospital
+T_MALE_NORTH,H04,9,bus,51.4,yes,"R2 from Carnival to Flat No. 147, wait 10, ride 26, walk 10"
 T_MALE_NORTH,H04,9,taxi,23.7,yes,"taxi, Avas median of 98 rides, wait 5.7, placeholder speed and wait"
 T_MALE_NORTH,H04,10,walk,,no,different island
-T_MALE_NORTH,H04,10,bus,,no,no route links terminal and hospital
+T_MALE_NORTH,H04,10,bus,51.4,yes,"R2 from Carnival to Flat No. 147, wait 10, ride 26, walk 10"
 T_MALE_NORTH,H04,10,taxi,23.9,yes,"taxi, Avas median of 119 rides, wait 5.7, placeholder speed and wait"
 T_MALE_NORTH,H04,11,walk,,no,different island
-T_MALE_NORTH,H04,11,bus,,no,no route links terminal and hospital
+T_MALE_NORTH,H04,11,bus,51.4,yes,"R2 from Carnival to Flat No. 147, wait 10, ride 26, walk 10"
 T_MALE_NORTH,H04,11,taxi,23.7,yes,"taxi, Avas median of 130 rides, wait 5.7, placeholder speed and wait"
 T_MALE_NORTH,H04,12,walk,,no,different island
-T_MALE_NORTH,H04,12,bus,,no,no route links terminal and hospital
+T_MALE_NORTH,H04,12,bus,48.9,yes,"R2 from Carnival to Flat No. 147, wait 7.5, ride 26, walk 10"
 T_MALE_NORTH,H04,12,taxi,23.8,yes,"taxi, Avas median of 193 rides, wait 5.7, placeholder speed and wait"
 T_MALE_NORTH,H04,13,walk,,no,different island
-T_MALE_NORTH,H04,13,bus,,no,no route links terminal and hospital
+T_MALE_NORTH,H04,13,bus,48.9,yes,"R2 from Carnival to Flat No. 147, wait 7.5, ride 26, walk 10"
 T_MALE_NORTH,H04,13,taxi,23.7,yes,"taxi, Avas median of 217 rides, wait 5.7, placeholder speed and wait"
 T_MALE_NORTH,H04,14,walk,,no,different island
-T_MALE_NORTH,H04,14,bus,,no,no route links terminal and hospital
+T_MALE_NORTH,H04,14,bus,48.9,yes,"R2 from Carnival to Flat No. 147, wait 7.5, ride 26, walk 10"
 T_MALE_NORTH,H04,14,taxi,23.9,yes,"taxi, Avas median of 301 rides, wait 5.7, placeholder speed and wait"
 T_MALE_NORTH,H04,15,walk,,no,different island
-T_MALE_NORTH,H04,15,bus,,no,no route links terminal and hospital
+T_MALE_NORTH,H04,15,bus,48.9,yes,"R2 from Carnival to Flat No. 147, wait 7.5, ride 26, walk 10"
 T_MALE_NORTH,H04,15,taxi,23.7,yes,"taxi, Avas median of 297 rides, wait 5.7, placeholder speed and wait"
 T_MALE_NORTH,H04,16,walk,,no,different island
-T_MALE_NORTH,H04,16,bus,,no,no route links terminal and hospital
+T_MALE_NORTH,H04,16,bus,48.9,yes,"R2 from Carnival to Flat No. 147, wait 7.5, ride 26, walk 10"
 T_MALE_NORTH,H04,16,taxi,23.5,yes,"taxi, Avas median of 356 rides, wait 5.7, placeholder speed and wait"
 T_MALE_NORTH,H04,17,walk,,no,different island
-T_MALE_NORTH,H04,17,bus,,no,no route links terminal and hospital
+T_MALE_NORTH,H04,17,bus,48.9,yes,"R2 from Carnival to Flat No. 147, wait 7.5, ride 26, walk 10"
 T_MALE_NORTH,H04,17,taxi,23.6,yes,"taxi, Avas median of 318 rides, wait 5.7, placeholder speed and wait"
 T_MALE_NORTH,H04,18,walk,,no,different island
-T_MALE_NORTH,H04,18,bus,,no,no route links terminal and hospital
+T_MALE_NORTH,H04,18,bus,48.9,yes,"R2 from Carnival to Flat No. 147, wait 7.5, ride 26, walk 10"
 T_MALE_NORTH,H04,18,taxi,23.6,yes,"taxi, Avas median of 239 rides, wait 5.7, placeholder speed and wait"
 T_MALE_NORTH,H04,19,walk,,no,different island
-T_MALE_NORTH,H04,19,bus,,no,no route links terminal and hospital
+T_MALE_NORTH,H04,19,bus,48.9,yes,"R2 from Carnival to Flat No. 147, wait 7.5, ride 26, walk 10"
 T_MALE_NORTH,H04,19,taxi,23.7,yes,"taxi, Avas median of 243 rides, wait 5.7, placeholder speed and wait"
 T_MALE_NORTH,H04,20,walk,,no,different island
-T_MALE_NORTH,H04,20,bus,,no,no route links terminal and hospital
+T_MALE_NORTH,H04,20,bus,51.4,yes,"R2 from Carnival to Flat No. 147, wait 10, ride 26, walk 10"
 T_MALE_NORTH,H04,20,taxi,23.7,yes,"taxi, Avas median of 185 rides, wait 5.7, placeholder speed and wait"
 T_MALE_NORTH,H04,21,walk,,no,different island
-T_MALE_NORTH,H04,21,bus,,no,no route links terminal and hospital
+T_MALE_NORTH,H04,21,bus,51.4,yes,"R2 from Carnival to Flat No. 147, wait 10, ride 26, walk 10"
 T_MALE_NORTH,H04,21,taxi,23.8,yes,"taxi, Avas median of 156 rides, wait 5.7, placeholder speed and wait"
 T_MALE_NORTH,H04,22,walk,,no,different island
-T_MALE_NORTH,H04,22,bus,,no,no route links terminal and hospital
+T_MALE_NORTH,H04,22,bus,51.4,yes,"R2 from Carnival to Flat No. 147, wait 10, ride 26, walk 10"
 T_MALE_NORTH,H04,22,taxi,23.6,yes,"taxi, Avas median of 141 rides, wait 5.7, placeholder speed and wait"
 T_MALE_NORTH,H04,23,walk,,no,different island
-T_MALE_NORTH,H04,23,bus,,no,no route links terminal and hospital
+T_MALE_NORTH,H04,23,bus,56.4,yes,"R2 from Carnival to Flat No. 147, wait 15, ride 26, walk 10"
 T_MALE_NORTH,H04,23,taxi,23.4,yes,"taxi, Avas median of 112 rides, wait 5.7, placeholder speed and wait"
 T_MALE_NORTH,H05,0,walk,,no,different island
-T_MALE_NORTH,H05,0,bus,,no,no route links terminal and hospital
+T_MALE_NORTH,H05,0,bus,54.1,yes,"R2 from Carnival to Flat No. 120, wait 15, ride 23, walk 11"
 T_MALE_NORTH,H05,0,taxi,22.0,yes,"taxi, Avas median of 60 rides, wait 5.7, placeholder speed and wait"
 T_MALE_NORTH,H05,1,walk,,no,different island
-T_MALE_NORTH,H05,1,bus,,no,no route links terminal and hospital
+T_MALE_NORTH,H05,1,bus,,no,outside service hours
 T_MALE_NORTH,H05,1,taxi,21.5,yes,"taxi, Avas median of 19 rides, wait 5.7, placeholder speed and wait"
 T_MALE_NORTH,H05,2,walk,,no,different island
-T_MALE_NORTH,H05,2,bus,,no,no route links terminal and hospital
+T_MALE_NORTH,H05,2,bus,,no,outside service hours
 T_MALE_NORTH,H05,2,taxi,30.4,yes,"taxi, 6.6 km at 20 km/h, wait 5.7, placeholder speed and wait"
 T_MALE_NORTH,H05,3,walk,,no,different island
-T_MALE_NORTH,H05,3,bus,,no,no route links terminal and hospital
+T_MALE_NORTH,H05,3,bus,,no,outside service hours
 T_MALE_NORTH,H05,3,taxi,30.4,yes,"taxi, 6.6 km at 20 km/h, wait 5.7, placeholder speed and wait"
 T_MALE_NORTH,H05,4,walk,,no,different island
-T_MALE_NORTH,H05,4,bus,,no,no route links terminal and hospital
+T_MALE_NORTH,H05,4,bus,,no,outside service hours
 T_MALE_NORTH,H05,4,taxi,30.4,yes,"taxi, 6.6 km at 20 km/h, wait 5.7, placeholder speed and wait"
 T_MALE_NORTH,H05,5,walk,,no,different island
-T_MALE_NORTH,H05,5,bus,,no,no route links terminal and hospital
+T_MALE_NORTH,H05,5,bus,49.1,yes,"R2 from Carnival to Flat No. 120, wait 10, ride 23, walk 11"
 T_MALE_NORTH,H05,5,taxi,22.6,yes,"taxi, Avas median of 11 rides, wait 5.7, placeholder speed and wait"
 T_MALE_NORTH,H05,6,walk,,no,different island
-T_MALE_NORTH,H05,6,bus,,no,no route links terminal and hospital
+T_MALE_NORTH,H05,6,bus,49.1,yes,"R2 from Carnival to Flat No. 120, wait 10, ride 23, walk 11"
 T_MALE_NORTH,H05,6,taxi,22.2,yes,"taxi, Avas median of 16 rides, wait 5.7, placeholder speed and wait"
 T_MALE_NORTH,H05,7,walk,,no,different island
-T_MALE_NORTH,H05,7,bus,,no,no route links terminal and hospital
+T_MALE_NORTH,H05,7,bus,46.6,yes,"R2 from Carnival to Flat No. 120, wait 7.5, ride 23, walk 11"
 T_MALE_NORTH,H05,7,taxi,21.2,yes,"taxi, Avas median of 90 rides, wait 5.7, placeholder speed and wait"
 T_MALE_NORTH,H05,8,walk,,no,different island
-T_MALE_NORTH,H05,8,bus,,no,no route links terminal and hospital
+T_MALE_NORTH,H05,8,bus,46.6,yes,"R2 from Carnival to Flat No. 120, wait 7.5, ride 23, walk 11"
 T_MALE_NORTH,H05,8,taxi,21.9,yes,"taxi, Avas median of 147 rides, wait 5.7, placeholder speed and wait"
 T_MALE_NORTH,H05,9,walk,,no,different island
-T_MALE_NORTH,H05,9,bus,,no,no route links terminal and hospital
+T_MALE_NORTH,H05,9,bus,49.1,yes,"R2 from Carnival to Flat No. 120, wait 10, ride 23, walk 11"
 T_MALE_NORTH,H05,9,taxi,22.1,yes,"taxi, Avas median of 159 rides, wait 5.7, placeholder speed and wait"
 T_MALE_NORTH,H05,10,walk,,no,different island
-T_MALE_NORTH,H05,10,bus,,no,no route links terminal and hospital
+T_MALE_NORTH,H05,10,bus,49.1,yes,"R2 from Carnival to Flat No. 120, wait 10, ride 23, walk 11"
 T_MALE_NORTH,H05,10,taxi,21.9,yes,"taxi, Avas median of 178 rides, wait 5.7, placeholder speed and wait"
 T_MALE_NORTH,H05,11,walk,,no,different island
-T_MALE_NORTH,H05,11,bus,,no,no route links terminal and hospital
+T_MALE_NORTH,H05,11,bus,49.1,yes,"R2 from Carnival to Flat No. 120, wait 10, ride 23, walk 11"
 T_MALE_NORTH,H05,11,taxi,22.1,yes,"taxi, Avas median of 179 rides, wait 5.7, placeholder speed and wait"
 T_MALE_NORTH,H05,12,walk,,no,different island
-T_MALE_NORTH,H05,12,bus,,no,no route links terminal and hospital
+T_MALE_NORTH,H05,12,bus,46.6,yes,"R2 from Carnival to Flat No. 120, wait 7.5, ride 23, walk 11"
 T_MALE_NORTH,H05,12,taxi,22.0,yes,"taxi, Avas median of 209 rides, wait 5.7, placeholder speed and wait"
 T_MALE_NORTH,H05,13,walk,,no,different island
-T_MALE_NORTH,H05,13,bus,,no,no route links terminal and hospital
+T_MALE_NORTH,H05,13,bus,46.6,yes,"R2 from Carnival to Flat No. 120, wait 7.5, ride 23, walk 11"
 T_MALE_NORTH,H05,13,taxi,21.9,yes,"taxi, Avas median of 247 rides, wait 5.7, placeholder speed and wait"
 T_MALE_NORTH,H05,14,walk,,no,different island
-T_MALE_NORTH,H05,14,bus,,no,no route links terminal and hospital
+T_MALE_NORTH,H05,14,bus,46.6,yes,"R2 from Carnival to Flat No. 120, wait 7.5, ride 23, walk 11"
 T_MALE_NORTH,H05,14,taxi,21.9,yes,"taxi, Avas median of 296 rides, wait 5.7, placeholder speed and wait"
 T_MALE_NORTH,H05,15,walk,,no,different island
-T_MALE_NORTH,H05,15,bus,,no,no route links terminal and hospital
+T_MALE_NORTH,H05,15,bus,46.6,yes,"R2 from Carnival to Flat No. 120, wait 7.5, ride 23, walk 11"
 T_MALE_NORTH,H05,15,taxi,21.9,yes,"taxi, Avas median of 326 rides, wait 5.7, placeholder speed and wait"
 T_MALE_NORTH,H05,16,walk,,no,different island
-T_MALE_NORTH,H05,16,bus,,no,no route links terminal and hospital
+T_MALE_NORTH,H05,16,bus,46.6,yes,"R2 from Carnival to Flat No. 120, wait 7.5, ride 23, walk 11"
 T_MALE_NORTH,H05,16,taxi,22.0,yes,"taxi, Avas median of 440 rides, wait 5.7, placeholder speed and wait"
 T_MALE_NORTH,H05,17,walk,,no,different island
-T_MALE_NORTH,H05,17,bus,,no,no route links terminal and hospital
+T_MALE_NORTH,H05,17,bus,46.6,yes,"R2 from Carnival to Flat No. 120, wait 7.5, ride 23, walk 11"
 T_MALE_NORTH,H05,17,taxi,21.8,yes,"taxi, Avas median of 347 rides, wait 5.7, placeholder speed and wait"
 T_MALE_NORTH,H05,18,walk,,no,different island
-T_MALE_NORTH,H05,18,bus,,no,no route links terminal and hospital
+T_MALE_NORTH,H05,18,bus,46.6,yes,"R2 from Carnival to Flat No. 120, wait 7.5, ride 23, walk 11"
 T_MALE_NORTH,H05,18,taxi,21.8,yes,"taxi, Avas median of 227 rides, wait 5.7, placeholder speed and wait"
 T_MALE_NORTH,H05,19,walk,,no,different island
-T_MALE_NORTH,H05,19,bus,,no,no route links terminal and hospital
+T_MALE_NORTH,H05,19,bus,46.6,yes,"R2 from Carnival to Flat No. 120, wait 7.5, ride 23, walk 11"
 T_MALE_NORTH,H05,19,taxi,22.0,yes,"taxi, Avas median of 183 rides, wait 5.7, placeholder speed and wait"
 T_MALE_NORTH,H05,20,walk,,no,different island
-T_MALE_NORTH,H05,20,bus,,no,no route links terminal and hospital
+T_MALE_NORTH,H05,20,bus,49.1,yes,"R2 from Carnival to Flat No. 120, wait 10, ride 23, walk 11"
 T_MALE_NORTH,H05,20,taxi,22.0,yes,"taxi, Avas median of 144 rides, wait 5.7, placeholder speed and wait"
 T_MALE_NORTH,H05,21,walk,,no,different island
-T_MALE_NORTH,H05,21,bus,,no,no route links terminal and hospital
+T_MALE_NORTH,H05,21,bus,49.1,yes,"R2 from Carnival to Flat No. 120, wait 10, ride 23, walk 11"
 T_MALE_NORTH,H05,21,taxi,22.0,yes,"taxi, Avas median of 139 rides, wait 5.7, placeholder speed and wait"
 T_MALE_NORTH,H05,22,walk,,no,different island
-T_MALE_NORTH,H05,22,bus,,no,no route links terminal and hospital
+T_MALE_NORTH,H05,22,bus,49.1,yes,"R2 from Carnival to Flat No. 120, wait 10, ride 23, walk 11"
 T_MALE_NORTH,H05,22,taxi,21.8,yes,"taxi, Avas median of 147 rides, wait 5.7, placeholder speed and wait"
 T_MALE_NORTH,H05,23,walk,,no,different island
-T_MALE_NORTH,H05,23,bus,,no,no route links terminal and hospital
+T_MALE_NORTH,H05,23,bus,54.1,yes,"R2 from Carnival to Flat No. 120, wait 15, ride 23, walk 11"
 T_MALE_NORTH,H05,23,taxi,21.9,yes,"taxi, Avas median of 97 rides, wait 5.7, placeholder speed and wait"
 T_MALE_NORTH,H06,0,walk,,no,different island
 T_MALE_NORTH,H06,0,bus,,no,no route links terminal and hospital
@@ -591,205 +591,205 @@ T_MALE_WEST,H03,4,walk,25.0,yes,walk 1.6 km
 T_MALE_WEST,H03,4,bus,,no,outside service hours
 T_MALE_WEST,H03,4,taxi,17.4,yes,"taxi, 2.2 km at 20 km/h, wait 5.7, placeholder speed and wait"
 T_MALE_WEST,H03,5,walk,25.0,yes,walk 1.6 km
-T_MALE_WEST,H03,5,bus,29.4,yes,"R11 from Maafannu Ferry Terminal to Dhamanaveshi, wait 10, ride 10, estimated, walk 5"
+T_MALE_WEST,H03,5,bus,27.8,yes,"R1 from Maafannu Bus Terminal to STELCO, wait 10, ride 4, walk 9"
 T_MALE_WEST,H03,5,taxi,17.4,yes,"taxi, 2.2 km at 20 km/h, wait 5.7, placeholder speed and wait"
 T_MALE_WEST,H03,6,walk,25.0,yes,walk 1.6 km
-T_MALE_WEST,H03,6,bus,29.4,yes,"R11 from Maafannu Ferry Terminal to Dhamanaveshi, wait 10, ride 10, estimated, walk 5"
+T_MALE_WEST,H03,6,bus,27.8,yes,"R1 from Maafannu Bus Terminal to STELCO, wait 10, ride 4, walk 9"
 T_MALE_WEST,H03,6,taxi,17.4,yes,"taxi, 2.2 km at 20 km/h, wait 5.7, placeholder speed and wait"
 T_MALE_WEST,H03,7,walk,25.0,yes,walk 1.6 km
-T_MALE_WEST,H03,7,bus,29.4,yes,"R11 from Maafannu Ferry Terminal to Dhamanaveshi, wait 10, ride 10, estimated, walk 5"
+T_MALE_WEST,H03,7,bus,25.3,yes,"R1 from Maafannu Bus Terminal to STELCO, wait 7.5, ride 4, walk 9"
 T_MALE_WEST,H03,7,taxi,17.4,yes,"taxi, 2.2 km at 20 km/h, wait 5.7, placeholder speed and wait"
 T_MALE_WEST,H03,8,walk,25.0,yes,walk 1.6 km
-T_MALE_WEST,H03,8,bus,29.4,yes,"R11 from Maafannu Ferry Terminal to Dhamanaveshi, wait 10, ride 10, estimated, walk 5"
+T_MALE_WEST,H03,8,bus,25.3,yes,"R1 from Maafannu Bus Terminal to STELCO, wait 7.5, ride 4, walk 9"
 T_MALE_WEST,H03,8,taxi,17.4,yes,"taxi, 2.2 km at 20 km/h, wait 5.7, placeholder speed and wait"
 T_MALE_WEST,H03,9,walk,25.0,yes,walk 1.6 km
-T_MALE_WEST,H03,9,bus,29.4,yes,"R11 from Maafannu Ferry Terminal to Dhamanaveshi, wait 10, ride 10, estimated, walk 5"
+T_MALE_WEST,H03,9,bus,27.8,yes,"R1 from Maafannu Bus Terminal to STELCO, wait 10, ride 4, walk 9"
 T_MALE_WEST,H03,9,taxi,17.4,yes,"taxi, 2.2 km at 20 km/h, wait 5.7, placeholder speed and wait"
 T_MALE_WEST,H03,10,walk,25.0,yes,walk 1.6 km
-T_MALE_WEST,H03,10,bus,29.4,yes,"R11 from Maafannu Ferry Terminal to Dhamanaveshi, wait 10, ride 10, estimated, walk 5"
+T_MALE_WEST,H03,10,bus,27.8,yes,"R1 from Maafannu Bus Terminal to STELCO, wait 10, ride 4, walk 9"
 T_MALE_WEST,H03,10,taxi,17.4,yes,"taxi, 2.2 km at 20 km/h, wait 5.7, placeholder speed and wait"
 T_MALE_WEST,H03,11,walk,25.0,yes,walk 1.6 km
-T_MALE_WEST,H03,11,bus,29.4,yes,"R11 from Maafannu Ferry Terminal to Dhamanaveshi, wait 10, ride 10, estimated, walk 5"
+T_MALE_WEST,H03,11,bus,27.8,yes,"R1 from Maafannu Bus Terminal to STELCO, wait 10, ride 4, walk 9"
 T_MALE_WEST,H03,11,taxi,17.4,yes,"taxi, 2.2 km at 20 km/h, wait 5.7, placeholder speed and wait"
 T_MALE_WEST,H03,12,walk,25.0,yes,walk 1.6 km
-T_MALE_WEST,H03,12,bus,29.4,yes,"R11 from Maafannu Ferry Terminal to Dhamanaveshi, wait 10, ride 10, estimated, walk 5"
+T_MALE_WEST,H03,12,bus,25.3,yes,"R1 from Maafannu Bus Terminal to STELCO, wait 7.5, ride 4, walk 9"
 T_MALE_WEST,H03,12,taxi,17.4,yes,"taxi, 2.2 km at 20 km/h, wait 5.7, placeholder speed and wait"
 T_MALE_WEST,H03,13,walk,25.0,yes,walk 1.6 km
-T_MALE_WEST,H03,13,bus,29.4,yes,"R11 from Maafannu Ferry Terminal to Dhamanaveshi, wait 10, ride 10, estimated, walk 5"
+T_MALE_WEST,H03,13,bus,25.3,yes,"R1 from Maafannu Bus Terminal to STELCO, wait 7.5, ride 4, walk 9"
 T_MALE_WEST,H03,13,taxi,17.4,yes,"taxi, 2.2 km at 20 km/h, wait 5.7, placeholder speed and wait"
 T_MALE_WEST,H03,14,walk,25.0,yes,walk 1.6 km
-T_MALE_WEST,H03,14,bus,29.4,yes,"R11 from Maafannu Ferry Terminal to Dhamanaveshi, wait 10, ride 10, estimated, walk 5"
+T_MALE_WEST,H03,14,bus,25.3,yes,"R1 from Maafannu Bus Terminal to STELCO, wait 7.5, ride 4, walk 9"
 T_MALE_WEST,H03,14,taxi,17.4,yes,"taxi, 2.2 km at 20 km/h, wait 5.7, placeholder speed and wait"
 T_MALE_WEST,H03,15,walk,25.0,yes,walk 1.6 km
-T_MALE_WEST,H03,15,bus,29.4,yes,"R11 from Maafannu Ferry Terminal to Dhamanaveshi, wait 10, ride 10, estimated, walk 5"
+T_MALE_WEST,H03,15,bus,25.3,yes,"R1 from Maafannu Bus Terminal to STELCO, wait 7.5, ride 4, walk 9"
 T_MALE_WEST,H03,15,taxi,17.4,yes,"taxi, 2.2 km at 20 km/h, wait 5.7, placeholder speed and wait"
 T_MALE_WEST,H03,16,walk,25.0,yes,walk 1.6 km
-T_MALE_WEST,H03,16,bus,29.4,yes,"R11 from Maafannu Ferry Terminal to Dhamanaveshi, wait 10, ride 10, estimated, walk 5"
+T_MALE_WEST,H03,16,bus,25.3,yes,"R1 from Maafannu Bus Terminal to STELCO, wait 7.5, ride 4, walk 9"
 T_MALE_WEST,H03,16,taxi,17.4,yes,"taxi, 2.2 km at 20 km/h, wait 5.7, placeholder speed and wait"
 T_MALE_WEST,H03,17,walk,25.0,yes,walk 1.6 km
-T_MALE_WEST,H03,17,bus,29.4,yes,"R11 from Maafannu Ferry Terminal to Dhamanaveshi, wait 10, ride 10, estimated, walk 5"
+T_MALE_WEST,H03,17,bus,25.3,yes,"R1 from Maafannu Bus Terminal to STELCO, wait 7.5, ride 4, walk 9"
 T_MALE_WEST,H03,17,taxi,17.4,yes,"taxi, 2.2 km at 20 km/h, wait 5.7, placeholder speed and wait"
 T_MALE_WEST,H03,18,walk,25.0,yes,walk 1.6 km
-T_MALE_WEST,H03,18,bus,29.4,yes,"R11 from Maafannu Ferry Terminal to Dhamanaveshi, wait 10, ride 10, estimated, walk 5"
+T_MALE_WEST,H03,18,bus,25.3,yes,"R1 from Maafannu Bus Terminal to STELCO, wait 7.5, ride 4, walk 9"
 T_MALE_WEST,H03,18,taxi,17.4,yes,"taxi, 2.2 km at 20 km/h, wait 5.7, placeholder speed and wait"
 T_MALE_WEST,H03,19,walk,25.0,yes,walk 1.6 km
-T_MALE_WEST,H03,19,bus,29.4,yes,"R11 from Maafannu Ferry Terminal to Dhamanaveshi, wait 10, ride 10, estimated, walk 5"
+T_MALE_WEST,H03,19,bus,25.3,yes,"R1 from Maafannu Bus Terminal to STELCO, wait 7.5, ride 4, walk 9"
 T_MALE_WEST,H03,19,taxi,17.4,yes,"taxi, 2.2 km at 20 km/h, wait 5.7, placeholder speed and wait"
 T_MALE_WEST,H03,20,walk,25.0,yes,walk 1.6 km
-T_MALE_WEST,H03,20,bus,29.4,yes,"R11 from Maafannu Ferry Terminal to Dhamanaveshi, wait 10, ride 10, estimated, walk 5"
+T_MALE_WEST,H03,20,bus,27.8,yes,"R1 from Maafannu Bus Terminal to STELCO, wait 10, ride 4, walk 9"
 T_MALE_WEST,H03,20,taxi,17.4,yes,"taxi, 2.2 km at 20 km/h, wait 5.7, placeholder speed and wait"
 T_MALE_WEST,H03,21,walk,25.0,yes,walk 1.6 km
-T_MALE_WEST,H03,21,bus,29.4,yes,"R11 from Maafannu Ferry Terminal to Dhamanaveshi, wait 10, ride 10, estimated, walk 5"
+T_MALE_WEST,H03,21,bus,27.8,yes,"R1 from Maafannu Bus Terminal to STELCO, wait 10, ride 4, walk 9"
 T_MALE_WEST,H03,21,taxi,17.4,yes,"taxi, 2.2 km at 20 km/h, wait 5.7, placeholder speed and wait"
 T_MALE_WEST,H03,22,walk,25.0,yes,walk 1.6 km
-T_MALE_WEST,H03,22,bus,29.4,yes,"R11 from Maafannu Ferry Terminal to Dhamanaveshi, wait 10, ride 10, estimated, walk 5"
+T_MALE_WEST,H03,22,bus,27.8,yes,"R1 from Maafannu Bus Terminal to STELCO, wait 10, ride 4, walk 9"
 T_MALE_WEST,H03,22,taxi,17.4,yes,"taxi, 2.2 km at 20 km/h, wait 5.7, placeholder speed and wait"
 T_MALE_WEST,H03,23,walk,25.0,yes,walk 1.6 km
 T_MALE_WEST,H03,23,bus,29.4,yes,"R11 from Maafannu Ferry Terminal to Dhamanaveshi, wait 10, ride 10, estimated, walk 5"
 T_MALE_WEST,H03,23,taxi,17.4,yes,"taxi, 2.2 km at 20 km/h, wait 5.7, placeholder speed and wait"
 T_MALE_WEST,H04,0,walk,,no,different island
-T_MALE_WEST,H04,0,bus,,no,no route links terminal and hospital
+T_MALE_WEST,H04,0,bus,61.2,yes,"R1 from Maafannu Bus Terminal to Flat No. 147, wait 15, ride 32, walk 9"
 T_MALE_WEST,H04,0,taxi,24.8,yes,"taxi, Avas median of 73 rides, wait 5.7, placeholder speed and wait"
 T_MALE_WEST,H04,1,walk,,no,different island
-T_MALE_WEST,H04,1,bus,,no,no route links terminal and hospital
+T_MALE_WEST,H04,1,bus,,no,outside service hours
 T_MALE_WEST,H04,1,taxi,25.1,yes,"taxi, Avas median of 29 rides, wait 5.7, placeholder speed and wait"
 T_MALE_WEST,H04,2,walk,,no,different island
-T_MALE_WEST,H04,2,bus,,no,no route links terminal and hospital
+T_MALE_WEST,H04,2,bus,,no,outside service hours
 T_MALE_WEST,H04,2,taxi,24.9,yes,"taxi, Avas median of 12 rides, wait 5.7, placeholder speed and wait"
 T_MALE_WEST,H04,3,walk,,no,different island
-T_MALE_WEST,H04,3,bus,,no,no route links terminal and hospital
+T_MALE_WEST,H04,3,bus,,no,outside service hours
 T_MALE_WEST,H04,3,taxi,38.6,yes,"taxi, 9.3 km at 20 km/h, wait 5.7, placeholder speed and wait"
 T_MALE_WEST,H04,4,walk,,no,different island
-T_MALE_WEST,H04,4,bus,,no,no route links terminal and hospital
+T_MALE_WEST,H04,4,bus,,no,outside service hours
 T_MALE_WEST,H04,4,taxi,38.6,yes,"taxi, 9.3 km at 20 km/h, wait 5.7, placeholder speed and wait"
 T_MALE_WEST,H04,5,walk,,no,different island
-T_MALE_WEST,H04,5,bus,,no,no route links terminal and hospital
+T_MALE_WEST,H04,5,bus,56.2,yes,"R1 from Maafannu Bus Terminal to Flat No. 147, wait 10, ride 32, walk 9"
 T_MALE_WEST,H04,5,taxi,38.6,yes,"taxi, 9.3 km at 20 km/h, wait 5.7, placeholder speed and wait"
 T_MALE_WEST,H04,6,walk,,no,different island
-T_MALE_WEST,H04,6,bus,,no,no route links terminal and hospital
+T_MALE_WEST,H04,6,bus,56.2,yes,"R1 from Maafannu Bus Terminal to Flat No. 147, wait 10, ride 32, walk 9"
 T_MALE_WEST,H04,6,taxi,24.9,yes,"taxi, Avas median of 18 rides, wait 5.7, placeholder speed and wait"
 T_MALE_WEST,H04,7,walk,,no,different island
-T_MALE_WEST,H04,7,bus,,no,no route links terminal and hospital
+T_MALE_WEST,H04,7,bus,53.7,yes,"R1 from Maafannu Bus Terminal to Flat No. 147, wait 7.5, ride 32, walk 9"
 T_MALE_WEST,H04,7,taxi,25.1,yes,"taxi, Avas median of 105 rides, wait 5.7, placeholder speed and wait"
 T_MALE_WEST,H04,8,walk,,no,different island
-T_MALE_WEST,H04,8,bus,,no,no route links terminal and hospital
+T_MALE_WEST,H04,8,bus,53.7,yes,"R1 from Maafannu Bus Terminal to Flat No. 147, wait 7.5, ride 32, walk 9"
 T_MALE_WEST,H04,8,taxi,24.5,yes,"taxi, Avas median of 102 rides, wait 5.7, placeholder speed and wait"
 T_MALE_WEST,H04,9,walk,,no,different island
-T_MALE_WEST,H04,9,bus,,no,no route links terminal and hospital
+T_MALE_WEST,H04,9,bus,56.2,yes,"R1 from Maafannu Bus Terminal to Flat No. 147, wait 10, ride 32, walk 9"
 T_MALE_WEST,H04,9,taxi,24.6,yes,"taxi, Avas median of 100 rides, wait 5.7, placeholder speed and wait"
 T_MALE_WEST,H04,10,walk,,no,different island
-T_MALE_WEST,H04,10,bus,,no,no route links terminal and hospital
+T_MALE_WEST,H04,10,bus,56.2,yes,"R1 from Maafannu Bus Terminal to Flat No. 147, wait 10, ride 32, walk 9"
 T_MALE_WEST,H04,10,taxi,24.8,yes,"taxi, Avas median of 115 rides, wait 5.7, placeholder speed and wait"
 T_MALE_WEST,H04,11,walk,,no,different island
-T_MALE_WEST,H04,11,bus,,no,no route links terminal and hospital
+T_MALE_WEST,H04,11,bus,56.2,yes,"R1 from Maafannu Bus Terminal to Flat No. 147, wait 10, ride 32, walk 9"
 T_MALE_WEST,H04,11,taxi,24.9,yes,"taxi, Avas median of 149 rides, wait 5.7, placeholder speed and wait"
 T_MALE_WEST,H04,12,walk,,no,different island
-T_MALE_WEST,H04,12,bus,,no,no route links terminal and hospital
+T_MALE_WEST,H04,12,bus,53.7,yes,"R1 from Maafannu Bus Terminal to Flat No. 147, wait 7.5, ride 32, walk 9"
 T_MALE_WEST,H04,12,taxi,24.8,yes,"taxi, Avas median of 140 rides, wait 5.7, placeholder speed and wait"
 T_MALE_WEST,H04,13,walk,,no,different island
-T_MALE_WEST,H04,13,bus,,no,no route links terminal and hospital
+T_MALE_WEST,H04,13,bus,53.7,yes,"R1 from Maafannu Bus Terminal to Flat No. 147, wait 7.5, ride 32, walk 9"
 T_MALE_WEST,H04,13,taxi,25.0,yes,"taxi, Avas median of 142 rides, wait 5.7, placeholder speed and wait"
 T_MALE_WEST,H04,14,walk,,no,different island
-T_MALE_WEST,H04,14,bus,,no,no route links terminal and hospital
+T_MALE_WEST,H04,14,bus,53.7,yes,"R1 from Maafannu Bus Terminal to Flat No. 147, wait 7.5, ride 32, walk 9"
 T_MALE_WEST,H04,14,taxi,24.7,yes,"taxi, Avas median of 187 rides, wait 5.7, placeholder speed and wait"
 T_MALE_WEST,H04,15,walk,,no,different island
-T_MALE_WEST,H04,15,bus,,no,no route links terminal and hospital
+T_MALE_WEST,H04,15,bus,53.7,yes,"R1 from Maafannu Bus Terminal to Flat No. 147, wait 7.5, ride 32, walk 9"
 T_MALE_WEST,H04,15,taxi,24.8,yes,"taxi, Avas median of 233 rides, wait 5.7, placeholder speed and wait"
 T_MALE_WEST,H04,16,walk,,no,different island
-T_MALE_WEST,H04,16,bus,,no,no route links terminal and hospital
+T_MALE_WEST,H04,16,bus,53.7,yes,"R1 from Maafannu Bus Terminal to Flat No. 147, wait 7.5, ride 32, walk 9"
 T_MALE_WEST,H04,16,taxi,24.8,yes,"taxi, Avas median of 259 rides, wait 5.7, placeholder speed and wait"
 T_MALE_WEST,H04,17,walk,,no,different island
-T_MALE_WEST,H04,17,bus,,no,no route links terminal and hospital
+T_MALE_WEST,H04,17,bus,53.7,yes,"R1 from Maafannu Bus Terminal to Flat No. 147, wait 7.5, ride 32, walk 9"
 T_MALE_WEST,H04,17,taxi,24.9,yes,"taxi, Avas median of 198 rides, wait 5.7, placeholder speed and wait"
 T_MALE_WEST,H04,18,walk,,no,different island
-T_MALE_WEST,H04,18,bus,,no,no route links terminal and hospital
+T_MALE_WEST,H04,18,bus,53.7,yes,"R1 from Maafannu Bus Terminal to Flat No. 147, wait 7.5, ride 32, walk 9"
 T_MALE_WEST,H04,18,taxi,24.8,yes,"taxi, Avas median of 185 rides, wait 5.7, placeholder speed and wait"
 T_MALE_WEST,H04,19,walk,,no,different island
-T_MALE_WEST,H04,19,bus,,no,no route links terminal and hospital
+T_MALE_WEST,H04,19,bus,53.7,yes,"R1 from Maafannu Bus Terminal to Flat No. 147, wait 7.5, ride 32, walk 9"
 T_MALE_WEST,H04,19,taxi,25.1,yes,"taxi, Avas median of 182 rides, wait 5.7, placeholder speed and wait"
 T_MALE_WEST,H04,20,walk,,no,different island
-T_MALE_WEST,H04,20,bus,,no,no route links terminal and hospital
+T_MALE_WEST,H04,20,bus,56.2,yes,"R1 from Maafannu Bus Terminal to Flat No. 147, wait 10, ride 32, walk 9"
 T_MALE_WEST,H04,20,taxi,25.0,yes,"taxi, Avas median of 197 rides, wait 5.7, placeholder speed and wait"
 T_MALE_WEST,H04,21,walk,,no,different island
-T_MALE_WEST,H04,21,bus,,no,no route links terminal and hospital
+T_MALE_WEST,H04,21,bus,56.2,yes,"R1 from Maafannu Bus Terminal to Flat No. 147, wait 10, ride 32, walk 9"
 T_MALE_WEST,H04,21,taxi,25.0,yes,"taxi, Avas median of 153 rides, wait 5.7, placeholder speed and wait"
 T_MALE_WEST,H04,22,walk,,no,different island
-T_MALE_WEST,H04,22,bus,,no,no route links terminal and hospital
+T_MALE_WEST,H04,22,bus,56.2,yes,"R1 from Maafannu Bus Terminal to Flat No. 147, wait 10, ride 32, walk 9"
 T_MALE_WEST,H04,22,taxi,24.9,yes,"taxi, Avas median of 129 rides, wait 5.7, placeholder speed and wait"
 T_MALE_WEST,H04,23,walk,,no,different island
-T_MALE_WEST,H04,23,bus,,no,no route links terminal and hospital
+T_MALE_WEST,H04,23,bus,61.2,yes,"R1 from Maafannu Bus Terminal to Flat No. 147, wait 15, ride 32, walk 9"
 T_MALE_WEST,H04,23,taxi,24.8,yes,"taxi, Avas median of 137 rides, wait 5.7, placeholder speed and wait"
 T_MALE_WEST,H05,0,walk,,no,different island
-T_MALE_WEST,H05,0,bus,,no,no route links terminal and hospital
+T_MALE_WEST,H05,0,bus,59.4,yes,"R1 from Maafannu Bus Terminal to Flat No. 137, wait 15, ride 28, walk 11"
 T_MALE_WEST,H05,0,taxi,23.4,yes,"taxi, Avas median of 69 rides, wait 5.7, placeholder speed and wait"
 T_MALE_WEST,H05,1,walk,,no,different island
-T_MALE_WEST,H05,1,bus,,no,no route links terminal and hospital
+T_MALE_WEST,H05,1,bus,,no,outside service hours
 T_MALE_WEST,H05,1,taxi,23.3,yes,"taxi, Avas median of 32 rides, wait 5.7, placeholder speed and wait"
 T_MALE_WEST,H05,2,walk,,no,different island
-T_MALE_WEST,H05,2,bus,,no,no route links terminal and hospital
+T_MALE_WEST,H05,2,bus,,no,outside service hours
 T_MALE_WEST,H05,2,taxi,23.4,yes,"taxi, Avas median of 17 rides, wait 5.7, placeholder speed and wait"
 T_MALE_WEST,H05,3,walk,,no,different island
-T_MALE_WEST,H05,3,bus,,no,no route links terminal and hospital
+T_MALE_WEST,H05,3,bus,,no,outside service hours
 T_MALE_WEST,H05,3,taxi,36.2,yes,"taxi, 8.5 km at 20 km/h, wait 5.7, placeholder speed and wait"
 T_MALE_WEST,H05,4,walk,,no,different island
-T_MALE_WEST,H05,4,bus,,no,no route links terminal and hospital
+T_MALE_WEST,H05,4,bus,,no,outside service hours
 T_MALE_WEST,H05,4,taxi,23.1,yes,"taxi, Avas median of 10 rides, wait 5.7, placeholder speed and wait"
 T_MALE_WEST,H05,5,walk,,no,different island
-T_MALE_WEST,H05,5,bus,,no,no route links terminal and hospital
+T_MALE_WEST,H05,5,bus,54.4,yes,"R1 from Maafannu Bus Terminal to Flat No. 137, wait 10, ride 28, walk 11"
 T_MALE_WEST,H05,5,taxi,36.2,yes,"taxi, 8.5 km at 20 km/h, wait 5.7, placeholder speed and wait"
 T_MALE_WEST,H05,6,walk,,no,different island
-T_MALE_WEST,H05,6,bus,,no,no route links terminal and hospital
+T_MALE_WEST,H05,6,bus,54.4,yes,"R1 from Maafannu Bus Terminal to Flat No. 137, wait 10, ride 28, walk 11"
 T_MALE_WEST,H05,6,taxi,23.3,yes,"taxi, Avas median of 25 rides, wait 5.7, placeholder speed and wait"
 T_MALE_WEST,H05,7,walk,,no,different island
-T_MALE_WEST,H05,7,bus,,no,no route links terminal and hospital
+T_MALE_WEST,H05,7,bus,51.9,yes,"R1 from Maafannu Bus Terminal to Flat No. 137, wait 7.5, ride 28, walk 11"
 T_MALE_WEST,H05,7,taxi,23.5,yes,"taxi, Avas median of 143 rides, wait 5.7, placeholder speed and wait"
 T_MALE_WEST,H05,8,walk,,no,different island
-T_MALE_WEST,H05,8,bus,,no,no route links terminal and hospital
+T_MALE_WEST,H05,8,bus,51.9,yes,"R1 from Maafannu Bus Terminal to Flat No. 137, wait 7.5, ride 28, walk 11"
 T_MALE_WEST,H05,8,taxi,23.3,yes,"taxi, Avas median of 133 rides, wait 5.7, placeholder speed and wait"
 T_MALE_WEST,H05,9,walk,,no,different island
-T_MALE_WEST,H05,9,bus,,no,no route links terminal and hospital
+T_MALE_WEST,H05,9,bus,54.4,yes,"R1 from Maafannu Bus Terminal to Flat No. 137, wait 10, ride 28, walk 11"
 T_MALE_WEST,H05,9,taxi,23.4,yes,"taxi, Avas median of 139 rides, wait 5.7, placeholder speed and wait"
 T_MALE_WEST,H05,10,walk,,no,different island
-T_MALE_WEST,H05,10,bus,,no,no route links terminal and hospital
+T_MALE_WEST,H05,10,bus,54.4,yes,"R1 from Maafannu Bus Terminal to Flat No. 137, wait 10, ride 28, walk 11"
 T_MALE_WEST,H05,10,taxi,23.2,yes,"taxi, Avas median of 135 rides, wait 5.7, placeholder speed and wait"
 T_MALE_WEST,H05,11,walk,,no,different island
-T_MALE_WEST,H05,11,bus,,no,no route links terminal and hospital
+T_MALE_WEST,H05,11,bus,54.4,yes,"R1 from Maafannu Bus Terminal to Flat No. 137, wait 10, ride 28, walk 11"
 T_MALE_WEST,H05,11,taxi,23.2,yes,"taxi, Avas median of 164 rides, wait 5.7, placeholder speed and wait"
 T_MALE_WEST,H05,12,walk,,no,different island
-T_MALE_WEST,H05,12,bus,,no,no route links terminal and hospital
+T_MALE_WEST,H05,12,bus,51.9,yes,"R1 from Maafannu Bus Terminal to Flat No. 137, wait 7.5, ride 28, walk 11"
 T_MALE_WEST,H05,12,taxi,23.3,yes,"taxi, Avas median of 178 rides, wait 5.7, placeholder speed and wait"
 T_MALE_WEST,H05,13,walk,,no,different island
-T_MALE_WEST,H05,13,bus,,no,no route links terminal and hospital
+T_MALE_WEST,H05,13,bus,51.9,yes,"R1 from Maafannu Bus Terminal to Flat No. 137, wait 7.5, ride 28, walk 11"
 T_MALE_WEST,H05,13,taxi,23.3,yes,"taxi, Avas median of 170 rides, wait 5.7, placeholder speed and wait"
 T_MALE_WEST,H05,14,walk,,no,different island
-T_MALE_WEST,H05,14,bus,,no,no route links terminal and hospital
+T_MALE_WEST,H05,14,bus,51.9,yes,"R1 from Maafannu Bus Terminal to Flat No. 137, wait 7.5, ride 28, walk 11"
 T_MALE_WEST,H05,14,taxi,23.3,yes,"taxi, Avas median of 213 rides, wait 5.7, placeholder speed and wait"
 T_MALE_WEST,H05,15,walk,,no,different island
-T_MALE_WEST,H05,15,bus,,no,no route links terminal and hospital
+T_MALE_WEST,H05,15,bus,51.9,yes,"R1 from Maafannu Bus Terminal to Flat No. 137, wait 7.5, ride 28, walk 11"
 T_MALE_WEST,H05,15,taxi,23.3,yes,"taxi, Avas median of 216 rides, wait 5.7, placeholder speed and wait"
 T_MALE_WEST,H05,16,walk,,no,different island
-T_MALE_WEST,H05,16,bus,,no,no route links terminal and hospital
+T_MALE_WEST,H05,16,bus,51.9,yes,"R1 from Maafannu Bus Terminal to Flat No. 137, wait 7.5, ride 28, walk 11"
 T_MALE_WEST,H05,16,taxi,23.3,yes,"taxi, Avas median of 262 rides, wait 5.7, placeholder speed and wait"
 T_MALE_WEST,H05,17,walk,,no,different island
-T_MALE_WEST,H05,17,bus,,no,no route links terminal and hospital
+T_MALE_WEST,H05,17,bus,51.9,yes,"R1 from Maafannu Bus Terminal to Flat No. 137, wait 7.5, ride 28, walk 11"
 T_MALE_WEST,H05,17,taxi,23.2,yes,"taxi, Avas median of 205 rides, wait 5.7, placeholder speed and wait"
 T_MALE_WEST,H05,18,walk,,no,different island
-T_MALE_WEST,H05,18,bus,,no,no route links terminal and hospital
+T_MALE_WEST,H05,18,bus,51.9,yes,"R1 from Maafannu Bus Terminal to Flat No. 137, wait 7.5, ride 28, walk 11"
 T_MALE_WEST,H05,18,taxi,23.3,yes,"taxi, Avas median of 175 rides, wait 5.7, placeholder speed and wait"
 T_MALE_WEST,H05,19,walk,,no,different island
-T_MALE_WEST,H05,19,bus,,no,no route links terminal and hospital
+T_MALE_WEST,H05,19,bus,51.9,yes,"R1 from Maafannu Bus Terminal to Flat No. 137, wait 7.5, ride 28, walk 11"
 T_MALE_WEST,H05,19,taxi,23.3,yes,"taxi, Avas median of 159 rides, wait 5.7, placeholder speed and wait"
 T_MALE_WEST,H05,20,walk,,no,different island
-T_MALE_WEST,H05,20,bus,,no,no route links terminal and hospital
+T_MALE_WEST,H05,20,bus,54.4,yes,"R1 from Maafannu Bus Terminal to Flat No. 137, wait 10, ride 28, walk 11"
 T_MALE_WEST,H05,20,taxi,23.2,yes,"taxi, Avas median of 177 rides, wait 5.7, placeholder speed and wait"
 T_MALE_WEST,H05,21,walk,,no,different island
-T_MALE_WEST,H05,21,bus,,no,no route links terminal and hospital
+T_MALE_WEST,H05,21,bus,54.4,yes,"R1 from Maafannu Bus Terminal to Flat No. 137, wait 10, ride 28, walk 11"
 T_MALE_WEST,H05,21,taxi,23.3,yes,"taxi, Avas median of 151 rides, wait 5.7, placeholder speed and wait"
 T_MALE_WEST,H05,22,walk,,no,different island
-T_MALE_WEST,H05,22,bus,,no,no route links terminal and hospital
+T_MALE_WEST,H05,22,bus,54.4,yes,"R1 from Maafannu Bus Terminal to Flat No. 137, wait 10, ride 28, walk 11"
 T_MALE_WEST,H05,22,taxi,23.3,yes,"taxi, Avas median of 153 rides, wait 5.7, placeholder speed and wait"
 T_MALE_WEST,H05,23,walk,,no,different island
-T_MALE_WEST,H05,23,bus,,no,no route links terminal and hospital
+T_MALE_WEST,H05,23,bus,59.4,yes,"R1 from Maafannu Bus Terminal to Flat No. 137, wait 15, ride 28, walk 11"
 T_MALE_WEST,H05,23,taxi,23.1,yes,"taxi, Avas median of 132 rides, wait 5.7, placeholder speed and wait"
 T_MALE_WEST,H06,0,walk,,no,different island
 T_MALE_WEST,H06,0,bus,,no,no route links terminal and hospital
@@ -1080,7 +1080,7 @@ T_HULHUMALE,H03,23,walk,,no,different island
 T_HULHUMALE,H03,23,bus,51.7,yes,"R2 from Amin Avenue to Senahiya, wait 15, ride 26, walk 6"
 T_HULHUMALE,H03,23,taxi,22.1,yes,"taxi, Avas median of 83 rides, wait 5.7, placeholder speed and wait"
 T_HULHUMALE,H04,0,walk,12.5,yes,walk 0.6 km
-T_HULHUMALE,H04,0,bus,32.0,yes,"R6 from Amin Avenue to Flat No. 147, wait 7.5, ride 11, walk 8"
+T_HULHUMALE,H04,0,bus,28.0,yes,"R6 from Hulhumalé Police Station to Amin Avenue, wait 7.5, ride 5, walk 10"
 T_HULHUMALE,H04,0,taxi,13.2,yes,"taxi, 0.8 km at 20 km/h, wait 5.7, placeholder speed and wait"
 T_HULHUMALE,H04,1,walk,12.5,yes,walk 0.6 km
 T_HULHUMALE,H04,1,bus,,no,outside service hours
@@ -1095,61 +1095,61 @@ T_HULHUMALE,H04,4,walk,12.5,yes,walk 0.6 km
 T_HULHUMALE,H04,4,bus,,no,outside service hours
 T_HULHUMALE,H04,4,taxi,13.2,yes,"taxi, 0.8 km at 20 km/h, wait 5.7, placeholder speed and wait"
 T_HULHUMALE,H04,5,walk,12.5,yes,walk 0.6 km
-T_HULHUMALE,H04,5,bus,,no,outside service hours
+T_HULHUMALE,H04,5,bus,27.2,yes,"R1 from Hulhumale' Police Station to Amin Avenue, wait 10, ride 2, walk 10"
 T_HULHUMALE,H04,5,taxi,13.2,yes,"taxi, 0.8 km at 20 km/h, wait 5.7, placeholder speed and wait"
 T_HULHUMALE,H04,6,walk,12.5,yes,walk 0.6 km
-T_HULHUMALE,H04,6,bus,,no,outside service hours
+T_HULHUMALE,H04,6,bus,27.2,yes,"R1 from Hulhumale' Police Station to Amin Avenue, wait 10, ride 2, walk 10"
 T_HULHUMALE,H04,6,taxi,13.2,yes,"taxi, 0.8 km at 20 km/h, wait 5.7, placeholder speed and wait"
 T_HULHUMALE,H04,7,walk,12.5,yes,walk 0.6 km
-T_HULHUMALE,H04,7,bus,32.0,yes,"R6 from Amin Avenue to Flat No. 147, wait 7.5, ride 11, walk 8"
+T_HULHUMALE,H04,7,bus,24.7,yes,"R1 from Hulhumale' Police Station to Amin Avenue, wait 7.5, ride 2, walk 10"
 T_HULHUMALE,H04,7,taxi,13.2,yes,"taxi, 0.8 km at 20 km/h, wait 5.7, placeholder speed and wait"
 T_HULHUMALE,H04,8,walk,12.5,yes,walk 0.6 km
-T_HULHUMALE,H04,8,bus,32.0,yes,"R6 from Amin Avenue to Flat No. 147, wait 7.5, ride 11, walk 8"
+T_HULHUMALE,H04,8,bus,24.7,yes,"R1 from Hulhumale' Police Station to Amin Avenue, wait 7.5, ride 2, walk 10"
 T_HULHUMALE,H04,8,taxi,13.2,yes,"taxi, 0.8 km at 20 km/h, wait 5.7, placeholder speed and wait"
 T_HULHUMALE,H04,9,walk,12.5,yes,walk 0.6 km
-T_HULHUMALE,H04,9,bus,32.0,yes,"R6 from Amin Avenue to Flat No. 147, wait 7.5, ride 11, walk 8"
+T_HULHUMALE,H04,9,bus,27.2,yes,"R1 from Hulhumale' Police Station to Amin Avenue, wait 10, ride 2, walk 10"
 T_HULHUMALE,H04,9,taxi,13.2,yes,"taxi, 0.8 km at 20 km/h, wait 5.7, placeholder speed and wait"
 T_HULHUMALE,H04,10,walk,12.5,yes,walk 0.6 km
-T_HULHUMALE,H04,10,bus,32.0,yes,"R6 from Amin Avenue to Flat No. 147, wait 7.5, ride 11, walk 8"
+T_HULHUMALE,H04,10,bus,27.2,yes,"R1 from Hulhumale' Police Station to Amin Avenue, wait 10, ride 2, walk 10"
 T_HULHUMALE,H04,10,taxi,13.2,yes,"taxi, 0.8 km at 20 km/h, wait 5.7, placeholder speed and wait"
 T_HULHUMALE,H04,11,walk,12.5,yes,walk 0.6 km
-T_HULHUMALE,H04,11,bus,32.0,yes,"R6 from Amin Avenue to Flat No. 147, wait 7.5, ride 11, walk 8"
+T_HULHUMALE,H04,11,bus,27.2,yes,"R1 from Hulhumale' Police Station to Amin Avenue, wait 10, ride 2, walk 10"
 T_HULHUMALE,H04,11,taxi,13.2,yes,"taxi, 0.8 km at 20 km/h, wait 5.7, placeholder speed and wait"
 T_HULHUMALE,H04,12,walk,12.5,yes,walk 0.6 km
-T_HULHUMALE,H04,12,bus,32.0,yes,"R6 from Amin Avenue to Flat No. 147, wait 7.5, ride 11, walk 8"
+T_HULHUMALE,H04,12,bus,24.7,yes,"R1 from Hulhumale' Police Station to Amin Avenue, wait 7.5, ride 2, walk 10"
 T_HULHUMALE,H04,12,taxi,13.2,yes,"taxi, 0.8 km at 20 km/h, wait 5.7, placeholder speed and wait"
 T_HULHUMALE,H04,13,walk,12.5,yes,walk 0.6 km
-T_HULHUMALE,H04,13,bus,32.0,yes,"R6 from Amin Avenue to Flat No. 147, wait 7.5, ride 11, walk 8"
+T_HULHUMALE,H04,13,bus,24.7,yes,"R1 from Hulhumale' Police Station to Amin Avenue, wait 7.5, ride 2, walk 10"
 T_HULHUMALE,H04,13,taxi,13.2,yes,"taxi, 0.8 km at 20 km/h, wait 5.7, placeholder speed and wait"
 T_HULHUMALE,H04,14,walk,12.5,yes,walk 0.6 km
-T_HULHUMALE,H04,14,bus,32.0,yes,"R6 from Amin Avenue to Flat No. 147, wait 7.5, ride 11, walk 8"
+T_HULHUMALE,H04,14,bus,24.7,yes,"R1 from Hulhumale' Police Station to Amin Avenue, wait 7.5, ride 2, walk 10"
 T_HULHUMALE,H04,14,taxi,13.2,yes,"taxi, 0.8 km at 20 km/h, wait 5.7, placeholder speed and wait"
 T_HULHUMALE,H04,15,walk,12.5,yes,walk 0.6 km
-T_HULHUMALE,H04,15,bus,32.0,yes,"R6 from Amin Avenue to Flat No. 147, wait 7.5, ride 11, walk 8"
+T_HULHUMALE,H04,15,bus,24.7,yes,"R1 from Hulhumale' Police Station to Amin Avenue, wait 7.5, ride 2, walk 10"
 T_HULHUMALE,H04,15,taxi,13.2,yes,"taxi, 0.8 km at 20 km/h, wait 5.7, placeholder speed and wait"
 T_HULHUMALE,H04,16,walk,12.5,yes,walk 0.6 km
-T_HULHUMALE,H04,16,bus,32.0,yes,"R6 from Amin Avenue to Flat No. 147, wait 7.5, ride 11, walk 8"
+T_HULHUMALE,H04,16,bus,24.7,yes,"R1 from Hulhumale' Police Station to Amin Avenue, wait 7.5, ride 2, walk 10"
 T_HULHUMALE,H04,16,taxi,13.2,yes,"taxi, 0.8 km at 20 km/h, wait 5.7, placeholder speed and wait"
 T_HULHUMALE,H04,17,walk,12.5,yes,walk 0.6 km
-T_HULHUMALE,H04,17,bus,32.0,yes,"R6 from Amin Avenue to Flat No. 147, wait 7.5, ride 11, walk 8"
+T_HULHUMALE,H04,17,bus,24.7,yes,"R1 from Hulhumale' Police Station to Amin Avenue, wait 7.5, ride 2, walk 10"
 T_HULHUMALE,H04,17,taxi,13.2,yes,"taxi, 0.8 km at 20 km/h, wait 5.7, placeholder speed and wait"
 T_HULHUMALE,H04,18,walk,12.5,yes,walk 0.6 km
-T_HULHUMALE,H04,18,bus,32.0,yes,"R6 from Amin Avenue to Flat No. 147, wait 7.5, ride 11, walk 8"
+T_HULHUMALE,H04,18,bus,24.7,yes,"R1 from Hulhumale' Police Station to Amin Avenue, wait 7.5, ride 2, walk 10"
 T_HULHUMALE,H04,18,taxi,13.2,yes,"taxi, 0.8 km at 20 km/h, wait 5.7, placeholder speed and wait"
 T_HULHUMALE,H04,19,walk,12.5,yes,walk 0.6 km
-T_HULHUMALE,H04,19,bus,32.0,yes,"R6 from Amin Avenue to Flat No. 147, wait 7.5, ride 11, walk 8"
+T_HULHUMALE,H04,19,bus,24.7,yes,"R1 from Hulhumale' Police Station to Amin Avenue, wait 7.5, ride 2, walk 10"
 T_HULHUMALE,H04,19,taxi,13.2,yes,"taxi, 0.8 km at 20 km/h, wait 5.7, placeholder speed and wait"
 T_HULHUMALE,H04,20,walk,12.5,yes,walk 0.6 km
-T_HULHUMALE,H04,20,bus,32.0,yes,"R6 from Amin Avenue to Flat No. 147, wait 7.5, ride 11, walk 8"
+T_HULHUMALE,H04,20,bus,27.2,yes,"R1 from Hulhumale' Police Station to Amin Avenue, wait 10, ride 2, walk 10"
 T_HULHUMALE,H04,20,taxi,13.2,yes,"taxi, 0.8 km at 20 km/h, wait 5.7, placeholder speed and wait"
 T_HULHUMALE,H04,21,walk,12.5,yes,walk 0.6 km
-T_HULHUMALE,H04,21,bus,32.0,yes,"R6 from Amin Avenue to Flat No. 147, wait 7.5, ride 11, walk 8"
+T_HULHUMALE,H04,21,bus,27.2,yes,"R1 from Hulhumale' Police Station to Amin Avenue, wait 10, ride 2, walk 10"
 T_HULHUMALE,H04,21,taxi,13.2,yes,"taxi, 0.8 km at 20 km/h, wait 5.7, placeholder speed and wait"
 T_HULHUMALE,H04,22,walk,12.5,yes,walk 0.6 km
-T_HULHUMALE,H04,22,bus,32.0,yes,"R6 from Amin Avenue to Flat No. 147, wait 7.5, ride 11, walk 8"
+T_HULHUMALE,H04,22,bus,27.2,yes,"R1 from Hulhumale' Police Station to Amin Avenue, wait 10, ride 2, walk 10"
 T_HULHUMALE,H04,22,taxi,13.2,yes,"taxi, 0.8 km at 20 km/h, wait 5.7, placeholder speed and wait"
 T_HULHUMALE,H04,23,walk,12.5,yes,walk 0.6 km
-T_HULHUMALE,H04,23,bus,32.0,yes,"R6 from Amin Avenue to Flat No. 147, wait 7.5, ride 11, walk 8"
+T_HULHUMALE,H04,23,bus,28.0,yes,"R6 from Hulhumalé Police Station to Amin Avenue, wait 7.5, ride 5, walk 10"
 T_HULHUMALE,H04,23,taxi,13.2,yes,"taxi, 0.8 km at 20 km/h, wait 5.7, placeholder speed and wait"
 T_HULHUMALE,H05,0,walk,11.2,yes,walk 0.5 km
 T_HULHUMALE,H05,0,bus,22.8,yes,"R6 from Amin Avenue to Tree Top Hospital, wait 7.5, ride 3, walk 7"

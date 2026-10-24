@@ -90,7 +90,10 @@ ROAD_NETWORK = {
 # Avas pickup zone for each terminal's island (taxi wait by zone and hour)
 TAXI_ZONE = {"K.Malé": "male", "K.Hulhumalé": "hulhumale", "K.Hulhulé": "airport"}
 
-BUS_STOP_RADIUS_M = 400       # max walk from terminal/hospital to a bus stop
+# Max walk from terminal/hospital to a bus stop. 550 rather than the guide's
+# 400 so the Malé terminals reach the routes that cross the bridge to
+# Hulhumalé (R1/R3/R7 at 435 m from Maafannu, R2/R8 at 535 m from Jetty NO5).
+BUS_STOP_RADIUS_M = 550
 MINIBUS_SPEED_KMH = 12        # R10-R12, R15 have no departures data; "estimated"
 TAXI_MATCH_RADIUS_M = 400     # Avas rides counted as terminal-to-hospital
 TAXI_MIN_RIDES = 10           # fewer rides than this: use the distance fallback
