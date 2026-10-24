@@ -1,0 +1,28 @@
+﻿island_key,atoll,island,harbour_lat,harbour_lon,population_2022,census_spelling,has_health_centre,atoll_name,role,foreign_population_2022,harbour_source,harbour_quality,health_facility_ids,has_hospital,health_location_quality,odi_name,notes
+K.Kaashidhoo,K,Kaashidhoo,4.95464,73.46189,2528,K Kaashidhoo,yes,Kaafu,origin,695,odi_connections,island_point,C01,no,exact,K. Kaashidhoo,
+K.Gaafaru,K,Gaafaru,4.73730,73.49706,1294,K Gaafaru,yes,Kaafu,origin,98,OSM https://www.openstreetmap.org/way/941025096 (landuse=harbour),exact,C02,no,estimated,,
+K.Dhiffushi,K,Dhiffushi,4.44057,73.71336,1270,K Dhiffushi,yes,Kaafu,origin,249,odi_connections,island_point,C03,no,exact,K. Dhiffushi,
+K.Thulusdhoo,K,Thulusdhoo,4.37289,73.64909,1801,K Thulusdhoo,yes,Kaafu,origin,613,odi_connections,island_point,C04,no,exact,K. Thulusdhoo,
+K.Huraa,K,Huraa,4.33357,73.60119,1654,K Huraa,yes,Kaafu,origin,447,odi_connections,island_point,C05,no,exact,K. Huraa,
+K.Himmafushi,K,Himmafushi,4.30967,73.57079,2012,K Himmafushi,yes,Kaafu,origin,520,odi_connections,island_point,C06,no,estimated,K. Himmafushi,
+K.Gulhi,K,Gulhi,3.99030,73.50923,976,K Gulhi,yes,Kaafu,origin,164,odi_connections,island_point,C07,no,exact,K. Gulhi,
+K.Maafushi,K,Maafushi,3.94231,73.49070,4471,K Maafushi,yes,Kaafu,origin,1276,odi_connections,island_point,C08,no,exact,K. Maafushi,
+K.Guraidhoo,K,Guraidhoo,3.90020,73.46588,1743,K Guraidhoo,yes,Kaafu,origin,175,OSM https://www.openstreetmap.org/node/5833834250 (ferry terminal),exact,C09,no,exact,,Th. Guraidhoo also exists; always join with the atoll
+AA.Bodufolhudhoo,AA,Bodufolhudhoo,4.18550,72.77335,704,AA Bodufolhudhoo,yes,Alif Alif,origin,51,odi_connections,island_point,C10,no,exact,Aa. Bodufolhudhoo,
+AA.Mathiveri,AA,Mathiveri,4.19176,72.74637,878,AA Mathiveri,yes,Alif Alif,origin,90,odi_connections,island_point,C11,no,exact,Aa. Mathiveri,
+AA.Rasdhoo,AA,Rasdhoo,4.26249,72.99209,1282,AA Rasdhoo,yes,Alif Alif,origin,204,odi_connections,island_point,H07,yes,exact,Aa. Rasdhoo,
+AA.Thoddoo,AA,Thoddoo,4.43610,72.96055,1924,AA Thoddoo,yes,Alif Alif,origin,395,odi_connections,island_point,C12,no,exact,Aa. Thoddoo,
+AA.Ukulhas,AA,Ukulhas,4.21473,72.86476,1284,AA Ukulhas,yes,Alif Alif,origin,231,odi_connections,island_point,C13,no,exact,Aa. Ukulhas,
+ADh.Dhangethi,ADh,Dhangethi,3.60765,72.95540,936,ADh Dhagethi,yes,Alif Dhaalu,origin,218,odi_connections,island_point,C14,no,exact,Adh. Dhangethi,Census spells it Dhagethi
+ADh.Dhigurah,ADh,Dhigurah,3.53514,72.92896,761,ADh Dhigurah,yes,Alif Dhaalu,origin,223,odi_connections,island_point,C15,no,exact,Adh. Dhigurah,
+ADh.Hangnaameedhoo,ADh,Hangnaameedhoo,3.84996,72.95667,484,ADh Hangnameedhoo,yes,Alif Dhaalu,origin,71,OSM https://www.openstreetmap.org/way/150655824 (harbour 'AD. Hangnaameedhoo'),exact,C16,no,estimated,Adh. Hangnaameedhoo,Census spells it Hangnameedhoo; odi_connections has no coordinates for it
+ADh.Mahibadhoo,ADh,Mahibadhoo,3.75713,72.96893,2580,ADh Mahibadhoo,yes,Alif Dhaalu,origin,558,odi_connections,island_point,H08,yes,exact,Adh. Mahibadhoo,
+ADh.Omadhoo,ADh,Omadhoo,3.79112,72.96347,913,ADh Omadhoo,yes,Alif Dhaalu,origin,55,odi_connections,island_point,C17,no,estimated,Adh. Omadhoo,Th. Omadhoo also exists; always join with the atoll
+V.Felidhoo,V,Felidhoo,3.47182,73.54699,620,V Felidhoo,yes,Vaavu,origin,117,odi_connections,island_point,H09,yes,exact,V. Felidhoo,
+V.Fulidhoo,V,Fulidhoo,3.68063,73.41579,400,V Fulidhoo,yes,Vaavu,origin,106,odi_connections,island_point,C18,no,estimated,V. Fulidhoo,
+V.Keyodhoo,V,Keyodhoo,3.46206,73.54971,641,V Keyodhoo,yes,Vaavu,origin,121,odi_connections,island_point,C19,no,estimated,V. Keyodhoo,
+V.Thinadhoo,V,Thinadhoo,3.48815,73.53949,258,V Thinadhoo,yes,Vaavu,origin,184,odi_connections,island_point,C20,no,estimated,V. Thinadhoo,"GDh. Thinadhoo (pop. 6,217) also exists; always join with the atoll"
+K.Malé,K,Malé,4.17521,73.50916,137238,Galolhu + Henveiru + Maafannu + Machchangolhi,yes,Kaafu,greater_male,36624,odi_connections,island_point,H01 H02 H03,yes,exact exact exact,K. Malé,"Point is central Malé, not a terminal: Kaafu ferries arrive at different Malé jetties, so record the arrival terminal per route in ferry_links. Population = sum of the four Malé wards (Census lists Maale = 211,908 for the whole city incl. Hulhumalé, Villimalé, Hulhulé)"
+K.Hulhumalé,K,Hulhumalé,4.21674,73.53785,65714,Hulhumaale Phase 1 + Hulhumaale Phase 2,yes,Kaafu,greater_male,12585,"Team Kandu rtl_bus_stops.csv, stop 507 Hulhumalé Ferry Terminal",exact,H04 H05,yes,exact exact,K. Hulhumalé,Population = Phase 1 + Phase 2. Harbour = Hulhumalé Ferry Terminal; the odi_connections point is the town centre
+K.Villimalé,K,Villimalé,4.17519,73.48744,6755,Vilimaale,yes,Kaafu,greater_male,784,OSM https://www.openstreetmap.org/node/4462445840 (RTL/MTCC ferry terminal),exact,H06,yes,estimated,,Not in odi_connections
+K.Hulhulé,K,Hulhulé,4.19183,73.52910,802,Hulhule,no,Kaafu,transfer,752,odi_connections,island_point,,no,,Velana Hulhule Airport,Airport island; transfer point only
