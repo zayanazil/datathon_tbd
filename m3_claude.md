@@ -2,6 +2,8 @@
 
 **Owner:** Al (M3) · **Branch:** `m3-network` · **Last updated:** 24 Oct 2026, after Step 5 (final figures for slides 5–6)
 
+**Full write-up (decisions, doubts, links to M1/M2, slide content): [`m3_handover.md`](m3_handover.md).**
+
 This file says what M3 has built, what it needs from the rest of the team, and what comes next. It's updated after each major step. Team: M1 Zayan (GIS), M2 Eish (movement), M3 Al (network), M4 Saroof (lead, dashboard).
 
 ## Status at a glance
