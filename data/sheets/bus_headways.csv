@@ -1,0 +1,118 @@
+﻿route_number,days,day_type,band_start,band_end,start_min,end_min,every_min,wait_min,estimated,source,notes
+R1,Sun Mon Tue Wed Thu,weekday,05:00,06:00,300,360,20,10.0,no,MTCC/RTL route timetable PDF R1 (supplied 23 Oct 2026),
+R1,Sun Mon Tue Wed Thu,weekday,06:00,08:00,360,480,15,7.5,no,MTCC/RTL route timetable PDF R1 (supplied 23 Oct 2026),
+R1,Sun Mon Tue Wed Thu,weekday,08:00,11:00,480,660,20,10.0,no,MTCC/RTL route timetable PDF R1 (supplied 23 Oct 2026),
+R1,Sun Mon Tue Wed Thu,weekday,11:00,19:00,660,1140,15,7.5,no,MTCC/RTL route timetable PDF R1 (supplied 23 Oct 2026),
+R1,Sun Mon Tue Wed Thu,weekday,19:00,22:00,1140,1320,20,10.0,no,MTCC/RTL route timetable PDF R1 (supplied 23 Oct 2026),
+R1,Sun Mon Tue Wed Thu,weekday,22:00,00:30,1320,1470,30,15.0,no,MTCC/RTL route timetable PDF R1 (supplied 23 Oct 2026),
+R1,Sat,saturday,05:00,06:00,300,360,30,15.0,no,MTCC/RTL route timetable PDF R1 (supplied 23 Oct 2026),
+R1,Sat,saturday,06:00,08:00,360,480,15,7.5,no,MTCC/RTL route timetable PDF R1 (supplied 23 Oct 2026),
+R1,Sat,saturday,08:00,16:00,480,960,20,10.0,no,MTCC/RTL route timetable PDF R1 (supplied 23 Oct 2026),
+R1,Sat,saturday,16:00,20:00,960,1200,15,7.5,no,MTCC/RTL route timetable PDF R1 (supplied 23 Oct 2026),
+R1,Sat,saturday,20:00,22:00,1200,1320,20,10.0,no,MTCC/RTL route timetable PDF R1 (supplied 23 Oct 2026),
+R1,Sat,saturday,22:00,00:30,1320,1470,30,15.0,no,MTCC/RTL route timetable PDF R1 (supplied 23 Oct 2026),
+R1,Fri,friday,05:00,10:30,300,630,30,15.0,no,MTCC/RTL route timetable PDF R1 (supplied 23 Oct 2026),
+R1,Fri,friday,14:00,20:00,840,1200,15,7.5,no,MTCC/RTL route timetable PDF R1 (supplied 23 Oct 2026),
+R1,Fri,friday,20:00,22:00,1200,1320,20,10.0,no,MTCC/RTL route timetable PDF R1 (supplied 23 Oct 2026),
+R1,Fri,friday,22:00,00:30,1320,1470,30,15.0,no,MTCC/RTL route timetable PDF R1 (supplied 23 Oct 2026),
+R2,Sun Mon Tue Wed Thu,weekday,05:00,06:00,300,360,20,10.0,no,MTCC/RTL route timetable PDF R2 (supplied 23 Oct 2026),
+R2,Sun Mon Tue Wed Thu,weekday,06:00,08:00,360,480,15,7.5,no,MTCC/RTL route timetable PDF R2 (supplied 23 Oct 2026),
+R2,Sun Mon Tue Wed Thu,weekday,08:00,11:00,480,660,20,10.0,no,MTCC/RTL route timetable PDF R2 (supplied 23 Oct 2026),
+R2,Sun Mon Tue Wed Thu,weekday,11:00,19:00,660,1140,15,7.5,no,MTCC/RTL route timetable PDF R2 (supplied 23 Oct 2026),
+R2,Sun Mon Tue Wed Thu,weekday,19:00,22:00,1140,1320,20,10.0,no,MTCC/RTL route timetable PDF R2 (supplied 23 Oct 2026),
+R2,Sun Mon Tue Wed Thu,weekday,22:00,00:30,1320,1470,30,15.0,no,MTCC/RTL route timetable PDF R2 (supplied 23 Oct 2026),
+R2,Sat,saturday,05:00,06:00,300,360,30,15.0,no,MTCC/RTL route timetable PDF R2 (supplied 23 Oct 2026),
+R2,Sat,saturday,06:00,08:00,360,480,15,7.5,no,MTCC/RTL route timetable PDF R2 (supplied 23 Oct 2026),
+R2,Sat,saturday,08:00,16:00,480,960,20,10.0,no,MTCC/RTL route timetable PDF R2 (supplied 23 Oct 2026),
+R2,Sat,saturday,16:00,20:00,960,1200,15,7.5,no,MTCC/RTL route timetable PDF R2 (supplied 23 Oct 2026),
+R2,Sat,saturday,20:00,22:00,1200,1320,20,10.0,no,MTCC/RTL route timetable PDF R2 (supplied 23 Oct 2026),
+R2,Sat,saturday,22:00,00:30,1320,1470,30,15.0,no,MTCC/RTL route timetable PDF R2 (supplied 23 Oct 2026),
+R2,Fri,friday,05:00,10:30,300,630,30,15.0,no,MTCC/RTL route timetable PDF R2 (supplied 23 Oct 2026),
+R2,Fri,friday,14:00,20:00,840,1200,15,7.5,no,MTCC/RTL route timetable PDF R2 (supplied 23 Oct 2026),
+R2,Fri,friday,20:00,22:00,1200,1320,20,10.0,no,MTCC/RTL route timetable PDF R2 (supplied 23 Oct 2026),
+R2,Fri,friday,22:00,00:30,1320,1470,30,15.0,no,MTCC/RTL route timetable PDF R2 (supplied 23 Oct 2026),
+R3,Sun Mon Tue Wed Thu,weekday,06:40,00:40,400,1480,60,30.0,yes,"MTCC/RTL route timetable PDF R3 is the RAMADAN 2024 schedule; first departure taken from it, evening from rtl_bus_departures.csv (fetched Sat 10 Oct 2026)","Only a Ramadan 2024 timetable was supplied; Iftar break removed and evening checked against RTL live departures (Oct 2026); times from West Park, airport side 30 min later"
+R3,Sat,saturday,06:40,00:40,400,1480,60,30.0,yes,"MTCC/RTL route timetable PDF R3 is the RAMADAN 2024 schedule; first departure taken from it, evening from rtl_bus_departures.csv (fetched Sat 10 Oct 2026)","Only a Ramadan 2024 timetable was supplied; Iftar break removed and evening checked against RTL live departures (Oct 2026); times from West Park, airport side 30 min later"
+R3,Fri,friday,06:40,10:40,400,640,60,30.0,yes,"MTCC/RTL route timetable PDF R3 is the RAMADAN 2024 schedule; first departure taken from it, evening from rtl_bus_departures.csv (fetched Sat 10 Oct 2026)","Only a Ramadan 2024 timetable was supplied; Iftar break removed and evening checked against RTL live departures (Oct 2026); times from West Park, airport side 30 min later"
+R3,Fri,friday,13:40,00:40,820,1480,60,30.0,yes,"MTCC/RTL route timetable PDF R3 is the RAMADAN 2024 schedule; first departure taken from it, evening from rtl_bus_departures.csv (fetched Sat 10 Oct 2026)","Only a Ramadan 2024 timetable was supplied; Iftar break removed and evening checked against RTL live departures (Oct 2026); times from West Park, airport side 30 min later"
+R4,Sun Mon Tue Wed Thu,weekday,06:30,00:00,390,1440,30,15.0,yes,"MTCC/RTL route timetable PDF R4 is the RAMADAN 2024 schedule; first departure taken from it, evening from rtl_bus_departures.csv (fetched Sat 10 Oct 2026)","Only a Ramadan 2024 timetable was supplied; Iftar break removed and evening checked against RTL live departures (Oct 2026); times from HM Phase 1, airport side 35 min later"
+R4,Sat,saturday,06:30,00:00,390,1440,30,15.0,yes,"MTCC/RTL route timetable PDF R4 is the RAMADAN 2024 schedule; first departure taken from it, evening from rtl_bus_departures.csv (fetched Sat 10 Oct 2026)","Only a Ramadan 2024 timetable was supplied; Iftar break removed and evening checked against RTL live departures (Oct 2026); times from HM Phase 1, airport side 35 min later"
+R4,Fri,friday,06:30,11:00,390,660,30,15.0,yes,"MTCC/RTL route timetable PDF R4 is the RAMADAN 2024 schedule; first departure taken from it, evening from rtl_bus_departures.csv (fetched Sat 10 Oct 2026)","Only a Ramadan 2024 timetable was supplied; Iftar break removed and evening checked against RTL live departures (Oct 2026); times from HM Phase 1, airport side 35 min later"
+R4,Fri,friday,14:00,00:00,840,1440,30,15.0,yes,"MTCC/RTL route timetable PDF R4 is the RAMADAN 2024 schedule; first departure taken from it, evening from rtl_bus_departures.csv (fetched Sat 10 Oct 2026)","Only a Ramadan 2024 timetable was supplied; Iftar break removed and evening checked against RTL live departures (Oct 2026); times from HM Phase 1, airport side 35 min later"
+R5,Sun Mon Tue Wed Thu,weekday,06:15,22:15,375,1335,60,30.0,yes,"MTCC/RTL route timetable PDF R5 is the RAMADAN 2024 schedule; first departure taken from it, evening from rtl_bus_departures.csv (fetched Sat 10 Oct 2026)","Only a Ramadan 2024 timetable was supplied (every 30 min, 07:00-17:00). RTL live data (Oct 2026) shows hourly buses at :15 and 17 trips a day, so hourly 06:15-22:15 is used instead"
+R5,Sat,saturday,06:15,22:15,375,1335,60,30.0,yes,"MTCC/RTL route timetable PDF R5 is the RAMADAN 2024 schedule; first departure taken from it, evening from rtl_bus_departures.csv (fetched Sat 10 Oct 2026)","Only a Ramadan 2024 timetable was supplied (every 30 min, 07:00-17:00). RTL live data (Oct 2026) shows hourly buses at :15 and 17 trips a day, so hourly 06:15-22:15 is used instead"
+R5,Fri,friday,06:15,10:15,375,615,60,30.0,yes,"MTCC/RTL route timetable PDF R5 is the RAMADAN 2024 schedule; first departure taken from it, evening from rtl_bus_departures.csv (fetched Sat 10 Oct 2026)","Only a Ramadan 2024 timetable was supplied (every 30 min, 07:00-17:00). RTL live data (Oct 2026) shows hourly buses at :15 and 17 trips a day, so hourly 06:15-22:15 is used instead; Friday prayer break 10:30-14:00 kept"
+R5,Fri,friday,14:15,22:15,855,1335,60,30.0,yes,"MTCC/RTL route timetable PDF R5 is the RAMADAN 2024 schedule; first departure taken from it, evening from rtl_bus_departures.csv (fetched Sat 10 Oct 2026)","Only a Ramadan 2024 timetable was supplied (every 30 min, 07:00-17:00). RTL live data (Oct 2026) shows hourly buses at :15 and 17 trips a day, so hourly 06:15-22:15 is used instead; Friday prayer break 10:30-14:00 kept"
+R6,Sun Mon Tue Wed Thu,weekday,07:00,00:30,420,1470,15,7.5,yes,"MTCC/RTL route timetable PDF R6 is the RAMADAN 2024 schedule; first departure taken from it, evening from rtl_bus_departures.csv (fetched Sat 10 Oct 2026)",Only a Ramadan 2024 timetable was supplied; Iftar break removed and evening checked against RTL live departures (Oct 2026)
+R6,Sat,saturday,07:00,00:30,420,1470,15,7.5,yes,"MTCC/RTL route timetable PDF R6 is the RAMADAN 2024 schedule; first departure taken from it, evening from rtl_bus_departures.csv (fetched Sat 10 Oct 2026)","Only a Ramadan 2024 timetable was supplied; Iftar break removed and evening checked against RTL live departures (Oct 2026); Ramadan Saturday daytime is every 20 min, but RTL live Saturday count (75) fits every 15, so every 15 used"
+R6,Fri,friday,07:00,10:40,420,640,20,10.0,yes,"MTCC/RTL route timetable PDF R6 is the RAMADAN 2024 schedule; first departure taken from it, evening from rtl_bus_departures.csv (fetched Sat 10 Oct 2026)",Only a Ramadan 2024 timetable was supplied; Iftar break removed and evening checked against RTL live departures (Oct 2026)
+R6,Fri,friday,14:00,00:30,840,1470,15,7.5,yes,"MTCC/RTL route timetable PDF R6 is the RAMADAN 2024 schedule; first departure taken from it, evening from rtl_bus_departures.csv (fetched Sat 10 Oct 2026)",Only a Ramadan 2024 timetable was supplied; Iftar break removed and evening checked against RTL live departures (Oct 2026)
+R7,Sun Mon Tue Wed Thu,weekday,05:00,06:00,300,360,20,10.0,no,MTCC/RTL route timetable PDF R7 (supplied 23 Oct 2026),
+R7,Sun Mon Tue Wed Thu,weekday,06:00,08:00,360,480,15,7.5,no,MTCC/RTL route timetable PDF R7 (supplied 23 Oct 2026),
+R7,Sun Mon Tue Wed Thu,weekday,08:00,11:00,480,660,20,10.0,no,MTCC/RTL route timetable PDF R7 (supplied 23 Oct 2026),
+R7,Sun Mon Tue Wed Thu,weekday,11:00,19:00,660,1140,15,7.5,no,MTCC/RTL route timetable PDF R7 (supplied 23 Oct 2026),
+R7,Sun Mon Tue Wed Thu,weekday,19:00,22:00,1140,1320,20,10.0,no,MTCC/RTL route timetable PDF R7 (supplied 23 Oct 2026),
+R7,Sun Mon Tue Wed Thu,weekday,22:00,00:30,1320,1470,30,15.0,no,MTCC/RTL route timetable PDF R7 (supplied 23 Oct 2026),
+R7,Sat,saturday,05:00,06:00,300,360,30,15.0,no,MTCC/RTL route timetable PDF R7 (supplied 23 Oct 2026),
+R7,Sat,saturday,06:00,08:00,360,480,15,7.5,no,MTCC/RTL route timetable PDF R7 (supplied 23 Oct 2026),
+R7,Sat,saturday,08:00,16:00,480,960,20,10.0,no,MTCC/RTL route timetable PDF R7 (supplied 23 Oct 2026),
+R7,Sat,saturday,16:00,20:00,960,1200,15,7.5,no,MTCC/RTL route timetable PDF R7 (supplied 23 Oct 2026),
+R7,Sat,saturday,20:00,22:00,1200,1320,20,10.0,no,MTCC/RTL route timetable PDF R7 (supplied 23 Oct 2026),
+R7,Sat,saturday,22:00,00:30,1320,1470,30,15.0,no,MTCC/RTL route timetable PDF R7 (supplied 23 Oct 2026),
+R7,Fri,friday,05:00,10:30,300,630,30,15.0,no,MTCC/RTL route timetable PDF R7 (supplied 23 Oct 2026),
+R7,Fri,friday,14:00,20:00,840,1200,15,7.5,no,MTCC/RTL route timetable PDF R7 (supplied 23 Oct 2026),
+R7,Fri,friday,20:00,22:00,1200,1320,20,10.0,no,MTCC/RTL route timetable PDF R7 (supplied 23 Oct 2026),
+R7,Fri,friday,22:00,00:30,1320,1470,30,15.0,no,MTCC/RTL route timetable PDF R7 (supplied 23 Oct 2026),
+R8,Sun Mon Tue Wed Thu,weekday,05:00,06:00,300,360,20,10.0,no,MTCC/RTL route timetable PDF R8 (supplied 23 Oct 2026),
+R8,Sun Mon Tue Wed Thu,weekday,06:00,08:00,360,480,15,7.5,no,MTCC/RTL route timetable PDF R8 (supplied 23 Oct 2026),
+R8,Sun Mon Tue Wed Thu,weekday,08:00,11:00,480,660,20,10.0,no,MTCC/RTL route timetable PDF R8 (supplied 23 Oct 2026),
+R8,Sun Mon Tue Wed Thu,weekday,11:00,19:00,660,1140,15,7.5,no,MTCC/RTL route timetable PDF R8 (supplied 23 Oct 2026),
+R8,Sun Mon Tue Wed Thu,weekday,19:00,22:00,1140,1320,20,10.0,no,MTCC/RTL route timetable PDF R8 (supplied 23 Oct 2026),
+R8,Sun Mon Tue Wed Thu,weekday,22:00,00:30,1320,1470,30,15.0,no,MTCC/RTL route timetable PDF R8 (supplied 23 Oct 2026),
+R8,Sat,saturday,05:00,06:00,300,360,30,15.0,no,MTCC/RTL route timetable PDF R8 (supplied 23 Oct 2026),
+R8,Sat,saturday,06:00,08:00,360,480,15,7.5,no,MTCC/RTL route timetable PDF R8 (supplied 23 Oct 2026),
+R8,Sat,saturday,08:00,16:00,480,960,20,10.0,no,MTCC/RTL route timetable PDF R8 (supplied 23 Oct 2026),
+R8,Sat,saturday,16:00,20:00,960,1200,15,7.5,no,MTCC/RTL route timetable PDF R8 (supplied 23 Oct 2026),
+R8,Sat,saturday,20:00,22:00,1200,1320,20,10.0,no,MTCC/RTL route timetable PDF R8 (supplied 23 Oct 2026),
+R8,Sat,saturday,22:00,00:30,1320,1470,30,15.0,no,MTCC/RTL route timetable PDF R8 (supplied 23 Oct 2026),
+R8,Fri,friday,05:00,10:30,300,630,30,15.0,no,MTCC/RTL route timetable PDF R8 (supplied 23 Oct 2026),
+R8,Fri,friday,14:00,20:00,840,1200,15,7.5,no,MTCC/RTL route timetable PDF R8 (supplied 23 Oct 2026),
+R8,Fri,friday,20:00,22:00,1200,1320,20,10.0,no,MTCC/RTL route timetable PDF R8 (supplied 23 Oct 2026),
+R8,Fri,friday,22:00,00:30,1320,1470,30,15.0,no,MTCC/RTL route timetable PDF R8 (supplied 23 Oct 2026),
+R9,Sun Mon Tue Wed Thu,weekday,05:30,23:30,330,1410,30,15.0,no,MTCC/RTL route timetable PDF R9 (supplied 23 Oct 2026),Times from HM Phase 2; buses from the airport leave 35 min later
+R9,Sat,saturday,05:30,23:30,330,1410,30,15.0,no,MTCC/RTL route timetable PDF R9 (supplied 23 Oct 2026),Times from HM Phase 2; buses from the airport leave 35 min later
+R9,Fri,friday,05:30,11:30,330,690,30,15.0,no,MTCC/RTL route timetable PDF R9 (supplied 23 Oct 2026),Times from HM Phase 2; buses from the airport leave 35 min later
+R9,Fri,friday,13:30,23:30,810,1410,30,15.0,no,MTCC/RTL route timetable PDF R9 (supplied 23 Oct 2026),Times from HM Phase 2; buses from the airport leave 35 min later
+R13,Sun Mon Tue Wed Thu,weekday,00:00,03:15,0,195,20,10.0,no,MTCC/RTL route timetable PDF R13 (supplied 23 Oct 2026),Runs 24 hours; RTL trips_per_day (92) seems to count fewer trips than the PDF
+R13,Sun Mon Tue Wed Thu,weekday,03:15,06:00,195,360,30,15.0,no,MTCC/RTL route timetable PDF R13 (supplied 23 Oct 2026),Runs 24 hours; RTL trips_per_day (92) seems to count fewer trips than the PDF
+R13,Sun Mon Tue Wed Thu,weekday,06:00,07:00,360,420,20,10.0,no,MTCC/RTL route timetable PDF R13 (supplied 23 Oct 2026),Runs 24 hours; RTL trips_per_day (92) seems to count fewer trips than the PDF
+R13,Sun Mon Tue Wed Thu,weekday,07:00,23:50,420,1430,10,5.0,no,MTCC/RTL route timetable PDF R13 (supplied 23 Oct 2026),Runs 24 hours; RTL trips_per_day (92) seems to count fewer trips than the PDF
+R13,Sat,saturday,00:00,03:15,0,195,20,10.0,no,MTCC/RTL route timetable PDF R13 (supplied 23 Oct 2026),Runs 24 hours; RTL trips_per_day (92) seems to count fewer trips than the PDF
+R13,Sat,saturday,03:15,06:00,195,360,30,15.0,no,MTCC/RTL route timetable PDF R13 (supplied 23 Oct 2026),Runs 24 hours; RTL trips_per_day (92) seems to count fewer trips than the PDF
+R13,Sat,saturday,06:00,08:00,360,480,15,7.5,no,MTCC/RTL route timetable PDF R13 (supplied 23 Oct 2026),Runs 24 hours; RTL trips_per_day (92) seems to count fewer trips than the PDF
+R13,Sat,saturday,08:00,23:50,480,1430,10,5.0,no,MTCC/RTL route timetable PDF R13 (supplied 23 Oct 2026),Runs 24 hours; RTL trips_per_day (92) seems to count fewer trips than the PDF
+R13,Fri,friday,00:00,03:15,0,195,20,10.0,no,MTCC/RTL route timetable PDF R13 (supplied 23 Oct 2026),Runs 24 hours; RTL trips_per_day (92) seems to count fewer trips than the PDF
+R13,Fri,friday,03:15,06:00,195,360,30,15.0,no,MTCC/RTL route timetable PDF R13 (supplied 23 Oct 2026),Runs 24 hours; RTL trips_per_day (92) seems to count fewer trips than the PDF
+R13,Fri,friday,06:00,11:30,360,690,15,7.5,no,MTCC/RTL route timetable PDF R13 (supplied 23 Oct 2026),Runs 24 hours; RTL trips_per_day (92) seems to count fewer trips than the PDF
+R13,Fri,friday,14:00,23:50,840,1430,10,5.0,no,MTCC/RTL route timetable PDF R13 (supplied 23 Oct 2026),Runs 24 hours; RTL trips_per_day (92) seems to count fewer trips than the PDF
+R14,Sun Mon Tue Wed Thu,weekday,06:00,08:00,360,480,15,7.5,no,MTCC/RTL route timetable PDF R14 (supplied 23 Oct 2026),
+R14,Sun Mon Tue Wed Thu,weekday,08:00,00:00,480,1440,10,5.0,no,MTCC/RTL route timetable PDF R14 (supplied 23 Oct 2026),
+R14,Sat,saturday,06:00,08:00,360,480,15,7.5,yes,MTCC/RTL route timetable PDF R14 (supplied 23 Oct 2026),No Saturday table in PDF; Sun-Thu times assumed
+R14,Sat,saturday,08:00,00:00,480,1440,10,5.0,yes,MTCC/RTL route timetable PDF R14 (supplied 23 Oct 2026),No Saturday table in PDF; Sun-Thu times assumed
+R14,Fri,friday,06:00,11:30,360,690,15,7.5,no,MTCC/RTL route timetable PDF R14 (supplied 23 Oct 2026),
+R14,Fri,friday,13:30,00:00,810,1440,10,5.0,no,MTCC/RTL route timetable PDF R14 (supplied 23 Oct 2026),
+R10,Sun Mon Tue Wed Thu,weekday,05:00,00:00,300,1440,20,10.0,no,MTCC/RTL route timetable PDF R10 (supplied 23 Oct 2026),
+R10,Sat,saturday,05:00,00:00,300,1440,20,10.0,yes,MTCC/RTL route timetable PDF R10 (supplied 23 Oct 2026),No Saturday table in PDF; Sun-Thu times assumed
+R10,Fri,friday,05:00,10:30,300,630,20,10.0,no,MTCC/RTL route timetable PDF R10 (supplied 23 Oct 2026),
+R10,Fri,friday,14:00,00:00,840,1440,20,10.0,no,MTCC/RTL route timetable PDF R10 (supplied 23 Oct 2026),
+R11,Sun Mon Tue Wed Thu,weekday,05:00,00:00,300,1440,20,10.0,no,MTCC/RTL route timetable PDF R11 (supplied 23 Oct 2026),
+R11,Sat,saturday,05:00,00:00,300,1440,20,10.0,yes,MTCC/RTL route timetable PDF R11 (supplied 23 Oct 2026),No Saturday table in PDF; Sun-Thu times assumed
+R11,Fri,friday,05:00,10:30,300,630,20,10.0,no,MTCC/RTL route timetable PDF R11 (supplied 23 Oct 2026),
+R11,Fri,friday,14:00,00:00,840,1440,20,10.0,no,MTCC/RTL route timetable PDF R11 (supplied 23 Oct 2026),
+R12,Sun Mon Tue Wed Thu,weekday,05:00,19:00,300,1140,20,10.0,no,MTCC/RTL route timetable PDF R12 (supplied 23 Oct 2026),
+R12,Sat,saturday,05:00,19:00,300,1140,20,10.0,yes,MTCC/RTL route timetable PDF R12 (supplied 23 Oct 2026),No Saturday table in PDF; Sun-Thu times assumed
+R12,Fri,friday,05:00,10:30,300,630,20,10.0,no,MTCC/RTL route timetable PDF R12 (supplied 23 Oct 2026),
+R12,Fri,friday,14:00,19:00,840,1140,20,10.0,no,MTCC/RTL route timetable PDF R12 (supplied 23 Oct 2026),
+R15,Sun Mon Tue Wed Thu,weekday,07:15,21:15,435,1275,60,30.0,no,MTCC/RTL route timetable PDF R15 (supplied 23 Oct 2026),
+R15,Sat,saturday,07:15,21:15,435,1275,60,30.0,no,MTCC/RTL route timetable PDF R15 (supplied 23 Oct 2026),
+R15,Fri,friday,14:15,21:15,855,1275,60,30.0,no,MTCC/RTL route timetable PDF R15 (supplied 23 Oct 2026),
