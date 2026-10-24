@@ -1,0 +1,10 @@
+pandas
+geopandas
+duckdb
+streamlit
+pydeck
+pytest
+openpyxl
+pyarrow
+requests
+matplotlib
