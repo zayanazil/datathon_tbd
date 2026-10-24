@@ -8,3 +8,4 @@ openpyxl
 pyarrow
 requests
 matplotlib
+altair

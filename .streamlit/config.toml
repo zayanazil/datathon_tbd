@@ -1,0 +1,21 @@
+# Kaafu Connect brand theme: quiet neutrals, one teal accent for controls.
+# The map's access bands (blue / amber / red / grey) stay data-only.
+[theme]
+base = "light"
+primaryColor = "#0E7C86"
+backgroundColor = "#FFFFFF"
+secondaryBackgroundColor = "#F5F6F4"
+textColor = "#111418"
+borderColor = "#E6E7E3"
+showWidgetBorder = true
+baseRadius = "0.6rem"
+buttonRadius = "full"
+font = "Inter:https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+headingFontWeights = [650, 600, 600, 600, 600, 600]
+linkColor = "#0E7C86"
+
+[theme.sidebar]
+backgroundColor = "#F5F6F4"
+
+[client]
+toolbarMode = "viewer"
