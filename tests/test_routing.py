@@ -8,7 +8,7 @@ import pandas as pd
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "src"))
 
 from kaafu.routing import door_to_door, earliest_arrival  # noqa: E402
-from kaafu.scenarios import extra_run, scale_route  # noqa: E402
+from kaafu.scenarios import adjust_last_mile, extra_run, scale_route  # noqa: E402
 
 CFG = SimpleNamespace(ACCESS_MIN=5, BOAT_TRANSFER_MIN=10, TERMINAL_EXIT_MIN=5, WALK_M_PER_MIN=80)
 
@@ -110,3 +110,18 @@ def test_extra_run_copies_the_inbound_run():
     added = new[new["trip_id"] == "R1_a~x1080"]
     assert added["dep_min"].tolist() == [1080, 1115] and added["to_stop"].tolist() == ["B", "T_M"]
     assert arrival(new, "A", 1000, "T_M") == 1180
+
+
+def test_adjust_last_mile_bus_and_taxi():
+    cfg = SimpleNamespace(TAXI_BASE_WAIT_MIN=5)
+    lm = pd.DataFrame({
+        "stop_id": ["T", "T", "T", "T"], "facility_id": ["H", "H", "H", "H"], "hour": [9, 9, 9, 1],
+        "mode": ["bus", "taxi", "walk", "bus"], "minutes": [30.0, 20.0, 23.0, None],
+        "available": ["yes", "yes", "yes", "no"],
+        "detail": ["R1 from A to B, wait 10, ride 5, walk 9", "taxi, 2.0 km at 20 km/h, wait 7.0",
+                   "walk 1.4 km", "outside service hours"],
+    })
+    out = adjust_last_mile(lm, cfg, bus_factor=2, taxi_availability=0.5)
+    assert out["minutes"].tolist()[:3] == [25.0, 19.0, 23.0]  # bus wait 10 -> 5; taxi retry 2 -> 1
+    assert pd.isna(out["minutes"].iloc[3])
+    assert adjust_last_mile(lm, cfg).equals(lm.assign(minutes=lm["minutes"].round(1)))

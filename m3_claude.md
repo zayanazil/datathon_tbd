@@ -1,6 +1,6 @@
 # M3 network and indicators: status
 
-**Owner:** Al (M3) · **Branch:** `m3-network` · **Last updated:** 24 Oct 2026, after merging `main` (sheets and `terminals.csv`)
+**Owner:** Al (M3) · **Branch:** `m3-network` · **Last updated:** 24 Oct 2026, after merging `zayan` (real `last_mile.csv`, `config.py`)
 
 This file says what M3 has built, what it needs from the rest of the team, and what comes next. It's updated after each major step. Team: M1 Zayan (GIS), M2 Eish (movement), M3 Al (network), M4 Saroof (lead, dashboard).
 
@@ -10,19 +10,23 @@ This file says what M3 has built, what it needs from the rest of the team, and w
 |---|---|
 | 1. `timetable.py` → `connections.csv` | Done |
 | 2. `routing.py` + toy tests | Done; matches the reference table in `M3_network.md` for all 23 islands |
-| 3. `access_results.csv` + `island_summary.csv` (H3) | Done, with a **placeholder walk-only last mile** |
-| 4. Indicators, HDX, NSDS, scenarios, best ferry change | Done except the parts that need M1/M2 files (below) |
-| 4. Observed boat times, bus and taxi sliders | **Waiting** for Eish's and Zayan's files |
-| 5. Final figures for slides 5–6 | Not started; best done once the real last mile and observed times are in |
+| 3. `access_results.csv` + `island_summary.csv` (H3) | Done, with **Zayan's real `last_mile.csv`** |
+| 4. Indicators, HDX, NSDS, scenarios, best ferry change | Done, including the bus and taxi sliders |
+| 4. Observed boat times | **Waiting** for Eish's `observed_pairs.csv` |
+| 5. Final figures for slides 5–6 | Not started |
 
-Tests: `python -m pytest tests` → 11 passed.
+Tests: `python -m pytest` → 12 passed.
+
+**Branch contents:**
+- `main` and `zayan` are both merged in, so this branch has the official `config.py`, `pyproject.toml`, Zayan's `geo.py`/`lastmile.py` and `last_mile.csv`.
+- `data/sheets/` is identical to `main`'s.
 
 ## What each member needs to know
 
 ### Saroof (M4): config, dashboard, merge
 
 - **My code uses the shared `config.py`** (the version with `SHEETS`, `PROCESSED`, the per-file `*_CSV` paths, `GM_HOSPITALS`, `ATOLL_HOSPITALS`, `DAYTIME_START_MIN`/`DAYTIME_END_MIN`, `EVENING_RUN_TIMES`, `READ_ENCODING`/`WRITE_ENCODING` and `MINUTES_PER_DAY`). Nothing is hardcoded on the M3 side.
-  - **It's not committed on this branch:** I have a local copy only, so the official one comes from your branch when we merge.
+  - It's the one from the `zayan` branch, merged in here.
   - **If you rename or remove any of those settings, tell Al.**
   - The M3 settings are the ones under "Routing and indicators (M3)", plus `DAY`, `NEXT_DAY`, `ACCESS_MIN`, `BOAT_TRANSFER_MIN`, `TERMINAL_EXIT_MIN`, `WALK_M_PER_MIN` and `INCLUDE_SENAHIYA`/`SENAHIYA_ID`.
 - **The dashboard entry point is `scenarios.run_scenario(params)`**, which returns `(access_results, island_summary)` and is cached. Its params:
@@ -33,8 +37,13 @@ Tests: `python -m pytest tests` → 11 passed.
   | `extra_runs` | works | `[(route_id, minute)]`, e.g. `[("307", 1080)]` for 18:00 |
   | `thulusdhoo_hospital` | works | `True` adds K.Thulusdhoo as an atoll hospital (`any_hospital` only) |
   | `observed` | waiting for Eish | raises `NotImplementedError` if set |
-  | `bus_factor` | waiting for Zayan | raises `NotImplementedError` if not 1 |
-  | `taxi_availability` | waiting for Zayan | raises `NotImplementedError` if not 0 |
+  | `bus_factor` | works | 0.5–3; the bus wait is divided by it |
+  | `taxi_availability` | works | 0–1; cuts the Avas unserved share (the part of the taxi wait above `TAXI_BASE_WAIT_MIN`) |
+
+  **The bus and taxi sliders don't move the headline**, by design of the measure, so they may not be worth showing:
+  - From every Malé/Hulhumalé terminal, the nearest Greater Malé hospital is a 6.6–11.2 min walk.
+  - A bus or taxi to any other hospital takes longer, at every hour.
+  - So the walk always wins, and changing bus or taxi times changes no row of `access_results`.
   | `label` | optional | value of the `scenario` column |
 
   `run_scenario({})` gives exactly the base `access_results.csv`. One scenario takes about a second.
@@ -46,22 +55,14 @@ Tests: `python -m pytest tests` → 11 passed.
 
 ### Zayan (M1): last mile
 
-- **Until `last_mile.csv` exists, `routing.placeholder_last_mile()` stands in.** It produces walk-only rows in the exact `last_mile.csv` layout:
-  - terminal to hospital on the same island: `TERMINAL_EXIT_MIN` + straight line ÷ 80 m/min;
-  - atoll-hospital islands: `TERMINAL_EXIT_MIN` + the hospital's `walk_minutes`.
-
-  The terminal coordinates come from your `terminals.csv` (merged from `main`). Results are unchanged, because it has the same coordinates as my stand-in.
-- **`docs/facilities.txt` on the `zayan` branch is the old note.** It still lists H01, H03, H07 and H08 as open questions. The current one, with those marked DONE on 23 Oct, is `datasets/data_pack/sheets/facilities (1).txt`; please swap it in.
-- **When you drop `data/processed/last_mile.csv` (`config.LAST_MILE_CSV`) in, my code uses it automatically.** It needs:
-  - columns `stop_id, facility_id, hour, mode, minutes, available, detail`;
-  - `stop_id` using the terminal IDs `T_MALE_NORTH`, `T_MALE_WEST`, `T_HULHUMALE`, `T_VILLIMALE`;
-  - rows for `AA.Rasdhoo` → H07, `ADh.Mahibadhoo` → H08 and `V.Felidhoo` → H09;
-  - `available` as true/false (or yes/no).
-- **Plausibility from the placeholder,** for you to compare against: Jetty NO5 → IGMH on foot 23 min, Hulhumalé Ferry Terminal → Hulhumalé Hospital 12.5 min.
-- **For the sliders, I'll need two things:**
-  - **Bus wait in the `detail` column:** for bus rows, the wait in a form I can parse, e.g. `wait=7.5`. `bus_factor` uses it: minutes − wait + wait ÷ factor.
-  - **A taxi function** with availability as an input, so `taxi_availability` doesn't recompute your formula.
-- **Bus sheets:** `bus_service_hours.csv` (45 rows) and `bus_headways.csv` (117 rows) are now in `data/sheets/` on this branch. The copies in `datasets/data_pack/sheets/` were missing or outdated.
+- **Your `last_mile.csv` is in use** (merged from `zayan`). It matches the contract, and the checks pass:
+  - all 24 hours for every row;
+  - Villimalé reaches only H06;
+  - the walk times match my old placeholder exactly.
+- **Bus and taxi waits:** the `bus_factor` and `taxi_availability` sliders read the wait from your `detail` text (`wait 7.5`). **Please keep the `wait <number>` wording in `detail`.**
+- **Taxi placeholder:** taxi rows still use the 20 km/h placeholder until Eish's `avas_hourly.csv` lands. When you regenerate `last_mile.csv`, I just rerun.
+- **Fallback:** `routing.placeholder_last_mile()` only runs if `last_mile.csv` is missing.
+- **`docs/facilities.txt`** is now the current note (fixed on `zayan`).
 
 ### Eish (M2): observed boat times
 
@@ -73,13 +74,13 @@ Tests: `python -m pytest tests` → 11 passed.
 
 ## How to run
 
-From the repo root, with `src/kaafu/config.py` in place:
+From the repo root (or `pip install -e .` once, then drop the `PYTHONPATH=src`):
 
 ```bash
 PYTHONPATH=src python -m kaafu.timetable    # data/processed/connections.csv
 PYTHONPATH=src python -m kaafu.indicators   # access_results, island_summary, population_within, hdx_comparison, nsds_figures
 PYTHONPATH=src python -m kaafu.scenarios    # best_ferry_change.csv (30-90 s; one-off, not for the live dashboard)
-python -m pytest tests
+python -m pytest
 ```
 
 Every `main()` and `run_scenario()` takes an optional `cfg` argument, which defaults to `kaafu.config`, so a test can pass its own.
@@ -92,7 +93,7 @@ Every `main()` and `run_scenario()` takes an optional `cfg` argument, which defa
 | `src/kaafu/routing.py` | Connection scan (`earliest_arrival`), door-to-door times (`door_to_door`), trip breakdown, placeholder last mile, and `access_results()` for all islands × departures × targets. |
 | `src/kaafu/indicators.py` | `island_summary`, `population_within`, `hdx_comparison`, `nsds_figures`; `main()` writes the base outputs. |
 | `src/kaafu/scenarios.py` | `run_scenario`, `scale_route` (ferry factor), `extra_run`, Thulusdhoo hospital, `best_ferry_change`. |
-| `tests/test_routing.py` | 11 toy tests: direct boat, next morning, transfer time, staying on board, later never earlier, breakdown adds up, own hospital, re-spacing, extra run. |
+| `tests/test_routing.py` | 12 toy tests: direct boat, next morning, transfer time, staying on board, later never earlier, breakdown adds up, own hospital, re-spacing, extra run, bus/taxi slider adjustment. |
 
 ## Outputs in `data/processed/`
 
@@ -106,9 +107,10 @@ Every `main()` and `run_scenario()` takes an optional `cfg` argument, which defa
 | `nsds_figures.csv` | 10 | Direct boat to Greater Malé, same-day boat with changes, health facility within 30 min, hospital within 2 h. |
 | `best_ferry_change.csv` | 27 | One extra run per CFN route × 18:00/20:00/22:00, ranked. |
 
-## Current results (public CFN ferries, Wednesday, walk-only last mile)
+## Current results (public CFN ferries, Wednesday, Zayan's last mile)
 
-These **will change** once the real last mile and observed speedboat times are in. Public ferries alone make the islands near Malé look much worse than reality, because most people there take speedboats.
+- **The real last mile changed nothing:** the nearest hospital is always a short walk from the terminal.
+- **These will change once observed speedboat times are in:** public ferries alone make the islands near Malé look much worse than reality, because most people there take speedboats.
 
 - **Within 2 h of any hospital (daytime median):** 0% of Kaafu and 14.3% of all 23 islands. The 14.3% is just the three islands with their own atoll hospital. HDX's car-only estimate is 77.4% of Kaafu and 45.9% of the Maldives.
 - **Direct scheduled boat to Greater Malé on Wednesday:** 100% of Kaafu and 76.9% of all 23. Mathiveri, Bodufolhudhoo (they change at Ukulhas) and all of Alif Dhaalu are missing. With changes allowed, same day: 81.9%.
@@ -145,7 +147,7 @@ These **will change** once the real last mile and observed speedboat times are i
 
 ## Next
 
-1. **When Zayan's `last_mile.csv` lands:** rerun `indicators` and `scenarios`, recheck the plausibility numbers, and then wire up `bus_factor` and `taxi_availability`.
+1. **When Zayan regenerates `last_mile.csv` with Eish's Avas data:** rerun `indicators` and `scenarios`.
 2. **When Eish's `observed_pairs.csv` lands:** the observed-times switch, synthetic speedboat departures (agree with Saroof) and `observed_gap_min`.
 3. **Merge:** `m3-network` into `main` at H3/H5. Code and outputs are already checked against the shared `config.py`.
 4. **Step 5:**

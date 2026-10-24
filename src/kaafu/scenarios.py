@@ -6,11 +6,12 @@ params (all optional; leaving one out means no change):
     extra_runs           [(route_id, minute), ...] one extra departure each, on DAY
     thulusdhoo_hospital  True adds K.Thulusdhoo as an atoll-level hospital (any_hospital)
     observed             True uses observed boat times        -- waiting for M2's observed_pairs.csv
-    bus_factor           bus frequency factor                 -- waiting for M1's last_mile.csv
-    taxi_availability    0 to 1, cuts the unserved share      -- waiting for M1's taxi function
+    bus_factor           bus frequency factor, 0.5 to 3 (divides the wait)
+    taxi_availability    0 to 1, cuts the Avas unserved share by that fraction
     label                the scenario column value (default "base" or "scenario")
 """
 import json
+import re
 
 import pandas as pd
 
@@ -18,8 +19,8 @@ from kaafu import indicators, routing
 
 DEFAULTS = dict(ferry_factor={}, extra_runs=[], thulusdhoo_hospital=False, observed=False,
                 bus_factor=1.0, taxi_availability=0.0)
-PENDING = {"observed": "M2's observed_pairs.csv", "bus_factor": "M1's last_mile.csv (bus waits)",
-           "taxi_availability": "M1's taxi function"}
+PENDING = {"observed": "M2's observed_pairs.csv"}
+WAIT_IN_DETAIL = re.compile(r"wait (\d+(?:\.\d+)?)")  # M1's last_mile.csv detail, e.g. "wait 7.5"
 THULUSDHOO_ID = "H10"
 BEST_FERRY_CHANGE_CSV = "best_ferry_change.csv"  # extra table, not in the section 4 contracts
 
@@ -109,6 +110,25 @@ def extra_run(conns, route_id, minute, towards_male=True):
     return _finish(pd.concat([conns, run]))
 
 
+def adjust_last_mile(last_mile, cfg, bus_factor=1.0, taxi_availability=0.0):
+    """Last mile with bus waits divided by bus_factor and the taxi unserved share cut.
+
+    Both read the wait from M1's `detail`. Bus: minutes - wait + wait / bus_factor.
+    Taxi: the wait is TAXI_BASE_WAIT_MIN + expired_share x TAXI_RETRY_MIN, so the part
+    above the base wait shrinks by taxi_availability. Unavailable rows are left alone.
+    """
+    lm = last_mile.copy()
+    wait = lm["detail"].astype(str).str.extract(WAIT_IN_DETAIL)[0].astype(float)
+    available = lm["available"].astype(str).str.lower().isin(["true", "yes", "1"]) & wait.notna()
+    bus = available & (lm["mode"] == "bus")
+    taxi = available & (lm["mode"] == "taxi")
+    lm.loc[bus, "minutes"] -= wait[bus] - wait[bus] / bus_factor
+    retry_part = (wait[taxi] - cfg.TAXI_BASE_WAIT_MIN).clip(lower=0)
+    lm.loc[taxi, "minutes"] -= retry_part * taxi_availability
+    lm["minutes"] = lm["minutes"].round(1)
+    return lm
+
+
 def thulusdhoo_hospital(facilities, islands, last_mile, cfg):
     """Facilities, any_hospital ids and last mile with a hospital on K.Thulusdhoo.
 
@@ -150,6 +170,8 @@ def run_scenario(params=None, cfg=None):
         conns = scale_route(conns, str(route_id), factor)
     for route_id, minute in params["extra_runs"]:
         conns = extra_run(conns, str(route_id), int(minute))
+    if params["bus_factor"] != 1 or params["taxi_availability"] != 0:
+        last_mile = adjust_last_mile(last_mile, cfg, params["bus_factor"], params["taxi_availability"])
     targets = None
     if params["thulusdhoo_hospital"]:
         facilities, last_mile = thulusdhoo_hospital(facilities, data["islands"], last_mile, cfg)
